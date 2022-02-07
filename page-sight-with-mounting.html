@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/libs/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<header id="header">
+
+</header>
+
+<main class="main-page">
+
+
+<section class="calculator-tilt-offset">
+    <div class="container">
+        <h1 class="calculator-tilt-offset__title _desktop">
+            Калькулятор смещения наклона
+        </h1>
+        <h1 class="calculator-tilt-offset__title _mobile">
+            Калькулятор
+        </h1>
+        <h2 class="calculator-tilt-offset__subtitle">
+            Калькулятор смещения наклона крепления прицела
+        </h2>
+        <p class="calculator-tilt-offset__description">
+            Воспользуйтесь этим простым калькулятором, чтобы вычислить потерю высоты из-за наклона крепления прицела. Например, предположим, что ваше крепление прицела обеспечивает зазор высотой 10 мм между нижней частью прицела и верхней частью ствола. Если крепление вашего прицела имеет наклон 20 МОА, как это повлияет на ваш зазор по высоте? Узнайте с помощью этого калькулятора.
+        </p>
+
+        <div class="calculator calculator-tilt-offset__calc">
+            <div class="calculator__row _flex-space">
+                <div class="calculator__row-left _flex-wrap">
+                    <div class="calculator__item_scope calculator__item">
+                        <label class="calculator__item-label">
+                            Scope cant
+                        </label>
+                        
+<!--                        <input type="text" class="common-input calculator__item-input" id="scope_diameter_num" name="scope_diameter_num" value="60" placeholder="60">-->
+
+                        <select name="moa_cant" id="moa_cant" class="calculator__item-select common-select">
+                            <option value="10">10</option>
+                            <option value="20" selected="selected">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__item_spacing calculator__item">
+                        <label class="calculator__item-label">
+                            Расстояние от прицела до рельса
+                        </label>
+
+                        <input type="text" class="common-input calculator__item-input" id="spacing_diameter_num" name="spacing_diameter_num" value="60" placeholder="60">
+
+                        <select name="spacing_diameter_unit" id="spacing_diameter_unit" class="calculator__item-select common-select">
+                            <option value="mm" selected>мм</option>
+                            <option value="inches">дюймы</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator__row-right">
+                    <img src="img/icons/mounting_with_sight.svg" alt="Прицел">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="fixed-calculator">
+    <div class="container _flex-space">
+        <button id="calculate" class="btn fixed-calculator__btn" onclick="onClickCalculate()">
+            Рассчитать
+        </button>
+
+        <div class="fixed-calculator__calculations">
+            Смещение: загар (косяк MOA x 1/60) x (длина между передней частью прицела и передней частью планки) = <b class="fixed-calculator__calculations-answer">потеря высоты 0,89 мм (0,03 дюйма)</b>
+            <span class="fixed-calculator__calculations-status"></span>
+            <br><br>
+            Примечание. Это рекомендация.
+        </div>
+    </div>
+</div>
+
+<script>
+    // Calculate clearance.
+
+    function onClickCalculate() {
+        var spacing_diameter = $('#spacing_diameter_num'),
+            spacing_diameter_unit = $('#spacing_diameter_unit'),
+            moa_cant = $('#moa_cant'),
+            final_answer = $(document).find('.fixed-calculator .fixed-calculator__calculations-answer'),
+            final_status = $(document).find('.fixed-calculator .fixed-calculator__calculations-status');
+
+        // Convert to mm if parameters are in inches.
+
+        if (spacing_diameter_unit.val() === 'inches') {
+            spacing_diameter.val((parseFloat(spacing_diameter.val()) * 25.4).toFixed(2));
+            spacing_diameter_unit.val('mm');
+        }
+
+        // Calculation.
+        var radians = (parseFloat(moa_cant.val()) / 60) * (Math.PI / 180),
+            answer = Math.tan(radians) * parseFloat(spacing_diameter.val()),
+            answer_in_inches = answer / 25.4;
+
+        final_answer.html(answer.toFixed(2) + ' мм (' + answer_in_inches.toFixed(2) + ' дюймов)');
+    }
+</script>
+
+    <footer id="footer">
+
+    </footer>
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/select2.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

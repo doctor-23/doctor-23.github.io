@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/libs/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<header id="header">
+
+</header>
+
+<main class="main-page">
+
+
+<section class="calculator-ring-sight">
+    <div class="container">
+        <h1 class="calculator-ring-sight__title _desktop">
+            Калькулятор высоты кольца прицела
+        </h1>
+        <h1 class="calculator-ring-sight__title _mobile">
+            Калькулятор
+        </h1>
+        <h2 class="calculator-ring-sight__subtitle">
+            Калькулятор высоты кольца прицела и зазора
+        </h2>
+        <p class="calculator-ring-sight__description">
+            Воспользуйтесь этим простым калькулятором, чтобы выяснить, сможет ли используемая вами комбинация оптического прицела и кольца очистить ствол вашей винтовки при установке. Этот калькулятор учитывает использование крышек прицела Butler Creek, а также крепления прицела для традиционных болтовых винтовок.
+        </p>
+
+        <div class="calculator calculator-ring-sight__calc">
+            <div class="calculator__row calculator__row_sight _flex-space">
+                <div class="calculator__row-left _flex-wrap">
+                    <div class="calculator__item_sight calculator__item">
+                        <label class="calculator__item-label">
+                            Диаметр
+                        </label>
+                        
+                        <input type="text" class="common-input calculator__item-input" id="sight_diameter_num" name="sight_diameter_num" value="60" placeholder="60">
+
+                        <select name="sight_diameter_unit" id="sight_diameter_unit" class="calculator__item-select common-select">
+                            <option value="mm" selected>мм</option>
+                            <option value="inches">дюймы</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__item_sight calculator__item">
+                        <label class="calculator__item-label">
+                            Бренд
+                        </label>
+
+                        <select name="sight_brand" id="sight_brand" class="calculator__item-select common-select">
+                            <option value="" selected disabled>--Выберите--</option>
+                            <option value="Bushnell">Bushnell</option>
+                            <option value="Schmidt & Bender">Schmidt & Bender</option>
+                            <option value="Nightforce">Nightforce</option>
+                            <option value="Premier Reticles">Premier Reticles</option>
+                            <option value="Steiner">Steiner</option>
+                            <option value="US Optics">US Optics</option>
+                            <option value="Kahles">Kahles</option>
+                            <option value="Leupold">Leupold</option>
+                            <option value="Vortex">Vortex</option>
+                            <option value="Athlon Optics">Athlon Optics</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__item_sight calculator__item">
+                        <label class="calculator__item-label">
+                            Модель
+                        </label>
+
+                        <select name="sight_model" id="sight_model" class="calculator__item-select common-select">
+                            <option value="VIPER PST" selected>VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator__row-right">
+                    <img src="img/icons/sight.svg" alt="Прицел">
+                </div>
+            </div>
+
+            <div class="calculator__row calculator__row_rim _flex-space">
+                <div class="calculator__row-left _flex-wrap">
+                    <div class="calculator__item_rim calculator__item">
+                        <label class="calculator__item-label">
+                            Толщина ободка
+                        </label>
+
+                        <input type="text" id="rim_num" class="common-input calculator__item-input" name="rim_num" value="2" placeholder="2">
+
+                        <select name="rim_unit" id="rim_unit" class="calculator__item-select common-select">
+                            <option value="mm" selected>мм</option>
+                            <option value="inches">дюймы</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__item_rim calculator__item">
+                        <label class="calculator__item-label">
+                            Бренд
+                        </label>
+
+                        <select name="rim_brand" id="rim_brand" class="calculator__item-select common-select">
+                            <option value="" selected disabled>--Выберите--</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__item_rim calculator__item">
+                        <label class="calculator__item-label">
+                            Модель
+                        </label>
+
+                        <select name="rim_model" id="rim_model" class="calculator__item-select common-select">
+                            <option value="VIPER PST" selected>VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator__row-right">
+                    <img src="img/icons/sight_rim.svg" alt="Прицел">
+                </div>
+            </div>
+
+            <div class="calculator__row calculator__row_ring _flex-space">
+                <div class="calculator__row-left _flex-wrap">
+                    <div class="calculator__item_ring calculator__item">
+                        <label class="calculator__item-label">
+                            Высота кольца
+                        </label>
+
+                        <input type="text" id="ring_num" class="common-input calculator__item-input" name="ring_num" value="2" placeholder="2">
+
+                        <select name="ring_unit" id="ring_unit" class="calculator__item-select common-select">
+                            <option value="mm" selected>мм</option>
+                            <option value="inches">дюймы</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__item_ring calculator__item">
+                        <label class="calculator__item-label">
+                            Бренд
+                        </label>
+
+                        <select name="ring_brand" id="ring_brand" class="calculator__item-select common-select">
+                            <option value="" selected disabled>--Выберите--</option>
+                            <option value="Vortex" selected>Vortex</option>
+                            <option value="Spuhr">Spuhr</option>
+                            <option value="Seekins">Seekins</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__item_ring calculator__item">
+                        <label class="calculator__item-label">
+                            Модель
+                        </label>
+
+                        <select name="ring_model" id="ring_model" class="calculator__item-select common-select">
+                            <option value="VIPER PST" selected>VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST">VIPER PST</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator__row-right">
+                    <img src="img/icons/sight_ring.svg" alt="Прицел">
+                </div>
+            </div>
+
+            <div class="calculator__row calculator__row_mounting _flex-space">
+                <div class="calculator__row-left _flex-wrap">
+                    <div class="calculator__item_mounting calculator__item">
+                        <label class="calculator__item-label">
+                            Высота крепления
+                        </label>
+
+                        <input type="text" id="mounting_num" class="common-input calculator__item-input" name="mounting_num" value="50" placeholder="50">
+
+                        <select name="mounting_unit" id="mounting_unit" class="calculator__item-select common-select">
+                            <option value="mm" selected>мм</option>
+                            <option value="inches">дюймы</option>
+                        </select>
+                    </div>
+
+                    <p class="calculator__item-description calculator__item-description_one">
+                        Установите 0, если используется полный рельс в стиле AR, например, Larue OBR, DTA SRS. Кроме того, если у вас конусообразный ствол, добавьте дополнительный прирост высоты.
+                    </p>
+
+                    <p class="calculator__item-description calculator__item-description_two">
+                        Наклон 20 МОА и 6 дюймов между передней частью прицела и креплением может уменьшить высоту крепления на 0,89 мм.
+                        <a href="#">Найдите свое смещение</a>.
+                    </p>
+                </div>
+                <div class="calculator__row-right">
+                    <img src="img/icons/sight_mounting.svg" alt="Прицел">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="fixed-calculator">
+    <div class="container _flex-space">
+        <button id="calculate" class="btn fixed-calculator__btn" onclick="onClickCalculate()">
+            Рассчитать
+        </button>
+
+        <div class="fixed-calculator__calculations">
+            Зазор: высота крепления + высота кольца - (диаметр раструба / 2) - защитная пленка = <b class="fixed-calculator__calculations-answer">6,50 мм (0,26 дюйма)</b>
+            <span class="fixed-calculator__calculations-status"></span>
+            <br><br>
+            Примечание. Это рекомендация.
+        </div>
+    </div>
+</div>
+
+<script>
+    // Calculate clearance.
+
+    function onClickCalculate() {
+        var sight_diameter = $('#sight_diameter_num'),
+            rim_num = $('#rim_num'),
+            ring_unit = $('#ring_num'),
+            mounting_num = $('#mounting_num'),
+            final_answer = $(document).find('.fixed-calculator .fixed-calculator__calculations-answer'),
+            final_status = $(document).find('.fixed-calculator .fixed-calculator__calculations-status');
+
+        // Convert to mm if parameters are in inches.
+
+        if ($('#sight_diameter_unit').val() === 'inches') {
+            sight_diameter.val((parseFloat($("#bell_diameter").val()) * 25.4).toFixed(2));
+            $("#sight_diameter_unit").val('mm');
+        }
+        if ($('#rim_unit').val() === 'inches') {
+            rim_num.val((parseFloat($("#scope_cover").val()) * 25.4).toFixed(2));
+            $("#rim_unit").val('mm');
+        }
+        if ($('#ring_unit').val() === 'inches') {
+            ring_unit.val((parseFloat($("#ring_height").val()) * 25.4).toFixed(2));
+            $("#ring_unit").val('mm');
+        }
+        if ($('#mounting_unit').val() === 'inches') {
+            mounting_num.val((parseFloat($("#mount_height").val()) * 25.4).toFixed(2));
+            $("#mounting_unit").val('mm');
+        }
+
+        // Calculate.
+
+        var answer = parseFloat(mounting_num.val()) + parseFloat(ring_unit.val()) - (parseFloat(sight_diameter.val()) / 2) - parseFloat(rim_num.val()),
+            answer_in_inches = answer / 25.4;
+
+        final_answer.html(answer.toFixed(2) + ' мм (' + answer_in_inches.toFixed(2) + ' дюймов)');
+
+        if (answer >= 0) {
+            final_status.html('ПРОЙДЕНО!');
+            final_status.addClass('calc_status_pass').removeClass('calc_status_fail');
+        } else {
+            final_status.html("ОШИБКА!");
+            final_status.addClass('calc_status_fail').removeClass('calc_status_pass');
+        }
+    }
+</script>
+
+    <footer id="footer">
+
+    </footer>
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/select2.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
