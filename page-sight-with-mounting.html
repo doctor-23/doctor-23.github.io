@@ -57,12 +57,14 @@
                             Расстояние от прицела до рельса
                         </label>
 
-                        <input type="text" class="common-input calculator__item-input" id="spacing_diameter_num" name="spacing_diameter_num" value="60" placeholder="60">
+                        <div class="calculator__item-wrapper">
+                            <input type="text" class="common-input calculator__item-input" id="spacing_diameter_num" name="spacing_diameter_num" value="60" placeholder="60" onkeypress="banText()">
 
-                        <select name="spacing_diameter_unit" id="spacing_diameter_unit" class="calculator__item-select common-select">
-                            <option value="mm" selected>мм</option>
-                            <option value="inches">дюймы</option>
-                        </select>
+                            <select name="spacing_diameter_unit" id="spacing_diameter_unit" class="calculator__item-select common-select">
+                                <option value="mm" selected>мм</option>
+                                <option value="inches">дюймы</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="calculator__row-right">

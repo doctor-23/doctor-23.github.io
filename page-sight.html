@@ -41,7 +41,7 @@
                             Диаметр
                         </label>
                         
-                        <input type="text" class="common-input calculator__item-input" id="sight_diameter_num" name="sight_diameter_num" value="60" placeholder="60">
+                        <input type="text" class="common-input calculator__item-input" id="sight_diameter_num" name="sight_diameter_num" value="60" placeholder="60" onkeypress="banText()">
 
                         <select name="sight_diameter_unit" id="sight_diameter_unit" class="calculator__item-select common-select">
                             <option value="mm" selected>мм</option>
@@ -75,11 +75,7 @@
                         </label>
 
                         <select name="sight_model" id="sight_model" class="calculator__item-select common-select">
-                            <option value="VIPER PST" selected>VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="VIPER PST" selected disabled>--Выберите--</option>
                         </select>
                     </div>
                 </div>
@@ -95,35 +91,11 @@
                             Толщина ободка
                         </label>
 
-                        <input type="text" id="rim_num" class="common-input calculator__item-input" name="rim_num" value="2" placeholder="2">
+                        <input type="text" id="rim_num" class="common-input calculator__item-input" name="rim_num" value="2" placeholder="2" onkeypress="banText()">
 
                         <select name="rim_unit" id="rim_unit" class="calculator__item-select common-select">
                             <option value="mm" selected>мм</option>
                             <option value="inches">дюймы</option>
-                        </select>
-                    </div>
-
-                    <div class="calculator__item_rim calculator__item">
-                        <label class="calculator__item-label">
-                            Бренд
-                        </label>
-
-                        <select name="rim_brand" id="rim_brand" class="calculator__item-select common-select">
-                            <option value="" selected disabled>--Выберите--</option>
-                        </select>
-                    </div>
-
-                    <div class="calculator__item_rim calculator__item">
-                        <label class="calculator__item-label">
-                            Модель
-                        </label>
-
-                        <select name="rim_model" id="rim_model" class="calculator__item-select common-select">
-                            <option value="VIPER PST" selected>VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
                         </select>
                     </div>
                 </div>
@@ -139,7 +111,7 @@
                             Высота кольца
                         </label>
 
-                        <input type="text" id="ring_num" class="common-input calculator__item-input" name="ring_num" value="2" placeholder="2">
+                        <input type="text" id="ring_num" class="common-input calculator__item-input" name="ring_num" value="2" placeholder="2" onkeypress="banText()">
 
                         <select name="ring_unit" id="ring_unit" class="calculator__item-select common-select">
                             <option value="mm" selected>мм</option>
@@ -154,7 +126,7 @@
 
                         <select name="ring_brand" id="ring_brand" class="calculator__item-select common-select">
                             <option value="" selected disabled>--Выберите--</option>
-                            <option value="Vortex" selected>Vortex</option>
+                            <option value="Vortex">Vortex</option>
                             <option value="Spuhr">Spuhr</option>
                             <option value="Seekins">Seekins</option>
                         </select>
@@ -166,11 +138,7 @@
                         </label>
 
                         <select name="ring_model" id="ring_model" class="calculator__item-select common-select">
-                            <option value="VIPER PST" selected>VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
-                            <option value="VIPER PST">VIPER PST</option>
+                            <option value="" selected disabled>--Выберите--</option>
                         </select>
                     </div>
                 </div>
@@ -186,7 +154,7 @@
                             Высота крепления
                         </label>
 
-                        <input type="text" id="mounting_num" class="common-input calculator__item-input" name="mounting_num" value="50" placeholder="50">
+                        <input type="text" id="mounting_num" class="common-input calculator__item-input" name="mounting_num" value="50" placeholder="50" onkeypress="banText()">
 
                         <select name="mounting_unit" id="mounting_unit" class="calculator__item-select common-select">
                             <option value="mm" selected>мм</option>
