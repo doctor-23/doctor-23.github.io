@@ -1,0 +1,41 @@
+.header > .wrapper {
+    max-width: 1430px;
+}
+
+.navMenuItem:not(:last-child) {
+    padding-right: 30px;
+}
+
+.navMenuLink {
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--main-color);
+
+    &:hover {
+        color: var(--blue-hover);
+    }
+
+    &:active, &:focus-visible {
+        color: var(--blue-active);
+    }
+}
+
+.headerBtn {
+    padding: 9px 19px 10px 24px;
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--text-color);
+    border-color: var(--blue);
+
+    &:hover {
+        color: #fff;
+        background-color: var(--blue-hover);
+        border-color: var(--blue-hover);
+    }
+
+    &:active, &:focus-visible {
+        color: #fff;
+        background-color: var(--blue-active);
+        border-color: var(--blue-active);
+    }
+}

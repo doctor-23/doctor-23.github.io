@@ -1,0 +1,63 @@
+.mainObjections {
+    max-width: 1430px;
+    width: 100%;
+    margin: 0 auto 76px;
+    padding: 70px 0;
+    color: #fff;
+    background: linear-gradient(0deg, #6456FF, #6456FF), #EFFAFE;
+    border-radius: 40px;
+}
+
+.mainObjectionsWrapper {
+    &::after {
+        content: url('../img/objectations-bg.png');
+        position: absolute;
+        right: -33px;
+        bottom: -73px;
+    }
+}
+
+.mainObjectionsTitle {
+    max-width: 510px;
+    margin-bottom: 30px;
+    font-size: 46px;
+    line-height: 56px;
+}
+
+.mainObjectionsDescription {
+    max-width: 593px;
+    margin-bottom: 38px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.mainObjectionsBtn {
+    margin-bottom: 15px;
+    padding: 21px 83px 23px;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    background-color: #fff;
+    border-color: #fff;
+
+    &:hover {
+        background-color: #ECECEC;
+        border-color: #ECECEC;
+    }
+
+    &:active, &:focus-visible {
+        background-color: #ccc;
+        border-color: #ccc;
+    }
+}
+
+.mainObjectionsCorrection {
+    display: block;
+    max-width: 242px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.72);
+}

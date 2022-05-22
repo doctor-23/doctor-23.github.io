@@ -1,0 +1,45 @@
+.burgerMenu {
+	border-bottom: 3px solid #004583;
+	border-top: 3px solid #004583;
+	height: 22px;
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	width: 33px;
+	z-index: 10;
+	transition: all .3s ease;
+}
+
+.burgerMenu.open {
+	border-color: transparent;
+	position: fixed;
+	right: auto;
+	left: 268px;
+	top: 20px;
+}
+
+.burgerMenu.open:after {
+	transform: rotate(-45deg);
+	background: #fff;
+}
+
+.burgerMenu.open:before {
+	transform: rotate(45deg);
+	background: #fff;
+}
+
+.burgerMenu:before, .burgerMenu:after {
+	background: #004583;
+	content: "";
+	height: 3px;
+	left: 0;
+	margin-top: -1px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 100%;
+	transition: all .3s ease;
+}
+
+
+

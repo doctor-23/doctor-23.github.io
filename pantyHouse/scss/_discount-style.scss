@@ -1,0 +1,67 @@
+section#promo_and_discounts {
+  padding-top: 82px;
+  padding-bottom: 152px;
+
+  h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 2.4rem;
+    line-height: 3.35rem;
+    margin-top: 28px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  p {
+      font-size: 0.9rem;
+      line-height: 1.8rem;
+  }
+
+  .more-more {
+    h3 {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      margin-bottom: 28px;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 28px;
+    }
+
+    span {
+      display: block;
+      font-size: 0.8rem;
+      line-height: 1.1rem;
+      max-width: 971px;
+    }
+  }
+
+  .stock-more {
+    margin-top: 80px;
+
+    h4, span {
+      font-size: 1.2rem;
+      line-height: 0.6rem;
+    }
+
+    p {
+      margin-top: 28px;
+      max-width: 736px;
+    }
+  }
+
+  .stock-in-brth {
+    margin-top: 80px;
+
+    h5 {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      margin-bottom: 28px;
+    }
+
+    p {
+      line-height: 1.25rem;
+      max-width: 938px;
+    }
+  }
+}

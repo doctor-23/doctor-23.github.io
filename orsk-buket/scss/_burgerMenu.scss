@@ -1,0 +1,161 @@
+.burgerMenu {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  height: 17px;
+  cursor: pointer;
+  transition: all .2s;
+
+  .burgerMenu__line {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    transition: all .2s;
+
+    &.burgerMenu__line-1 {
+      top: 2px;
+    }
+    
+    &.burgerMenu__line-2 {
+      top: 7px;
+    }
+
+    &.burgerMenu__line-3 {
+      top: 12px;
+    }
+
+    &.burgerMenu__line-4 {
+      top: 17px;
+    }
+  }
+
+  &.close {
+    .burgerMenu__line-1 {
+      animation: ac-burgerMenu__line-1 .2s forwards;
+    }
+    
+    .burgerMenu__line-2 {
+      animation: ac-burgerMenu__line-2 .2s forwards;
+    }
+
+    .burgerMenu__line-3 {
+      animation: ac-burgerMenu__line-3 .2s forwards;
+    }
+
+    .burgerMenu__line-4 {
+      animation: ac-burgerMenu__line-4 .2s forwards;
+    }
+  }
+
+  &.open {
+    .burgerMenu__line-1 {
+      animation: ao-burgerMenu__line-1 .2s forwards;
+    }
+
+    .burgerMenu__line-2 {
+      animation: ao-burgerMenu__line-2 .2s forwards;
+    }
+
+    .burgerMenu__line-3 {
+      animation: ao-burgerMenu__line-3 .2s forwards;
+    }
+
+    .burgerMenu__line-4 {
+      animation: ao-burgerMenu__line-4 .2s forwards;
+    }
+  }
+}
+
+@keyframes ac-burgerMenu__line-1 {
+  0% {
+    top: 7px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 4px;
+  }
+  100% {
+    top: 2px;
+  }
+}
+
+@keyframes ac-burgerMenu__line-2 {
+  0% {}
+  50% {
+    opacity: 1;
+  }
+  100% {}
+}
+
+@keyframes ac-burgerMenu__line-3 {
+  0% {}
+  50% {
+    opacity: 1;
+  }
+  100% {}
+}
+
+@keyframes ac-burgerMenu__line-4 {
+  0% {
+    top: 12px;
+    transform: rotate(-45deg);
+  }
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 17px;
+  }
+}
+
+@keyframes ao-burgerMenu__line-1 {
+  0% {
+    top: 4px;
+  }
+  50% {
+    top: 7px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 9.5px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes ao-burgerMenu__line-2 {
+  0% {}
+  50% {}
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ao-burgerMenu__line-3 {
+  0% {}
+  50% {}
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ao-burgerMenu__line-4 {
+  0% {
+    top: 15px;
+  }
+  50% {
+    top: 12px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 9.5px;
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+
+

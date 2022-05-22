@@ -1,0 +1,48 @@
+section#how-order {
+  padding-top: 80px;
+  padding-bottom: 152px;
+
+  h1 {
+    font-family: 'Cormorant';
+    font-size: 2.4rem;
+    line-height: 96px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 39px;
+    text-align: center;
+  }
+
+  .order-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .profile-menu {
+    &.second-menu-nav {
+      margin-right: 100px;
+    }
+  }
+
+  .order-instruction {
+    max-width: 948px;
+    width: 100%;
+
+    p {
+      margin: 0;
+      margin-bottom: 28px;
+      font-size: 1.2rem;
+      line-height: 34px;
+    }
+
+    img {
+      margin-bottom: 50px;
+      object-fit: cover;
+      max-width: 948px;
+      width: 100%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

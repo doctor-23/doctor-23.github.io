@@ -1,0 +1,478 @@
+@media screen and (max-height: 760px) {
+	
+	header#header {
+		.logo {
+			margin: 15px auto 30px;
+			width: 170px;
+		}
+
+		.menu {
+			margin-bottom: 30px;
+
+			.menu-item {
+				margin-bottom: 13px;
+
+				a {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.contacts {
+			margin-bottom: 30px;
+		}
+
+		.patners {
+			margin-bottom: 30px;
+
+			.partners__item {
+				&:first-child {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	section#first {
+		section#lastNews {
+			padding-top: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 1710px) {
+	.container {
+		margin-left: 315px!important;
+	}
+}
+
+@media screen and (max-width: 1249.99px) and (max-height: 960px) {
+	section#first {
+		section#lastNews {
+			.news {
+				.news__item {
+					&:nth-of-type(1),
+					&:nth-of-type(2) {
+						margin-bottom: 0px;
+					}
+
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+
+			.more__news {
+				margin-right: 8%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1469.99px) {
+	section#aboutUs {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		h2 {
+			margin-bottom: 40px;
+		}
+
+		.about {
+			.about__item {
+				p, img {
+					width: 95%;
+				}
+
+				&:first-child {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	section#progress {
+		.progressCart {
+			.progressCart__item {
+				background-position-x: 50%;
+
+				&:first-child,
+				&:nth-of-type(2) {
+					margin-bottom: 30px;
+				}
+
+				.hover {
+					left: 50%;
+					margin-left: -135px;
+				}
+			}
+		}
+	}
+
+	section#blockNews {
+		padding-top: 80px;
+
+		.news {
+			width: 100%;
+			
+			.news__item {
+				img {
+					object-fit: cover;
+					width: 280px;
+				}
+
+				.item__inf {
+					width: 290px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1249.99px) {
+	section#first {
+		section#firstContent {
+			h1 {
+				br:last-child {
+					display: block;
+				}
+			}
+		}
+
+		section#lastNews {
+			.news {
+				div {
+					width: 300px;
+				}
+
+				.news__item {
+
+					&:nth-of-type(1),
+					&:nth-of-type(2) {
+						margin-bottom: 50px;
+					}
+
+				}
+			}
+		}
+	}
+
+	section#progress {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		.jumper {
+			right: 30px;
+			top: -67px;
+
+			img {
+				object-fit: cover;
+				width: 160px;
+			}
+		}
+	}
+
+	section#blockNews {
+		padding-top: 80px;
+
+		.news {
+			.news__item {
+				img {
+					width: 320px;
+				}
+
+				.item__inf {
+					width: 320px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1034.99px) {
+	.container {
+		margin-left: auto!important;
+	}
+
+	header#header {
+		padding: 0 45px;
+		margin: 0;
+		transform: scaleY(0);
+		transform-origin: 100% 0;
+		transition: 0.5s ease-in-out;
+	}
+
+	header#header.scale {
+		transform: scaleY(1);
+	}
+
+	.burgerMenu {
+		display: block;
+	}
+
+	section#first {
+		background-image: url(../img/BG-1-tablet.jpg);
+	}
+}
+
+@media screen and (max-width: 767.99px) {
+	section#first {
+		height: auto;
+		padding-top: 60px;
+		padding-bottom: 40px;
+
+		section#lastNews {
+			.news {
+				margin-top: 30px;
+
+				div {
+					width: 100%;
+				}
+				.news__item {
+					span:first-child {
+						margin-right: 35px;
+					}
+					&:nth-of-type(1),
+					&:nth-of-type(2) {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.more__news {
+				margin-right: 0;
+				padding-right: 6px;
+			}
+		}
+	}
+
+	section#progress {
+		.progressCart {
+			margin-right: -30px !important;
+			margin-left: -30px !important;
+		}
+	}
+
+	section#blockNews {
+		.news {
+			.news__item {
+				img {
+					width: 256px;
+				}
+
+				.item__inf {
+					width: 290px;
+				}
+
+				&:nth-of-type(5),
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.privacy-container {
+		.privacy {
+			width: 90%;
+
+			.privacy__title {
+				width: 88%;
+
+				h2 {
+					font-size: 1.4375rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575.99px) {
+	h2 {
+		font-size: 1.4375rem;
+	}
+
+	.burgerMenu {
+		right: 15px;
+	}
+
+	section#first {
+		height: 100vh;
+		padding-top: 60px;
+		background-image: url(../img/BG-1-mobile.jpg);
+
+		section#firstContent {
+			h1 {
+				br:first-child {
+					display: block;
+				}
+
+				br:last-child {
+					display: none;
+				}
+			}
+
+			.subscribe {
+				.subscribe__text {
+					text-align: left;
+				}
+			}
+		}
+
+		section#lastNews {
+			padding-top: 60px;
+
+			.news {
+				margin-top: 30px;
+
+				.news__item {
+					&:nth-of-type(2) {
+						margin-top: 30px;
+						margin-bottom: 0;
+					}
+				}
+
+				a.more {
+					display: block;
+					margin-top: 5px;
+				}
+			}
+
+			.more__news {
+				margin-right: 8%;
+				padding-right: 4px;
+			}
+		}
+	}
+
+	section#progress {
+		.aboutProgress {
+			margin-bottom: 50.35px;
+		}
+
+		.progressCart {
+			margin-bottom: 40.35px;
+
+			.progressCart__item {
+				margin-bottom: 20.01px;
+
+				&:nth-of-type(2) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	section#blockNews {
+		.news {
+			.news__item {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					width: 290px;
+				}
+			}
+		}
+
+		.pages {
+			padding-left: 15px;
+
+			button.pages__next {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 449.99px) {
+	header#header {
+		width: 100%;
+		position: absolute;
+	}
+
+	.burgerMenu.open {
+		left: auto;
+		right: 30px;
+	}
+
+	section#first {
+		section#firstContent {
+			h1 {
+				font-size: 1.75rem;
+			}
+
+
+		}
+
+		section#lastNews {
+			.news {
+				div {
+					width: 300px;
+				}
+
+				.news__item {
+					&:nth-of-type(2) {
+						display: none;
+					}
+				}
+			}
+
+			.more__news {
+				float: left;
+				margin-left: 21%;
+				margin-right: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	section#blockNews {
+		.news {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+
+	footer#footer {
+		.footer-inf {
+			width: 80%;
+			margin-left: 0;
+
+			.footer-inf__item {
+				text-align: left;
+			}
+		}
+	}
+
+	.privacy-container {
+		.privacy {
+			.privacy__title {
+				h2 {
+					text-align: left;
+					width: 80%;
+					hyphens: auto;
+				}
+			}
+
+			.privacy__text {
+				padding-top: 143px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575.99px) and (max-height: 645px) {
+	section#first {
+		height: auto;
+	}
+}
+
+
+
+
+
+
+

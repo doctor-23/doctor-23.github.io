@@ -1,0 +1,99 @@
+main.how_order-page {
+    .breadcrump {
+        padding: 20px 15px 15px;
+    }
+
+    section.section-how_order {
+        .how_order__title {
+            margin-bottom: 20px;
+        }
+
+        .how_order__desc {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .how_order__list {
+            display: flex;
+            justify-content: space-between;
+
+            .list__item {
+                flex-basis: 28.41%;
+
+                .item-bg {
+                    width: 150px;
+                    height: 150px;
+                    margin-bottom: 15px;
+                    background: #fff center no-repeat;
+                    border-radius: 50% 50% 50% 0;
+                }
+
+                &.list__item-1 {
+                    .item-bg {
+                        background-image: url('../img/how-order/horder-order_item-1.jpg');
+                    }
+                }
+                &.list__item-2 {
+                    .item-bg {
+                        background-image: url('../img/how-order/horder-order_item-2.jpg');
+                    }
+                }
+                &.list__item-3 {
+                    .item-bg {
+                        background-image: url('../img/how-order/horder-order_item-3.jpg');
+                    }
+                }
+            }
+            
+            .item-title {
+                font-weight: bold;
+            }
+
+            .item-desc {
+                margin-top: 5px;
+                line-height: 20px;
+
+                a {
+                    color: #448370;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &.callback-phone {
+                        color: inherit;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .how_order__slogan {
+            margin-top: 20px;
+            font-family: 'Nunito';
+            font-weight: bold;
+            color: #E65497;
+            font-size: 1.2857142857142858rem;
+        }
+
+        
+    }
+
+    section.how_order__adv {
+        margin-top: 60px;
+        padding-top: 15px;
+        padding-bottom: 50px;
+        border-top: 1px solid #e7e7e7;
+
+        .adv-title {
+            margin-bottom: 36px;
+        }
+    }
+
+    section.may-interested {
+        background: #f8f8f8;
+    }
+}

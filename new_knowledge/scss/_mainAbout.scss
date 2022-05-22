@@ -1,0 +1,121 @@
+.mainAbout {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 35px 0 66px;
+    background: linear-gradient(0deg, #F4F4F4, #F4F4F4), #EFFAFE;
+    border-radius: 40px;
+}
+
+.mainAboutTitle {
+    position: relative;
+    width: max-content;
+    margin: 0 auto 16px;
+    text-align: center;
+    color: #231F20;
+    font-weight: 350;
+    font-size: 46px;
+    line-height: 56px;
+
+    &::after {
+        content: url('../img/icons/about-smile.svg');
+        position: absolute;
+        bottom: -10px;
+        right: -77px;
+    }
+}
+
+.mainAboutDescription {
+    max-width: 743px;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.mainAboutBlocks {
+    display: flex;
+    justify-content: center;
+}
+
+.mainAboutBlocksItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 12.5px);
+    padding: 35px 28px 134px 40px;
+    background: #FFFFFF;
+    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+    }
+
+    &:first-child {
+        margin-right: 25px;
+
+        &::before {
+            z-index: 2;
+            top: 35px;
+            right: 75px;
+            display: block;
+            width: 19px;
+            height: 19px;
+            background-color: #F86428;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 5px 6px rgba(248, 171, 136, 0.8);
+        }
+
+        &::after {
+            z-index: 1;
+            top: 49px;
+            right: -117px;
+            display: block;
+            width: 210px;
+            border: 2px solid #F8AB88;
+        }
+    }
+
+    &:last-child {
+        &::before {
+            content: url('../img/icons/about-arrow.svg');
+            top: 39px;
+            left: 77px;
+        }
+    }
+}
+
+.blocksItemTitle {
+    text-align: center;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+}
+
+.blocksItemMonth {
+    display: inline-block;
+    margin-bottom: 34px;
+    text-align: center;
+    color: #5A5A5A;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.blocksItemDescription {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.blocksItemListItem {
+    &:not(:last-child) {
+        margin-bottom: 21px;
+    }
+
+    &::before {
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,57 @@
+section#refund {
+  padding-top: 80px;
+  padding-bottom: 152px;
+
+  h1 {
+    font-family: 'Cormorant';
+    font-size: 2.4rem;
+    line-height: 96px;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 39px;
+  }
+
+  .refund-wrapper {
+    display: flex;
+  }
+
+  .profile-menu {
+    &.second-menu-nav {
+      margin-right: 94px;
+    }
+  }
+
+  .refund-inf {
+    max-width: 879px;
+    width: 100%;
+
+    li.refund-inf__item {
+      margin-bottom: 80px;
+      font-weight: normal;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 36px;
+      }
+
+      ul {
+        li {
+          font-size: 0.9rem;
+          line-height: 36px;
+          
+          h5 {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

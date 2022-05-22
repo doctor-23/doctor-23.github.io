@@ -1,0 +1,228 @@
+html {
+	font-size: 18px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Raleway:wght@400;500;600&display=swap');
+
+body {
+	color: #07131F;
+	overflow-x: hidden;
+	font-family: 'Raleway', sans-serif;
+	font-weight: normal;
+	
+}
+
+ul, li {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+* {
+	// transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active {
+	text-decoration: none;
+	outline: none;
+}
+
+section {
+	overflow: hidden;
+}
+
+.container {
+	position: relative;
+	max-width: 1410px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.static {
+	position: static!important;
+}
+
+i {
+	cursor: pointer;
+				
+	&.action_mouse {
+		bottom: 26px;
+		left: 15px;
+
+		&::after {
+			content: url('../img/icon/mouse.svg');
+		}
+	}
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+span {
+	&.action_ellipse-top {
+		position: absolute;
+    top: -115px;
+    right: -123px;
+    width: 889px;
+    height: 267px;
+    background: rgba(255, 255, 255, 0.7);
+    filter: blur(250px);
+	}
+
+	&.action_parachute-1 {
+		position: absolute;
+		bottom: 0;
+		left: 388px;
+		bottom: 148px;
+
+		&::after {
+			content: url('../img/parachute-1.png');
+		}
+	}
+
+	&.action_parachute-2 {
+		position: absolute;
+		right: 449px;
+		bottom: 157px;
+
+		&::after {
+			content: url('../img/parachute-2.png');
+		}
+	}
+
+	&.action_parachute-wing-1 {
+		position: absolute;
+		right: -340px;
+		bottom: 58px;
+		transform: rotate(-7.88deg);
+
+		&::after {
+			content: url('../img/parachute-wing-1.png');
+		}
+	}
+
+	&.action_wing-ellips {
+		position: absolute;
+		bottom: 258.36px;
+		right: -183px;
+		width: 301px;
+		height: 165.93px;
+		background: rgba(255, 255, 255, 0.26);
+		filter: blur(151px);
+		transform: rotate(26.58deg);
+		z-index: 1;
+	}
+
+	&.action_wing-ellips2 {
+		position: absolute;
+		right: -211px;
+		bottom: 65px;
+		z-index: 2;
+		width: 301px;
+		height: 184px;
+		background: rgba(51, 80, 116, 0.9);
+		filter: blur(250px);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+	&.action_ellips3 {
+		position: absolute;
+		left: -781px;
+		top: 172px;
+		z-index: 1;
+		width: 725px;
+		height: 343px;
+		background: rgba(255, 255, 255, 0.7);
+		filter: blur(250px);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+	&.action_ellips4 {
+		position: absolute;
+		left: -72px;
+		top: 128px;
+		width: 873px;
+		height: 376px;
+		background: rgba(255, 255, 255, 0.7);
+		filter: blur(250px);
+	}
+
+
+	&.action_plane {
+		position: absolute;
+		top: 72px;
+		left: -560px;
+
+		&::after {
+			content: url('../img/plane.png');
+		}
+	}
+
+	&.action_statistic {
+		position: absolute;
+		bottom: 77px;
+		right: 155px;
+
+		&::after {
+			content: url('../img/statistic.png');
+		}
+	}
+}
+
+h2.bg-label {
+	font-weight: normal;
+	margin: 0;
+	text-align: center;
+	line-height: 224px;
+	color: rgba(255, 255, 255, 0.27);
+	font-size: 140px;
+	text-transform: uppercase;
+}
+
+.close {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 6%;
+	right: 4%;
+	cursor: pointer;
+	z-index: 3;
+	
+	&::before {
+		content: '';
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		background: #fff;
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&::after {
+		content: '';
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		background: #fff;
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}

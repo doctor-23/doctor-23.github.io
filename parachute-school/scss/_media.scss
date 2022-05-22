@@ -1,0 +1,1656 @@
+@media screen and (max-width: 1900px) {
+	.container {
+    max-width: 960px;
+  }
+
+  html {
+    font-size: 17px;
+  }
+
+  h2.bg-label {
+    font-size: 100px;
+  }
+
+  section#first-screen {
+    header#header {
+      .social-nets {
+        margin-left: 25px;
+      }
+
+      #nav-menu {
+        margin: 0 25px;
+      }
+    }
+
+    section#first {
+      h2.bg-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+        right: 0;
+        color: rgba(255, 255, 255, 0.40);
+      }
+
+      .offer {
+        padding-top: calc(100vh - 50% - 91px);
+      }
+
+      span {
+        &.action_plane {
+          left: -545px;
+          top: 80px;
+          transform: scale(0.95);
+        }
+
+        &.action_parachute-1::after {
+          content: none;
+        }
+
+        &.action_parachute-2 {
+          right: auto;
+          left: 208px;
+          bottom: 45px;
+        }
+
+        &.action_parachute-wing-1 {
+          transform: rotate(-16.88deg) scale(0.8);
+          right: -270px;
+        }
+      }
+
+      i.action_mouse {
+        left: 10px;
+      }
+    }
+  }
+
+  section#about {
+    span {
+      transform: scale(0.65);
+
+      &.action_cloud_1 {
+        left: -318px;
+        top: 154px;
+      }
+
+      &.action_cloud_2 {
+        top: 171px;
+        right: -284px;
+      }
+
+      &.action_cloud_3 {
+        bottom: -194px;
+        left: 129px;
+      }
+    }
+
+    .block-about {
+      &.block_1-about {
+        img {
+          object-fit: cover;
+          width: 518px;
+        }
+
+        .about__text-block {
+          margin-right: 0;
+          margin-top: 20px;
+
+          h4 {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      &.block_2-about {
+        .about__text-block {
+          ul {
+            li {
+              line-height: 40px;
+            }
+          }
+        }
+
+        img {
+          object-fit: cover;
+          width: 656px;
+        }
+      }
+    }
+  }
+
+  section#about_school {
+    h2.bg-label {
+      top: -77px;
+    }
+
+    h3 {
+      margin-left: -6px;
+    }
+
+    .invitation {
+      flex-direction: column;
+      margin-bottom: 50px;
+      margin-right: 0;
+
+      .invitation__img {
+        margin-bottom: 30px;
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
+      .invitation__text {
+        flex-basis: 50%;
+        margin-left: 50%;
+
+        .invitation__text-inf {
+          margin-bottom: 20px;
+        }
+
+        h4 {
+          line-height: 22px;
+
+          &:first-child {
+            margin-bottom: 10px;
+          }
+        }
+
+        p {
+          line-height: 26px;
+        }
+
+        .invitation__text-list {
+          ul {
+            li {
+              margin-bottom: 0 !important;
+              line-height: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    span.action_cloud_4 {
+      top: 5px;
+      left: -581px;
+    }
+  }
+
+  section#learnProgramme {
+    .programme-list {
+      margin-top: 0;
+
+      li {
+        &.list__block {
+
+          &:nth-child(2) {
+            top: 46%;
+            left: 20%;
+            bottom: auto;
+          }
+
+          &:nth-child(4) {
+            left: 10%;
+            top: 9%;
+          }
+
+          &:nth-child(6) {
+            left: 0;
+            right: 0;
+          }
+
+          &:nth-child(8) {
+            right: 10%;
+            top: 9%;
+          }
+
+          &:nth-child(10) {
+            top: 46%;
+            right: 20%;
+            bottom: auto;
+          }
+        }
+
+        &.list__line {
+          display: none;
+        }
+
+        &:last-child {
+          bottom: auto;
+          top: 90px;
+          left: -68px;
+
+        }
+      }
+    }
+
+    .postscript {
+      margin-top: -70px;
+    }
+
+    span {
+      transform: scale(0.7);
+
+      &.action_cloud.action_cloud_5 {
+        left: -292px;
+        bottom: -35px;
+      }
+
+      &.action_cloud.action_cloud_6 {
+        bottom: -180px;
+        right: -326px;
+      }
+    }
+  }
+
+  section#graduates {
+    h2.bg-label {
+      top: -80px;
+    }
+  }
+
+  footer#footer {
+    .ftr_str-1 {
+      .footer_social-nets {
+        margin: 0 25px;
+        flex-grow: 1;
+
+        li {
+          margin: 0 !important;
+        }
+      }
+
+      #footer_nav-menu {
+        margin-right: 25px;
+      }
+
+      .btn-link {
+        margin: 0;
+      }
+
+      .top-arrow {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        margin-left: -10px;
+      }
+    }
+
+    .ftr_str-2 {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .copyright {
+        margin-top: 20px;
+      }
+
+      .partners {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width: 991.99px) {
+  .container {
+    max-width: 720px;
+  }
+
+  section#first-screen {
+    header#header {
+      .burgerMenu {
+        display: block;
+      }
+
+      .social-nets {
+        display: flex;
+        justify-content: center;
+
+        ul {
+          max-width: 138px;
+          width: 100%;
+        }
+      }
+
+      #nav-menu {
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: 100% 0;
+        transition: 0.5s ease-in-out;
+        background: #F8F8F8;
+        border-radius: 10px;
+        width: 100%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        z-index: 10;
+
+        &.scale {
+          transform: scaleX(1);
+        }
+
+        ul {
+          width: 100%;
+          margin: 0 75px 0 15px;
+        }
+      }
+
+      .btn-link {
+        margin-right: 100px;
+      }
+    }
+
+    section#first {
+      h2.bg-label {
+        font-size: 82px;
+        line-height: normal;
+      }
+
+      span {
+        &.action_plane {
+          transform: scale(0.8);
+          top: 0;
+          left: -420px;
+        }
+
+        &.action_parachute-2 {
+          transform: scale(0.8);
+          left: -20px;
+          bottom: 30px;
+        }
+
+        &.action_statistic {
+          transform: scale(0.8);
+          bottom: 0;
+          right: 65px;
+        }
+
+        &.action_parachute-wing-1 {
+          transform: rotate(-16.88deg) scale(0.6);
+          right: -330px;
+          bottom: 0px;
+        }
+      }
+    }
+  }
+
+  section#about {
+    padding-top: 50px;
+
+    h2.bg-label {
+      font-size: 90px;
+    }
+
+    .block-about {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &.block_1-about {
+        img {
+          width: 100%;
+        }
+      }
+
+      &.block_2-about {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+
+        img {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    
+    span {
+      &.action_cloud_1 {
+        left: -210px;
+        top: 215px;
+      }
+
+      &.action_cloud_2 {
+        top: 555px;
+      }
+
+      &.action_cloud_3 {
+        bottom: 120px;
+        left: -155px;
+      }
+    }
+  }
+
+  section#about_school {
+    h2.bg-label {
+      line-height: normal;
+      font-size: 85px;
+      top: -18px;
+    }
+
+    .invitation {
+      .invitation__text {
+        flex-basis: 100%;
+        margin-left: 0;
+        display: flex;
+        position: relative;
+        z-index: 5;
+
+        .invitation__text-inf {
+          flex-basis: 100%;
+          margin-right: 50px;
+          max-width: none;
+          width: 100%;
+          margin-bottom: 0;
+
+          h4 {
+            line-height: 30px;
+          }
+
+          p {
+            line-height: 32px;
+          }
+        }
+
+        .invitation__text-list {
+          max-width: none;
+          width: 100%;
+
+          ul {
+            li {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      &.action_cloud_4 {
+        top: -70px;
+        left: -630px;
+      }
+    }
+  }
+
+  section#learnProgramme {
+    padding-top: 70px;
+
+    h2.bg-label {
+      line-height: normal;
+      font-size: 85px;
+      top: -22px;
+    }
+
+    .programme-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 400px;
+
+      li {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        flex-basis: 45%;
+        max-width: 690px;
+        margin: 0 0 30px !important;
+
+        &:nth-child(10) {
+          margin: 0 auto !important;
+        }
+
+        &:last-child {
+          position: absolute;
+          top: -400px !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          width: 600px;
+          height: 392px;
+
+          img {
+            object-fit: cover;
+            max-width: 600px;
+          }
+        }
+      }
+    }
+
+    .postscript {
+      margin-top: 90px;
+    }
+
+    span {
+      &.action_cloud {
+        &.action_cloud_5 {
+          left: -403px;
+          bottom: auto;
+          top: 165px;
+        }
+
+        &.action_cloud_6 {
+          bottom: auto;
+          right: -460px;
+          top: 50px;
+        }
+
+        &.action_cloud-bg {
+          display: none;
+        }
+      }
+    }
+  }
+
+  section#graduates {
+    h2.bg-label {
+      font-size: 75px;
+    }
+  }
+
+  section#feedback {
+    h2.bg-label {
+      z-index: 1;
+    }
+  }
+
+  footer#footer {
+    .ftr_str-1 {
+      .footer_social-nets {
+        margin: 0;
+        flex-grow: unset;
+        flex-basis: 30%;
+      }
+      #footer_nav-menu {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 540px;
+  }
+
+  h2.bg-label {
+    font-size: 60px !important;
+  }
+
+  section#first-screen {
+    header#header {
+      #nav-menu {
+        width: auto;
+        height: auto;
+        padding: 30px 25px;
+        right: 0;
+        top: 0;
+
+
+        ul {
+          flex-direction: column;
+          justify-content: space-between;
+          height: 150px;
+          margin: 0;
+        }
+      }
+
+      .btn-link {
+        margin-right: 55px;
+      }
+    }
+
+    section#first {
+      h2.bg-label {
+        width: 100%;
+        right: 0;
+        left: auto;
+        text-align: left;
+        top: 30px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .offer {
+        padding-top: calc(100vh / 2.3 - 182px);
+        margin-left: 0;
+        margin-top: 0;
+      }
+
+      span {
+        &.action_parachute-1 {
+          bottom: 260px;
+          left: 195px;
+
+          &::after {
+            content: url("../img/parachute-1.png");
+          }
+        }
+
+        &.action_parachute-2 {
+          bottom: 90px;
+        }
+
+        &.action_statistic {
+          right: 0;
+        }
+
+        &.action_parachute-wing-1 {
+          bottom: 240px;
+        }
+      }
+    }
+  }
+
+  section#about {
+    padding-bottom: 0;
+
+    h2.bg-label {
+      top: -91px;
+    }
+
+    .block-about {
+      &.block_1-about {
+        margin-bottom: 50px;
+
+        .about__text-block {
+          position: relative;
+          z-index: 3;
+        }
+      }
+
+      &.block_2-about {
+        align-items: center;
+        
+        .about__text-block {
+          position: relative;
+          z-index: 3;
+        }
+      }
+    }
+
+    span {
+      &.action_cloud_1 {
+        left: -201px;
+        top: 125px;
+      }
+
+      &.action_cloud_2 {
+        top: 335px;
+      }
+
+      &.action_cloud_3 {
+        bottom: 90px;
+        left: -183px;
+      }
+    }
+  }
+
+  section#about_school {
+    h2.bg-label {
+      top: -8px;
+    }
+
+    .invitation {
+      .invitation__text {
+        .invitation__text-inf {
+          p {
+            text-align: justify;
+          }
+        }
+      }
+    }
+
+    span {
+      &.action_cloud_4 {
+        top: -167px;
+        left: -732px;
+      }
+    }
+  }
+
+  section#learnProgramme {
+    padding-bottom: 0;
+
+    h2.bg-label {
+      top: -15px;
+    }
+
+    .programme-list {
+      li {
+        flex-basis: 100%;
+
+        &:last-child {
+          left: -45px !important;
+          bottom: auto !important;
+          right: auto !important;
+        }
+
+        &.list__block {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          .block__item-2 {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .postscript {
+      margin-top: 240px;
+    }
+
+    span.action_cloud {
+      &.action_cloud_5 {
+        left: -492px;
+      }
+
+      &.action_cloud_6 {
+        right: -553px;
+      }
+    }
+  }
+
+  section#graduates {
+    h2.bg-label {
+      font-size: 57px !important;
+      top: -95px;
+    }
+  }
+
+  section#feedback {
+    padding-top: 0;
+
+    .feedback-block {
+      position: relative;
+      z-index: 1;
+    }
+
+    span {
+      &.action_wing-2 {
+        transform: scale(0.7);
+        bottom: -310px;
+      }
+    }
+  }
+
+  footer#footer {
+    .ftr_str-2 {
+      .partners {
+        flex-wrap: wrap;
+
+        .partner-4 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+// and (max-height: 899.99px)
+
+@media screen and (max-width: 579.99px) {
+  .container {
+    max-width: 100%;
+  }
+
+  section#first-screen {
+    background-image: url('../img/mobile/BG-1_mob.jpg') !important;
+
+    header#header {
+      
+    }
+
+    section#first {
+      h2.bg-label {
+        width: 100%;
+        top: 0;
+      }
+
+      .offer {
+        float: right;
+        padding-top: 15px;
+      }
+
+      span {
+        &.action_plane {
+          top: 0;
+          left: -25px;
+
+          &::after {
+            content: url('../img/mobile/plane.png');
+          }
+        }
+        &.action_parachute-1 {
+          &::after {
+            content: none;
+          }
+        }
+
+        &.action_parachute-2 {
+          &::after {
+            content: none;
+          }
+        }
+
+        &.action_parachute-wing-1 {
+          &::after {
+            content: none;
+          }
+        }
+
+        &.action_statistic {
+          bottom: auto;
+          top: 24px;
+        }
+      }
+
+      i.action_mouse {
+        bottom: 10px;
+      }
+    }
+  }
+
+  section#about {
+    span {
+      &.action_cloud_1 {
+        left: -184px;
+        top: 134px;
+      }
+    }
+  }
+
+  section#learnProgramme {
+    .programme-list {
+      li {
+        &:last-child {
+          width: 100%;
+          left: auto !important;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 449.99px) {
+  h2.bg-label {
+    font-size: 36px !important;
+  }
+
+  section#first-screen {
+    
+    span.action_ellipse-top {
+      display: none;
+    }
+
+    header#header {
+      #nav-menu {
+        width: 150px;
+        height: 331px;
+        flex-direction: column;
+
+        ul {
+          height: 331px;
+        }
+      }
+    }
+
+    section#first {
+      position: relative;
+      z-index: 0;
+
+      h2.bg-label {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 33px !important;
+        right: auto;
+        left: 0;
+        text-align: center;
+        top: 15px;
+      }
+
+      .offer {
+        width: 310px;
+        float: none;
+        margin: 0 auto;
+        padding-top: 120px;
+
+        h1 {
+          font-size: 1.625rem;
+          line-height: 35px;
+        }
+
+        .btn-links {
+          a {
+            &:first-child {
+              width: 132px;
+            }
+
+            &:last-child {
+              width: 138px;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      span {
+        &.action_plane {
+          top: -78px;
+          left: -99px;
+          transform: scale(1);
+          z-index: 1;
+        }
+
+        &.action_wing-ellips, &.action_wing-ellips2 {
+          display: none;
+        }
+
+        &.action_statistic {
+          display: none;
+
+          &::after {
+            content: none;
+          }
+        }
+
+        &.action_parachute-1 {
+          left: 48px;
+          bottom: 185px;
+
+          &::after {
+            content: url('../img/mobile/parachute-1.png');
+          }
+        }
+
+        &.action_parachute-2 {
+          right: 75px;
+          left: auto;
+          bottom: 157px;
+
+          &::after {
+            content: url('../img/mobile/parachute-2.png');
+          }
+        }
+
+        &.action_parachute-wing-1 {
+          left: 82px;
+          right: auto;
+          bottom: 146px;
+
+          &::after {
+            content: url('../img/mobile/parachute-wing-1.png');
+          }
+        }
+      }
+    }
+  }
+
+  section#about {
+    h2.bg-label {
+      left: 15px;
+      top: -94px;
+    }
+
+    h3 {
+      margin-left: 0;
+    }
+
+    span {
+      &.action_cloud_1 {
+        left: 36px;
+        top: 167px;
+        transform: scale(1);
+        
+        &::after {
+          content: url('../img/mobile/cloud_1.png')
+        }
+      }
+
+      &.action_cloud_2 {
+        right: 0;
+        top: 606px;
+        transform: scale(1);
+
+        &::after {
+          content: url('../img/mobile/cloud_2.png')
+        }
+      }
+
+      &.action_cloud_3 {
+        bottom: 315px;
+        left: 0;
+        transform: scale(1);
+
+        &::after {
+          content: url('../img/mobile/cloud_3.png')
+        }
+      }
+    }
+  }
+
+  section#about_school {
+    h2.bg-label {
+      top: -12px;
+      left: 15px;
+    }
+
+    h3 {
+      margin-left: 0;
+    }
+
+    .invitation {
+      .invitation__text {
+        flex-direction: column;
+
+        .invitation__text-list {
+          margin-top: 59px;
+
+          ul {
+            justify-content: space-around;
+
+            li {
+              flex-basis: 40%;
+              align-items: flex-start;
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      &.action_cloud_4 {
+        left: 0;
+        top: 165px;
+
+        &::after {
+          content: url('../img/mobile/cloud_4.png');
+        }
+      }
+    }
+  }
+
+  section#learnProgramme {
+    .programme-list {
+      margin-top: 245px;
+
+      li {
+        &.list__block {
+          .block__item-1 {
+            margin-right: 48px;
+          }
+        }
+        &:last-child {
+          height: 184px;
+          top: -225px !important;
+        }
+      }
+    }
+
+    span {
+      &.action_cloud {
+        &.action_cloud_5 {
+          left: 35px;
+          top: 168px;
+          transform: scale(1);
+
+          &::after {
+            content: url('../img/mobile/cloud_5.png')
+          }
+        }
+
+        &.action_cloud_6 {
+          top: 165px;
+          right: 0;
+          transform: scale(1);
+
+          &::after {
+            content: url('../img/mobile/cloud_6.png')
+          }
+        }
+      }
+    }
+  }
+
+  section#graduates {
+    h2.bg-label {
+      font-size: 39px !important;
+      top: -110px;
+    }
+
+    h3 {
+      margin-bottom: 28px;
+    }
+
+    ul.graduates__list {
+      li {
+        height: 294px !important;
+        flex-basis: 47% !important;
+        padding-top: 28px !important;
+
+        &:first-child {
+          flex-basis: 100% !important;
+          height: auto !important;
+          padding-bottom: 29px;
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  section#feedback {
+    padding-bottom: 212px;
+    padding-top: 6px;
+
+    h2.bg-label {
+      top: -105px;
+    }
+
+    h3 {
+      margin-bottom: 23px;
+    }
+
+    .feedback-block {
+      max-width: 100%;
+      #mailpoet_form_1 {
+        form.mailpoet_form {
+          input {
+            width: 100%;
+
+            &.mailpoet_submit {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      // bottom: 74px;
+      // left: 35px;
+
+      &.action_wing-2 {
+        bottom: -220px;
+        left: 46px;
+        transform: scale(1);
+        z-index: 1;
+
+        &::after {
+          content: url('../img/mobile/parachute-wing-2.png');
+        }
+      }
+
+      &.action_cloud_7 {
+        bottom: -226px;
+        left: -21px;
+
+        &::after {
+          content: url('../img/mobile/cloud_7.png')
+        }
+      }
+
+      &.action_cloud_8 {
+        bottom: -222px;
+        right: -7px;
+
+        &::after {
+          content: url('../img/mobile/cloud_8.png')
+        }
+      }
+
+      &.action_ftr_prt-1 {
+        bottom: -181px;
+        left: 16px;
+
+        &::after {
+          content: url('../img/mobile/ftr_prt-1.png')
+        }
+      }
+
+      &.action_ftr_prt-2 {
+        bottom: -142px;
+        left: 130px;
+
+        &::after {
+          content: url('../img/mobile/ftr_prt-2.png')
+        }
+      }
+
+      &.action_ftr_prt-3 {
+        right: 91px;
+        top: 37px;
+
+        &::after {
+          content: url('../img/mobile/ftr_prt-1.png');
+        }
+      }
+
+      &.action_ftr-plane {
+        left: 50px;
+        bottom: -153px;
+
+        &::after {
+          content: url('../img/mobile/ftr-plane.png');
+        }
+      }
+    }
+  }
+
+  footer#footer {
+    .ftr_str-1 {
+      .footer_social-nets {
+        flex-basis: 40%;
+      }
+
+      .btn-link {
+        display: none;
+      }
+    }
+
+    .ftr_str-2 {
+      .partners {
+        img:first-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 419.99px) {
+  
+  section#first-screen {
+    background-image: url('../img/mobile/BG-1_mob.jpg') !important;
+
+    
+    span.action_ellipse-top {
+      display: none;
+    }
+
+    section#first {
+      position: relative;
+      z-index: 0;
+
+      h2.bg-label {
+        color: rgba(255, 255, 255, 0.4);
+        width: 100%;
+        text-align: center;
+        top: 15px;
+      }
+
+      .offer {
+        width: 310px;
+        float: none;
+        margin: 0 auto;
+        padding-top: calc(100vh / 10);
+
+        h1 {
+          font-size: 1.625rem;
+          line-height: 35px;
+        }
+
+        .btn-links {
+          a {
+            &:first-child {
+              width: 132px;
+            }
+
+            &:last-child {
+              width: 138px;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      span {
+        &.action_plane {
+          top: -55px;
+          left: -155px;
+          transform: scale(1);
+          z-index: 1;
+
+          &::after {
+            content: url('../img/mobile/plane.png');
+          }
+        }
+
+        &.action_wing-ellips, &.action_wing-ellips2 {
+          display: none;
+        }
+
+        &.action_statistic {
+          display: none;
+
+          &::after {
+            content: none;
+          }
+        }
+
+        &.action_parachute-1 {
+          left: 48px;
+          bottom: 185px;
+
+          &::after {
+            content: url('../img/mobile/parachute-1.png');
+          }
+        }
+
+        &.action_parachute-2 {
+          right: 75px;
+          left: auto;
+          bottom: 157px;
+
+          &::after {
+            content: url('../img/mobile/parachute-2.png');
+          }
+        }
+
+        &.action_parachute-wing-1 {
+          left: 82px;
+          right: auto;
+          bottom: 146px;
+
+          &::after {
+            content: url('../img/mobile/parachute-wing-1.png');
+          }
+        }
+      }
+
+      i {
+        z-index: 1;
+      }
+    }
+  }
+
+  section#about {
+    span {
+      &.action_cloud_1 {
+        left: 75px;
+        top: 240px;
+        transform: scale(1);
+        
+        &::after {
+          content: url('../img/mobile/cloud_1.png')
+        }
+      }
+
+      &.action_cloud_2 {
+        right: -28px;
+        top: 610px;
+        transform: scale(2.5);
+
+        &::after {
+          content: url('../img/mobile/cloud_2.png')
+        }
+      }
+
+      &.action_cloud_3 {
+        bottom: 308px;
+        left: 50px;
+        transform: scale(1.3);
+
+        &::after {
+          content: url('../img/mobile/cloud_3.png')
+        }
+      }
+    }
+  }
+
+  section#about_school {
+    h2.bg-label {
+      top: -12px;
+      left: 15px;
+    }
+
+    h3 {
+      margin-left: 0;
+    }
+
+    .invitation {
+      .invitation__text {
+        flex-direction: column;
+
+        .invitation__text-list {
+          margin-top: 59px;
+
+          ul {
+            justify-content: space-around;
+
+            li {
+              flex-basis: 40%;
+              align-items: flex-start;
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      &.action_cloud_4 {
+        left: 80px;
+        top: 240px;
+        transform: scale(1.3);
+
+        &::after {
+          content: url('../img/mobile/cloud_4.png');
+        }
+      }
+    }
+  }
+
+  section#learnProgramme {
+    .programme-list {
+      margin-top: 345px;
+
+      li {
+        &.list__block {
+          .block__item-1 {
+            margin-right: 48px;
+          }
+        }
+        &:last-child {
+          width: 600px;
+          height: 392px;
+          top: -375px !important;
+        }
+      }
+    }
+
+    span {
+      &.action_cloud {
+        &.action_cloud_5 {
+          left: -65px;
+          top: 310px;
+          transform: scale(2);
+
+          &::after {
+            content: url('../img/mobile/cloud_5.png')
+          }
+        }
+
+        &.action_cloud_6 {
+          top: 310px;
+          right: -20px;
+          transform: scale(2);
+
+          &::after {
+            content: url('../img/mobile/cloud_6.png')
+          }
+        }
+      }
+    }
+  }
+
+  section#graduates {
+    h2.bg-label {
+      font-size: 39px !important;
+      top: -110px;
+    }
+
+    h3 {
+      margin-bottom: 28px;
+    }
+
+    ul.graduates__list {
+      li {
+        height: 294px !important;
+        flex-basis: 47% !important;
+        padding-top: 28px !important;
+
+        &:first-child {
+          flex-basis: 100% !important;
+          height: auto !important;
+          padding-bottom: 29px;
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  section#feedback {
+    padding-bottom: 212px;
+    padding-top: 6px;
+
+    h2.bg-label {
+      top: -96px;
+    }
+
+    h3 {
+      margin-bottom: 23px;
+    }
+
+    .feedback-block {
+      max-width: 100%;
+      #mailpoet_form_1 {
+        form.mailpoet_form {
+          input {
+            width: 100%;
+
+            &.mailpoet_submit {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      // bottom: 74px;
+      // left: 35px;
+
+      &.action_wing-2 {
+        bottom: -220px;
+        left: 46px;
+        transform: scale(1);
+        z-index: 1;
+
+        &::after {
+          content: url('../img/mobile/parachute-wing-2.png');
+        }
+      }
+
+      &.action_cloud_7 {
+        bottom: -226px;
+        left: -21px;
+
+        &::after {
+          content: url('../img/mobile/cloud_7.png')
+        }
+      }
+
+      &.action_cloud_8 {
+        bottom: -222px;
+        right: -7px;
+
+        &::after {
+          content: url('../img/mobile/cloud_8.png')
+        }
+      }
+
+      &.action_ftr_prt-1 {
+        bottom: -181px;
+        left: 16px;
+
+        &::after {
+          content: url('../img/mobile/ftr_prt-1.png')
+        }
+      }
+
+      &.action_ftr_prt-2 {
+        bottom: -142px;
+        left: 130px;
+
+        &::after {
+          content: url('../img/mobile/ftr_prt-2.png')
+        }
+      }
+
+      &.action_ftr_prt-3 {
+        right: 91px;
+        top: 37px;
+
+        &::after {
+          content: url('../img/mobile/ftr_prt-1.png');
+        }
+      }
+
+      &.action_ftr-plane {
+        left: 50px;
+        bottom: -153px;
+
+        &::after {
+          content: url('../img/mobile/ftr-plane.png');
+        }
+      }
+    }
+  }
+
+  footer#footer {
+    .ftr_str-1 {
+      .footer_social-nets {
+        flex-basis: 40%;
+      }
+
+      .btn-link {
+        display: none;
+      }
+    }
+
+    .ftr_str-2 {
+      .partners {
+        img:first-child {
+          margin: 0;
+        }
+
+        .partner-3 {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

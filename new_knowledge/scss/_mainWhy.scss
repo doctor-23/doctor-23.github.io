@@ -1,0 +1,86 @@
+.mainWhy {
+    padding: 128px 0 161px;
+}
+
+.mainWhyTitle {
+    margin-bottom: 78px;
+    font-size: 46px;
+    line-height: 56px;
+}
+
+.mainWhyBlocks {
+    display: flex;
+    column-gap: 49px;
+}
+
+.mainWhyBlocksItem {
+    border-radius: 50px;
+    height: max-content;
+
+    &:not(.mainWhyBlocksItemLast) {
+        padding: 22px 26px 10px 136px;
+        background: 31px center / 76.69px 70.43px no-repeat url('../img/whyPresent.png');
+        background-color:  rgba(109, 114, 214, 0.1);
+    }
+}
+
+.mainWhyBlocksItemFirst {
+    position: relative;
+    background-image: none;
+    background-color:  rgba(109, 114, 214, 0.1);
+
+    &::before {
+        content: url('../img/whyPresentFirst.png');
+        position: absolute;
+        top: 50%;
+        left: -52px;
+        margin-top: -94px;
+    }
+}
+
+.mainWhyBlocksItemLast {
+    padding: 53px 61px 110px 87px;
+    border: 1px solid #C4C4C4;
+}
+
+.mainWhyBlocksColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.mainWhyBlocksItemTitle {
+    display: inline-block;
+    margin-bottom: 19px;
+    color: var(--text-color);
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.mainWhyBlocksItemLastTitle {
+    margin-bottom: 36px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.mainWhyBlocksItemList {
+    &:not(.mainWhyBlocksItemLastList) {
+        &>li {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            line-height: 20px;
+        }
+    }
+}
+
+.mainWhyBlocksItemLastList {
+    .commonListItem {
+        &::before {
+            margin-right: 9px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}

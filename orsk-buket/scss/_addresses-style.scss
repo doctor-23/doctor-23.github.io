@@ -1,0 +1,183 @@
+main.addresses-page {
+    h3 {
+        font-family: 'Nunito';
+        font-size: 1.2857142857142858rem;
+    }
+    .breadcrump {
+        padding: 20px 15px 15px;
+    }
+
+    section.section-addresses {
+        padding-bottom: 21px;
+
+        .addresses__title {
+            margin-bottom: 30px;
+        }
+
+        .addresses-wrapper {
+            border-top: 1px solid #e7e7e7;
+        }
+
+        .flex-wrapper {
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .addresses-list {
+            flex-basis: 31.02%;
+            max-height: 339px;
+            border-bottom: 1px solid #e7e7e7;
+
+            .list__item {
+                padding: 10px 0;
+                border-bottom: 1px solid #e7e7e7;
+
+                a {
+                    color: inherit;
+                }
+
+                .item-title {
+                    margin-bottom: 10px;
+                }
+
+                .item-desc {
+                    font-size: 0.8571428571428571rem;
+                }
+
+                &:hover {
+                    .item-title {
+                        color: #E65497;
+                    }
+                }
+
+                &.active {
+                    padding-left: 20px;
+                    background: #f8f8f8;
+                }
+            }
+
+            .mCSB_inside>.mCSB_container {
+                margin-right: 0;
+            }
+
+            .mCSB_scrollTools {
+                width: 4px;
+                
+                .mCSB_dragger {
+                    height: 150px !important;
+                    .mCSB_dragger_bar {
+                        background-color: #E65497;
+                        border-radius: 0;
+
+                        &:hover {
+                            background-color: #E65497;
+                        }
+                    }
+
+                    .mCSB_draggerRail {
+                        display: none;
+                    }
+                }
+            }  
+        }
+
+        .addresses_map {
+            flex-basis: 68.98%;
+            height: 339px;
+            border-bottom: 1px solid #e7e7e7;
+
+            .active {
+                background-image: url("../img/icon/map-marker_rose.png") !important;
+            }
+        }
+
+        .addresses-desc {
+            flex-basis: 100%;
+            margin-top: 46px;
+
+            .addresses-desc__item {
+                // display: none;
+                position: absolute;
+                transform: scaleY(0);
+                transform-origin: 100% 0;
+
+                &.active {
+                    position: static;
+                    transform: scaleY(1);
+                    transition: .3s ease-in-out;
+                    display: block;
+                }
+            }
+
+            .item-title {
+                margin-bottom: 10px;
+            }
+
+            .item-wrapper {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 10px;
+                border-top: 1px solid #e7e7e7;
+            }
+
+            .item-left {
+                flex-basis: 58.98%;
+            }
+
+            .item-right {
+                flex-basis: 34.09%;
+
+                .right__address-iamge {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .left__item {
+                display: flex;
+                justify-content: space-between;
+
+                .item-headind {
+                    flex-basis: 19.4%;
+                    font-weight: bold;
+                }
+
+                .item-desc {
+                    flex-basis: 77.07%;
+                }
+
+                &.left__time {
+                    margin-bottom: 10px;
+
+                    .item-desc {
+                        font-size: 0.8571428571428571rem;
+                    }
+                }
+            }
+        }
+
+        .show-list,
+        .show-map {
+            display: none;
+            height: 40px;
+            margin: 20px auto 0;
+            padding: 0 86.5px;
+            color: #fff;
+            font-weight: 600;
+            background: #448370;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.layoutClass {
+    display: block;
+    width: 26px;
+    height: 30px;
+    background: url('../img/icon/map-marker_violet.png');
+
+    &.active {
+        background-image: url('../img/icon/map-marker_rose.png')
+    }
+}

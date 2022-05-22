@@ -1,0 +1,95 @@
+main.page-delivery_payment {
+    padding-bottom: 80px;
+
+    .breadcrump {
+        padding: 20px 15px 15px;
+    }
+
+    .delivery_payment__heading {
+        margin-bottom: 30px;
+    }
+
+    .delivery-wrapper,
+    .payment-wrapper {
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            flex-basis: 23.3%;
+            min-width: 205px;
+            min-height: 200px;
+            margin-right: 20px;
+            object-fit: contain;
+        }
+
+        .delivery-list,
+        .payment-list {
+            flex-basis: 57.37%;
+        }
+
+        .delivery-list__item,
+        .payment-list__item {
+            position: relative;
+            margin-bottom: 5px;
+            padding-left: 16px;
+            line-height: 25px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 11px;
+                display: flex;
+                width: 6px;
+                height: 6px;
+                margin-right: 10px;
+                background: #9469AF;
+            }
+
+            &:first-child {
+                margin-bottom: 0;
+                padding-left: 0;
+                &::before {
+                    content: none;
+                }
+            }
+        }
+
+        .payment-list__item_subHeading {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .delivery-list__item_heading,
+        .payment-list__item_heading {
+            margin-bottom: 15px;
+            font-family: 'Nunito';
+            font-size: 1.2857142857142858rem;
+        }
+    }
+
+    .payment-wrapper {
+        margin-top: 50px;
+
+        .payment-list__item {
+            &:nth-child(2) {
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            &:last-child {
+                margin-top: 10px;
+            }
+
+            &:nth-child(2),
+            &:last-child {
+                margin-bottom: 0;
+                padding-left: 0;
+
+                &::before {
+                    content: none;
+                }
+            }
+        }
+    }
+}

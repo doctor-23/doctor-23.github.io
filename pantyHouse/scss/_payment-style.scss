@@ -1,0 +1,71 @@
+section#payment {
+  padding-top: 80px;
+  padding-bottom: 152px;
+
+  h1 {
+    font-size: 2.4rem;
+    line-height: 96px;
+    font-family: 'Cormorant';
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+
+  .payment-wrapper {
+    display: flex;
+  }
+
+  .profile-menu {
+    &.second-menu-nav {
+      margin-right: 94px;
+    }
+  }
+
+  .payment-inf {
+    li {
+      margin-bottom: 60px;
+      padding-left: 77px;
+      background: url('../img/icon/credit-card.png') left top no-repeat;
+      
+      &:nth-child(1) {
+        background: url('../img/icon/cash.png') left top no-repeat;
+
+        p {
+          max-width: 390px;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        p {
+          max-width: 379px;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(3) {
+        p {
+          max-width: 574px;
+          width: 100%;
+          font-size: 0.8rem;
+        }
+      }
+
+      h5 {
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 22px;
+        margin: 0;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 0.7rem;
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+  }
+}

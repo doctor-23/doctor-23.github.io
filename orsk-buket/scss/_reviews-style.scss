@@ -1,0 +1,101 @@
+main.page-reviews {
+    .breadcrump {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    section.reviews__all {
+        padding-top: 0;
+
+        .reviews__heading {
+            margin-bottom: 20px;
+            padding-bottom: 0;
+            border: none;
+        }
+
+        .container.flex-wrapper {
+            border-top: 1px solid #e7e7e7;
+        }
+
+        .reviews__slider {
+            margin-top: 0;
+        }
+
+        .item__heading {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 29.81%;
+
+            .heading-name {
+                display: inline-block;
+                max-width: 205px;
+                margin-bottom: 15px;
+            }
+
+            .item__product {
+                flex-basis: 100%;
+                justify-content: flex-start;
+
+                img {
+                    height: 82px;
+                    width: 82px;
+                }
+
+                .product__wrapper {
+                    flex-basis: 100%;
+                }
+            }
+        }
+
+        .review-wrapper {
+            flex-basis: 65.22%;
+            justify-content: space-between;
+
+            .heading-date {
+                color: #aeaeae;
+                font-size: 0.8571428571428571rem;
+            }
+
+            .item__text {
+                margin: 10px 0 0;
+            }
+
+            .item__reviews-photo {
+                margin-top: 10px;
+            }
+        }
+
+        .catalog__pagination-wrapper {
+            flex-basis: 68%;
+            margin-top: 20px;
+            padding: 0;
+            border: none;
+
+            .flex-wrapper {
+                border: none;
+            }
+
+            .pagination__list-item {
+                &.pag-link {
+                    &.pag-prev {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        svg path {
+                            stroke: #9469AF;
+                        }
+                    }
+
+                    .pag-link__icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    section.may-interested {
+        padding: 50px 0 80px;
+        background: #F8F8F8;
+    }
+}

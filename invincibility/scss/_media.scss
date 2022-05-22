@@ -1,0 +1,541 @@
+@media screen and (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+    padding: 0 15px;
+  }
+
+  header#header {
+    nav {
+      flex-grow: 2;
+    }
+
+    .nav-menu {
+      justify-content: space-around;
+      margin: 0;
+    }
+  }
+
+  section.section-main {
+    padding-bottom: 124px;
+
+    .offer__heading {
+      font-size: 3rem;
+    }
+
+    .offer__underheading {
+      margin-bottom: 30px;
+      font-size: 1.3rem;
+    }
+
+    .offer__description {
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .main-image-wrapper {
+      top: -93px;
+      right: -186px;
+      background-size: contain;
+      height: 640px;
+      width: 567px;
+    }
+  }
+
+  section.coach-team {
+    .coach-slider {
+      max-width: 870px;
+    }
+
+    .slider__item {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  section#process {
+    .list__item {
+      flex-basis: 50%;
+      max-width: 450px;
+      
+      &.list__item-1, &.list__item-2 {
+        max-width: 450px;
+        height: 440px;
+      }
+
+      &.list__item-5 {
+        margin: 30px auto 0;
+      }
+    }
+  }
+
+  section.important {
+    .separator {
+      width: 2px;
+    }
+  }
+
+  section.themes {
+    .list__item {
+      max-width: 450px;
+    }
+  }
+
+  section#price {
+    .list__item {
+      max-width: 450px;
+    }
+  }
+
+  section.visitors {
+    .visitors__slider {
+      max-width: 870px;
+    }
+  }
+
+  section.calendar {
+    .list__item {
+      padding: 39px 30px 39px 75px;
+
+      .item__num {
+        left: 40px;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 1180px) {
+  footer#footer {
+    .container {
+      padding-left: 135px;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+
+  header#header {
+    &.nav_scroll {
+      .burgerMenu {
+        span {
+          background-color: #333;
+
+          &::after, &::before {
+            background-color: #333;
+          }
+        }
+      }
+    }
+
+    .burgerMenu {
+      position: absolute;
+      left: 180px;
+      display: block;
+    }
+
+    nav {
+      position: absolute;
+      z-index: 2;
+      top: 101px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 101px;
+      background: #333;
+      transform: scaleY(0);
+      transform-origin: 100% 0;
+      transition: .5s ease-in-out;
+
+      &.scale {
+        transform: scaleY(1);
+        transition: .5s ease-in-out;
+      }
+    }
+  }
+
+  section.section-main {
+    .main-image-wrapper {
+      right: -400px;
+    }
+  }
+
+  section.coach-team {
+    .coach-slider {
+      max-width: 673px;
+      max-height: none;
+      min-height: 570px;
+    }
+
+    .slider__item {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  section.all-time {
+    .all-time__inf {
+      padding: 417px 58px 65.5px 59px;
+      background-position: top 54px center;
+    }
+  }
+
+  section#process {
+    .process__list {
+      justify-content: center;
+    }
+
+    .list__item {
+      max-width: none !important;
+      min-width: 505px;
+      margin-bottom: 30px !important;
+
+      &:last-child {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  section.themes {
+    .list__item {
+      max-width: 100%;
+      flex-basis: 100%;
+      min-height: 150px;
+      margin-bottom: 30px;
+    }
+  }
+
+  section#price {
+    .price__list {
+      justify-content: center;
+    }
+
+    .list__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-basis: 100%;
+      min-width: 100%;
+
+      .list__heading {
+        text-align: center;
+      }
+
+      &.list__item-1 {
+        margin-bottom: 30px;
+      }
+
+      .separator {
+        max-width: 100%;
+      }
+    }
+  }
+
+  section.visitors {
+    .visitors__slider {
+      max-width: 673px;
+    }
+  }
+
+  section.calendar {
+    .list__item {
+      flex-basis: 33%;
+    }
+  }
+
+  footer#footer {
+    .container {
+      padding-left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 875px) {
+  footer#footer {
+    .container {
+      padding-left: 110px;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+
+  section.section-main {
+    .main-offer {
+      margin: 0 auto;
+    }
+
+    .main-image-wrapper {
+      display: none;
+    }
+  }
+
+  section.main-point {
+    .point__list {
+      .list__item {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 60px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  section.important {
+    .imp__title {
+      margin-top: 17px;
+    }
+
+    .separator {
+      width: 3px;
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+
+    .imp__desc {
+      margin-top: 17px;
+      font-size: 0.875rem;
+    }
+  }
+
+  section.important-second {
+    .imp__title {
+      font-size: 2rem;
+    }
+
+    .separator {
+      margin: 0 25px;
+    }
+  }
+
+  section#results {
+    .list__item {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 60px !important;
+    }
+  }
+
+  section.visitors {
+    .dots-slider {
+      position: absolute;
+      bottom: -35px;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        width: 10px;
+        height: 10px;
+        margin-right: 6.67px;
+        font-size: 0;
+        border: 2px solid #e49a00;
+        border-radius: 50%;
+
+        &.slick-active {
+          background: #e49a00;
+        }
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  section.calendar {
+    .list__item {
+      flex-basis: 50%;
+    }
+  }
+
+  footer#footer {
+    .ftr-str-1 {
+      nav {
+        flex-wrap: wrap;
+
+        .menu-footer__contacts {
+          margin: 20px auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 3rem !important;
+    line-height: 1 !important;
+  }
+
+  header#header {
+
+    &.nav_scroll {
+      .burgerMenu {
+        span.open {
+          background-color: #fff;
+
+          &::after, &::before {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    nav.scale {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+
+      .nav-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        flex-direction: column;
+
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .burgerMenu {
+      left: 155px;
+
+      &.open {
+        left: auto;
+        right: 15px;
+        top: 30px;
+      }
+    }
+
+    #btn-answer {
+      width: 150px;
+    }
+  }
+
+  section.section-main {
+    .offer__heading {
+      font-size: 2.5rem !important;
+      line-height: 1;
+    }
+  }
+
+  section.coach-team {
+    .dots-slider {
+      left: 50%;
+      margin-left: -50px;
+    }
+  }
+
+  section#process {
+    .list__item {
+      flex-basis: 100% !important;
+      min-width: 320px;
+      height: auto !important;
+      padding-bottom: 60px;
+    }
+  }
+
+  section.important {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .imp__title {
+      margin: 47px auto 0;
+    }
+
+    .imp__desc {
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+  }
+
+  section.themes {
+    .list__item {
+      min-height: 250px;
+    }
+  }
+
+  section#price {
+    .list__item {
+      .list__duration {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  section.calendar {
+    .list__item {
+      flex-basis: 100%;
+    }
+  }
+
+  footer#footer {
+    .back-to-top {
+      display: none;
+    }
+
+    .container {
+      padding-left: 15px;
+    }
+
+    .ftr-str-1 {
+      nav {
+        justify-content: center;
+
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          flex-basis: 100%;
+
+          &.menu-footer__about {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+
+    .ftr-str-3 {
+      .str-3__list {
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          &:first-child {
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}

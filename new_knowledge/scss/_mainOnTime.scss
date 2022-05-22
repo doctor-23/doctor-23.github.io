@@ -1,0 +1,60 @@
+.mainOnTime {
+    padding: 70px 0;
+}
+
+.mainOnTimeWrapper {
+    padding: 59px 68px 61px;
+    border: 1px solid #C4C4C4;
+    border-radius: 50px;
+
+    &::after {
+        content: url('../img/timing-bg.png');
+        position: absolute;
+        right: -70px;
+        bottom: -75px;
+    }
+}
+
+.mainOnTimeTitle {
+    max-width: 458px;
+    margin-bottom: 30px;
+    font-size: 46px;
+    line-height: 56px;
+}
+
+.mainOnTimeDescription {
+    max-width: 656px;
+    margin-bottom: 27px;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.mainOnTimeBtn {
+    margin-bottom: 15px;
+    padding: 21px 83px 23px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    background-color: var(--blue);
+    border-color: var(--blue);
+
+    &:hover {
+        background-color: var(--blue-hover);
+        border-color: var(--blue-hover);
+    }
+
+    &:active, &:focus-visible {
+        background-color: var(--blue-active);
+        border-color: var(--blue-active);
+    }
+}
+
+.mainOnTimeCorrection {
+    display: block;
+    max-width: 270px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+}

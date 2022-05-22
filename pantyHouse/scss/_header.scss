@@ -1,0 +1,364 @@
+header#header {
+	height: 190px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	
+	.mob-header {
+		display: none;
+	}
+	
+	nav {
+		ul {
+			display: flex;
+		}
+	}
+	
+	.str_first, .str_second {
+		display: flex;
+		align-items: center;
+		height: 95px;
+		justify-content: space-between;
+	}
+
+	.str_second {
+		line-height: 90px;
+	}
+  .desktop-header {
+    .contact_inf {
+      font-size: 0.8rem;
+      
+      .contact_phone {
+        display: flex;
+        margin-bottom: 10px;
+        
+        .fa-phone {
+          margin-right: 18.75px;
+          cursor: help;
+          
+          &:hover {
+            opacity: 1;
+          }
+        }
+        
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          
+          span {
+            line-height: 22.4px;
+            
+            a {
+              color:inherit;
+              
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .timetable {
+        text-align: right;
+      }
+    }
+
+    .search {
+      label {
+        display: flex;
+        
+        .fa-search {
+          margin-right: 19.61px;
+        }
+
+        input[type='text'] {
+          border: none;
+          border-bottom: 1px solid #000;
+          padding-bottom: 9px;
+          font-size: 0.8rem;
+          width: 253px;
+        }
+      }
+    }
+
+    .all_inf {
+      nav {
+        ul {
+          font-size: 0.6rem;
+          
+          li {
+            padding: 0 8px;
+            
+            a {
+              color: rgba(0, 0, 0, 0.8);
+              
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav-menu {
+      font-size: 0.6rem;
+      
+      nav {
+        ul {
+          li {
+            &.nav-menu_item {
+              margin: 0 18px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+              
+              a {
+                border-bottom: 2px solid transparent;
+              }
+
+              &:hover > a {
+                border-color: #000;
+              }
+            }
+
+            &:hover {
+              & > .sub-menu {
+                transform: scaleY(1);
+              }
+            }
+            
+            a {
+              color: inherit;
+            }
+
+            .sub-menu {
+              position: absolute;
+              z-index: 1;
+              top: 159px;
+              background: #FFF;
+              left: 0;
+              text-transform: lowercase;
+              flex-direction: column;
+              flex-wrap: wrap;
+              min-height: 738px;
+              max-width: 1192px;
+              width: 100%;
+              height: 100%;
+              padding-top: 76px;
+              padding: 76px 86px 33px 90px;
+              transition: 0.5s ease-in-out;
+              transform-origin: 100% 0;
+              transform: scaleY(0);
+              margin-bottom: 13px;
+              
+              li {
+                margin: 0;
+                padding: 0;
+                line-height: 1.1rem;
+                font-weight: bold;
+                font-size: 0.8rem;
+                
+                ul.sub-menu_second {
+                  flex-direction: column;
+                  
+                  li {
+                    font-weight: normal;
+                  }
+                }
+              }
+            }
+
+            &#nav-menu_woman {
+              .sub-menu {
+                li {
+                  .sub-menu_second {
+                    &.sub-menu_novelties {
+                      margin-bottom: 13px;
+                    }
+
+                    &.sub-menu_tights, &.sub-menu_stockings, &.sub-menu_socks {
+                      min-height: 604px;
+                      height: 604px;
+                    }
+
+                    &.sub-menu_leggings {
+                      margin-bottom: 45px;
+                    }
+
+                    &.sub-menu_homewear {
+                        height: 430px;
+                        max-height: 430px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &#nav-menu_man {
+              .sub-menu {
+                align-content: flex-start;
+                min-height: 277px;
+
+                li {
+                  .sub-menu_second {
+
+                    &.sub-menu_novelties, &.sub-menu_socks, &.sub-menu_pants {
+                      min-height: 277px;
+                      height: 277px;
+                    }
+
+                    &.sub-menu_novelties {
+                      margin-right: 43px;
+                    }
+
+                    &.sub-menu_socks {
+                      margin-right: 63px;
+                    }
+
+                    &.sub-menu_pants {
+                      margin-right: 56px;
+                    }
+
+                    &.sub-menu_thermal {
+                      margin-bottom: 43px;
+                    }
+
+                    &.sub-menu_thermal, &.sub-menu_homewear {
+                        height: auto;
+                    }
+                  }
+                }
+              }
+            }
+
+            &#nav-menu_girls {
+              .sub-menu {
+                align-content: flex-start;
+                min-height: 277px;
+
+                li {
+                  .sub-menu_second {
+                    &.sub-menu_novelties, &.sub-menu_tights, &.sub-menu_leggings, &.sub-menu_socks {
+                      min-height: 277px;
+                      height: 277px;
+                    }
+
+                    &.sub-menu_novelties, &.sub-menu_leggings {
+                      margin-right: 82px;
+                    }
+
+                    &.sub-menu_tights {
+                      margin-right: 74px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &#nav-menu_boys {
+              .sub-menu {
+                align-content: flex-start;
+                min-height: 166px;
+                padding-top: 33px;
+
+                li {
+                  margin-right: 30px;
+
+                  .sub-menu_second {
+                    &.sub-menu_novelties, &.sub-menu_tights, &.sub-menu_leggings, &.sub-menu_socks {
+                      min-height: 166px;
+                      height: 166px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &#nav-menu_brands {
+              .sub-menu {
+                flex-direction: column;
+                max-width: 1206px;
+                min-height: 476px;
+                padding: 62px 84px 58px ;
+                text-transform: none;
+
+
+                li {
+                  flex-basis: 10%;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav-action {
+      width: 204px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        &:nth-child(3) {
+          position: relative;
+          
+          &::after {
+            content: '';
+            display: block;
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            background: #FF2929;
+            position: absolute;
+            top: 25px;
+            right: -5px;
+          }
+        }
+      }
+    } 
+  }
+
+  .profile_menu {
+    transform: scaleY(0);
+    position: absolute;
+    right: 97px;
+    top: 151px;
+    transition: 0.5s ease-in-out;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    padding: 17px 27px 18px;
+    border: 1px solid #000000;
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    min-width: 165px;
+
+    li {
+      line-height: 1rem;
+      margin-bottom: 9px;
+
+      &:first-child {
+        margin-bottom: 21px;
+      }
+
+      &:last-child {
+        margin-top: 12px;
+
+        a {
+          font-weight: bold;
+        }
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+
+    &.scale {
+      transform: scaleY(1);
+    }
+  }
+}

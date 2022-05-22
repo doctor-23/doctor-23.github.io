@@ -1,0 +1,47 @@
+section#addresses-of-shops {
+  padding-top: 73px;
+  padding-bottom: 152px;
+
+  h1 {
+    font-family: 'Cormorant';
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 96px;
+    margin: 0;
+    margin-bottom: 46px;
+    font-weight: normal;
+  }
+
+  .address-1, .address-2 {
+    font-size: 1.2rem;
+    line-height: 34px;
+    font-weight: normal;
+  }
+
+  .address-1 {
+    margin-bottom: 28px;
+  }
+
+  .address-2 {
+    margin-bottom: 39px;
+  }
+
+  .glad-see {
+    font-family: 'Cormorant';
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 34px;
+    text-align: right;
+    padding-right: 143px;
+
+    span {
+      i {
+        &.heart-icon {
+          &::after {
+            content: url("../img/icon/heart.svg");
+          }
+        }
+      }
+    }
+  }
+}

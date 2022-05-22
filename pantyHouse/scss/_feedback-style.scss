@@ -1,0 +1,74 @@
+section#feedback {
+  padding-top: 80px;
+  padding-bottom: 152px;
+
+  h1 {
+    font-family: 'Cormorant';
+    font-size: 2.4rem;
+    line-height: 67px;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 39px;
+  }
+
+  .feedback-wrapper {
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #feedback-form {
+    display: block;
+    margin: 0 auto;
+
+    input, textarea, button {
+      width: 100%;
+    }
+
+    input {
+      height: 44px;
+      font-size: 0.8rem;
+      line-height: 22px;
+      padding: 14px 20px;
+    }
+
+    .full-name {
+      input {
+        margin-bottom: 28px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    span {
+      margin-top: 39px;
+      margin-bottom: 28px;
+      display: block;
+      font-size: 0.8rem;
+      line-height: 22px;
+    }
+
+    textarea {
+      height: 182px;
+      resize: none;
+    }
+
+    button {
+      max-width: 321px;
+      width: 100%;
+      height: 61px;
+      background: #000;
+      border-radius: 4px;
+      font-size: 0.8333333333333334rem;
+      font-weight: bold;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-top: 50px;
+      border: none;
+    }
+  }
+}

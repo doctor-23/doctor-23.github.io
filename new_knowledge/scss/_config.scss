@@ -1,0 +1,140 @@
+:root {
+    --font-size: 16px;
+    --main-font: 'FavoritPro', sans-serif;
+    --main-color: #000;
+    --blue: #426FFF;
+    --blue-hover: #2B54DA;
+    --blue-active: #2344B0;
+    --grey: #E2E6ED;
+    --grey-hover: #DDE2EC;
+    --grey-active: #BFC8DA;
+    --text-color: #181818;
+    --validate: #ED694A;
+    --radius: 12px;
+    --container: 1105px;
+}
+
+html {
+    font-size: var(--font-size);
+}
+
+body {
+    margin: 0;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    background: #fff;
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: 13px;
+    overflow-x: hidden;
+}
+
+ul, ol, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before, &::after {
+        box-shadow: border-box;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:active, a:focus, button, input, button:hover, button:active, button:focus, input:focus, input:active {
+    text-decoration: none;
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.wrapper {
+    position: relative;
+    max-width: var(--container);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+._fSpace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+._fCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._fWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+._fColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.validate {
+    border-color: var(--validate);
+}
+
+.btn {
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    background-color: transparent;
+    transition-property: border-color, color, background-color;
+    transition-delay: .3s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.hidden {
+    position: absolute !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.commonListItem {
+    display: flex;
+
+    &::before {
+        content: url('../img/icons/bullit.svg');
+        display: inline-block;
+    }
+}

@@ -1,0 +1,119 @@
+.mainHeader {
+    padding-bottom: 151px;
+}
+
+.mainHeaderLeft {
+    max-width: 581px;
+    padding-top: 37px;
+}
+
+.infPlate {
+    display: inline-block;
+    margin-bottom: 17px;
+    padding: 19px 28px 20px 27px;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: rgba(109, 114, 214, 0.1);
+    border-radius: var(--radius);
+}
+
+.mainHeaderTitle {
+    margin-bottom: 13px;
+    font-size: 50px;
+    line-height: 56px;
+    font-weight: normal;
+
+    span {
+        font-weight: 500;
+    }
+}
+
+.mainHeaderList {
+    margin-bottom: 66px;
+}
+
+.mainHeaderListItem {
+    font-size: 18px;
+    line-height: 22px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &::before {
+        margin-right: 22px;
+    }
+}
+
+.mainHeaderBtn {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    border-color: var(--blue-hover);
+
+    &:hover {
+        border-color: var(--blue-hover);
+    }
+
+    &:active, &:focus-visible {
+        border-color: var(--blue-active);
+    }
+}
+
+.mainHeaderBtnFirst {
+    padding: 21px 83px 23px 83px;
+    color: #fff;
+    line-height: 26px;
+    background-color: var(--blue);
+
+    &:hover {
+        background-color: var(--blue-hover);
+    }
+
+    &:active, &:focus-visible {
+        background-color: var(--blue-active);
+    }
+}
+
+.mainHeaderBtnSecond {
+    position: relative;
+    padding: 23px 66px 25px 109px;
+    color: var(--blue);
+
+    &:hover {
+        color: var(--blue-hover);
+    }
+
+    &:active, &:focus-visible {
+        color: var(--blue-active);
+    }
+
+    &::before {
+        content: url('../img/icons/telegram-on-btn.svg');
+        position: absolute;
+        top: 13px;
+        bottom: 13px;
+        left: 40px;
+        display: block;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.mainHeroCorrection {
+    display: block;
+    width: 272px;
+    text-align: center;
+    color: #5a5a5a;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.mainHeaderRight {
+    position: relative;
+
+}
+.mainHeaderWrapper {
+    background: url('../img/mainHeader.png') top right no-repeat;
+}

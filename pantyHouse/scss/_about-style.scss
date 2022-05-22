@@ -1,0 +1,115 @@
+section#about {
+  padding-top: 80px;
+  padding-bottom: 152px;
+
+  h1 {
+    font-family: 'Cormorant';
+    font-size: 2.4rem;
+    line-height: 96px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 39px;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 42px;
+    margin: 0;
+  }
+
+  p.about-text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 34px;
+  }
+
+  span {
+    font-size: 1.2rem;
+    line-height: 34px;
+  }
+
+  .about-block {
+    margin-top: 80px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      max-width: 1276px;
+      width: 100%;
+
+      &.about_mob-img {
+        display: none;
+      }
+    }
+
+    .about-block__wrapper {
+      max-width: 1276px;
+      padding: 0 15px;
+      width: 100%;
+      margin: 0 auto;
+      background: #000;
+      color: #fff;
+      padding: 43px 89px 84px 64px;
+
+
+      h3 {
+        font-size: 1.2rem;
+        line-height: 48px;
+        margin: 0;
+        margin-bottom: 40px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+          padding-left: 51px;
+          position: relative;
+          font-size: 0.7rem;
+          line-height: 20px;
+
+          &::before {
+            content: url('../img/icon/like.svg');
+            position: absolute;
+            left: 0;
+          }
+
+          &:first-child {
+            width: 100%;
+            max-width: 345px;
+            margin-bottom: 50px;
+          }
+
+          &:nth-child(2) {
+            width: 100%;
+            max-width: 271px;
+          }
+
+          &:nth-child(3) {
+            width: 100%;
+            max-width: 258px;
+          }
+
+          &:nth-child(4) {
+            width: 100%;
+            max-width: 414px;
+          }
+
+          &:nth-child(5) {
+            width: 100%;
+            max-width: 336px;
+          }
+        }
+      }
+    }
+  }
+
+  p.about-text.container {
+    margin: 80px auto 0;
+  }
+}

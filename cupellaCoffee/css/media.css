@@ -1,0 +1,285 @@
+@media screen and (min-width: 1200px) {
+
+	.menuBurger {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 1199.98px) {
+
+	.menuBurger {
+		display: none;
+	}
+
+	.menu-item {
+		padding-left: 10px;
+	}
+
+	.ellips {
+		float: none;
+		margin: 0px auto;
+	}
+
+	.skills__item-text {
+		display: block;
+		text-align: center;
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 991.98px) {
+
+	.menuBurger {
+		display: block;
+	}
+
+	.menu {
+		display: none;
+		background: rgba(167, 167, 167,0.8);
+		width: 150px;
+		height: 200px;
+		right: -11px;
+		top: 76px;
+		position: absolute;
+		z-index: 9999;
+		border-radius: 4px;
+	}
+
+	.menu-item {
+		line-height: 50px;
+	}
+
+	.nav-menu {
+		position: absolute!important;
+		right: 0px
+	}
+
+	.contact {
+		display: flex;
+		justify-content: center;
+	}
+
+	.overlay-slide p {
+		font-size: 1rem;
+	}
+
+	.overlay-slide h4 {
+		font-size: 2rem;
+		margin-top: 9%;
+	}
+
+	.about-text {
+		text-align: justify;
+		padding-bottom: 20px;
+	}
+
+	.mail {
+		margin-bottom: 40px;
+	}
+
+	.contact-phone {
+		float: left;
+	}
+
+	.contact-mail {
+		float: right;
+	}
+
+	#Communication h4 {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+
+	header {
+		height: 500px;
+	}
+
+	nav {
+		display: block;
+	}
+
+	#main h1 {
+		width: 100%;
+	    margin-left: -323.5px;
+	    top: 100%;
+	}
+
+	.menu {
+		width: 200px;
+		height: 235px;
+		right: 0;
+		text-align: center;
+	}
+
+	.contact {
+		display: none;
+		position: absolute !important;
+		right: -5px;
+		top: 285px;
+		z-index: 9999;
+	}
+
+	.contact-header {
+		line-height: 0px;
+	}
+
+	.arrow {
+		bottom: -80%;
+	}
+
+	.skills__item-text {
+		line-height: 1.5em;
+	}
+
+	#Cost h3 {
+		font-size: 1.5rem;
+		margin-left: -40.70835px;
+		bottom: 115px;
+	}
+
+	.overlay-child-1 h4 {
+		margin-top: 2%;
+	}
+
+	.overlay-child-2 h4, .overlay-child-4 h4 {
+		margin-top: 6%;
+	}
+
+	.overlay-child-3 h4 {
+		margin-bottom: 0px;
+		margin-top: 0;
+	}
+
+	.overlay-child-4 p {
+		margin-top: 12px;
+	}
+
+	#Cost .bx-wrapper .bx-prev {
+		left: 15px;
+	}
+
+	#Cost .bx-wrapper .bx-next {
+		right: 15px;
+	}
+
+	.overlay-slide p {
+		width: 85%;
+	}
+
+	ul.rhomb li:nth-child(1) .rhomb__item_shape:before, ul.rhomb li:nth-child(2) .rhomb__item_shape:before, ul.rhomb li:nth-child(3) .rhomb__item_shape:before {
+		left: 51.5%;
+		top: 24%;
+	}
+
+	ul.rhomb li:nth-child(4) .rhomb__item_shape:before {
+		top: 24.5%;
+	}
+	 ul.rhomb li:nth-child(5) .rhomb__item_shape:before, ul.rhomb li:nth-child(6) .rhomb__item_shape:before {
+	 	top: 20.5%;
+	 }
+
+	.contact-mail, .contact-phone {
+		float: none;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+
+	header {
+		height: 100vh;
+	}
+
+	.menuBurger {
+		right: 15px;
+	}
+
+	.menu {
+		right: 15px;
+	}
+
+	.contact {
+		right: 10px;
+	}
+
+	#main h1 {
+		width: 70%;
+	    margin-left: -119px;
+	    margin-top: -137.4px;
+	    top: 50%;
+	}
+
+	.arrow {
+		bottom: 10%;
+	}
+
+	.skills__item-text {
+	    margin-left: 24%;
+	    width: 52%;
+	}
+
+	.skills__item:nth-child(1), .skills__item:nth-child(2) {
+		margin-bottom: 40px;
+	}
+
+	.skills__item:last-child {
+    	padding-right: 5%;
+    }
+
+    .bx-controls-direction {
+    	display: none;
+    }
+
+    .overlay-slide h4 {
+    	font-size: 1rem;
+    }
+
+    .overlay-slide p {
+    	font-size: 0.7rem;
+    	width: 100%;
+    }
+
+    #Cost h3 {
+    	bottom: 70px;
+    	color: #000;
+    	border-color: #000;
+    }
+
+    .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
+    	bottom: -60px!important;
+    }
+
+	.overlay-child-3 h4 {
+		margin-top: 5%;
+	}
+
+	#AboutUs h2, #Communication h2 {
+		margin-top: 40px;
+	}
+
+	.about-text {
+		text-align: left;
+	}
+
+	.phone-numbers {
+		margin-bottom: 50px;
+	}
+
+	#Communication a {
+		padding-left: 60px;
+	}
+
+	.form__items {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	#Communication h3 {
+		font-size: 1.7rem;
+	}
+
+}
+
+}
