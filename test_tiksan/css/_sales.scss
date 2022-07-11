@@ -1,0 +1,193 @@
+.sale-list {
+    padding-bottom: 71px;
+
+    @media screen and (max-width: 575.98px) {
+        padding-top: 10px;
+    }
+
+    .sale-list__heading {
+        margin-bottom: 10px;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        color: #4A4F54;
+
+        @media screen and (max-width: 575.98px) {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+
+    .sales-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 57px;
+
+        @media screen and (max-width: 575.98px) {
+            gap: 15px;
+            margin-bottom: 11px;
+        }
+    }
+
+    .sales-list__item {
+        max-width: 534px;
+        padding: 16px 14px;
+        background-color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+
+        @media screen and (max-width: 575.98px) {
+            padding: 10px 10px 12px;
+        }
+    }
+
+    .sales-list__item-image {
+        margin-bottom: 10px;
+        border-radius: 15px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .sales-list__item-title {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #4A4F54;
+
+        @media screen and (max-width: 575.98px) {
+            margin-bottom: 2px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    .sales-list__item-description {
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #4A4F54;
+
+        @media screen and (max-width: 575.98px) {
+            margin-bottom: 11px;
+            font-size: 12px;
+            line-height: 13px;
+        }
+    }
+
+    .sales-list__item-bonus {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 17px;
+
+        @media screen and (max-width: 575.98px) {
+            margin-bottom: 11px;
+        }
+    }
+
+    .sales-list__item-bonus_sticker {
+        padding: 13px 21px 9px 73px;
+        background: #FDDA64 url('../img/icon/present.svg') center left 16px / auto no-repeat;
+        border-radius: 15px;
+
+        @media screen and (max-width: 575.98px) {
+            padding: 11px 5px 11px 45px;
+            font-size: 9px;
+            line-height: 11px;
+            background-size: 23.54px 27px;
+        }
+
+    }
+
+    .sales-list__item-bonus_timer {
+        flex-shrink: 0;
+        font-size: 13px;
+        line-height: 15px;
+        text-align: center;
+        color: #4A4F54;
+
+        @media screen and (max-width: 575.98px) {
+            font-size: 8px;
+            line-height: 9px;
+        }
+    }
+
+    .timer {
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: bold;
+
+        @media screen and (max-width: 575.98px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .sales-list__item-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .buy-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            padding: 16px 63px 15px;
+            color: #fff;
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: bold;
+            background-color: #4A4F54;
+            border: 1px solid #4A4F54;
+            border-radius: 15px;
+            transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+            @media screen and (max-width: 575.98px) {
+                padding: 11px 38px 11.65px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            &:hover {
+                color: #4A4F54;
+                text-decoration: none;
+                background-color: transparent;
+            }
+        }
+
+        .weight {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            color: #4A4F54;
+
+            @media screen and (max-width: 575.98px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    .sales-description {
+        max-width: 845px;
+        margin: 0 auto;
+        font-size: 17px;
+        line-height: 22px;
+        text-align: center;
+        color: #4A4F54;
+
+        @media screen and (max-width: 575.98px) {
+            max-width: 100%;
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}

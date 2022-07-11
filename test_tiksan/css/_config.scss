@@ -1,0 +1,193 @@
+
+:root {
+    --hover-color: #B2A194;
+    --active-color: #A2624A;
+    --main-color: #373a3c;
+    --sell-red: #FF4600;
+    --light-grey: #F6F6F6;
+    --grey: #DFDFDF;
+    --dark-grey: #A1A1A1;
+    --main-font: 'MIR';
+    --container: 1125px;
+
+    @media screen and (max-width: 575.98px) {
+        --container: 100%;
+    }
+}
+
+html {
+    font-size: 16px;
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--active-color);
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--grey);
+    }
+}
+
+body {
+    font-family: var(--main-font), sans-serif;
+    color: var(--main-color);
+    overflow-x: hidden;
+    margin: 0;
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,.2);
+    }
+
+    &::-webkit-scrollbar {
+        width: auto;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--light-grey);
+    }
+}
+
+main {
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+ul,
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::after, &::before {
+        box-sizing: border-box;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a, a:hover, a:active, a:focus, button, input, button:hover, button:active, button:focus, input:focus, input:active {
+    text-decoration: none;
+    outline: none;
+}
+
+a {
+    color: #292f32;
+    transition: color .3s ease-in-out;
+
+    &:hover, &:focus-visible {
+        color: #A7CA6B;
+        text-decoration: underline;
+    }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    max-width: var(--container);
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 575.98px) {
+        padding: 0 15px;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.modal {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+
+    .modal__content {
+        display: none;
+        opacity: 0;
+        cursor: default;
+        transition: opacity .3s ease-in-out;
+    }
+
+    &.open {
+        display: block;
+
+        .modal__content {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.desktop {
+    @media screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @media screen and (max-width: 575.98px) {
+        display: block;
+    }
+}
