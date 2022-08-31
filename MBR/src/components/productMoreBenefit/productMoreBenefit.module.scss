@@ -1,0 +1,104 @@
+.productBenefits {
+    padding: 63px 0 107px;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 41px 0 91px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 18px 0 43px;
+    }
+}
+
+.wrapper {
+    max-width: 1381px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.title {
+    margin-bottom: 47px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 25px;
+        font-size: 36px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        font-size: 26px;
+        line-height: 64px;
+    }
+}
+
+.list {
+    column-count: 2;
+
+    @media screen and (max-width: 991.98px) {
+        padding-bottom: 28px;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+    }
+
+    @media screen and (max-width: 767.98px) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 31px;
+        column-count: unset;
+        //row-gap: 0;
+    }
+}
+
+.listItem {
+    position: relative;
+    padding-left: 27px;
+    font-size: 18px;
+    line-height: 44px;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 445px;
+        width: 100%;
+        padding-left: 24px;
+        font-size: 14px;
+        line-height: 23px;
+
+        &:nth-child(2n) {
+            max-width: 465px;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    &::before {
+        content: '•';
+        position: absolute;
+        left: 11px;
+        top: 21px;
+        line-height: 0;
+
+        @media screen and (max-width: 1381.98px) {
+            top: 11px;
+        }
+    }
+}

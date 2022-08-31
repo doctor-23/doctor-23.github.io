@@ -1,0 +1,105 @@
+.accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.accordionItem {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+
+    &.active {
+        .accordionHeading {
+            padding-bottom: 0;
+
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+
+        .accordionContent {
+            position: static;
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+}
+
+.accordionHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 26px 0 23px;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 19px 0 21px;
+    }
+
+    &::after {
+        content: '';
+        width: 22px;
+        height: 22px;
+        margin-right: 23px;
+        background: transparent url('../../../public/images/icons/arrow-right.svg') center / 22px 22px no-repeat;
+        transition: transform .3s ease-in-out;
+
+        @media screen and (max-width: 767.98px) {
+            margin-right: 11px;
+        }
+    }
+}
+
+.accordionContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 36px 0 45px;
+    transform: scaleY(0);
+    transform-origin: 100% 0;
+    opacity: 0;
+    transition: transform .3s ease-in-out;
+
+    @media screen and (max-width: 767.98px) {
+        gap: 28px;
+        padding: 29px 0 33px;
+    }
+}
+
+.accordionContentItem {
+    a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.03em;
+        //text-decoration-line: underline;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1381.98px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            font-size: 18px;
+            line-height: 28px;
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        a {
+            text-decoration: underline;
+        }
+    }
+}

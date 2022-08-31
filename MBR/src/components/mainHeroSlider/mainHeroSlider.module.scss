@@ -1,0 +1,142 @@
+.mainHero {
+    background-color: #323232;
+}
+
+.wrapper {
+    @media screen and (max-width: 1381.98px) {
+        //max-width: 944px;
+    }
+}
+
+.slider {
+}
+
+.sliderItem {
+}
+
+.sliderItemWrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 123px 0  227px 150px;
+    color: #fff;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 97px 0 214px 40px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 100vw;
+        padding: 114px 15px 113px;
+    }
+}
+
+.category {
+    display: inline-block;
+    margin-bottom: 71px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 27px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 37px;
+    }
+}
+
+.title {
+    max-width: 610px;
+    margin-bottom: 84px;
+    font-weight: 300;
+    font-size: 74px;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 627px;
+        margin-bottom: 52px;
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 213px;
+        font-size: 43px;
+        line-height: 50px;
+    }
+}
+
+.btn {
+    display: block;
+    width: max-content;
+    padding: 24px 68px 27px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    //border: 1px solid #fff;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 18px 60px;
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin: 0 auto;
+    }
+
+    &:hover {
+        //color: #fff;
+        background-color: #E5E5E5;
+    }
+
+    &:active {
+        background-color: #BABABA;
+    }
+}
+
+.sliderItemImage {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    background: #323232 top right / contain no-repeat;
+
+    @media screen and (max-width: 767.98px) {
+        background-size: cover;
+    }
+}
+
+.bulletWrapper {
+    position: absolute;
+    left: 150px;
+    bottom: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+.bullet {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}

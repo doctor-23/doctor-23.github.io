@@ -1,0 +1,58 @@
+.offers {
+    padding-top: 60px;
+
+    @media screen and (max-width: 767.98px) {
+        padding-top: 40px;
+    }
+}
+
+.offers-slider {
+    position: relative;
+    display: none;
+    margin: 0 -12.5px 40px;
+
+    @media screen and (max-width: 767.98px) {
+        margin: 0 0 30px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        margin: 0 -5px 30px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -15px;
+            display: block;
+            width: 15px;
+            background-color: #fff;
+        }
+
+        .slick-list {
+            overflow: visible;
+        }
+    }
+
+    .catalog-card {
+        padding: 0 12.5px;
+
+        a {
+            padding: 0 12.5px;
+        }
+
+        @media screen and (max-width: 1054.98px) {
+            width: calc((100vw / 3) - .6px) !important;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            width: calc((100vw / 2) - .6px) !important;
+        }
+
+        @media screen and (max-width: 575.98px) {
+            width: calc(100vw - 30px) !important;
+            padding: 0 5px;
+        }
+
+    }
+}

@@ -1,0 +1,242 @@
+.history {
+    padding: 75px 0 203px;
+    background-color: #E8E8E8;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 34px 0 84px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 32px 0 42px;
+    }
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1384px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.title {
+    margin-bottom: 75px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+    opacity: 0.75;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 13px;
+        font-size: 36px;
+        line-height: 64px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        margin-bottom: 19px;
+    }
+}
+
+.tabsContent {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 101px;
+
+    @media screen and (max-width: 1381.98px) {
+        gap: 21px;
+        margin-bottom: 65px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        flex-direction: column;
+        gap: 31px;
+        margin-bottom: 0;
+    }
+}
+
+.left {
+    img {
+        display: block;
+        max-width: 690px;
+
+        @media screen and (max-width: 1381.98px) {
+            max-width: 462px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.right {
+    @media screen and (max-width: 1381.98px) {
+        margin-top: -8px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        margin-top: 0;
+    }
+}
+
+.tabsContentTitle {
+    margin-bottom: 38px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 19px;
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 38px;
+    }
+}
+
+.tabsContentDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media screen and (max-width: 1381.98px) {
+        gap: 19px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.tabsWrap {
+    @media screen and (max-width: 767.98px) {
+        width: calc(100vw - 15px);
+        overflow-x: scroll;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {width: 0;}
+    }
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 72px;
+
+    &.middle {
+        display: none;
+    }
+
+    @media screen and (max-width: 1381.98px) {
+        padding-right: 11px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        display: none;
+        margin-bottom: 21px;
+
+        &.middle {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        width: 1377px;
+        margin-bottom: 0;
+        padding-bottom: 21px;
+        //overflow-x: scroll;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+
+        @media screen and (max-width: 767.98px) {
+            bottom: 9px;
+        }
+    }
+}
+
+.tabItem {
+    position: relative;
+    font-size: 14px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+    user-select: none;
+    cursor: pointer;
+
+    &:first-child {
+        &::after {
+            left: 0;
+            transform: none;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        z-index: 1;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #E8E8E8;
+        border: 1px solid #000;
+        border-radius: 50%;
+        transform: translateX(-50%);
+
+        @media screen and (max-width: 767.98px) {
+            bottom: -17px;
+        }
+    }
+
+    &.active {
+        margin-top: -14px;
+        font-size: 50px;
+
+        @media screen and (max-width: 1381.98px) {
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            font-size: 36px;
+        }
+
+        &::after {
+            bottom: -18px;
+            width: 18px;
+            height: 18px;
+            background-color: #000;
+
+            @media screen and (max-width: 767.98px) {
+                bottom: -20px;
+            }
+        }
+    }
+}

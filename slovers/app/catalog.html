@@ -1,0 +1,2500 @@
+@@include('_header.html')
+
+<section class="catalog">
+    <div class="container _flex">
+        <div class="catalog__left">
+            <h1 class="catalog__title">
+                Все предложения
+            </h1>
+
+            <form action="#" class="catalog__filter">
+                <div class="form__row first_row">
+                    <label class="form__radio">
+                        <input type="radio" name="rent_sale" value="rent">
+                        <span class="custom-radio">Аренда</span>
+                    </label>
+                    <label class="form__radio">
+                        <input type="radio" name="rent_sale" value="sale">
+                        <span class="custom-radio">Продажа</span>
+                    </label>
+                </div>
+
+                <div class="form__row">
+                    <span class="form__label">Строение</span>
+
+                    <div class="select" id="place_select">
+                        <div class="select-title">
+                            -- Выберите строение --
+                        </div>
+
+                        <div class="select-content">
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="place" value="all">
+                                <span class="select-content__radio">
+                                    Все
+                                </span>
+
+                            </label>
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="place" value="federation">
+                                <span class="select-content__radio">
+                                    Федерация
+                                </span>
+                            </label>
+
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="place" value="empire">
+                                <span class="select-content__radio">
+                                    Империя
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__row">
+                    <span class="form__label">Тип помещения</span>
+
+                    <div class="select" id="space_select">
+                        <div class="select-title">
+                            -- Выберите тип помещения --
+                        </div>
+
+                        <div class="select-content">
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="space" value="all">
+                                <span class="select-content__radio">
+                                    Все
+                                </span>
+                            </label>
+
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="space" value="apartment">
+                                <span class="select-content__radio">
+                                    Апартаменты
+                                </span>
+                            </label>
+
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="space" value="office">
+                                <span class="select-content__radio">
+                                    Офисы
+                                </span>
+                            </label>
+
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="space" value="selling">
+                                <span class="select-content__radio">
+                                    Торговля
+                                </span>
+                            </label>
+
+                            <label class="select-content__wrapper">
+                                <input type="radio" name="space" value="parking">
+                                <span class="select-content__radio">
+                                    Парковка
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__row">
+                    <span class="form__label">Цена, ₽</span>
+
+                    <input type="text" id="filter_min_price" class="common-input" name="min_price"
+                           placeholder="от 200.000₽"
+                           onkeypress="banText(event)">
+                    <input type="text" id="filter_max_price" class="common-input" name="max_price"
+                           placeholder="до 2000.000₽"
+                           onkeypress="banText(event)">
+                </div>
+
+                <div class="form__row">
+                    <span class="form__label">Площадь, м²</span>
+
+                    <input type="text" id="filter_min_square" class="common-input" min="20" name="min_square"
+                           placeholder="от 20"
+                           onkeypress="banText(event)">
+                    <input type="text" id="filter_max_square" class="common-input" max="10000" name="max_square"
+                           placeholder="до 1000"
+                           onkeypress="banText(event)">
+                </div>
+
+                <div class="form__row form__row_last">
+                    <input type="reset" class="reset_filter" value="Сбросить">
+                </div>
+            </form>
+        </div>
+        <div class="catalog__right">
+            <div class="catalog__sorting">
+                <label class="catalog__sorting-label label__price">
+                    <input type="checkbox" name="sort_price" id="sorting_price">
+                    <span class="custom-checkbox">
+                        <svg width="14" height="18" class="svg-ico" role="img">
+                            <use xlink:href="/img/icons/sprite.svg#arrow_up"></use>
+                        </svg>
+
+                        Цена
+                    </span>
+                </label>
+
+                <label class="catalog__sorting-label label__list">
+                    <input type="radio" name="display_type" value="list">
+                    <span class="custom-radio">
+                        <svg width="18" height="16" class="svg-ico" role="img">
+                            <use xlink:href="/img/icons/sprite.svg#list_ico"></use>
+                        </svg>
+                    </span>
+                </label>
+
+                <label class="catalog__sorting-label label__columns">
+                    <input type="radio" name="display_type" value="columns" checked>
+                    <span class="custom-radio">
+                        <svg width="20" height="20" class="svg-ico" role="img">
+                            <use xlink:href="/img/icons/sprite.svg#columns_ico"></use>
+                        </svg>
+                    </span>
+                </label>
+            </div>
+
+            <div class="catalog__wrapper _flex">
+                <div class="catalog__list _flex-wrap" data-display-type="columns">
+                    <div class="catalog-card" data-place="federation" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                8 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    125 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="apartment" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-4.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                6 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    1257 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                5 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                7 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    315 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="parking" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                3 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="parking" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                2 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    425 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                4 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    90 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                1 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    95 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                8 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    125 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="apartment" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-4.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                6 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    1257 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                5 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                7 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    315 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="parking" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                3 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="parking" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                2 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    425 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                4 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    90 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                1 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    95 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+
+                    <div class="catalog-card" data-place="federation" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                8 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    125 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="apartment" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-4.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                6 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    1257 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                5 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                7 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    315 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="parking" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                3 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="parking" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                2 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    425 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                4 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    90 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                1 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    95 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+
+                    <div class="catalog-card" data-place="federation" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                8 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    125 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="apartment" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-4.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                6 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    1257 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                5 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                7 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    315 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="parking" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                3 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    225 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="parking" data-status="rent">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-1.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                2 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    425 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="12" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+
+                                Парковка
+                            </div>
+
+                            <div class="sticker-status">
+                                Аренда
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="empire" data-space="office" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-2.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                4 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    90 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Империя
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+
+                                Офис
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="catalog-card" data-place="federation" data-space="selling" data-status="sale">
+                        <div class="catalog-card__picture">
+                            <img src="img/offer-3.jpg" alt="Офис">
+                        </div>
+
+                        <div class="catalog-card__content">
+                            <span class="catalog-card__price">
+                                1 ₽/мес
+                            </span>
+
+                            <div class="catalog-card__information">
+                                <span class="catalog-card__quadrature">
+                                    95 м²
+                                </span>
+
+                                <span class="catalog-card__place">
+                                    Федерация
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="catalog-card__stickers">
+                            <div class="sticker-space">
+                                <svg width="13" height="12" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+
+                                Торговля
+                            </div>
+
+                            <div class="sticker-status">
+                                Продажа
+                            </div>
+                        </div>
+
+                        <a href="#"></a>
+                    </div>
+                </div>
+
+                <a href="#" class="catalog-more_link more-link">Загрузить еще</a>
+
+                <div class="catalog__table table" data-display-type="list">
+                    <div class="table-head">
+                        <div class="table-head__item"></div>
+                        <div class="table-head__item table-head__item_building">
+                            <label class="table-head__label">
+                                <input type="checkbox" name="table_sort" value="name">
+                                <span class="table-radio_custom">
+                                    Строение
+
+                                    <span class="icon-wrapper">
+                                    <svg width="10" height="13" class="svg-ico" role="img">
+                                        <use xlink:href="/img/icons/sprite.svg#arrow_up"></use>
+                                    </svg>
+                                </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="table-head__item table-head__item_floor">
+                            <label class="table-head__label">
+                                <input type="checkbox" name="table_sort" value="floor">
+                                <span class="table-radio_custom">
+                                    Этаж
+
+                                    <span class="icon-wrapper">
+                                    <svg width="10" height="14" class="svg-ico" role="img">
+                                        <use xlink:href="/img/icons/sprite.svg#up_down_arrows_icon"></use>
+                                    </svg>
+                                </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="table-head__item table-head__item_square">
+                            <label class="table-head__label">
+                                <input type="checkbox" name="table_sort" value="quadrature">
+                                <span class="table-radio_custom">
+                                    Площадь, м²
+
+                                    <span class="icon-wrapper">
+                                    <svg width="10" height="14" class="svg-ico" role="img">
+                                        <use xlink:href="/img/icons/sprite.svg#up_down_arrows_icon"></use>
+                                    </svg>
+                                </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="table-head__item table-head__item_price">
+                            <label class="table-head__label">
+                                <input type="checkbox" name="table_sort" value="price">
+                                <span class="table-radio_custom">
+                                    <span class="text">Цена/мес</span>
+
+                                    <span class="icon-wrapper">
+                                    <svg width="10" height="14" class="svg-ico" role="img">
+                                        <use xlink:href="/img/icons/sprite.svg#up_down_arrows_icon"></use>
+                                    </svg>
+                                </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="table-head__item table-head__item_status">
+                            Статус
+                        </div>
+                    </div>
+
+                    <div class="table-body">
+                        <div class="table-body__row" data-place="empire" data-space="parking" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                48 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                203 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                920 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                47 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                202 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                919 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                47 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                202 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                919 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                200 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                917 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                46 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                201 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                918 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="selling" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                48 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                167 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                620 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                46 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                165 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                618 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="selling" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                47 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                166 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                619 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="parking" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                49 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                169 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                622 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="parking" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                49 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                168 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                621 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                46 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                165 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                618 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="selling" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                47 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                166 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                619 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="parking" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                49 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                169 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                622 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="selling" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                47 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                166 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                619 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="parking" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                49 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                169 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                622 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="parking" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                48 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                203 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                920 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+
+                        <div class="table-body__row" data-place="federation" data-space="parking" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                49 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                168 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                621 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                200 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                917 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+
+                        <div class="table-body__row" data-place="empire" data-space="parking" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                48 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                203 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                920 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                47 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                202 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                919 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                164 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                617 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                200 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                917 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                46 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                201 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                918 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="selling" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                48 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                167 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                620 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="apartment" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#small_user_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                45 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                200 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                917 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="apartment" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#small_user_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                46 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                201 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                918 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="apartment" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#small_user_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                48 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                167 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                620 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="empire" data-space="office" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Империя
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                46 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                201 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                918 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="selling" data-status="sale">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#sale_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                48 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                167 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                620 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Продажа
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="parking" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#parking_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                49 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                168 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                621 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="table-body__row" data-place="federation" data-space="office" data-status="rent">
+                            <div class="table-body__item table-body__item_place">
+                                <svg width="20" height="19" class="svg-ico" role="img">
+                                    <use xlink:href="/img/icons/sprite.svg#desktop_ico"></use>
+                                </svg>
+                            </div>
+                            <div class="table-body__item table-body__item_building">
+                                Федерация
+                            </div>
+                            <div class="table-body__item table-body__item_floor">
+                                46 эт
+                            </div>
+                            <div class="table-body__item table-body__item_square">
+                                165 м²
+                            </div>
+                            <div class="table-body__item table-body__item_price">
+                                618 000 ₽
+                            </div>
+                            <div class="table-body__item table-body__item_status">
+                                Аренда
+                            </div>
+                            <a href="#"></a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="table-footer">
+                        <div class="table-pagination _flex">
+                            <a href="#" class="pagination__link pag_prev disable">
+                                <svg width="6" height="8" viewBox="0 0 6 8" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.961394 3.70537L4.53881 0.127959C4.70152 -0.0347592 4.96534 -0.0347592 5.12806 0.127959L5.71422 0.714114C5.87677 0.876672 5.87696 1.14017 5.71463 1.30296L3.0251 4L5.71463 6.69704C5.87696 6.85982 5.87677 7.12333 5.71422 7.28588L5.12806 7.87204C4.96534 8.03476 4.70152 8.03476 4.53881 7.87204L0.961394 4.29463C0.798676 4.13191 0.798676 3.86809 0.961394 3.70537Z"
+                                          fill="black" fill-opacity="0.9"/>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="pagination__link pag_next">
+                                <svg width="6" height="8" viewBox="0 0 6 8" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.03868 3.70537L1.46127 0.127959C1.29855 -0.0347592 1.03473 -0.0347592 0.872012 0.127959L0.285857 0.714114C0.123299 0.876672 0.123115 1.14017 0.285447 1.30296L2.97497 4L0.285447 6.69704C0.123115 6.85982 0.123299 7.12333 0.285857 7.28588L0.872012 7.87204C1.03473 8.03476 1.29855 8.03476 1.46127 7.87204L5.03868 4.29463C5.2014 4.13191 5.2014 3.86809 5.03868 3.70537Z"
+                                          fill="black" fill-opacity="0.9"/>
+                                </svg>
+                            </a>
+
+                            <span class="pagination__text">
+                    <span class="pagination__text-current">1-6</span> из <span
+                                    class="pagination__text-total">1.999</span>
+                </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="not-found">
+                    Ничего не найдено
+                </div>
+                
+                <div class="overlay-spinner">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('_footer.html')

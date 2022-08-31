@@ -1,0 +1,118 @@
+header {
+    padding: 8px 0;
+    color: #fff;
+    background-color: var(--bg-color-dark-1);
+}
+
+.logo {
+    display: block;
+    width: max-content;
+    height: max-content;
+}
+
+.logo-mobile {
+    display: none;
+
+    @media screen and (max-width: 575.98px) {
+        display: block;
+    }
+}
+
+.logo-desktop {
+    @media screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+.header-email {
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+}
+
+.header-phone {
+    display: block;
+    margin-right: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.01em;
+}
+
+.hamburger-wrapper {
+    position: relative;
+
+    &.show {
+        .hamburger-content {
+            display: flex;
+            opacity: 1;
+        }
+    }
+}
+
+.hamburger {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.hamburger-content {
+    position: absolute;
+    top: 59px;
+    right: 0;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    padding: 16px 32px 12px 16px;
+    background-color: var(--bg-color-dark-2);
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.hamburger-content__item {
+    display: flex;
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.015em;
+
+    .svg-ico {
+        flex-shrink: 0;
+    }
+
+    .svg-wrapper {
+        display: flex;
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    &.user-link {
+        margin: 9px 0 4px;
+        padding: 16px 0;
+        border-top: 1px solid #404549;
+        border-bottom: 1px solid #404549;
+    }
+}
+
+.hamburger-content__item_logo {
+    width: max-content;
+    height: max-content;
+}
+
+.hamburger-content__text-wrapper {
+    font-family: var(--helveticaNeue-sans);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.7);
+
+    a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: underline;
+    }
+}
+

@@ -1,0 +1,175 @@
+.servicesAbout {
+    padding: 191px 0 98px;
+    background: transparent center / cover no-repeat;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 128px 0 44px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 198px 0 155px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding-bottom: 149px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 90px 237px;
+    max-width: 1382px;
+    margin: 0 auto;
+    color: #fff;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+        gap: 110px 119px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        position: relative;
+        flex-direction: column;
+        max-width: 740px;
+        gap: 16px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.left {
+
+    @media screen and (max-width: 991.98px) {
+        align-self: flex-start;
+    }
+
+    a {
+        display: block;
+        padding-top: 61px;
+
+        @media screen and (max-width: 1381.98px) {
+            max-width: 214px;
+            padding-top: 99px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 767.98px) {
+            display: none;
+        }
+    }
+}
+
+.description {
+    margin-bottom: 48px;
+    padding-bottom: 54px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    border-bottom: 1px solid #fff;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 35px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 100%;
+        margin-bottom: 14px;
+        padding-bottom: 17px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+}
+
+.footnote {
+    display: block;
+    margin-bottom: 47px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.btn {
+    padding: 24.5px 55.8px 26.5px 54.2px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    //border: 1px solid #fff;
+    border: 0;
+    cursor: pointer;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 19.26px 55.8px 21.54px 54.2px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        position: absolute;
+        bottom: -104px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        bottom: -105px;
+        right: 0;
+        left: 0;
+        width: max-content;
+        margin: auto;
+    }
+    
+    &:hover {
+        //color: #fff;
+        background-color: #E5E5E5;
+    }
+
+    &:active {
+        background-color: #BABABA;
+    }
+}
+
+.right {
+    max-width: 678px;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 575px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 100%;
+    }
+}
+
+.benefitList {
+    flex-basis: 100%;
+
+    @media screen and (max-width: 991.98px) {
+        width: 100%;
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "slovers-front",
+  "description": "slovers-front",
+  "main": "index.html",
+  "authors": [
+    "Aleksandr Dombradi"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "slovers-front"
+  ],
+  "homepage": "https://github.com/feofilaktov/solvers-front.git",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "fancybox": "^3.5.7",
+    "slick-carousel": "git://github.com/kenwheeler/slick#^1.8.1",
+    "inputmask": "^5.0.6",
+    "jquery_lazyload": "git://github.com/tuupola/lazyload#^1.9.7"
+  },
+  "overrides": {
+    "slick-carousel": {
+      "main": [
+        "./slick/slick.js",
+        "./slick/slick-theme.css",
+        "./slick/slick.css"
+      ]
+    },
+    "fancybox": {
+      "main": [
+        "./dist/jquery.fancybox.css",
+        "./dist/jquery.fancybox.js"
+      ]
+    },
+    "jquery_lazyload": {
+      "main": [
+        "./jquery.lazyload.js"
+      ]
+    },
+    "inputmask": {
+      "main": [
+        "./dist/jquery.inputmask.js"
+      ]
+    }
+  }
+}

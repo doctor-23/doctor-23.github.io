@@ -1,0 +1,202 @@
+.production {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //max-width: 1680px;
+    margin: 0 auto;
+    height: 796px;
+    background-color: #424242;
+
+    @media screen and (max-width: 1381.98px) {
+        height: 598px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        height: auto;
+        padding: 25px 0 138px;
+    }
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1377px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 115px;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+        padding-left: 71px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 740px;
+
+        &.aboutWrapper {
+            flex-direction: column-reverse;
+            margin-bottom: -50px;
+            padding-top: 120px;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        display: inline-block;
+        width: 10px;
+        height: 450px;
+        background-color: #fff;
+
+        @media screen and (max-width: 1381.98px) {
+            width: 4px;
+            height: 366px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            content: none;
+        }
+    }
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //width: 100%;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    margin-bottom: 24px;
+    font-weight: 300;
+    font-size: 74px;
+    line-height: 90px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 1381.98px) {
+        font-size: 64px;
+        line-height: 90px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 36px;
+    }
+}
+
+.titleAbout {
+    text-transform: capitalize;
+
+    @media screen and (max-width: 1381.98px) {
+        font-size: 74px;
+        line-height: 80px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 36px;
+        line-height: 90px;
+    }
+}
+
+.description {
+    max-width: 570px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 470px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 100%;
+        margin-bottom: 52px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 56px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+    }
+}
+
+.play {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 444px;
+    height: 444px;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media screen and (max-width: 1381.98px) {
+        width: 284px;
+        height: 284px;
+        background-size: 23px 25px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        position: relative;
+
+        &.aboutPlay {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        width: 222.84px;
+        height: 222.84px;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background: transparent url('../../../public/images/icons/play.svg') center / 33px 38px no-repeat;
+
+        @media screen and (max-width: 767.98px) {
+            background-size: 16px 23px;
+        }
+    }
+}

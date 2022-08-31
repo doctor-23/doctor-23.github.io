@@ -1,0 +1,87 @@
+.filter {
+	position: relative;
+	width: 100%;
+	height: 75px;
+	border: 1px solid #8B8B8B;
+}
+
+.header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 24.08px 27px 26.92px;
+	cursor: pointer;
+
+	@media screen and (max-width: 767.98px) {
+		padding: 19px 18px 22px;
+	}
+}
+.header svg {
+	width: 10px;
+	height: 7px;
+	display: flex;
+}
+
+.filter.open .header svg {
+	transform: rotate(180deg);
+}
+
+.filterButtonText {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.placeholder {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.dropdown {
+	display: none;
+	padding: 16px 20px 22px;
+	background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #EDEDED;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+	width: 100%;
+	position: absolute;
+	top: calc(100% + 8px)!important;
+	left: 0!important;
+	box-sizing: border-box;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	z-index: 3;
+}
+
+.filter.open .dropdown {
+	display: block;
+}
+
+.itemText {
+	font-size: 16px;
+	line-height: 40px;
+	width: 100%;
+	cursor: pointer;
+}
+.arrow {
+	background-image: url("../../../public/images/icons/select-arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	right: 22px;
+	width: 10px;
+	height: 7px;
+	transform: translateY(-50%);
+	transition: transform .3s
+}
+.arrowOpen {
+	transform: translateY(-50%) rotate(180deg);
+}

@@ -1,0 +1,125 @@
+.tabs-container {
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 767.98px) {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+
+.tabs-panel_one {
+    margin-right: 47px;
+
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+}
+
+.tabs-panel_two {
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+.tabs-panel__select {
+    display: none;
+
+    @media screen and (max-width: 767.98px) {
+        display: block;
+    }
+}
+
+.tabs-panel__list {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    @media screen and (max-width: 767.98px) {
+        border-bottom: 0;
+    }
+
+    .tabs-panel__list-item {
+        &:not(:last-child) {
+            margin-right: 32px;
+        }
+    }
+}
+
+.tabs-panel__list-item {
+    position: relative;
+
+    @media screen and (max-width: 767.98px) {
+        width: calc(100% - 11px);
+    }
+
+    input {
+        display: none;
+
+        &:checked {
+            &~.custom-radio {
+                color: rgba(0, 0, 0, 0.9);
+                background-color: transparent;
+
+                @media screen and (max-width: 767.98px) {
+                    color: #fff;
+                    background-color: var(--bg-action);
+                }
+
+                &::after {
+                    background-color: #1F2639;
+                }
+            }
+        }
+    }
+
+    .custom-radio {
+        display: inline-block;
+        padding: 20px 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.015em;
+        color: rgba(0, 0, 0, 0.65);
+        background-color: transparent;
+        cursor: pointer;
+        user-select: none;
+        transition: color .3s ease-in-out;
+
+        @media screen and (max-width: 767.98px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: .01em;
+            color: rgba(255,255,255,.95);
+            background-color: rgba(138,153,168,.25);
+            border-radius: 3px;
+            transition: background-color .3s ease-in-out;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+            left: 0;
+            display: block;
+            height: 4px;
+            background-color: transparent;
+            transition: background-color .3s ease-in-out;
+
+            @media screen and (max-width: 767.98px) {
+                content: none;
+            }
+        }
+    }
+}
+
+.tabs-panel__radio {
+    display: block;
+    height: max-content;
+}

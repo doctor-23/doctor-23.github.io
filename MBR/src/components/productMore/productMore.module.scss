@@ -1,0 +1,208 @@
+.productMore {
+    padding-top: 95px;
+
+    @media screen and (max-width: 1381.98px) {
+        padding-top: 24px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding-top: 30px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding-top: 22px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 66px 133px;
+    max-width: 1382px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+        gap: 39px 61px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        position: relative;
+        flex-direction: column-reverse;
+        gap: 0;
+        max-width: 740px;
+        padding-top: 86px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.left {
+    max-width: 556px;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 454px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        order: 1;
+        max-width: 100%;
+        margin-bottom: 33px;
+    }
+}
+
+.right {
+    max-width: 690px;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 424px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 991.98px) {
+        order: 2;
+        max-width: 100%;
+        margin-bottom: 26px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding-top: 99px;
+    }
+}
+
+.title {
+    margin-bottom: 26px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        position: absolute;
+        top: 0;
+        //margin-bottom: 40px;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 44px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media screen and (max-width: 1381.98px) {
+        gap: 20px;
+        margin-bottom: 32px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 36px;
+    }
+}
+
+.btn {
+    padding: 22.08px 50.3px 26.92px 51.45px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 19.26px 55.8px 21.54px 54.2px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+    }
+
+    &:hover {
+        color: #fff;
+        //background-color: #000;
+        background-color: #181818;
+        border-color: #343434;
+    }
+
+    &:active {
+        color: #fff;
+        background-color: #212121;
+        border-color: #343434;
+    }
+}
+
+.downloadWrap {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    width: 100%;
+
+    @media screen and (max-width: 991.98px) {
+        order: 0;
+    }
+}
+
+.download {
+    position: relative;
+    width: 100%;
+    padding: 45px 82px 45px 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 25px 82px 25px 0;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 17px 82px 22px 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 36px;
+        right: 29px;
+        width: 40px;
+        height: 40px;
+        background: transparent url('../../../public/images/icons/pdf.svg') center / auto no-repeat;
+
+        @media screen and (max-width: 1381.98px) {
+            top: 14px;
+            right: 4px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            top: 9px;
+            background-size: 28px;
+        }
+    }
+
+    &:not(:first-child) {
+        margin-top: -1px;
+    }
+}

@@ -1,0 +1,192 @@
+.servicesList {
+    padding: 106px 0;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 47px 0;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 30px 0;
+    }
+}
+
+.wrapper {
+    max-width: 1382px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    //display: none;
+    flex-basis: 33.33%;
+    height: 352px;
+    perspective: 1000px;
+    transition: all .4s;
+
+    @media screen and (max-width: 1381.98px) {
+        height: 239px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        height: 246px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        flex-basis: 50%;
+        height: 165px;
+
+        &:nth-child(even) {
+            margin-right: -0.5px;
+        }
+
+        &:nth-child(odd) {
+            margin-right: -0.5px;
+        }
+    }
+
+    &.show {
+        display: flex;
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (max-width: 767.98px) {
+            top: 16px;
+            right: 14px;
+            left: auto;
+            bottom: auto;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .back {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .4s;
+    }
+
+    .backContent {
+        z-index: 2;
+        border: 1px solid #C0C0C0;
+        color: #000;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 60px 48px 42px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        position: relative;
+
+        @media screen and (max-width: 1381.98px) {
+            padding: 0 21px 29px 29px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            padding: 11px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 33px;
+            right: 33px;
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-image: url("../../../public/images/icons/arrow-diagonal-grey.svg");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            @media screen and (max-width: 1381.98px) {
+                top: 19px;
+                right: 21px;
+                width: 12px;
+                height: 12px;
+                background-size: 12px;
+            }
+        }
+    }
+
+    &:hover {
+        .backContent {
+            color: #FFFFFF;
+            &::after {
+                visibility: visible;
+                background-image: url("../../../public/images/icons/arrow-diagonal-white.svg");
+            }
+        }
+        .back {
+            opacity: 1;
+        }
+    }
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 352px;
+    transform-style: preserve-3d;
+    //transition: 0.6s;
+
+    @media screen and (max-width: 1381.98px) {
+        height: 239px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        height: 165px;
+        transition: 0.6s;
+    }
+
+}
+
+.content, .backContent {
+    width: 100%;
+    height: 352px;
+
+    @media screen and (max-width: 1381.98px) {
+        height: 239px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        height: 165px;
+    }
+}

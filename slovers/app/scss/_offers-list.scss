@@ -1,0 +1,222 @@
+.offers-inf {
+    padding: 60px 0 118px;
+
+    @media screen and (max-width: 767.98px) {
+        padding: 40px 0 41px;
+    }
+}
+
+.offers-inf__table {
+    display: none;
+}
+
+.table-head, .table-body__row {
+    display: grid;
+    grid-template-columns: 2.34% 3.9% 16.59% 15.61% 19.51% 19.51% 22.54%;
+    grid-template-rows: 100%;
+    gap: 0 0;
+    grid-template-areas:
+    ". . . . . . .";
+}
+
+.table-head {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+.table-head__item {
+    display: flex;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        padding: 9px 8px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    .icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+    }
+}
+
+.table-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 21px;
+    }
+}
+
+.table-body__row {
+    position: relative;
+    padding: 12px 0 13px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    transition: background-color .3s ease-in-out;
+    
+    &:hover {
+        background-color: rgba(138, 153, 168, 0.15);
+    }
+
+    @media screen and (max-width: 767.98px) {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+
+        &:first-child {
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+.table-body__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #000;
+
+    @media screen and (max-width: 767.98px) {
+        padding: 10px 0 6px;
+    }
+}
+
+.table-body__item_break {
+    display: none;
+    height: 0;
+
+    @media screen and (max-width: 767.98px) {
+        display: inline;
+        flex-basis: 100%;
+        padding: 0;
+    }
+}
+
+.table-body__item_bullits {
+    background: url('../img/icons/custom_bullits_ico.svg') center / 8px 32px
+no-repeat;
+
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+.table-body__item_place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 767.98px) {
+        margin-right: 14px;
+        //padding: 0;
+    }
+}
+
+.table-body__item_building {
+    font-weight: 700;
+
+    @media screen and (max-width: 767.98px) {
+        margin-right: auto;
+        font-weight: normal;
+    }
+}
+
+.table-body__item_floor {
+    @media screen and (max-width: 767.98px) {
+    }
+}
+
+.table-body__item_square {
+    @media screen and (max-width: 767.98px) {
+        margin: 0 auto 0 32px;
+    }
+}
+
+.table-body__item_free {
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+.table-body__item_price {
+    @media screen and (max-width: 767.98px) {
+        font-weight: 700;
+    }
+}
+
+.table-pagination {
+    align-items: center;
+}
+
+.pagination__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(138, 153, 168, 0.2);
+    border-radius: 3px;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        background-color: rgba(138, 153, 168, 0.4);
+    }
+
+    &.disable {
+        opacity: .5;
+        pointer-events: none;
+    }
+}
+
+.pag_prev {
+    margin-right: 8px;
+}
+
+.pag_next {
+    margin-right: 16px;
+}
+
+.pagination__text {
+    font-family: var(--helveticaNeue-sans);
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 500;
+}

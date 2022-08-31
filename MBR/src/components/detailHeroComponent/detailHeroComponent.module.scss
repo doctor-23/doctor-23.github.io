@@ -1,0 +1,74 @@
+.hero {
+    position: relative;
+    padding: 141px 0 51px;
+    //height: 452px;
+    color: #fff;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 97px 0 39px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 89px 0 44px;
+    }
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1383px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.backLink, .title {
+    display: flex;
+    align-items: center;
+    gap: 30.15px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 767.98px) {
+        gap: 20.15px;
+    }
+
+    &::before {
+        content: "";
+        width: 11px;
+        height: 18px;
+        background: transparent url("../../../public/images/icons/arrow-left.svg") center / auto no-repeat;
+    }
+}
+
+.title {
+    font-weight: 400;
+    
+    &::before {
+        content: none;
+    }
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    margin: auto;
+    background: #7D7D7D center / cover no-repeat;
+}

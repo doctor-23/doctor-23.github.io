@@ -1,0 +1,104 @@
+.ecology {
+    padding: 140px 0 85px;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 67px 0 61px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 25px 0 187px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding-top: 33px;
+    }
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    gap: 48px;
+    max-width: 1381px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        flex-direction: column;
+        gap: 25px;
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.title {
+    margin-bottom: 46px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 39px;
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 29px;
+    }
+}
+
+.descriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media screen and (max-width: 1381.98px) {
+        gap: 19px;
+        margin-bottom: 17px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 25px;
+    }
+}
+
+.logoEcology {
+    width: 122px;
+    height: 147px;
+    background: transparent center / auto no-repeat;
+
+    @media screen and (max-width: 991.98px) {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        transform: translateY(100%);
+    }
+}
+
+.right {
+    img {
+        display: block;
+        max-width: 690px;
+
+        @media screen and (max-width: 1381.98px) {
+            max-width: 461px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.hamburger {
+    width: 24px;
+    height: 24px;
+}
+
+.hamburger-ico {
+    position: relative;
+    width: 20px;
+    height: 14px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    border-top: 2px solid rgba(255, 255, 255, 0.7);
+    transition: all .3s ease;
+    cursor: pointer;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.4);
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+        transition: all .3s ease;
+    }
+}
+
+.hamburger-wrapper {
+    &.show {
+        .hamburger-ico {
+            border-color: transparent;
+
+            &::after {
+                background-color: rgba(255, 255, 255, 0.7);
+                transform: rotate(-45deg);
+            }
+
+            &::before {
+                background-color: rgba(255, 255, 255, 0.7);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

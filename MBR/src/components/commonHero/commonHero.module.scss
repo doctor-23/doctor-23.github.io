@@ -1,0 +1,76 @@
+.commonHero {
+    position: relative;
+    padding: 174px 0 139px;
+    //height: 452px;
+    color: #fff;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 104px 0 56px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 105px 0 130.5px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 104px 0 65px;
+    }
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1383px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.title {
+    margin-bottom: 25px;
+    font-weight: 300;
+    font-size: 74px;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 11px;
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 19px;
+        font-size: 43px;
+        line-height: 50px;
+    }
+}
+
+.description {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    margin: auto;
+    background: #7D7D7D center / cover no-repeat;
+}

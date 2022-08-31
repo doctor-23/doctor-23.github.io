@@ -1,0 +1,211 @@
+.serviceMore {
+    padding: 67px 0 136px;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 64px 0 151px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 30px 0 69px;
+    }
+}
+
+.wrapper {
+    max-width: 1382px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.topWrapper, .bottomWrapper {
+    display: flex;
+}
+
+.topWrapper {
+    width: 100%;
+    gap: 128px;
+    padding-bottom: 86px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    @media screen and (max-width: 1381.98px) {
+        gap: 53px;
+        padding-bottom: 52px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        position: relative;
+        flex-direction: column;
+        gap: 35px;
+        padding-bottom: 142px;
+    }
+
+    .description {
+        margin-bottom: 65px;
+
+        @media screen and (max-width: 1381.98px) {
+            gap: 23px;
+            margin-bottom: 46px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            display: none;
+        }
+    }
+
+    .left {
+        max-width: 562px;
+
+        @media screen and (max-width: 1381.98px) {
+            max-width: 431px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            max-width: 100%;
+        }
+    }
+
+    .right {
+        width: 100%;
+        padding-top: 21px;
+
+        @media screen and (max-width: 1381.98px) {
+            padding-top: 0;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+}
+
+.title {
+    margin-bottom: 58px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 407px;
+        margin-bottom: 17px;
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.btn {
+    padding: 22.08px 50.3px 26.92px 51.45px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 19.26px 55.8px 21.54px 54.2px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        position: absolute;
+        bottom: 40px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+    }
+    
+    &:hover {
+        color: #fff;
+        background-color: #000;
+    }
+}
+
+.bottomWrapper {
+    gap: 108px;
+    padding-top: 67px;
+
+    @media screen and (max-width: 1381.98px) {
+        padding-top: 32px;
+        gap: 43px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding-top: 40px;
+    }
+
+    .left {
+        max-width: 583px;
+
+        @media screen and (max-width: 1381.98px) {
+            max-width: 447px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            max-width: 100%;
+        }
+    }
+
+    .right {
+        max-width: 600px;
+
+        @media screen and (max-width: 1381.98px) {
+            max-width: 463px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            max-width: 100%;
+        }
+    }
+
+    .description {
+        @media screen and (max-width: 1381.98px) {
+            gap: 18px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+

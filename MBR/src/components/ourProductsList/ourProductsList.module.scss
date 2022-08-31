@@ -1,0 +1,80 @@
+.ourProducts {
+    padding: 106px 0 155px;
+
+    @media screen and (max-width: 1381.98px) {
+        padding: 24px 0 121px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 21.5px 0 50px;
+    }
+}
+
+.wrapper {
+    max-width: 1381px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1381.98px) {
+        max-width: 944px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 740px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.title {
+    margin-bottom: 21px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 12px;
+        font-size: 36px;
+        line-height: 64px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: -3px;
+        font-size: 26px;
+        line-height: 64px;
+    }
+}
+
+.description {
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 26px;
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        margin-bottom: 28px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        line-height: 20px;
+    }
+}
+
+.productAccordion {
+    margin-bottom: 126px;
+
+    @media screen and (max-width: 1381.98px) {
+        margin-bottom: 8px;
+    }
+}
