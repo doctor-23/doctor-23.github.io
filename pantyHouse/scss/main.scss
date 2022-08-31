@@ -1,0 +1,310 @@
+// @import 'fonts';
+@import 'config';
+@import 'burgerMenu';
+@import 'header';
+
+.container {
+	width: 1276px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+// стили главной страницы
+
+section#shop_slider {
+	.slider_first {
+		.slick-dots {
+			bottom: 40px;
+			
+			li {
+				width: 16px;
+				height: 16px;
+				background: rgba(254, 254, 254, 0.5);
+				border-radius: 100%;
+				font-size: 0;
+				
+				&.slick-active {
+					background: #FCFCFC;
+				}
+
+				button {
+					&::before {
+						content: '';
+					}
+				}
+			}
+		}
+
+		.slide {
+			min-height: 707px;
+			background-position: top center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-color: linear-gradient(180deg, #DCDCE5 2.43%, #D4D4DB 60.42%, #CDCDD1 100%);
+	        
+			.slide_stock {
+				span {
+					font-size: 7.5rem;
+					line-height: 9rem;
+				}
+			}
+
+			&.slide-1 {
+				.wrapper {
+		        	width: 482px;
+		        	text-align: center;
+		        }
+
+				.slide_stock {
+					font-size: 2.5rem;
+					margin-bottom: 71px;
+					margin-top: 210px;
+				}
+			}
+
+			&.slide-2 {
+				.wrapper {
+		        	width: 264px;
+		        	text-align: center;
+		        }
+
+				.slide_stock {
+					font-size: 4rem;
+					margin-bottom: 60px;
+					margin-top: 90px;
+				}
+			}
+
+			&.slide-3 {
+				.slide_stock {
+					font-size: 2rem;
+					margin-bottom: 28px;
+					margin-top: 145px;
+				}
+			}
+
+			.btn.btn-more {
+				border-radius: 4px;
+				box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+				width: 225px;
+				height: 67px;
+				color: #FFF;
+				font-weight: bold;
+				background: #000;
+				border: none;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+				&:hover {
+					background: rgba(0,0,0,0.9);
+				}
+			}
+		}
+	}
+}
+
+section#new_collection {
+	padding-top: 81px;
+	
+	a {
+		color: #FFF;
+	}
+	
+	.new_one {
+		min-height: 500px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 80px;
+		
+		h2 {
+			font-size: 3.2rem;
+			text-align: center;
+		}
+	}
+
+	.new_two {
+		min-height: 495px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+		h3 {
+			font-size: 3.2rem;
+			text-align: center;
+			margin-bottom: 27px;
+		}
+
+		button {
+			border: 2px solid #FFF;
+			background: transparent;
+			color: #FFF;
+			font-size: 1.2rem;
+			font-weight: bold;
+			padding: 18px 78px;
+			width: 236px;
+			display: block;
+			margin: 0 auto;
+			
+			&:hover {
+			    background: rgba(255,255,255,0.3);
+			    cursor: pointer;
+	    	}
+		}
+	}
+
+	.lazy {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+section#hit_sales {
+	padding-top: 80px;
+	padding-bottom: 152px;
+	
+	h2 {
+		text-align: center;
+		font-size: 2.4rem;
+		font-family: 'Cormorant', serif;
+		text-transform: uppercase;
+		line-height: 67px;
+		margin-bottom: 63px;
+		margin-top: 0;
+	}
+
+	.hits {
+		display: flex;
+		flex-wrap:wrap;
+		
+		.hit {
+			max-width: 305px;
+			margin-right: 165.5px;
+			margin-bottom: 64px;
+			
+			.card_inf {
+				display: flex;
+				justify-content: space-between;
+				
+				a {
+					color: inherit;
+					
+					&:hover {
+						color: rgba(#000, 0.7);
+					}
+				}
+				
+				.hit_inf {
+					max-width: 210px;
+					
+					span {
+						display: block;
+						line-height: 34px;
+					}
+				}
+
+				.buy_box {
+					margin-top: 5px;
+					
+					span {
+						&:last-child {
+							margin-left: 40px;
+						}
+					}
+				}
+			}
+		}
+		
+		.hit_one {
+		}
+		.hit_two {
+		}
+		.hit_three {
+			margin-right: 0;
+		}
+		.hit_four {
+			margin-bottom: 0;
+		}
+		.hit_five {
+			margin-bottom: 0;
+		}
+		.hit_six {
+			margin-bottom: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+// конец
+
+// стили страницы акции и скидки
+
+@import 'discount-style';
+
+// cтили подвала
+@import 'footer';
+
+// стили каталога
+
+@import 'catalog-style';
+
+// стили карточки товара
+
+@import 'card-style';
+
+// стили страницы "моя корзина"
+
+@import 'my-basket';
+
+// стили страницы "коризина + офррмление заказа
+
+@import 'ordering-style';
+
+// стили страницы "Мои заказы" 
+
+@import 'orders-style';
+
+// стили страницы "информация о профиле"
+
+@import 'profile-inf-style';
+
+// стили страницы "лист пожеланий"
+
+@import 'wish-list-style';
+
+// стили страницы "Обратная связь"
+
+@import 'feedback-style';
+
+// стили страницы "Адреса магазинов"
+
+@import 'addresses-of-shops-style';
+
+// стили страницы "Как закзать"
+
+@import 'how-order-style';
+
+// стили страницы "Оплата"
+
+@import 'payment-style';
+
+// стили страницы "Доставка"
+
+@import 'shipping-style';
+
+// стили страницы "Возврат товара"
+
+@import 'refund-style';
+
+// стили страницы "О нас"
+
+@import 'about-style';
+
+// стили промежуточных страниц
+
+@import 'intermediate-pages';
+
+// адаптив
+
+@import 'media';
