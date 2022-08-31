@@ -1,0 +1,232 @@
+html {
+	font-size: 18px;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif !important;
+	color: #000!important;
+	overflow-x: hidden;
+}
+
+ul, li {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.black {
+	color: #000;
+}
+
+* {
+	transition: all 0.3s ease;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+}
+
+.h1, .h2, h2 {
+	font-size: 1.9444444444444444rem!important;
+	line-height: 48px!important;
+}
+
+h1 {
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+				black 1px 1px 0, black -1px -1px 0, 
+                black -1px 1px 0, black 1px -1px 0;
+}
+
+h2, .h2 {
+	text-align: left;
+}
+
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active {
+	text-decoration: none;
+	outline: none;
+}
+
+.container {
+	position: relative;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.bolder {
+	font-weight: 800;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.em-play {
+	background: #fff;
+	border-radius: 50%;
+	position: relative;
+	margin: 0px auto;
+
+	&:after {
+		content: '';
+		background: rgba(241, 241, 241, 0.3);
+		display: block;
+		border-radius: 50%;
+		border: 16.5px solid rgba(241, 241, 241, 0.3);
+		position: absolute;
+		top: -17%;
+		left: -17%;
+	}
+
+	img {
+		object-fit: cover;
+		position: absolute;
+		left: 50%;
+		margin-left: -25%;
+		top: 50%;
+		margin-top: -25%;
+	}
+}
+
+.static {
+	position: static!important;
+}
+
+.relative {
+	position: relative!important;
+}
+
+button {
+	&:active {
+		padding: 2px 0 0;
+	}
+}
+
+.move {
+	opacity:1!important;
+}
+
+.btn:focus {
+	box-shadow: none!important;
+}
+
+
+// magnific popUp
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transform: scale(0);
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  transform: scale(1);
+
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+// настройка twentyTwenty slider
+.twentytwenty-handle {
+	background: #BFAA86!important;
+	border: 1px solid #BFAA86!important;
+
+	i {
+		position: absolute;
+		top: 50%;
+		margin-top: -5.8px;
+		color: #fff;
+		font-size: 0.7rem;
+
+		&:first-child {
+			left: 26%;
+		}
+
+		&:last-child {
+			right: 26%;
+		}
+	}
+}
+.twentytwenty-horizontal .twentytwenty-handle::before,
+.twentytwenty-horizontal .twentytwenty-handle::after {
+	background: #BFAA86!important;
+	box-shadow: 0 3px 0 #BFAA86, 0px 0px 12px rgba(51, 51, 51, 0.5)!important;
+}
+
+// форма обратной связи
+
+.all-form {
+	.form__group {
+
+		&:nth-of-type(1) {
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		&:nth-of-type(2) {
+			display: inline-block;
+		}
+
+		input {
+			width: 260px;
+			height: 50px;
+			background: #fff;
+			border: 1px solid #DFDFDF;
+			border-radius: 50px;
+			padding: 7px 0px 7px 21px;
+			color: #C1C1C1;
+			font-size: 15px;
+		}
+
+		button.group__btn {
+			width: 302px;
+			height: 50px;
+			background: #BD9457;
+			border-radius: 50px;
+			color: #fff;
+			font-weight: bold;
+			font-size: 14px;
+			border: none;
+		}
+	}
+
+	.form__group-input {
+		margin: 26px 0;
+		font-size: 13px;
+
+		a {
+			border-bottom: 1px solid #fff;
+			color: #fff;
+
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+}
