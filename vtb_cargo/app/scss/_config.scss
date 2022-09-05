@@ -1,0 +1,90 @@
+:root {
+    --font-size: 18px;
+    --main-font: 'Montserrat', sans-serif;
+    --main-color: #374048;
+}
+
+html {
+    font-size: var(--font-size);
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--main-color);
+    background: #fff;
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+ul,
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before, &::after {
+        box-shadow: border-box;
+    }
+}
+
+a, a:hover, a:active, a:focus, button, input, button:hover, button:active, button:focus, input:focus, input:active {
+    text-decoration: none;
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.container {
+    position: relative;
+    max-width: 1276px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+._flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+._flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+._flex-column {
+    display: flex;
+    flex-direction: column;
+}
