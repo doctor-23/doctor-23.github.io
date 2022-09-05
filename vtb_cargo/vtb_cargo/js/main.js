@@ -179,6 +179,7 @@ $(document).ready(function () {
     });
   }
 
+  catalogSlider('.catalog__list-slider');
   var tabs = $('.catalog__tabs'); // $('.catalog__list .catalog__list-slider').each(function () {
   //     var data = $(this).data('tab'),
   //         dataTab = tabs.find('.catalog__tabs-item.active').data('tab');
