@@ -1,0 +1,78 @@
+.leasing-help {
+    padding: 67px 0 120px;
+}
+
+.leasing-help__title {
+    margin-bottom: 40px;
+    font-family: var(--vtb-book);
+    font-size: 36px;
+    line-height: 45px;
+    color: var(--main-color);
+}
+
+.leasing-help__list {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.leasing-help__list-item {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 18.66px);
+    padding-bottom: 33px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.leasing-help__list-item__image {
+    margin-bottom: 28px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+        transition: transform .3s ease-in-out;
+    }
+}
+
+.leasing-help__list-item__description {
+    margin-bottom: 15px;
+    padding: 0 24px;
+    color: #474747;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.leasing-help__list-item__more {
+    width: 121px;
+    height: 30px;
+    margin: auto 0 0 24px;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--main-color);
+    background-color: #fff;
+    border-color: var(--main-color);
+
+    &:hover {
+        color: #fff;
+        background-color: var(--dark-main-color);
+        border-color: var(--dark-main-color)
+    }
+}
+
+.leasing-help__more-btn {
+    margin: 0 auto;
+    width: 164px;
+    height: 46px;
+}

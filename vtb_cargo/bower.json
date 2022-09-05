@@ -1,6 +1,6 @@
 {
-  "name": "slovers-front",
-  "description": "slovers-front",
+  "name": "vtb_cargo",
+  "description": "vtb_cargo",
   "main": "index.html",
   "authors": [
     "Aleksandr Dombradi"
@@ -9,7 +9,7 @@
   "keywords": [
     "slovers-front"
   ],
-  "homepage": "https://github.com/feofilaktov/solvers-front.git",
+  "homepage": "https://doctor-23.github.io/vtb-cargo/",
   "private": true,
   "ignore": [
     "**/.*",

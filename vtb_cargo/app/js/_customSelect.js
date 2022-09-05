@@ -13,23 +13,12 @@ function customSelect(container, title, content, label, radio, show) {
         mainParent.removeClass('open');
     })
 
-        .on('click', title, function () {
-            if($(this).closest(container).hasClass('open')) {
-                $(container).removeClass('open')
-            } else {
-                $(container).removeClass('open')
-                $(this).closest(container).addClass('open');
-            }
-        });
+    .on('click', title, function () {
+        if($(this).closest(container).hasClass('open')) {
+            $(container).removeClass('open')
+        } else {
+            $(container).removeClass('open')
+            $(this).closest(container).addClass('open');
+        }
+    });
 } // кастомный select
-
-$('.accordC').prev('.t-rec').on('click', function () {
-    var content = $(this).next('.accordC'),
-        blockOne = content.find('.t396__artboard'),
-        blockTwo = blockOne.find('.t396__carrier'),
-        blockThree = blockOne.find('.t396__filter');
-
-    blockOne.attr('style', 'height: max-content !important');
-    blockTwo.attr('style', 'height: max-content !important');
-    blockThree.attr('style', 'height: max-content !important');
-})
