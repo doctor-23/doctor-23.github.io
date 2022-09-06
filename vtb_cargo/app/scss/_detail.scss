@@ -1,5 +1,21 @@
 .cargo-detail {
     padding: 120px 0 67px;
+
+    @media screen and (max-width: 1189.98px) {
+        padding: 90px 0 60px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 60px 0 30px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 40px 0 20px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        padding: 30px 0 15px;
+    }
 }
 
 .cargo-detail__slider {
@@ -23,17 +39,40 @@
         cursor: pointer;
         transition: color .3s ease-in-out, background-color .3s ease-in-out;
 
+        @media screen and (max-width: 991.98px) {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media screen and (max-width: 575.98px) {
+            width: 40px;
+            height: 40px;
+
+            svg {
+                width: 7px;
+                height: 18px;
+            }
+        }
+
         &:hover, &:focus-visible {
             color: #fff;
             background-color: var(--main-color);
         }
 
         &.arrow-left {
-            left: -30px;
+            left: -25px;
+
+            @media screen and (max-width: 575.98px) {
+                left: -20px;
+            }
         }
 
         &.arrow-right {
-            right: -30px;
+            right: -25px;
+
+            @media screen and (max-width: 575.98px) {
+                right: -20px;
+            }
         }
     }
 
@@ -48,16 +87,41 @@
         gap: 22px;
         transform: translateY(100%);
 
+        @media screen and (max-width: 575.98px) {
+            bottom: -15px;
+            gap: 10px;
+        }
+
         &>li {
             width: 10px;
             height: 10px;
             background-color: #EAEAEA;
             border-radius: 50%;
 
+            @media screen and (max-width: 991.98px) {
+                width: 8px;
+                height: 8px;
+            }
+
+            @media screen and (max-width: 575.98px) {
+                width: 5px;
+                height: 5px;
+            }
+
             &.slick-active {
                 width: 14px;
                 height: 14px;
                 background-color: var(--main-color);
+
+                @media screen and (max-width: 991.98px) {
+                    width: 12px;
+                    height: 12px;
+                }
+
+                @media screen and (max-width: 575.98px) {
+                    width: 9px;
+                    height: 9px;
+                }
             }
 
             button {
@@ -72,26 +136,74 @@
     font-family: var(--vtb-book);
     font-size: 36px;
     line-height: 45px;
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 36px;
+    }
 }
 
 .cargo-detail__slider-item {
     width: 100%;
     height: 480px;
+
+    @media screen and (max-width: 991.98px) {
+        height: auto;
+    }
 }
 
 .cargo-detail__slider-item__content {
     display: flex;
     height: 100%;
     border-radius: 12px;
+
+    @media screen and (max-width: 991.98px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .cargo-detail__slider-item__left {
     padding: 40px 64px 72px 50px;
 
+    @media screen and (max-width: 1189.98px) {
+        padding: 40px 40px 72px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 25px 15px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        row-gap: 15px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        padding: 15px;
+    }
+
+
     .select-cargo {
         width: 333px;
         height: 40px;
         margin-bottom: 36px;
+
+        @media screen and (max-width: 991.98px) {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            width: 100%;
+        }
     }
 
     .select-title {
@@ -106,27 +218,56 @@
     }
 }
 
-.cargo-detail__slider-item__wrap {
+.cargo-detail__slider-item__wrap_one {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 25px;
+
+    @media screen and (max-width: 991.98px) {
+        justify-content: space-between;
+        gap: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+
+.cargo-detail__slider-item__wrap_two {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 25px;
     padding-bottom: 21px;
     border-bottom: 1px solid rgba(var(--main-color), .6);
+
+    @media screen and (max-width: 991.98px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        flex-basis: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        justify-content: space-between;
+        gap: 25px 0;
+    }
 }
 
 .cargo-detail__slider-item__inf {
     font-size: 16px;
     line-height: 22px;
     color: var(--placeholder);
-}
 
-.cargo-detail__slider-item__inf_first {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 18px;
-    line-height: 25px;
+    @media screen and (max-width: 767.98px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .cargo-detail__slider-item__inf_last {
@@ -134,16 +275,40 @@
     font-size: 18px;
     line-height: 25px;
     color: var(--main-color);
+
+    @media screen and (max-width: 991.98px) {
+        padding-bottom: 0;
+    }
+}
+
+.cargo-detail__slider-item__btn-wrap {
+    width: max-content;
+
+    @media screen and (max-width: 991.98px) {
+        flex-basis: 100%;
+    }
 }
 
 .cargo-detail__slider-item__btn {
     width: 220px;
     height: 46px;
+
+    @media screen and (max-width: 991.98px) {
+        margin: 0 auto;
+    }
 }
+
 
 .cargo-detail__slider-item__right {
     max-width: 713px;
     width: 100%;
+
+    @media screen and (max-width: 991.98px) {
+        max-width: 100%;
+        //height: calc(var(--container) / 1.49);
+        height: 350px;
+        border-radius: 12px 12px 0 0;
+    }
 
     img {
         display: block;
@@ -151,5 +316,9 @@
         height: 100%;
         object-fit: cover;
         border-radius: 0 12px 12px 0;
+
+        @media screen and (max-width: 991.98px) {
+            border-radius: 12px 12px 0 0;
+        }
     }
 }

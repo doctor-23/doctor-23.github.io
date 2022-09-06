@@ -1,6 +1,18 @@
 .cargo-with-mileage {
     padding: 120px 0;
-    background-color: #F3F5FB;;
+    background-color: #F3F5FB;
+
+    @media screen and (max-width: 1189.98px) {
+        padding: 90px 0;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 60px 0;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 30px 0;
+    }
 }
 
 .cargo-with-mileage__title {
@@ -8,6 +20,11 @@
     font-family: var(--vtb-book);
     font-size: 36px;
     line-height: 45px;
+
+    @media screen and (max-width: 575.98px) {
+        font-size: 26px;
+        line-height: 36px;
+    }
 }
 
 .cargo-with-mileage__description {
@@ -15,6 +32,16 @@
     font-family: var(--vtb-light);
     font-size: 24px;
     line-height: 38px;
+
+    @media screen and (max-width: 991.98px) {
+        margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 .cargo-with-mileage__slider {
@@ -25,10 +52,27 @@
 
 .cargo-with-mileage__slider-item {
     padding: 45px 80px;
+
+    @media screen and (max-width: 1189.98px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 30px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 30px 20px;
+    }
 }
 
 .cargo-with-mileage__slider-item__content {
     display: flex;
+
+    @media screen and (max-width: 767.98px) {
+        //flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
 .cargo-with-mileage__slider-item__left {
@@ -36,6 +80,23 @@
     max-width: 524px;
     margin-right: 50px;
     padding-right: 50px;
+
+    @media screen and (max-width: 991.98px) {
+        margin-right: 30px;
+        padding-right: 30px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        order: 2;
+        width: calc(60% - 15px);
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: 15px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        display: none;
+    }
 
     &::after {
         content: "";
@@ -47,20 +108,54 @@
         height: calc(100% - 15px);
         margin: auto;
         background-color: #E6E6E6;
+
+        @media screen and (max-width: 767.98px) {
+            content: none;
+        }
+
     }
 }
 
 .select-cargo-with-mileage {
     margin-bottom: 20px;
     max-height: 46px;
+
+    @media screen and (max-width: 767.98px) {
+        order: 0;
+        flex-basis: 100%;
+    }
 }
 
 .cargo-with-mileage__slider-item__image {
+    @media screen and (max-width: 767.98px) {
+        height: 100%;
+    }
+
     img {
         display: block;
         width: 100%;
         height: 249px;
         object-fit: cover;
+
+        @media screen and (max-width: 767.98px) {
+            height: 100%;
+        }
+    }
+}
+
+.cargo-with-mileage__slider-item__right {
+    @media screen and (max-width: 991.98px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        order: 1;
+        width: 40%;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        width: 100%;
     }
 }
 
@@ -69,6 +164,22 @@
     font-size: 30px;
     line-height: 48px;
     color: var(--main-color);
+
+    @media screen and (max-width: 991.98px) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        font-size: 24px;
+        line-height: 36px;
+    }
 }
 
 .cargo-with-mileage__slider-item__list {
@@ -79,9 +190,35 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--main-color);
+
+    @media screen and (max-width: 991.98px) {
+        gap: 10px;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 15px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        font-size: 13px;
+        line-height: 19px;
+    }
 }
 
 .cargo-with-mileage__slider-item__btn {
     width: 250px;
     height: 46px;
+
+    @media screen and (max-width: 991.98px) {
+        margin-top: auto;
+        height: 40px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+    }
 }

@@ -1,5 +1,13 @@
 .feedback {
     padding-bottom: 80px;
+
+    @media screen and (max-width: 991.98px) {
+        padding-bottom: 60px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding-bottom: 30px;
+    }
 }
 
 .feedback__title {
@@ -8,15 +16,33 @@
     font-size: 36px;
     line-height: 46px;
     color: var(--main-color);
+
+    @media screen and (max-width: 575.98px) {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 36px;
+    }
 }
 
 .feedback__form {
     display: flex;
     gap: 16px;
 
+    @media screen and (max-width: 767.98px) {
+        flex-wrap: wrap;
+    }
+
     .inputWrap {
         position: relative;
         width: 300px;
+
+        @media screen and (max-width: 767.98px) {
+            width: calc(50% - 16px);
+        }
+
+        @media screen and (max-width: 575.98px) {
+            width: 100%;
+        }
 
         .msg {
             position: absolute;
@@ -39,6 +65,10 @@
         border-radius: 4px;
         transition: border-color .3s ease-in-out;
 
+        @media screen and (max-width: 767.98px) {
+            height: 40px;
+        }
+
         &::placeholder {
             color: var(--placeholder);
         }
@@ -51,6 +81,16 @@
     .feedback__submit {
         width: 212px;
         height: 46px;
+
+        @media screen and (max-width: 767.98px) {
+            width: calc(50% - 16px);
+            height: 40px;
+        }
+
+        @media screen and (max-width: 575.98px) {
+            width: 100%;
+            margin-top: 20px;
+        }
     }
 }
 

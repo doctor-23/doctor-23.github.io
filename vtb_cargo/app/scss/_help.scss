@@ -1,5 +1,21 @@
 .leasing-help {
     padding: 67px 0 120px;
+
+    @media screen and (max-width: 1189.98px) {
+        padding: 60px 0 90px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 30px 0 60px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 20px 0 30px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        padding-top: 15px;
+    }
 }
 
 .leasing-help__title {
@@ -8,12 +24,31 @@
     font-size: 36px;
     line-height: 45px;
     color: var(--main-color);
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 36px;
+    }
 }
 
 .leasing-help__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 28px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 1189.98px) {
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 20px;
+    }
 }
 
 .leasing-help__list-item {
@@ -23,6 +58,24 @@
     padding-bottom: 33px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     border-radius: 12px;
+
+    @media screen and (max-width: 991.98px) {
+        display: none;
+        width: calc(50% - 10px);
+
+        &:nth-child(1), &:nth-child(2) {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 575.98px) {
+        width: 100%;
+        padding-bottom: 15px;
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
 
     &:hover {
         img {
@@ -35,6 +88,10 @@
     margin-bottom: 28px;
     border-radius: 12px 12px 0 0;
     overflow: hidden;
+
+    @media screen and (max-width: 575.98px) {
+        margin-bottom: 15px;
+    }
 
     img {
         display: block;
@@ -52,6 +109,17 @@
     color: #474747;
     font-size: 20px;
     line-height: 28px;
+
+    @media screen and (max-width: 1189.98px) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        padding: 0 15px;
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 .leasing-help__list-item__more {
@@ -64,6 +132,10 @@
     background-color: #fff;
     border-color: var(--main-color);
 
+    @media screen and (max-width: 575.98px) {
+        margin-left: 15px;
+    }
+
     &:hover {
         color: #fff;
         background-color: var(--dark-main-color);
@@ -75,4 +147,8 @@
     margin: 0 auto;
     width: 164px;
     height: 46px;
+
+    @media screen and (max-width: 1189.98px) {
+        height: 40px;
+    }
 }

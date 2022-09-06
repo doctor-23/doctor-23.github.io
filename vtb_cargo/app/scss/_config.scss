@@ -8,7 +8,19 @@
     --grey-color: #7A7878;
     --dark-grey-color: #474747;
     --placeholder: #999999;
+    --container: 1160px;
 
+    @media screen and (max-width: 1189.98px ) {
+        --container: 940px;
+    }
+
+    @media screen and (max-width: 991.98px ) {
+        --container: 720px;;
+    }
+
+    @media screen and (max-width: 767.98px ) {
+        --container: 100vw;
+    }
 }
 
 html {
@@ -69,20 +81,11 @@ input[type="number"]:focus {
 
 .container {
     position: relative;
-    max-width: 1160px;
+    max-width: var(--container);
     width: 100%;
     margin: 0 auto;
 
-    @media screen and (max-width: 1189.98px ) {
-        max-width: 940px;
-    }
-
-    @media screen and (max-width: 991.98px ) {
-        max-width: 720px;;
-    }
-
     @media screen and (max-width: 767.98px ) {
-        max-width: 100%;
         padding: 0 15px;
     }
 }
@@ -133,6 +136,10 @@ input[type="number"]:focus {
     border-radius: 4px;
     cursor: pointer;
     transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+    @media screen and (max-width: 1189.98px) {
+        font-size: 13px;
+    }
 
     &:hover, &:focus-visible {
         background-color: var(--dark-main-color);
@@ -185,5 +192,19 @@ input[type="number"]:focus {
 
 .validate-border {
     border-color: red !important;
+}
+
+.tablet {
+    display: none;
+
+    @media screen and (max-width: 767.98px) {
+        display: block;
+    }
+}
+
+.desktop {
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
 }
 
