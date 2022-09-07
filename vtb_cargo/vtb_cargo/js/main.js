@@ -152,11 +152,60 @@ $(document).ready(function () {
     }
   });
   ;
-  $('.hamburger').on('click', function () {
+  var body = $('body'); // фиксированная шапка
+
+  function fixedHeader(item) {
+    if ($(item).scrollTop() > window.innerHeight) {
+      body.addClass('prev_nav_scroll');
+    } else {
+      body.removeClass('prev_nav_scroll');
+    }
+
+    if ($(item).scrollTop() > window.innerHeight + 300) {
+      body.addClass('nav_scroll');
+    } else {
+      body.removeClass('nav_scroll');
+    }
+  }
+
+  fixedHeader(window);
+  $(window).scroll(function () {
+    fixedHeader(this);
+  });
+  var hamburger = $('.hamburger'); // плавный скролл для меню шапки
+
+  $('.nav-menu__list-item > a').on('click', function (e) {
+    if (!$(this).parent().hasClass('nav-menu__list-item_last')) {
+      e.preventDefault();
+      var t = 1000;
+      var d = $(this).attr('href');
+      $('html,body').stop().animate({
+        scrollTop: $(d).offset().top
+      }, t);
+
+      if (hamburger.hasClass('open')) {
+        hamburger.removeClass('open');
+        $('header').find('.nav-menu').removeClass('show');
+      }
+    }
+  });
+  hamburger.on('click', function () {
     $(this).toggleClass('open');
     $('header').find('.nav-menu').toggleClass('show');
   }); // гамбурегер меню
-  // вызов фильтра в каталоге
+  // вызов формы обратной связи
+
+  $(document).on('click', '.btn-call, .main-hero__btn, .calculator__btn', function (e) {
+    e.preventDefault();
+    $('#modal_feedback_form').fadeIn(215); // инит валидации и отправки модальной формы
+
+    validation('#modal_form__feedback');
+
+    if (hamburger.hasClass('open')) {
+      hamburger.removeClass('open');
+      $('header').find('.nav-menu').removeClass('show');
+    }
+  }); // вызов фильтра в каталоге
 
   $(document).on('click', '.catalog__btn-show-filters', function () {
     if ($(this).text().trim() === "Показать фильтры") {
@@ -179,11 +228,11 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 300,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000
   });
 
-  if (window.matchMedia('(max-width: 767.98px)').matches) {
+  if (window.matchMedia('(max-width: 991.98px)').matches) {
     var mainHeight = $('.main-hero').outerHeight();
     $('.main-hero__slider-item').css('height', mainHeight + 'px');
   } // конец
@@ -193,9 +242,9 @@ $(document).ready(function () {
 
   clickOutside('.select', '.select-content', 'open'); // клик вне элемента
   // каталог
+  // функция инита слайдера
 
   function catalogSlider(el) {
-    console.log(el);
     $(el).slick({
       slidesToShow: 3,
       slidesToScroll: 3,
@@ -217,40 +266,46 @@ $(document).ready(function () {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: true,
+          dotsClass: 'slider-dots'
         }
       }]
     });
   }
 
-  catalogSlider('.catalog__list-slider');
-  var tabs = $('.catalog__tabs'); // $('.catalog__list .catalog__list-slider').each(function () {
-  //     var data = $(this).data('tab'),
-  //         dataTab = tabs.find('.catalog__tabs-item.active').data('tab');
-  //
-  //     if (data === dataTab) {
-  //         $(this).css('display','block !important');
-  //         catalogSlider(this);
-  //     }
-  // })
+  var tabs = $('.catalog__tabs');
+  var sliders = document.querySelectorAll('.catalog__list .catalog__list-slider'); // инит слайдера каталога для текущего выбранного таба при загрузке
+
+  sliders.forEach(function (item) {
+    var data = item.dataset.tab,
+        dataTab = tabs.find('.catalog__tabs-item.active').data('tab');
+
+    if (data === dataTab) {
+      catalogSlider(".".concat(item.className, "[data-tab=\"").concat(item.dataset.tab, "\"]"));
+      item.classList.add('active');
+    }
+  }); // клик по табу
 
   tabs.on('click', '.catalog__tabs-item', function () {
     var dataTab = $(this).data('tab'),
-        slider = $('.catalog__list .catalog__list-slider'),
-        container = $(this).closest('.catalog').find('.container'),
-        currentSlider = $('.catalog__list .catalog__list-slider[data-tab="' + dataTab + '"]'); // slider[0].style.display = 'none !important';
-    // $(`.catalog__list .catalog__list-slider[data-tab=${dataTab}]`)[0].style.display = 'block !important';
-    //
-    // // slider.slick('unslick');
-    // catalogSlider(currentSlider);
+        slider = $('.catalog__list .catalog__list-slider.active'),
+        currentSlider = document.querySelector('.catalog__list .catalog__list-slider[data-tab="' + dataTab + '"]');
+    body.addClass('loader'); // ждем пока загрузится контент, чтобы его подменить
 
-    container.addClass('loader');
-    $('.catalog__tabs').find('.catalog__tabs-item').removeClass('active');
-    $(this).addClass('active');
     setTimeout(function () {
-      container.removeClass('loader');
+      // показываем выбранный слайдер
+      slider.removeClass('active');
+      slider.slick('unslick');
+      catalogSlider(".".concat(currentSlider.className, "[data-tab=\"").concat(currentSlider.dataset.tab, "\"]"));
+      currentSlider.classList.add('active'); // делаем активным текущий таб
+
+      $('.catalog__tabs').find('.catalog__tabs-item').removeClass('active');
+      $(this).addClass('active'); // убмраем лоадер
+
+      body.removeClass('loader');
     }, 1000);
-  });
+  }); // функция для выбора цены в каталоге
 
   function getPriceRange() {
     var priceMin = $('#minPrice');
@@ -390,21 +445,15 @@ $(document).ready(function () {
       }
     }
   });
-  $('.input-email').inputmask({
-    mask: '*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]' // greedy: false,
-    // onBeforePaste: function (pastedValue, opts) {
-    //     pastedValue = pastedValue.toLowerCase();
-    //     return pastedValue.replace('mailto:', '');
-    // },
-    // definitions: {
-    //     '*': {
-    //         validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
-    //         casing: 'lower'
-    //     }
-    // }
+  $('.input-email').inputmask('email'); // конец
+  // закрытие модальных окон
 
-  }); // конец
-  // валидация формы
+  $(document).on('click', '.modal, .modal__close', function () {
+    $('.modal').fadeOut(215);
+  });
+  $(document).on('click', '.modal__content', function (e) {
+    e.stopPropagation();
+  }); // валидация формы
 
   function validation(form) {
     var parent = $(form),
@@ -416,6 +465,8 @@ $(document).ready(function () {
         nameCheck = false,
         phoneCheck = false,
         emailCheck = false;
+    formInput.val(''); // валидация полей при потере фокуса
+
     formName.on('blur', function () {
       nameCheck = formNameValid(formName, nameCheck);
     });
@@ -424,12 +475,59 @@ $(document).ready(function () {
     });
     formEmail.on('blur', function () {
       emailCheck = formEmailValid(formEmail, emailCheck);
-    });
+    }); // разблокировка кнопки отправки при потере фокуса
+
     formInput.on('blur', function () {
       if (nameCheck && phoneCheck && emailCheck) {
         formSubmit.removeClass('disabled');
       } else {
         formSubmit.addClass('disabled');
+      }
+    }); // отправка формы при условии (условие на всякий случай)
+
+    parent.on('submit', function (e) {
+      e.preventDefault();
+      var form_id = this.getAttribute('ID'),
+          clientName = $(this).find('.input-name').val().trim(),
+          modalName = $('.modal').find('.name'),
+          formData = new FormData(document.getElementById(form_id));
+
+      if (clientName) {
+        modalName.text('');
+        modalName.text(clientName);
+      }
+
+      $('.modal').fadeOut(215);
+      body.addClass('loader');
+
+      if (!formSubmit.hasClass('disabled')) {
+        $.ajax({
+          url: 'https://jsonplaceholder.typicode.com/posts',
+          type: 'post',
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function success(success) {
+            setTimeout(function () {
+              body.removeClass('loader');
+
+              if (success.id === 101) {
+                $('#modal_feedback_success').fadeIn(215);
+              } else {
+                $('#modal_feedback_error').fadeIn(215);
+              }
+            }, 2000);
+          },
+          error: function error(req, text, _error) {
+            console.log(req);
+            console.log(text);
+            console.log(_error);
+            setTimeout(function () {
+              body.removeClass('loader');
+              $('#modal_feedback_error').fadeIn(215);
+            }, 2000);
+          }
+        });
       }
     });
   }

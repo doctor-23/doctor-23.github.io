@@ -1,3 +1,5 @@
+    </div>
+
     <footer id="footer">
         <div class="container">
             <div class="links-wrap">
@@ -55,6 +57,85 @@
             </p>
         </div>
     </footer>
+
+    <div class="modal" id="modal_feedback_success">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+
+            <div class="modal__header">
+                Заявка успешно отправлена
+            </div>
+
+            <div class="modal__body">
+                <span class="name"></span>, спасибо, за обращение!<br>
+                В ближайшее время с вами свяжутся!
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_feedback_error">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+
+            <div class="modal__header">
+                Ошибка отправки
+            </div>
+
+            <div class="modal__body">
+                <span class="name"></span>, произошла ошибка отправки формы, перезагрузите страницу и повторите попытку
+                <br><br>
+                Спасибо!
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_feedback_form">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+
+            <div class="modal__header">
+                Остались вопросы?
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="feedback__form" id="modal_form__feedback">
+                    <label class="inputWrap">
+                        <input type="text" class="form-input input-name" name="modal_feedback_name" placeholder="Ваше имя">
+                        <span class="msg msg-error">
+                            Имя должно быть больше 2 символов
+                        </span>
+                                <span class="msg msg-empty">
+                            Поле не должно быть пустым
+                        </span>
+                    </label>
+
+                    <label class="inputWrap">
+                        <input type="tel" class="form-input input-phone" name="modal_feedback_phone" placeholder="Телефон">
+                        <span class="msg msg-error-phone">
+                            Телефон должен состоять из 10 цифр
+                        </span>
+                                <span class="msg msg-error-empty">
+                            Поле не должно быть пустым
+                        </span>
+                    </label>
+
+                    <label class="inputWrap">
+                        <input type="text" class="form-input input-email" name="modal_feedback_email" placeholder="E-mail">
+                        <span class="msg msg-error-length">
+                            Не менее 2 символов перед @
+                        </span>
+                                <span class="msg msg-error-empty">
+                            Поле не должно быть пустым
+                        </span>
+                    </label>
+
+                    <button class="btn feedback__submit disabled" type="submit">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/jquery.fancybox.min.js"></script>
