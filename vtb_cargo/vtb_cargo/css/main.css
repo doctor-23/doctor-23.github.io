@@ -877,7 +877,7 @@ input[type="number"]:focus {
 
 .catalog__list-slider {
   display: none !important;
-  margin: 0 -20px 40px;
+  margin: 0 -20px 40px !important;
 }
 
 .catalog__list-slider.active {
@@ -925,6 +925,11 @@ input[type="number"]:focus {
 
 .catalog__list-slider .slick-arrow.arrow-right {
   right: -10px;
+}
+
+.catalog__list-slider .slick-arrow.slick-disabled {
+  opacity: .4;
+  pointer-events: none;
 }
 
 .catalog__list-slider .slider-dots {
@@ -1063,6 +1068,17 @@ input[type="number"]:focus {
 .catalog__list-item__list-btn:hover,
 .catalog__list-item__list-btn:focus-visible {
   color: #fff;
+}
+
+.catalog__list__empty {
+  display: none;
+  padding: 40px 0 60px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.catalog__list__hidden-item {
+  display: none;
 }
 
 .catalog__show-more {
@@ -1747,6 +1763,10 @@ input[type="number"]:focus {
   border-top: 1px solid #CFCFCF;
 }
 
+.accordion-submenu a {
+  color: var(--dark-main-color);
+}
+
 .feedback {
   padding-bottom: 80px;
 }
@@ -2137,7 +2157,7 @@ input[type="number"]:focus {
   }
 
   .catalog__list-slider {
-    margin: 0 -12px 30px;
+    margin: 0 -12px 30px !important;
   }
 
   .catalog__list-item__wrap {
