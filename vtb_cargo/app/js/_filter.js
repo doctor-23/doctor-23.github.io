@@ -27,6 +27,8 @@ function catalogSlider(el, infinite) {
         arrows: true,
         infinite: infinite,
         variableWidth: true,
+        // dots: true,
+        // dotsClass: 'slider-dots',
         prevArrow: '<a class="arrow-left"><svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 0.884978C9.27834 0.884978 9.05667 0.966644 8.88167 1.14164L1.275 8.74831C0.0383371 9.98498 0.0383371 12.015 1.275 13.2516L8.88167 20.8583C9.22 21.1966 9.78 21.1966 10.1183 20.8583C10.4567 20.52 10.4567 19.96 10.1183 19.6216L2.51167 12.015C1.95167 11.455 1.95167 10.545 2.51167 9.98498L10.1183 2.37831C10.4567 2.03998 10.4567 1.47998 10.1183 1.14164C9.94334 0.978311 9.72167 0.884978 9.5 0.884978Z" fill="currentColor"/></svg></a>',
         nextArrow: '<a class="arrow-right"><svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.50003 0.884978C1.72169 0.884978 1.94336 0.966644 2.11836 1.14164L9.72503 8.74831C10.9617 9.98498 10.9617 12.015 9.72503 13.2516L2.11836 20.8583C1.78003 21.1966 1.22003 21.1966 0.881695 20.8583C0.543362 20.52 0.543362 19.96 0.881695 19.6216L8.48836 12.015C9.04836 11.455 9.04836 10.545 8.48836 9.98498L0.881695 2.37831C0.543362 2.03998 0.543362 1.47998 0.881695 1.14164C1.05669 0.978311 1.27836 0.884978 1.50003 0.884978Z" fill="currentColor"/></svg></a>',
         swipe: true,
@@ -180,7 +182,7 @@ $(document).on('click', '.filters__btn', function (e) {
     currentSlider.append(sliderChildren);
 
     var sliderItem = currentSlider.find('.catalog__list-item');
-    body.addClass('loader')
+    body.addClass('loader');
 
     sliderItem.each(function () {
         if (!$(this).closest('.slick-slide').hasClass('slick-cloned')) {
@@ -194,22 +196,23 @@ $(document).on('click', '.filters__btn', function (e) {
 
             var compare_price = comparePrice(price);
 
-            if (data_model !== model && model !== "all") {
-                if (data_motor !== motor || motor !== "all") {
-                    if (!compare_price) {
+            if (compare_price) {
+                if (data_model !== model || model === "all") {
+                    if (model !== "all") {
+                        hiddenContainer.append($(this));
+                    }
+
+                    if (data_motor !== motor) {
+                        hiddenContainer.append($(this));
+                    }
+                } else {
+                    console.log(data_model, model)
+                    if (data_motor !== motor && motor !== "all") {
                         hiddenContainer.append($(this));
                     }
                 }
             } else {
-                if (data_motor !== motor && motor !== "all") {
-                    if (!compare_price) {
-                        hiddenContainer.append($(this));
-                    }
-                } else {
-                    if (!compare_price) {
-                        hiddenContainer.append($(this));
-                    }
-                }
+                hiddenContainer.append($(this));
             }
         }
     });
