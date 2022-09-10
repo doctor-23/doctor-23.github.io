@@ -238,17 +238,12 @@ $(document).ready(function () {
   // вызов фильтра в каталоге
 
   $(document).on('click', '.catalog__btn-show-filters', function () {
-    if ($(this).text().trim() === "Показать фильтры") {
-      $(this).text("Скрыть фильтры");
-    } else {
-      $(this).text("Показать фильтры");
-    }
-
-    $('.catalog').find('.filters').toggleClass('show');
+    $('#overlay').fadeIn(215);
+    $('.catalog').find('.filters').addClass('show');
   });
-  $(document).on('click', '.catalog .filters .close', function () {
-    $(this).closest('.filters').removeClass('show');
-    $('.catalog__btn-show-filters').text("Показать фильтры");
+  $(document).on('click', '.catalog .filters .close, #overlay', function () {
+    $('#overlay').fadeOut(215);
+    $('.catalog .filters').removeClass('show');
   }); // конец
   // функция инита слайдера
 
@@ -394,6 +389,8 @@ $(document).ready(function () {
     hiddenContainer.children().remove();
     currentSlider.children().remove();
     currentSlider.append(sliderChildren);
+    $('#overlay').fadeOut(215);
+    $('.catalog .filters').removeClass('show');
     var sliderItem = currentSlider.find('.catalog__list-item');
     body.addClass('loader');
     sliderItem.each(function () {

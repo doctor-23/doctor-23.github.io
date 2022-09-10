@@ -273,6 +273,20 @@ input[type="number"]:focus {
   display: none;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
 .select {
   position: relative;
 }
@@ -2429,7 +2443,7 @@ input[type="number"]:focus {
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 5;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2842,7 +2856,7 @@ input[type="number"]:focus {
   }
 
   .catalog__list-slider {
-    margin: 0 0 50px !important;
+    margin: 0 0 60px !important;
   }
 
   .catalog__list-slider .slick-arrow.arrow-left {
@@ -2851,6 +2865,10 @@ input[type="number"]:focus {
 
   .catalog__list-slider .slick-arrow.arrow-right {
     right: 0;
+  }
+
+  .catalog__list-slider .slider-dots {
+    bottom: -20px;
   }
 
   .catalog__list-item__wrap {
@@ -3217,7 +3235,7 @@ input[type="number"]:focus {
   }
 
   .cargo-detail__slider-item__left {
-    padding: 15px;
+    padding: 15px 15px 20px;
   }
 
   .articles {
@@ -3232,7 +3250,7 @@ input[type="number"]:focus {
 
   .leasing-help__list-item {
     width: 100%;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
 
   .leasing-help__list-item:nth-child(2) {
