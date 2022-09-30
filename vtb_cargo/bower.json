@@ -20,7 +20,6 @@
   ],
   "dependencies": {
     "jquery": "^3.6.0",
-    "fancybox": "^3.5.7",
     "slick-carousel": "git://github.com/kenwheeler/slick#^1.8.1",
     "inputmask": "^5.0.6",
     "nouislider": "^14.6.2"
@@ -31,12 +30,6 @@
         "./slick/slick.js",
         "./slick/slick-theme.css",
         "./slick/slick.css"
-      ]
-    },
-    "fancybox": {
-      "main": [
-        "./dist/jquery.fancybox.css",
-        "./dist/jquery.fancybox.js"
       ]
     },
     "inputmask": {
