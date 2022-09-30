@@ -55,7 +55,8 @@ function clickOutside(container, area, open) {
 
 function resizeInput() {
   this.style.width = this.value.length + "ch";
-} // функция валидации имени
+} // конец
+// функция валидации имени
 
 
 function formNameValid(el, elCheck) {
@@ -75,7 +76,8 @@ function formNameValid(el, elCheck) {
   }
 
   return elCheck;
-} // функция валидации телефона
+} // конец
+// функция валидации телефона
 
 
 function formPhoneValid(el, elCheck) {
@@ -104,41 +106,8 @@ function formPhoneValid(el, elCheck) {
   }
 
   return elCheck;
-} // функция валидации email
+} // конец
 
-
-function formEmailValid(el, elCheck) {
-  var emailVal = el.val(),
-      emailValid = emailVal.split('@'),
-      validEmail = /_/;
-  console.log(el.val());
-
-  if (el.val().length > 0 && !validEmail.test(el.val())) {
-    if (emailValid[0].length < 3) {
-      el.addClass('validate-border');
-      el.parent().find('.msg').hide();
-      el.parent().find('.msg-error-length').show();
-      elCheck = false;
-    } else {
-      el.removeClass('validate-border');
-      el.parent().find('.msg').hide();
-      elCheck = true;
-    }
-  } else {
-    el.parent().find('.msg').hide();
-
-    if (el.val().length === '') {
-      el.parent().find('.msg-error-empty').show();
-    } else {
-      el.parent().find('.msg-error-invalid').show();
-    }
-
-    el.addClass('validate-border');
-    elCheck = false;
-  }
-
-  return elCheck;
-}
 
 $(document).ready(function () {
   // check browser for webp format
@@ -179,7 +148,8 @@ $(document).ready(function () {
   fixedHeader(window);
   $(window).scroll(function () {
     fixedHeader(this);
-  });
+  }); // конец
+
   var hamburger = $('.hamburger'); // плавный скролл для меню шапки
 
   $('.nav-menu__list-item > a').on('click', function (e) {
@@ -196,7 +166,9 @@ $(document).ready(function () {
         $('header').find('.nav-menu').removeClass('show');
       }
     }
-  });
+  }); // конец
+  // гамбурегер меню
+
   hamburger.on('click', function () {
     var isOpen = $(this).hasClass('open');
     $(this).toggleClass('open');
@@ -214,10 +186,10 @@ $(document).ready(function () {
     $('header').find('.nav-menu').removeClass('show');
     $('body').removeClass('no-scroll');
     $('#overlay').fadeOut(215);
-  }); // гамбурегер меню
+  }); // конец
   // вызов формы обратной связи
 
-  $(document).on('click', '.btn-call, .main-hero__btn, .calculator__btn', function (e) {
+  $(document).on('click', '.btn-call, .main-hero__btn, .calculator__btn, .program__btn, .cargo-with-mileage__btn', function (e) {
     e.preventDefault();
     $('#modal_feedback_form').fadeIn(215); // инит валидации и отправки модальной формы
 
@@ -227,12 +199,7 @@ $(document).ready(function () {
       hamburger.removeClass('open');
       $('header').find('.nav-menu').removeClass('show');
     }
-  }); // if (window.matchMedia('(max-width: 991.98px)').matches) {
-  //     var mainHeight = $('.main-hero').outerHeight();
-  //
-  //     $('.main-hero__slider-item').css('height', mainHeight + 'px')
-  // }
-  // конец
+  }); // конец
 
   customSelect('.select', '.select-title', '.select-content', '.select-content__wrapper', '.select-content__radio', 4); // init кастомного селекта
 
@@ -475,9 +442,10 @@ $(document).ready(function () {
   calculatorRange('leasing_period_range', 'leasing_period', 1);
   calculatorRange('prepayment_range', 'prepayment', 100000);
   calculatorRange('redemption_payment_range', 'redemption_payment', 1); // конец
-  // в мобильной и планшетной версии клик по иконке информации в блоке "программы"
+  // адаптив
 
   if (window.matchMedia('(max-width: 991.98px)').matches) {
+    // клик по иконке информации в блоке "программы"
     var infHover = document.querySelector('.program__top__inf-hover');
     var circle = document.querySelector('.program__top__inf-title__circle');
     circle.addEventListener('click', function () {
@@ -493,26 +461,9 @@ $(document).ready(function () {
         infHover.classList.remove('active');
         circle.classList.remove('active');
       }
-    });
-  } // авто с пробегаом табы
+    }); // конец
+    // статьи
 
-
-  $('.cargo-with-mileage__tabs').on('click', '.cargo-with-mileage__tabs-item', function () {
-    var dataAttr = $(this).data('tab');
-
-    if (typeof dataAttr === 'undefined') {
-      dataAttr = $(this).val();
-    }
-
-    console.log(dataAttr);
-    $('.cargo-with-mileage__tabs-item').removeClass('active');
-    $(this).addClass('active');
-    $('.cargo-with-mileage__content-item').removeClass('active');
-    $('.cargo-with-mileage__content-item[data-content="' + dataAttr + '"]').addClass('active');
-  }); // конец
-  // статьи
-
-  if (window.matchMedia('(max-width: 991.98px)').matches) {
     $('.leasing-help__list').slick({
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -531,9 +482,25 @@ $(document).ready(function () {
           slidesToScroll: 1
         }
       }]
-    });
-  } // аккордеон
+    }); // конец
+  } // конец
+  // авто с пробегом табы
 
+
+  $('.cargo-with-mileage__tabs').on('click', '.cargo-with-mileage__tabs-item', function () {
+    var dataAttr = $(this).data('tab');
+
+    if (typeof dataAttr === 'undefined') {
+      dataAttr = $(this).val();
+    }
+
+    console.log(dataAttr);
+    $('.cargo-with-mileage__tabs-item').removeClass('active');
+    $(this).addClass('active');
+    $('.cargo-with-mileage__content-item').removeClass('active');
+    $('.cargo-with-mileage__content-item[data-content="' + dataAttr + '"]').addClass('active');
+  }); // конец
+  // аккордеон
 
   (function () {
     var accordion = function accordion(el, multiple) {
@@ -571,8 +538,7 @@ $(document).ready(function () {
         placeholder: "9"
       }
     }
-  });
-  $('.input-email').inputmask('email'); // конец
+  }); // конец
   // закрытие модальных окон
 
   $(document).on('click', '.modal, .modal__close', function () {
@@ -586,12 +552,10 @@ $(document).ready(function () {
     var parent = $(form),
         formName = parent.find('.input-name'),
         formPhone = parent.find('.input-phone'),
-        formEmail = parent.find('.input-email'),
         formInput = parent.find('input'),
         formSubmit = parent.find('button[type="submit"]'),
         nameCheck = false,
-        phoneCheck = false,
-        emailCheck = false;
+        phoneCheck = false;
     formInput.val(''); // валидация полей при потере фокуса
 
     formName.on('blur', function () {
@@ -599,10 +563,7 @@ $(document).ready(function () {
     });
     formPhone.on('blur', function () {
       phoneCheck = formPhoneValid(formPhone, phoneCheck);
-    }); // formEmail.on('blur', function () {
-    //     emailCheck = formEmailValid(formEmail, emailCheck);
-    // })
-    // разблокировка кнопки отправки при потере фокуса
+    }); // разблокировка кнопки отправки при потере фокуса
 
     formInput.on('blur', function () {
       if (nameCheck && phoneCheck) {

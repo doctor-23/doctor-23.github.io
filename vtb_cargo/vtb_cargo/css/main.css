@@ -2221,22 +2221,83 @@ input[type="number"]:focus {
   max-width: 320px;
 }
 
+#modal_feedback_form .modal__content {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 40px 73px 50px;
+}
+
+#modal_feedback_form .modal__header {
+  margin-bottom: 32px;
+}
+
+#modal_feedback_form .modal__title {
+  margin-bottom: 16px;
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 500;
+  color: var(--dark-main-color);
+}
+
+#modal_feedback_form .modal__description {
+  max-width: 419px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-main-color);
+}
+
+#modal_feedback_form .modal__body {
+  width: 100%;
+}
+
 #modal_feedback_form .feedback__form {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
-  width: 300px;
+  gap: 38px;
+  width: 100%;
 }
 
 #modal_feedback_form .inputWrap {
   width: 100%;
 }
 
+#modal_feedback_form .form-input {
+  height: 35px;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-main-color);
+  border: 0;
+  border-bottom: 1px solid var(--dark-main-color);
+  border-radius: 0;
+}
+
+#modal_feedback_form .form-input::-webkit-input-placeholder {
+  color: #042033;
+}
+
+#modal_feedback_form .form-input::-moz-placeholder {
+  color: #042033;
+}
+
+#modal_feedback_form .form-input:-ms-input-placeholder {
+  color: #042033;
+}
+
+#modal_feedback_form .form-input::-ms-input-placeholder {
+  color: #042033;
+}
+
+#modal_feedback_form .form-input::placeholder {
+  color: #042033;
+}
+
 #modal_feedback_form .feedback__submit {
   width: 100%;
-  margin-top: 20px;
+  margin-top: -6px;
 }
 
 .modal__content {
@@ -3709,6 +3770,36 @@ input[type="number"]:focus {
     margin-top: 0;
   }
 
+  #modal_feedback_form .modal__content {
+    max-width: calc(100vw - 30px);
+    padding: 32px 20px;
+  }
+
+  #modal_feedback_form .modal__header {
+    margin-bottom: 45px;
+  }
+
+  #modal_feedback_form .modal__title {
+    margin-bottom: 29px;
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  #modal_feedback_form .modal__description {
+    max-width: 305px;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  #modal_feedback_form .feedback__form {
+    gap: 41px;
+  }
+
+  #modal_feedback_form .form-input {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
   .modal__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3725,6 +3816,13 @@ input[type="number"]:focus {
             align-items: center;
     width: calc(100vw - 15px);
     padding: 40px 0;
+  }
+
+  .modal__close {
+    top: 15px;
+    right: 15px;
+    width: 11px;
+    height: 11px;
   }
 
   .modal__body {
@@ -3763,15 +3861,6 @@ input[type="number"]:focus {
   #modal_feedback_error .modal__body,
   #modal_feedback_success .modal__body {
     max-width: 290px;
-  }
-
-  #modal_feedback_form .feedback__form {
-    width: 260px;
-  }
-
-  .modal__close {
-    top: 10px;
-    right: 10px;
   }
 
   .modal__header {
