@@ -1,8 +1,7 @@
 :root {
     --font-size: 14px;
-    --main-font: 'Roboto-Regular', sans-serif;
-    --vtb-light: 'VTB-Group-Cond-Light', sans-serif;
-    --vtb-book: 'VTB-Group-Cond-Book', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
+    --roboto: 'Roboto', sans-serif;
     --main-color: #11257A;
     --dark-main-color: #0D1846;
     --grey-color: #7A7878;
@@ -10,7 +9,7 @@
     --placeholder: #999999;
     --container: 1160px;
 
-    @media screen and (max-width: 1189.98px ) {
+    @media screen and (max-width: 1190.98px ) {
         --container: 940px;
     }
 
@@ -143,7 +142,9 @@ input[type="number"]:focus {
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-weight: 700;
     font-size: 14px;
+    line-height: 160%;
     background-color: var(--main-color);
     border: 1px solid var(--main-color);
     border-radius: 4px;

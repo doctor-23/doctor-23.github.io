@@ -6,6 +6,7 @@
     #header {
         position: fixed;
         top: 0;
+        height: 63px;
         background-color: #fff;
         box-shadow: 0 4px 10px rgba(0,0,0,.06);
         opacity: 0;
@@ -20,16 +21,6 @@
         .nav-menu__list-item {
             a {
                 color: var(--main-color);
-            }
-        }
-
-        .btn-call {
-            color: #fff;
-            background-color: var(--main-color);
-            border-color: var(--main-color);
-
-            &:hover {
-                color: #fff;
             }
         }
 
@@ -68,7 +59,8 @@
     right: 0;
     left: 0;
     z-index: 2;
-    height: 63px;
+    height: 92px;
+    //padding: 30px 0;
     background-color: transparent;
     transform-origin: 100% 0;
     transition: background-color .3s ease-in-out, transform .3s ease-in-out;
@@ -115,7 +107,7 @@
     .nav-menu__list {
         display: flex;
         align-items: center;
-        gap: 36px;
+        gap: 32px;
 
         @media screen and (max-width: 991.98px) {
             flex-direction: column;
@@ -129,7 +121,10 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            font-family: var(--roboto);
             color: #fff;
+            font-size: 14px;
+            line-height: 160%;
             transition: opacity .3s ease-in-out;
 
             @media screen and (max-width: 991.98px) {
@@ -198,51 +193,11 @@
         }
     }
 
-    .call-wrapper {
-        display: flex;
-        align-items: center;
-
-        @media screen and (max-width: 1189.98px) {
-            flex-direction: column;
-        }
-
-        @media screen and (max-width: 991.98px) {
-            flex-direction: row;
-            justify-content: flex-end;
-            gap: 20px;
-            flex-grow: 1;
-            margin-right: 24px;
-        }
-    }
-
-    .btn-call {
-        width: 151px;
-        height: 36px;
-        margin-right: 36px;
-        color: var(--main-color);
-        background-color: #fff;
-        border-color: #fff;
-        border-radius: 33px;
-
-        @media screen and (max-width: 1189.98px) {
-            margin-right: 0;
-        }
-
-        @media screen and (max-width: 575.98px) {
-            display: none;
-        }
-
-        &:hover, &:focus-visible {
-            color: #fff;
-            background-color: var(--dark-main-color);
-            border-color: var(--dark-main-color);
-        }
-    }
-
     .header-phone {
         color: #fff;
-        font-size: 20px;
-        line-height: 32px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
         transition: opacity .3s ease-in-out;
 
         @media screen and (max-width: 1189.98px) {

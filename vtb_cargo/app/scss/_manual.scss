@@ -1,6 +1,6 @@
 .manual {
-    padding: 120px 0;
-    background-color: var(--main-color);
+    padding: 100px 0;
+    background-color: #F3F5FB;
 
     @media screen and (max-width: 1189.98px) {
         padding: 90px 0;
@@ -17,10 +17,9 @@
 
 .manual__title {
     margin-bottom: 40px;
-    font-family: var(--vtb-book);
     font-size: 36px;
     line-height: 45px;
-    color: #fff;
+    color: var(--dark-main-color);
 
     @media screen and (max-width: 767.98px) {
         margin-bottom: 24px;
@@ -49,10 +48,11 @@
 
 .manual__list-item {
     width: calc(33.33% - 18.66px);
-    padding: 28px 24px 60px 24px;
+    padding: 28px 24px 40px 24px;
     background-color: #fff;
     border: 1px solid #EBEDF3;
-    border-radius: 12px;
+    border-radius: 16px;
+    box-shadow: 6px 4px 57px rgba(0, 0, 0, 0.1);
 
     @media screen and (max-width: 1189.98px) {
         width: calc(33.33% - 13.33px);
@@ -69,15 +69,8 @@
 }
 
 .manual__list-item__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
     margin-bottom: 20px;
-    color: #fff;
-    background-color: var(--main-color);
-    border-radius: 6px;
+    color: var(--dark-main-color);
 
     @media screen and (max-width: 575.98px) {
         margin-bottom: 10px;
@@ -86,8 +79,8 @@
 
 .manual__list-item__title {
     margin-bottom: 12px;
-    font-size: 19px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 140%;
     color: var(--dark-main-color);
 
     @media screen and (max-width: 575.98px) {
@@ -99,7 +92,7 @@
 
 .manual__list-item__description {
     font-size: 14px;
-    line-height: 22px;
+    line-height: 160%;
     letter-spacing: -0.01em;
     color: rgba(var(--dark-main-color), 0.5);
 

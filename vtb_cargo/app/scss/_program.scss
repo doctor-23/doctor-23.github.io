@@ -1,0 +1,222 @@
+.program {
+    padding: 100px 0;
+    background-color: #F3F5FB;
+}
+
+.program__title {
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 130%;
+}
+
+.program__top-wrap {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.program__top-wrap__left {
+    position: relative;
+    max-width: 466px;
+    flex-shrink: 0;
+    padding: 31.75px 20px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.program__logos-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+
+.program__top__inf-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: max-content;
+    margin-bottom: 3px;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    cursor: pointer;
+
+    &:hover {
+        .program__top__inf-title__circle {
+            color: #fff;
+            background-color: var(--main-color);
+        }
+
+        .program__top__inf-hover {
+            opacity: 1;
+            transform: translateY(100%);
+        }
+    }
+}
+
+.program__top__inf-title__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    transition: color .3s ease-in-out, background-color.3s ease-in-out;
+}
+
+.program__top__inf-description {
+    max-width: 294px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #494B4D;
+}
+
+.program__top__inf-hover {
+    position: absolute;
+    left: 0;
+    bottom: 59px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 448.75px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    opacity: 0;
+    transform: translate(-1000%);
+    transition: opacity .3s ease-in-out;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        display: block;
+    }
+
+    &::before {
+        top: 0;
+        right: 102px;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 5px 10px;
+        border-color: transparent transparent #fff transparent;
+        transform: translateY(-100%);
+    }
+
+    &::after {
+        height: 15px;
+        right: 0;
+        left: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.program__top__inf-hover__item {
+    display: flex;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--dark-main-color);
+
+    .svg-ico {
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+}
+
+.program__top-wrap__right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px 30px;
+    max-width: calc(100% - 521px);
+    flex-shrink: 0;
+}
+
+.program__top-wrap__right-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: calc(50% - 15px);
+}
+
+.program__top-wrap__right-item__title {
+    color: var(--dark-main-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.program__top-wrap__right-item__description {
+    color: var(--dark-main-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    &:nth-child(even) {
+        max-width: 300px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.program__top-wrap__right-item__status {
+    color: var(--dark-main-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.program__bottom-wrap {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.program__bottom-wrap__content {
+    display: flex;
+    gap: 30px;
+    width: 55.11%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.program__interest-rate {
+    gap: 0;
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+
+    b {
+        font-size: 88px;
+    }
+}
+
+.program__bottom-wrap__content-title {
+    color: var(--dark-main-color);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.program__bottom-wrap__content-description {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.program__btn {
+    width: calc(100% - 55.11% - 30px);
+    height: 56px;
+    font-size: 16px;
+}

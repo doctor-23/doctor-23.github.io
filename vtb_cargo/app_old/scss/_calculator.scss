@@ -1,0 +1,190 @@
+.calculator {
+    padding: 150px 0;
+    background-color: var(--main-color);
+
+    @media screen and (max-width: 1189.98px) {
+        padding: 120px 0;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding: 90px 0;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        padding: 60px 15px;
+    }
+
+    .container {
+        padding: 56px 40px 74px;
+        background-color: #fff;
+
+        @media screen and (max-width: 1189.98px) {
+            padding: 40px 40px 55px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            padding: 40px 30px 45px;
+        }
+    }
+}
+
+.calculator__title {
+    margin-bottom: 32px;
+    font-family: var(--vtb-book);
+    font-size: 36px;
+    line-height: 45px;
+
+    @media screen and (max-width: 575.98px) {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+
+.calculator__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 36px;
+
+    @media screen and (max-width: 991.98px) {
+        column-gap: 0;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        row-gap: 30px
+    }
+}
+
+.calculator__item {
+    position: relative;
+    width: calc(33.33% - 24px);
+
+    @media screen and (max-width: 991.98px) {
+        width: calc(50% - 20px);
+    }
+
+    @media screen and (max-width: 575.98px) {
+        width: 100%;
+    }
+
+    &.calculator__item_last {
+        display: flex;
+        align-items: flex-end;
+        width: calc(66.66% - 36px);
+
+        @media screen and (max-width: 991.98px) {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    .inputWrap {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        max-width: 100%;
+        width: 100%;
+        max-height: 46px;
+        padding: 12px 16px;
+        border: 1px solid #E5E5E5;
+        border-radius: 4px;
+
+        @media screen and (max-width: 1189.98px) {
+            height: 40px;
+        }
+
+        input {
+            padding: 0;
+            border: 0;
+        }
+    }
+
+    .calculator__item-range {
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        max-width: calc(100% - 8px);
+        margin: 0 auto;
+        transform: translateY(100%);
+
+        & > div {
+            color: var(--placeholder);
+            font-size: 8px;
+            line-height: 13px;
+            letter-spacing: 0.04em;
+        }
+    }
+
+    .common-range {
+        .noUi-handle {
+            &.noUi-handle-lower {
+                right: -5px;
+            }
+        }
+    }
+
+    .calculator__item-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+
+        @media screen and (max-width: 991.98px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            gap: 0;
+        }
+
+        @media screen and (max-width: 575.98px) {
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
+    }
+
+    .calculator__item-inf {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .calculator__item-inf__top {
+        color: var(--main-color);
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .calculator__item-inf__bottom {
+        color: var(--placeholder);
+        font-size: 8px;
+        line-height: 13px;
+        letter-spacing: 0.04em;
+    }
+
+    .calculator__btn {
+        width: 164px;
+        height: 46px;
+        margin-left: 20px;
+
+        @media screen and (max-width: 1189.98px) {
+            height: 40px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            margin-left: auto;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: 575.98px) {
+            width: 100%;
+        }
+    }
+}

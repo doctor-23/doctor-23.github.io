@@ -1,5 +1,5 @@
 .feedback {
-    padding-bottom: 80px;
+    padding: 40px 0 75px;
 
     @media screen and (max-width: 991.98px) {
         padding-bottom: 60px;
@@ -11,8 +11,7 @@
 }
 
 .feedback__title {
-    margin-bottom: 32px;
-    font-family: var(--vtb-book);
+    margin-bottom: 24px;
     font-size: 36px;
     line-height: 46px;
     color: var(--main-color);
@@ -22,6 +21,15 @@
         font-size: 26px;
         line-height: 36px;
     }
+}
+
+.feedback__description {
+    flex-shrink: 0;
+    max-width: 330px;
+    width: 100%;
+    font-size: 17px;
+    line-height: 160%;
+    color: var(--dark-main-color);
 }
 
 .feedback__form {
@@ -34,7 +42,7 @@
 
     .inputWrap {
         position: relative;
-        width: 300px;
+        width: 259px;
 
         @media screen and (max-width: 767.98px) {
             width: calc(50% - 16px);
