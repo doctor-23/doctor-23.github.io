@@ -3,7 +3,7 @@
     --main-font: 'Montserrat', sans-serif;
     --roboto: 'Roboto', sans-serif;
     --main-color: #11257A;
-    --dark-main-color: #0D1846;
+    --dark-main-color: #0A1547;
     --grey-color: #7A7878;
     --dark-grey-color: #474747;
     --placeholder: #999999;
@@ -32,6 +32,20 @@ body {
     color: var(--main-color);
     background: #fff;
     overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-main-color) #d0d6dc;
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--dark-main-color);
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #d0d6dc;
+    }
 }
 
 main {

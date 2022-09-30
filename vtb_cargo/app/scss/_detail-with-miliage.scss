@@ -12,15 +12,11 @@
     @media screen and (max-width: 767.98px) {
         padding: 30px 0;
     }
-
-    .container {
-        max-width: 1390px;
-    }
 }
 
 .cargo-with-mileage__title {
-    max-width: var(--container);
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
+    color: var(--dark-main-color);
     font-size: 36px;
     line-height: 45px;
 
@@ -67,14 +63,10 @@
     }
 }
 
-.cargo-with-mileage__content {
-    max-width: var(--container);
-    margin: 0 auto;
-}
-
 .cargo-with-mileage__content-item {
     display: none;
     justify-content: space-between;
+    gap: 150px;
     width: 100%;
 
     &.active {
@@ -86,6 +78,9 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    flex-shrink: 0;
+    max-width: 450px;
+    width: 100%;
 }
 
 .cargo-with-mileage__content-row {
@@ -173,20 +168,16 @@
 }
 
 .cargo-with-mileage__content-right {
-    max-width: 702px;
-    width: 100%;
-    margin-right: -115px;
-    border-radius: 8px;
-
-    @media screen and(max-width: 1390px) {
-        border-radius: 8px 0 8px 0;
-    }
+    position: relative;
+    width: calc(((100vw - var(--container)) / 2) + (var(--container) - 600px));
+    margin-right: calc(((100vw) - var(--container)) / -2);
+    border-radius: 8px 0 0 8px;
 
     img {
-        border-radius: 8px;
-
-        @media screen and(max-width: 1390px) {
-            border-radius: 8px 0 8px 0;
-        }
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px 0 0 8px;
     }
 }

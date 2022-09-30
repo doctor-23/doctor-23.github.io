@@ -5,6 +5,7 @@
 
 .program__title {
     margin-bottom: 40px;
+    color: var(--dark-main-color);
     font-size: 36px;
     line-height: 130%;
 }
@@ -144,6 +145,10 @@
     flex-direction: column;
     gap: 12px;
     width: calc(50% - 15px);
+
+    .svg-ico {
+        color: var(--dark-main-color);
+    }
 }
 
 .program__top-wrap__right-item__title {
@@ -211,6 +216,7 @@
 }
 
 .program__bottom-wrap__content-description {
+    color: #494B4D;
     font-size: 16px;
     line-height: 24px;
 }

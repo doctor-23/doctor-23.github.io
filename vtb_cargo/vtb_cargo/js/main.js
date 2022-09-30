@@ -536,13 +536,13 @@ $(document).ready(function () {
     });
     formPhone.on('blur', function () {
       phoneCheck = formPhoneValid(formPhone, phoneCheck);
-    });
-    formEmail.on('blur', function () {
-      emailCheck = formEmailValid(formEmail, emailCheck);
-    }); // разблокировка кнопки отправки при потере фокуса
+    }); // formEmail.on('blur', function () {
+    //     emailCheck = formEmailValid(formEmail, emailCheck);
+    // })
+    // разблокировка кнопки отправки при потере фокуса
 
     formInput.on('blur', function () {
-      if (nameCheck && phoneCheck && emailCheck) {
+      if (nameCheck && phoneCheck) {
         formSubmit.removeClass('disabled');
       } else {
         formSubmit.addClass('disabled');
