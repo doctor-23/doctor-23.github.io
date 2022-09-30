@@ -57,6 +57,7 @@ let {src, dest} = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
+    sourcemaps   = require('gulp-sourcemaps'),
     fonter = require('gulp-fonter');
 
 
@@ -81,6 +82,7 @@ function html() {
 
 function css() {
     return src(path.src.css)
+        .pipe(sourcemaps.init())
         .pipe(
             scss({
                 outputStyle: 'expanded'
@@ -101,6 +103,7 @@ function css() {
                 extname: '.min.css'
             })
         )
+        .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream())
 }
@@ -119,6 +122,7 @@ function cssLibs() {
 
 function js() {
     return src(path.src.js)
+        .pipe(sourcemaps.init())
         .pipe(fileinclude())
         .pipe(babel({
             presets: ['@babel/env']
@@ -130,6 +134,7 @@ function js() {
                 extname: '.min.js'
             })
         )
+        .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream())
 }
