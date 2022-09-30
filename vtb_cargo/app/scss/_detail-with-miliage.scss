@@ -1,16 +1,8 @@
 .cargo-with-mileage {
     padding: 100px 0;
 
-    @media screen and (max-width: 1189.98px) {
-        padding: 90px 0;
-    }
-
     @media screen and (max-width: 991.98px) {
-        padding: 60px 0;
-    }
-
-    @media screen and (max-width: 767.98px) {
-        padding: 30px 0;
+        padding: 70px 0;
     }
 }
 
@@ -20,15 +12,28 @@
     font-size: 36px;
     line-height: 45px;
 
-    @media screen and (max-width: 575.98px) {
-        font-size: 26px;
-        line-height: 36px;
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 30px;
     }
 }
 
 .cargo-with-mileage__tabs {
     display: flex;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 767.98px) {
+        height: 52px;
+        margin-bottom: 24px;
+
+        .select-title {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            color: var(--main-color);
+        }
+    }
 }
 
 .cargo-with-mileage__tabs-item {
@@ -47,16 +52,6 @@
     user-select: none;
     transition: color .3s ease-in-out, background-color .3s ease-in-out;
 
-    @media screen and(max-width: 1390px) {
-        &:first-child {
-            border-radius: 0 12px 0 0;
-        }
-
-        &:last-child {
-            border-radius: 12px 0 0 0;
-        }
-    }
-
     &.active {
         color: #fff;
         background-color: var(--main-color);
@@ -68,6 +63,10 @@
     justify-content: space-between;
     gap: 150px;
     width: 100%;
+
+    @media screen and (max-width: 1190.98px) {
+        gap: 50px;
+    }
 
     &.active {
         display: flex;
@@ -81,6 +80,15 @@
     flex-shrink: 0;
     max-width: 450px;
     width: 100%;
+
+    @media screen and (max-width: 991.98px) {
+        max-width: max-content;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        gap: 32px;
+        max-width: 100%;
+    }
 }
 
 .cargo-with-mileage__content-row {
@@ -89,10 +97,19 @@
 
     &:nth-child(2) {
         gap: 27px;
+
+        @media screen and (max-width: 767.98px) {
+            gap: 16px;
+        }
     }
 
     &:last-child {
         margin-top: 8px;
+
+        @media screen and (max-width: 767.98px) {
+            width: 100%;
+            margin-top: 0;
+        }
     }
 
     .row__title {
@@ -101,6 +118,11 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 130%;
+
+        @media screen and (max-width: 767.98px) {
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
     }
 
     .row__list {
@@ -133,17 +155,37 @@
         .svg-ico {
             color: #494B4D;
         }
+
+        @media screen and (max-width: 767.98px) {
+            justify-content: flex-start;
+            gap: 12px;
+
+            &:last-child {
+                .svg-ico {
+                    margin-right: 8px;
+                }
+            }
+        }
     }
 
     .row__item-content {
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: 767.98px) {
+            gap: 2px;
+            max-width: 277px;
+        }
     }
 
     .row__item-content__top {
         font-size: 14px;
         line-height: 130%;
         color: #494B4D;
+
+        @media screen and (max-width: 767.98px) {
+            font-size: 12px;
+        }
     }
 
     .row__item-content__bottom {
@@ -159,11 +201,19 @@
         font-size: 16px;
         line-height: 160%;
         color: var(--dark-main-color);
+
+        @media screen and (max-width: 767.98px) {
+            margin-bottom: 16px;
+        }
     }
 
     .cargo-with-mileage__btn {
         width: 266px;
         height: 56px;
+
+        @media screen and (max-width: 767.98px) {
+            width: 100%;
+        }
     }
 }
 
@@ -172,6 +222,18 @@
     width: calc(((100vw - var(--container)) / 2) + (var(--container) - 600px));
     margin-right: calc(((100vw) - var(--container)) / -2);
     border-radius: 8px 0 0 8px;
+
+    @media screen and (max-width: 1190.98px) {
+        width: calc(((100vw - var(--container)) / 2) + (var(--container) - 500px));
+    }
+
+    @media screen and (max-width: 991.98px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
 
     img {
         position: absolute;

@@ -46,6 +46,10 @@ body {
     &::-webkit-scrollbar-track {
         background: #d0d6dc;
     }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 main {
@@ -256,7 +260,7 @@ input[type="number"]:focus {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 4;
+    z-index: 1;
     display: none;
     width: 100vw;
     height: 100vh;

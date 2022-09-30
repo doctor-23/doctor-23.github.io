@@ -3627,7 +3627,7 @@
             <br>те же условия, только дешевле
         </h2>
 
-        <ul class="cargo-with-mileage__tabs">
+        <ul class="cargo-with-mileage__tabs desktop">
             <li class="cargo-with-mileage__tabs-item active" data-tab="category_C">
                 Грузовой категории С
             </li>
@@ -3640,6 +3640,36 @@
                 Прицеп
             </li>
         </ul>
+
+        <div class="select cargo-with-mileage__tabs tablet">
+            <div class="select-title">
+                Грузовой категории С
+            </div>
+            <div class="select-content">
+                <label class="select-content__wrapper">
+                    <input type="radio" name="category" value="category_C"
+                           class="select-content__radio cargo-with-mileage__tabs-item" checked>
+                    <span class="select-content__radio">
+                        Грузовой категории С
+                    </span>
+                </label>
+                <label class="select-content__wrapper">
+                    <input type="radio" name="category" value="category_B"
+                           class="select-content__radio cargo-with-mileage__tabs-item">
+                    <span class="select-content__radio">
+                       Грузовой категории В
+                    </span>
+                </label>
+                <label class="select-content__wrapper">
+                    <input type="radio" name="category" value="trailer"
+                           class="select-content__radio cargo-with-mileage__tabs-item">
+                    <span class="select-content__radio">
+                        Прицеп
+                    </span>
+                </label>
+            </div>
+        </div>
+
 
         <div class="cargo-with-mileage__content">
             <div class="cargo-with-mileage__content-item active" data-content="category_C">
@@ -3882,66 +3912,70 @@
             Как лизинг помогает в кризис?
         </h2>
 
-        <ul class="leasing-help__list">
-            <li class="leasing-help__list-item">
-                <div class="leasing-help__list-item__image">
-                    <img src="./img/help-leasing-1.png" alt="Обложка">
+        <div class="leasing-help__list">
+            <div class="leasing-help__list-item">
+                <div class="leasing-help__list-item__wrap">
+                    <div class="leasing-help__list-item__image">
+                        <img src="./img/help-leasing-1.png" alt="Обложка">
+                    </div>
+
+                    <div class="leasing-help__list-item__title">
+                        Как приобрести автомобиль?
+                    </div>
+
+                    <div class="leasing-help__list-item__description">
+                        Как приобрести автомобиль с пробегом вместе с ВТБ Лизинг?
+                    </div>
+
+                    <a href="#" class="btn leasing-help__list-item__more">
+                        Подробнее
+                    </a>
                 </div>
+            </div>
+            <div class="leasing-help__list-item">
+                <div class="leasing-help__list-item__wrap">
+                    <div class="leasing-help__list-item__image">
+                        <img src="./img/help-leasing-2.png" alt="Обложка">
+                    </div>
 
-                <div class="leasing-help__list-item__title">
-                    Как приобрести автомобиль?
+                    <div class="leasing-help__list-item__title">
+                        Как лизинг выручит?
+                    </div>
+
+                    <div class="leasing-help__list-item__description">
+                        Как лизинг выручит в сложившейся экономической ситуации?
+                    </div>
+
+                    <a href="#" class="btn leasing-help__list-item__more">
+                        Подробнее
+                    </a>
                 </div>
+            </div>
+            <div class="leasing-help__list-item">
+                <div class="leasing-help__list-item__wrap">
+                    <div class="leasing-help__list-item__image">
+                        <img src="./img/help-leasing-3.png" alt="Обложка">
+                    </div>
 
-                <div class="leasing-help__list-item__description">
-                    Как приобрести автомобиль с пробегом вместе с ВТБ Лизинг?
+                    <div class="leasing-help__list-item__title">
+                        Сравнение лизинга и кредита:
+                    </div>
+
+                    <div class="leasing-help__list-item__description">
+                        Сравнение лизинга и кредита: выгода даже с учетом повышения процентной ставки
+                    </div>
+
+                    <a href="#" class="btn leasing-help__list-item__more">
+                        Подробнее
+                    </a>
                 </div>
+            </div>
+        </div>
 
-                <a href="#" class="btn leasing-help__list-item__more">
-                    Подробнее
-                </a>
-            </li>
-
-            <li class="leasing-help__list-item">
-                <div class="leasing-help__list-item__image">
-                    <img src="./img/help-leasing-2.png" alt="Обложка">
-                </div>
-
-                <div class="leasing-help__list-item__title">
-                    Как лизинг выручит?
-                </div>
-
-                <div class="leasing-help__list-item__description">
-                    Как лизинг выручит в сложившейся экономической ситуации?
-                </div>
-
-                <a href="#" class="btn leasing-help__list-item__more">
-                    Подробнее
-                </a>
-            </li>
-
-            <li class="leasing-help__list-item">
-                <div class="leasing-help__list-item__image">
-                    <img src="./img/help-leasing-3.png" alt="Обложка">
-                </div>
-
-                <div class="leasing-help__list-item__title">
-                    Сравнение лизинга и кредита:
-                </div>
-
-                <div class="leasing-help__list-item__description">
-                    Сравнение лизинга и кредита: выгода даже с учетом повышения процентной ставки
-                </div>
-
-                <a href="#" class="btn leasing-help__list-item__more">
-                    Подробнее
-                </a>
-            </li>
-        </ul>
 
         <a href="#" class="btn leasing-help__more-btn">
             Читать еще
         </a>
-    </div>
 </section>
 
 <section class="manual" id="manual_anchor">

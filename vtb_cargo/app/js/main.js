@@ -140,9 +140,28 @@ $(document).ready(function () {
     });
 
     hamburger.on('click', function () {
+        var isOpen = $(this).hasClass('open');
+
         $(this).toggleClass('open');
         $('header').find('.nav-menu').toggleClass('show');
-    }); // гамбурегер меню
+        $('body').toggleClass('no-scroll');
+        if (isOpen) {
+            $('#overlay').fadeOut(215);
+        } else {
+            $('#overlay').fadeIn(215);
+        }
+    });
+
+    $('#overlay').on('click', function () {
+        hamburger.removeClass('open');
+        $('header').find('.nav-menu').removeClass('show');
+        $('body').removeClass('no-scroll');
+        $('#overlay').fadeOut(215);
+    })
+
+
+    // гамбурегер меню
+
 
     // вызов формы обратной связи
 
@@ -216,16 +235,71 @@ $(document).ready(function () {
 
     // конец
 
+    // в мобильной и планшетной версии клик по иконке информации в блоке "программы"
+
+    if (window.matchMedia('(max-width: 991.98px)').matches) {
+        var infHover = document.querySelector('.program__top__inf-hover');
+        var circle = document.querySelector('.program__top__inf-title__circle');
+
+        circle.addEventListener('click', function () {
+            infHover.classList.toggle('active');
+            circle.classList.toggle('active');
+        });
+
+        document.addEventListener('click', e => {
+            let target = e.target;
+            let isIcon = target == circle || circle.contains(target)
+            let its_infHover = target == infHover || infHover.contains(target);
+
+            if (!its_infHover && !isIcon) {
+                infHover.classList.remove('active');
+                circle.classList.remove('active');
+            }
+        });
+    }
+
     // авто с пробегаом табы
 
-    $('.cargo-with-mileage__tabs').on('click', '.cargo-with-mileage__tabs-item',function() {
+    $('.cargo-with-mileage__tabs').on('click', '.cargo-with-mileage__tabs-item', function () {
         var dataAttr = $(this).data('tab');
+
+        if (typeof dataAttr === 'undefined') {
+            dataAttr = $(this).val();
+        }
+
+        console.log(dataAttr)
 
         $('.cargo-with-mileage__tabs-item').removeClass('active');
         $(this).addClass('active');
         $('.cargo-with-mileage__content-item').removeClass('active');
         $('.cargo-with-mileage__content-item[data-content="' + dataAttr + '"]').addClass('active');
     }); // конец
+
+    // статьи
+
+    if (window.matchMedia('(max-width: 991.98px)').matches) {
+        $('.leasing-help__list').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            speed: 300,
+            draggable: false,
+            arrows: false,
+            dots: true,
+            dotsClass: 'slider-dots',
+            infinite: true,
+            variableWidth: true,
+            swipe: true,
+            responsive: [
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
 
     // аккордеон
 

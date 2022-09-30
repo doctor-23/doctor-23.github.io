@@ -84,6 +84,10 @@ body::-webkit-scrollbar-track {
   background: #d0d6dc;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 main {
   overflow-x: hidden;
 }
@@ -318,7 +322,7 @@ input[type="number"]:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 4;
+  z-index: 1;
   display: none;
   width: 100vw;
   height: 100vh;
@@ -532,6 +536,10 @@ input[type="number"]:focus {
           flex-grow: 1;
 }
 
+#header .nav-menu .logo-mobile {
+  display: none;
+}
+
 #header .nav-menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -637,6 +645,13 @@ input[type="number"]:focus {
           transform: rotate(-45deg);
 }
 
+.hamburger.open .hamburger-ico::after,
+.hamburger.open .hamburger-ico::before,
+.close.open .hamburger-ico::after,
+.close.open .hamburger-ico::before {
+  background-color: #fff;
+}
+
 .hamburger-ico,
 .close-ico {
   position: relative;
@@ -713,7 +728,7 @@ input[type="number"]:focus {
   display: -ms-flexbox;
   display: flex;
   gap: 14px;
-  width: calc(100% / 4 - 22.5px);
+  width: calc(25% - 22.5px);
   padding: 16px 24px;
   font-weight: 500;
   font-size: 14px;
@@ -724,6 +739,8 @@ input[type="number"]:focus {
 }
 
 .main-hero__list-item .svg-ico {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-top: -2px;
   color: var(--main-color);
 }
@@ -1298,10 +1315,11 @@ input[type="number"]:focus {
 
 .program__top-wrap__left {
   position: relative;
-  max-width: 466px;
+  max-width: 40.17%;
+  width: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 31.75px 20px 30px;
+  padding: 32px 20px;
   background-color: #fff;
   border-radius: 8px;
 }
@@ -1315,6 +1333,14 @@ input[type="number"]:focus {
           align-items: center;
   gap: 10px;
   margin-bottom: 36px;
+}
+
+.program__logos-wrap picture {
+  width: calc(33.33% - 6.66px);
+}
+
+.program__logos-wrap img {
+  width: 100%;
 }
 
 .program__top__inf-title {
@@ -1362,9 +1388,18 @@ input[type="number"]:focus {
   height: 20px;
   border-radius: 50%;
   border: 1px solid var(--main-color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.program__top__inf-title__circle.active {
+  color: #fff;
+  background-color: var(--main-color);
 }
 
 .program__top__inf-description {
@@ -1377,8 +1412,8 @@ input[type="number"]:focus {
 
 .program__top__inf-hover {
   position: absolute;
-  left: 0;
   bottom: 59px;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1400,6 +1435,13 @@ input[type="number"]:focus {
   -webkit-transition: opacity .3s ease-in-out;
   -o-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
+}
+
+.program__top__inf-hover.active {
+  opacity: 1;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .program__top__inf-hover::after,
@@ -1768,7 +1810,7 @@ input[type="number"]:focus {
 }
 
 .articles {
-  padding: 0 0 100px;
+  padding-bottom: 100px;
 }
 
 .leasing-help__title {
@@ -1789,13 +1831,6 @@ input[type="number"]:focus {
 }
 
 .leasing-help__list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: calc(33.33% - 18.66px);
   padding-bottom: 33px;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
@@ -1809,8 +1844,19 @@ input[type="number"]:focus {
           transform: scale(1.1);
 }
 
+.leasing-help__list-item__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 12px;
+}
+
 .leasing-help__list-item__image {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
@@ -1862,6 +1908,38 @@ input[type="number"]:focus {
   color: #fff;
   background-color: var(--dark-main-color);
   border-color: var(--dark-main-color);
+}
+
+.slider-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.slider-dots li {
+  width: 5px;
+  height: 5px;
+  background-color: #EAEAEA;
+  border-radius: 50%;
+}
+
+.slider-dots li.slick-active {
+  width: 9px;
+  height: 9px;
+  background-color: var(--main-color);
+}
+
+.slider-dots li button {
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
 }
 
 .leasing-help__more-btn {
@@ -2114,6 +2192,7 @@ input[type="number"]:focus {
 
 .map .container {
   max-width: 1260px;
+  border-radius: 10px;
 }
 
 .map img {
@@ -2350,19 +2429,113 @@ input[type="number"]:focus {
   background: #6d6d6d url(../img/calculator-bg.webp) center/cover no-repeat;
 }
 
-@media screen and (max-width: 1390px) {
-  .cargo-with-mileage__tabs-item:first-child {
-    border-radius: 0 12px 0 0;
-  }
-
-  .cargo-with-mileage__tabs-item:last-child {
-    border-radius: 12px 0 0 0;
-  }
-}
-
 @media screen and (max-width: 1190.98px) {
   :root {
     --container: 940px;
+  }
+
+  #header .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  #header .logo {
+    margin-right: 0;
+  }
+
+  #header .nav-menu {
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+  }
+
+  #header .nav-menu__list {
+    gap: 18px;
+  }
+
+  #header .nav-menu__list-item a {
+    font-size: 13px;
+  }
+
+  .main-hero__list-item {
+    padding: 16px 18px;
+  }
+
+  .calculator__item .calculator__item-title {
+    font-size: 20px;
+  }
+
+  .program__top-wrap__left {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .program__top__inf-hover__item {
+    font-size: 14px;
+  }
+
+  .program__top-wrap__right {
+    max-width: calc(100% - 40.17% - 30px);
+  }
+
+  .program__top-wrap__right-item__title {
+    font-size: 18px;
+  }
+
+  .program__top-wrap__right-item__description {
+    font-size: 14px;
+  }
+
+  .program__top-wrap__right-item__description:nth-child(even) {
+    font-size: 18px;
+  }
+
+  .program__top-wrap__right-item__status {
+    font-size: 14px;
+  }
+
+  .program__bottom-wrap__content {
+    width: 60%;
+  }
+
+  .program__interest-rate {
+    font-size: 35px;
+  }
+
+  .program__interest-rate b {
+    font-size: 78px;
+  }
+
+  .program__bottom-wrap__content-title {
+    font-size: 20px;
+  }
+
+  .program__bottom-wrap__content-description {
+    font-size: 14px;
+  }
+
+  .program__btn {
+    width: calc(100% - 60% - 30px);
+  }
+
+  .cargo-with-mileage__content-item {
+    gap: 50px;
+  }
+
+  .cargo-with-mileage__content-right {
+    width: calc(((100vw - var(--container)) / 2) + (var(--container) - 500px));
+  }
+
+  .feedback__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .feedback__description {
+    max-width: 500px;
   }
 }
 
@@ -2381,7 +2554,8 @@ input[type="number"]:focus {
   }
 
   #header .header-phone {
-    font-size: 18px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
 
   .catalog__tabs-item {
@@ -2425,10 +2599,6 @@ input[type="number"]:focus {
     width: calc(var(--container) / 3 - 16px);
   }
 
-  .calculator {
-    padding: 120px 0;
-  }
-
   .calculator .container {
     padding: 40px 40px 55px;
   }
@@ -2439,14 +2609,6 @@ input[type="number"]:focus {
 
   .calculator__item .calculator__btn {
     height: 40px;
-  }
-
-  .cargo-with-mileage {
-    padding: 90px 0;
-  }
-
-  .articles {
-    padding: 60px 0 90px;
   }
 
   .leasing-help__list {
@@ -2462,20 +2624,12 @@ input[type="number"]:focus {
     height: 40px;
   }
 
-  .manual {
-    padding: 90px 0;
-  }
-
   .manual__list {
     gap: 20px;
   }
 
   .manual__list-item {
     width: calc(33.33% - 13.33px);
-  }
-
-  .faq {
-    padding: 90px 0;
   }
 
   .accordion-submenu__link {
@@ -2516,10 +2670,6 @@ input[type="number"]:focus {
   }
 
   #header .nav-menu {
-    display: none;
-  }
-
-  #header .nav-menu.show {
     position: fixed;
     top: 0;
     right: 0;
@@ -2529,15 +2679,38 @@ input[type="number"]:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 17px 40px 50px;
     background-color: #fff;
+    border-radius: 0 12px 12px 0;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  #header .nav-menu.show {
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+
+  #header .nav-menu .logo-mobile {
+    display: block;
+    margin-bottom: 52px;
+    color: var(--main-color);
   }
 
   #header .nav-menu__list {
@@ -2545,66 +2718,49 @@ input[type="number"]:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 24px;
+    height: 100%;
+  }
+
+  #header .nav-menu__list-item {
+    width: 100%;
+  }
+
+  #header .nav-menu__list-item:first-child {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+
+  #header .nav-menu__list-item:first-child a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 24px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 201px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
   }
 
   #header .nav-menu__list-item a {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
     color: var(--main-color);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   #header .nav-menu__list-item_last {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  #header .nav-menu__list-item_last .header-phone {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  #header .nav-menu__list-item_last .header-phone__ico {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 40px;
-    height: 40px;
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    border-radius: 50%;
-  }
-
-  #header .nav-menu__list-item_last .btn-call {
-    display: none;
+    display: block;
+    margin-top: auto;
   }
 
   #header .header-phone {
@@ -2618,17 +2774,39 @@ input[type="number"]:focus {
     display: flex;
   }
 
+  .hamburger.open .hamburger-ico::after,
+  .hamburger.open .hamburger-ico::before,
+  .close.open .hamburger-ico::after,
+  .close.open .hamburger-ico::before {
+    background-color: var(--main-color);
+  }
+
+  .main-hero {
+    height: 100%;
+    padding: 146px 0 53px;
+  }
+
+  .main-hero__content-wrap {
+    margin-bottom: 90px;
+  }
+
   .main-hero__title {
     font-size: 35px;
     line-height: 45px;
   }
 
-  .main-hero__btn {
-    height: 45px;
+  .main-hero__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .main-hero__list-item {
+    width: calc(50% - 15px);
   }
 
   .catalog {
-    padding: 50px 0 60px;
+    padding: 70px 0;
   }
 
   .catalog__tabs {
@@ -2721,7 +2899,7 @@ input[type="number"]:focus {
   }
 
   .calculator {
-    padding: 90px 0;
+    padding: 70px 0;
   }
 
   .calculator__wrap {
@@ -2750,28 +2928,134 @@ input[type="number"]:focus {
     margin-left: auto;
   }
 
-  .cargo-with-mileage {
-    padding: 60px 0;
+  .program {
+    padding: 70px 0;
   }
 
-  .articles {
-    padding: 30px 0 60px;
+  .program__top-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
-  .leasing-help__list-item {
-    display: none;
-    width: calc(50% - 10px);
+  .program__top-wrap__left {
+    max-width: 100%;
   }
 
-  .leasing-help__list-item:nth-child(1),
-  .leasing-help__list-item:nth-child(2) {
+  .program__top__inf-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .program__top__inf-description {
+    max-width: 100%;
+  }
+
+  .program__top__inf-hover {
+    bottom: 45px;
+    left: 176px;
+  }
+
+  .program__top-wrap__right {
+    max-width: 100%;
+  }
+
+  .program__top-wrap__right-item__description:nth-child(even) {
+    max-width: 100%;
+  }
+
+  .program__bottom-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .program__bottom-wrap__content {
+    width: 100%;
+  }
+
+  .program__btn {
+    width: 33%;
+  }
+
+  .cargo-with-mileage {
+    padding: 70px 0;
+  }
+
+  .cargo-with-mileage__content-left {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+
+  .cargo-with-mileage__content-right {
+    width: 100%;
+  }
+
+  .articles {
+    padding-bottom: 70px;
+  }
+
+  .leasing-help__list {
+    display: block;
+    margin: 0 -10px 32px !important;
+  }
+
+  .leasing-help__list .slick-track {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .leasing-help__list .slick-slide {
+    height: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+
+  .leasing-help__list .slick-slide > div {
+    height: 100%;
+    margin-bottom: 16px;
+  }
+
+  .leasing-help__list-item {
+    width: 100%;
+    height: calc(100% - 16px);
+    padding-bottom: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .leasing-help__list-item__wrap {
+    width: calc(var(--container) / 2 - 10px);
+    height: 100%;
+    margin: 0 10px;
+    padding-bottom: 33px;
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+
+  .leasing-help__list-item__image img {
+    height: calc(((var(--container) / 2) - 10px) / 1.26);
   }
 
   .manual {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 
   .manual__list-item {
@@ -2779,36 +3063,13 @@ input[type="number"]:focus {
   }
 
   .faq {
-    padding: 60px 0;
-  }
-
-  .feedback {
-    padding-bottom: 60px;
+    padding: 70px 0 35px;
   }
 }
 
 @media screen and (max-width: 991.98px) and (max-width: 575.98px) {
-  #header .nav-menu__list-item_last .header-phone {
-    margin-bottom: 20px;
-  }
-
-  #header .nav-menu__list-item_last .header-phone__ico {
-    width: 30px;
-    height: 30px;
-  }
-
-  #header .nav-menu__list-item_last .header-phone__ico .svg-ico {
-    width: 15px;
-    height: 15px;
-  }
-
-  #header .nav-menu__list-item_last .btn-call {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: #fff;
-    background-color: var(--main-color);
-    border-color: var(--main-color);
+  #header .nav-menu.show {
+    opacity: 1;
   }
 }
 
@@ -2845,21 +3106,15 @@ input[type="number"]:focus {
     height: 100%;
   }
 
-  .main-hero__content-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-bottom: 60px;
-  }
-
   .main-hero__title {
     font-size: 26px;
     line-height: 34px;
   }
 
-  .catalog {
-    padding: 30px 0 40px;
+  .catalog__title {
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 36px;
   }
 
   .catalog__tabs {
@@ -2892,6 +3147,11 @@ input[type="number"]:focus {
         flex-shrink: 0;
   }
 
+  .catalog__filters .catalog__btn-show-filters {
+    width: calc(100vw - 150px);
+    margin: 0 auto;
+  }
+
   .catalog__list-slider {
     margin: 0 0 60px !important;
   }
@@ -2918,52 +3178,211 @@ input[type="number"]:focus {
     margin: 0 auto 10px;
   }
 
+  .catalog__show-more {
+    width: calc(100vw - 150px);
+  }
+
   .calculator {
-    padding: 60px 15px;
+    padding: 70px 15px;
   }
 
   .calculator .container {
-    padding: 40px 30px 45px;
+    padding: 24px 24px 32px;
+  }
+
+  .calculator__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .calculator__item.calculator__item_last {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .calculator__item .calculator__item-title {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 29px;
   }
 
   .calculator__item .calculator__item-content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     gap: 0;
   }
 
+  .calculator__item .calculator__item-inf__bottom {
+    max-width: 100%;
+  }
+
   .calculator__item .calculator__btn {
-    margin-left: 0;
+    width: calc(50% - 20px);
+    margin: 0 auto;
   }
 
-  .cargo-with-mileage {
-    padding: 30px 0;
+  .program__title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
-  .articles {
-    padding: 20px 0 30px;
+  .program__top-wrap {
+    gap: 32px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+
+  .program__top__inf-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .program__top__inf-hover {
+    right: calc(100vw - 551.75px);
+    left: auto;
+  }
+
+  .program__top-wrap__right-item__title {
+    font-size: 20px;
+  }
+
+  .program__top-wrap__right-item__description {
+    font-size: 16px;
+  }
+
+  .program__top-wrap__right-item__description:nth-child(even) {
+    font-size: 20px;
+  }
+
+  .program__btn {
+    width: 100%;
+  }
+
+  .cargo-with-mileage__title {
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .cargo-with-mileage__tabs {
+    height: 52px;
+    margin-bottom: 24px;
+  }
+
+  .cargo-with-mileage__tabs .select-title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+  }
+
+  .cargo-with-mileage__content-left {
+    gap: 32px;
+    max-width: 100%;
+  }
+
+  .cargo-with-mileage__content-row:nth-child(2) {
+    gap: 16px;
+  }
+
+  .cargo-with-mileage__content-row:last-child {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .cargo-with-mileage__content-row .row__title {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  .cargo-with-mileage__content-row .row__item {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .cargo-with-mileage__content-row .row__item:last-child .svg-ico {
+    margin-right: 8px;
+  }
+
+  .cargo-with-mileage__content-row .row__item-content {
+    gap: 2px;
+    max-width: 277px;
+  }
+
+  .cargo-with-mileage__content-row .row__item-content__top {
+    font-size: 12px;
+  }
+
+  .cargo-with-mileage__content-row .row__underbtn-text {
+    margin-bottom: 16px;
+  }
+
+  .cargo-with-mileage__content-row .cargo-with-mileage__btn {
+    width: 100%;
+  }
+
+  .cargo-with-mileage__content-right {
+    display: none;
   }
 
   .leasing-help__title {
     margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .leasing-help__list {
     margin-bottom: 20px;
   }
 
-  .manual {
-    padding: 30px 0;
+  .leasing-help__list-item__wrap {
+    width: calc((100vw - 30px) / 2 - 10px);
+    padding-bottom: 20px;
+  }
+
+  .leasing-help__list-item__image img {
+    height: calc((((100vw - 30px) / 2) - 10px) / 1.26);
+  }
+
+  .leasing-help__list-item__title {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .leasing-help__list-item__description {
+    margin-bottom: 16px;
+    line-height: 19.6px;
   }
 
   .manual__title {
     margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
-  .faq {
-    padding: 30px 0;
+  .manual__list-item {
+    padding-bottom: 32px;
+  }
+
+  .manual__list-item__icon {
+    margin-bottom: 24px;
+  }
+
+  .manual__list-item__title {
+    font-size: 16px;
+    line-height: 22.4px;
   }
 
   .faq__title {
     margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .accordion__item {
@@ -2973,7 +3392,7 @@ input[type="number"]:focus {
   .accordion-submenu__link {
     padding: 15px 40px 15px 0;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 30px;
   }
 
   .accordion-submenu__link-icon {
@@ -2994,12 +3413,13 @@ input[type="number"]:focus {
   }
 
   .feedback {
-    padding-bottom: 30px;
+    padding: 35px 0 70px;
   }
 
   .feedback__form {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
 
   .feedback__form .inputWrap {
@@ -3013,12 +3433,18 @@ input[type="number"]:focus {
   .feedback__form .feedback__submit {
     width: calc(50% - 16px);
     height: 40px;
+    margin-top: 10px;
   }
 
   .map .container {
     width: 100vw;
     margin-right: 0;
     padding: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .map img {
+    border-radius: 0 0 10px 10px;
   }
 
   #footer {
@@ -3068,9 +3494,44 @@ input[type="number"]:focus {
 }
 
 @media screen and (max-width: 575.98px) {
-  .catalog__title {
-    font-size: 26px;
-    line-height: 36px;
+  #header .nav-menu {
+    width: 100vw;
+    padding: 17px 15px 50px;
+    border-radius: 0;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+  }
+
+  .main-hero__content-wrap {
+    margin-bottom: 103px;
+  }
+
+  .main-hero__title {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .main-hero__btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .main-hero__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 27px;
+  }
+
+  .main-hero__list-item {
+    width: 100%;
+  }
+
+  .catalog__filters .catalog__btn-show-filters {
+    width: 100%;
   }
 
   .catalog__list-slider .slick-arrow {
@@ -3110,10 +3571,8 @@ input[type="number"]:focus {
     width: 100%;
   }
 
-  .calculator__title {
-    margin-bottom: 20px;
-    font-size: 26px;
-    line-height: 36px;
+  .catalog__show-more {
+    width: 100%;
   }
 
   .calculator__wrap {
@@ -3130,17 +3589,69 @@ input[type="number"]:focus {
     row-gap: 30px;
   }
 
+  .calculator__item .calculator__item-inf {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+
+  .calculator__item .calculator__item-inf:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
   .calculator__item .calculator__btn {
     width: 100%;
   }
 
-  .cargo-with-mileage__title {
-    font-size: 26px;
-    line-height: 36px;
+  .program__top__inf-wrap {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0;
   }
 
-  .articles {
-    padding-top: 15px;
+  .program__top__inf-description {
+    max-width: 294px;
+  }
+
+  .program__top__inf-hover {
+    right: calc(100vw - (100vw - 30px));
+  }
+
+  .program__top-wrap__right-item {
+    width: 100%;
+  }
+
+  .program__bottom-wrap {
+    gap: 32px;
+  }
+
+  .program__bottom-wrap__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+  }
+
+  .program__interest-rate {
+    font-size: 40px;
+  }
+
+  .program__interest-rate b {
+    font-size: 88px;
+  }
+
+  .program__bottom-wrap__content-title {
+    line-height: 30px;
+  }
+
+  .program__bottom-wrap__content-description {
+    font-size: 16px;
+  }
+
+  .articles .container {
+    padding: 0;
   }
 
   .leasing-help__title {
@@ -3149,63 +3660,38 @@ input[type="number"]:focus {
     line-height: 36px;
   }
 
+  .leasing-help__list {
+    margin: 0 0 32px !important;
+  }
+
   .leasing-help__list-item {
-    width: 100%;
-    padding-bottom: 20px;
+    margin: 0 15px;
   }
 
-  .leasing-help__list-item:nth-child(2) {
-    display: none;
+  .leasing-help__list-item__wrap {
+    width: calc(100vw - 30px);
+    margin: 0;
   }
 
-  .leasing-help__list-item__image {
-    margin-bottom: 15px;
-  }
-
-  .leasing-help__list-item__title {
-    padding: 0 15px;
-    font-size: 16px;
-    line-height: 22px;
+  .leasing-help__list-item__image img {
+    height: calc((100vw - 30px) / 1.26);
   }
 
   .leasing-help__list-item__more {
     margin-left: 15px;
   }
 
-  .manual__title {
-    margin-bottom: 20px;
-    font-size: 26px;
-    line-height: 36px;
+  .leasing-help__more-btn {
+    width: 100%;
   }
 
   .manual__list {
-    gap: 15px;
+    gap: 24px;
   }
 
   .manual__list-item {
     width: 100%;
     padding-bottom: 28px;
-  }
-
-  .manual__list-item__icon {
-    margin-bottom: 10px;
-  }
-
-  .manual__list-item__title {
-    margin-bottom: 10px;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  .manual__list-item__description {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .faq__title {
-    margin-bottom: 20px;
-    font-size: 26px;
-    line-height: 36px;
   }
 
   .feedback__title {
@@ -3220,7 +3706,7 @@ input[type="number"]:focus {
 
   .feedback__form .feedback__submit {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .modal__content {

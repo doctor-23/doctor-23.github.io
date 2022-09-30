@@ -3,6 +3,7 @@
 
     .container {
         max-width: 1260px;
+        border-radius: 10px;
 
         @media screen and (max-width: 1189.98px) {
             max-width: 100%;
@@ -12,8 +13,8 @@
             width: 100vw;
             margin-right: 0;
             padding: 0;
+            border-radius: 0 0 10px 10px;
         }
-
     }
 
     img {
@@ -22,5 +23,9 @@
         height: 420px;
         object-fit: cover;
         border-radius: 10px;
+
+        @media screen and (max-width: 767.98px) {
+            border-radius: 0 0 10px 10px;
+        }
     }
 }

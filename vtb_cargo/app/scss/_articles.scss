@@ -1,20 +1,14 @@
 .articles {
-    padding: 0 0 100px;
-
-    @media screen and (max-width: 1189.98px) {
-        padding: 60px 0 90px;
-    }
+    padding-bottom: 100px;
 
     @media screen and (max-width: 991.98px) {
-        padding: 30px 0 60px;
+        padding-bottom: 70px;
     }
 
-    @media screen and (max-width: 767.98px) {
-        padding: 20px 0 30px;
-    }
-
-    @media screen and (max-width: 575.98px) {
-        padding-top: 15px;
+    .container {
+        @media screen and (max-width: 575.98px) {
+            padding: 0;
+        }
     }
 }
 
@@ -26,6 +20,8 @@
 
     @media screen and (max-width: 767.98px) {
         margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 32px;
     }
 
     @media screen and (max-width: 575.98px) {
@@ -45,35 +41,49 @@
         gap: 20px;
     }
 
+    @media screen and (max-width: 991.98px) {
+        display: block;
+        margin: 0 -10px 32px !important;
+
+        .slick-track {
+            display:flex !important;
+        }
+
+        .slick-slide {
+            height:auto;
+            flex: 0 0 auto;
+
+            &>div {
+                height: 100%;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
     @media screen and (max-width: 767.98px) {
         margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        margin: 0 0 32px !important;
     }
 }
 
 .leasing-help__list-item {
-    display: flex;
-    flex-direction: column;
     width: calc(33.33% - 18.66px);
     padding-bottom: 33px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     border-radius: 12px;
 
     @media screen and (max-width: 991.98px) {
-        display: none;
-        width: calc(50% - 10px);
-
-        &:nth-child(1), &:nth-child(2) {
-            display: flex;
-        }
+        width: 100%;
+        height: calc(100% - 16px);
+        padding-bottom: 0;
+        box-shadow: none;
     }
 
     @media screen and (max-width: 575.98px) {
-        width: 100%;
-        padding-bottom: 20px;
-
-        &:nth-child(2) {
-            display: none;
-        }
+        margin: 0 15px;
     }
 
     &:hover {
@@ -83,14 +93,34 @@
     }
 }
 
-.leasing-help__list-item__image {
-    margin-bottom: 25px;
-    border-radius: 12px 12px 0 0;
-    overflow: hidden;
+.leasing-help__list-item__wrap {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+
+    @media screen and (max-width: 991.98px) {
+        width: calc(var(--container) / 2 - 10px);
+        height: 100%;
+        margin: 0 10px;
+        padding-bottom: 33px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    @media screen and (max-width: 767.98px) {
+        width: calc((100vw - 30px) / 2 - 10px);
+        padding-bottom: 20px;
+    }
 
     @media screen and (max-width: 575.98px) {
-        margin-bottom: 15px;
+        width: calc(100vw - 30px);
+        margin: 0;
     }
+}
+
+.leasing-help__list-item__image {
+    margin-bottom: 24px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
 
     img {
         display: block;
@@ -99,6 +129,18 @@
         object-fit: cover;
         border-radius: 12px 12px 0 0;
         transition: transform .3s ease-in-out;
+
+        @media screen and (max-width: 991.98px) {
+            height: calc(((var(--container) / 2) - 10px) / 1.26);
+        }
+
+        @media screen and (max-width: 767.98px) {
+            height: calc((((100vw - 30px) / 2) - 10px) / 1.26);
+        }
+
+        @media screen and (max-width: 575.98px) {
+            height: calc((100vw - 30px) / 1.26);
+        }
     }
 }
 
@@ -115,10 +157,9 @@
         line-height: 26px;
     }
 
-    @media screen and (max-width: 575.98px) {
-        padding: 0 15px;
+    @media screen and (max-width: 767.98px) {
         font-size: 16px;
-        line-height: 22px;
+        line-height: 22.4px;
     }
 }
 
@@ -128,6 +169,11 @@
     color: var(--dark-main-color);
     font-size: 14px;
     line-height: 22.4px;
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 16px;
+        line-height: 19.6px;
+    }
 }
 
 .leasing-help__list-item__more {
@@ -152,6 +198,32 @@
     }
 }
 
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    li {
+        width: 5px;
+        height: 5px;
+        background-color: #EAEAEA;
+        border-radius: 50%;
+
+        &.slick-active {
+            width: 9px;
+            height: 9px;
+            background-color: var(--main-color);
+        }
+
+        button {
+            font-size: 0;
+            background-color: transparent;
+            border: 0;
+        }
+    }
+}
+
 .leasing-help__more-btn {
     margin: 0 auto;
     width: calc(33.33% - 18.66px);
@@ -159,5 +231,9 @@
 
     @media screen and (max-width: 1189.98px) {
         height: 40px;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        width: 100%;
     }
 }
