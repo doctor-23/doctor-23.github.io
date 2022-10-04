@@ -7,6 +7,10 @@
     color: #fff;
     background: #32363a url("../img/hero.png") center / cover no-repeat;
 
+    &.old-image {
+        background: #32363a url("../img/hero-old.png") center / cover no-repeat;
+    }
+
     @media screen and (max-width: 991.98px) {
         height: 100%;
         padding: 146px 0 53px;

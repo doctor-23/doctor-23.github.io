@@ -681,6 +681,10 @@ input[type="number"]:focus {
   background: #32363a url("../img/hero.png") center/cover no-repeat;
 }
 
+.main-hero.old-image {
+  background: #32363a url("../img/hero-old.png") center/cover no-repeat;
+}
+
 .main-hero__content-wrap {
   max-width: 666px;
   margin-bottom: 131.45px;
@@ -2470,6 +2474,10 @@ input[type="number"]:focus {
 
 .webp .main-hero {
   background: #32363a url(../img/hero.webp) center/cover no-repeat;
+}
+
+.webp .main-hero.old-image {
+  background: #32363a url(../img/hero-old.webp) center/cover no-repeat;
 }
 
 .webp .calculator {
