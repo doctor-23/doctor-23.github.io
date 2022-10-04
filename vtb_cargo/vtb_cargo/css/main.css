@@ -678,7 +678,7 @@ input[type="number"]:focus {
   padding-bottom: 100px;
   padding-top: calc(100vh / 2.58);
   color: #fff;
-  background: #32363a url("../img/hero-bg.png") center/cover no-repeat;
+  background: #32363a url("../img/hero.png") center/cover no-repeat;
 }
 
 .main-hero__content-wrap {
@@ -1732,13 +1732,15 @@ input[type="number"]:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 12px;
 }
 
 .cargo-with-mileage__content-row .row__item .svg-ico {
   color: #494B4D;
+}
+
+.cargo-with-mileage__content-row .row__item-icon {
+  min-width: 56px;
 }
 
 .cargo-with-mileage__content-row .row__item-content {
@@ -2467,7 +2469,7 @@ input[type="number"]:focus {
 }
 
 .webp .main-hero {
-  background: #32363a url(../img/hero-bg.webp) center/cover no-repeat;
+  background: #32363a url(../img/hero.webp) center/cover no-repeat;
 }
 
 .webp .calculator {
@@ -3344,17 +3346,6 @@ input[type="number"]:focus {
     font-size: 18px;
   }
 
-  .cargo-with-mileage__content-row .row__item {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    gap: 12px;
-  }
-
-  .cargo-with-mileage__content-row .row__item:last-child .svg-ico {
-    margin-right: 8px;
-  }
-
   .cargo-with-mileage__content-row .row__item-content {
     gap: 2px;
     max-width: 277px;
@@ -3547,6 +3538,10 @@ input[type="number"]:focus {
     -webkit-transition: opacity .3s ease-in-out;
     -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
+  }
+
+  .main-hero {
+    background: #32363a url("../img/hero_mob.png") center/cover no-repeat;
   }
 
   .main-hero__content-wrap {
@@ -3838,6 +3833,10 @@ input[type="number"]:focus {
 
   .social-list {
     gap: 15px;
+  }
+
+  .webp .main-hero {
+    background: #32363a url(../img/hero_mob.webp) center/cover no-repeat;
   }
 }
 

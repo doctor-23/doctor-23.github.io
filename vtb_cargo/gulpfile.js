@@ -68,7 +68,8 @@ function browserSync() {
         },
         port: 3000,
         notify: false,
-        logPrefix: 'DomWeb'
+        logPrefix: 'DomWeb',
+        browser: 'firefox',
     })
 }
 

@@ -89,7 +89,7 @@ tabs.on('click', '.catalog__tabs-item', function () {
 
         // убмраем лоадер
         body.removeClass('loader');
-    }, 1000)
+    }, 300)
 });
 
 // функция для выбора цены в каталоге

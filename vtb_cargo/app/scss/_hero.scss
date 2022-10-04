@@ -5,7 +5,7 @@
     padding-bottom: 100px;
     padding-top: calc(100vh / 2.58);
     color: #fff;
-    background: #32363a url("../img/hero-bg.png") center / cover no-repeat;
+    background: #32363a url("../img/hero.png") center / cover no-repeat;
 
     @media screen and (max-width: 991.98px) {
         height: 100%;
@@ -14,6 +14,10 @@
 
     @media screen and (max-width: 767.98px) {
         height: 100%;
+    }
+
+    @media screen and(max-width: 575.98px) {
+        background: #32363a url("../img/hero_mob.png") center / cover no-repeat;
     }
 }
 

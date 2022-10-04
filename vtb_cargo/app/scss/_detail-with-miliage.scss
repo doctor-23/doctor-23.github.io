@@ -150,22 +150,15 @@
 
     .row__item {
         display: flex;
-        justify-content: space-between;
+        gap: 12px;
 
         .svg-ico {
             color: #494B4D;
         }
+    }
 
-        @media screen and (max-width: 767.98px) {
-            justify-content: flex-start;
-            gap: 12px;
-
-            &:last-child {
-                .svg-ico {
-                    margin-right: 8px;
-                }
-            }
-        }
+    .row__item-icon {
+        min-width: 56px;
     }
 
     .row__item-content {

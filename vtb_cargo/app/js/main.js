@@ -364,7 +364,7 @@ $(document).ready(function () {
                             } else {
                                 $('#modal_feedback_error').fadeIn(215);
                             }
-                        }, 2000)
+                        }, 500)
                     },
                     error: function error(req, text, _error) {
                         console.log(req);
@@ -375,7 +375,7 @@ $(document).ready(function () {
                             body.removeClass('loader');
 
                             $('#modal_feedback_error').fadeIn(215);
-                        }, 2000)
+                        }, 500)
                     }
                 });
             }
