@@ -1,5 +1,9 @@
 .hero {
     position: relative;
+
+    .container {
+        max-width: 1640px;
+    }
 }
 
 .prev_nav_scroll {
@@ -76,13 +80,14 @@
     }
 
     .container {
+        justify-content: space-between;
+
         @media screen and (max-width: 1190.98px) {
-            justify-content: space-between;
         }
     }
 
     .logo {
-        margin-right: 69px;
+        //margin-right: 69px;
         color: #fff;
         transition: color .3s ease-in-out;
 
@@ -92,7 +97,7 @@
     }
 
     .nav-menu {
-        flex-grow: 1;
+        //flex-grow: 1;
 
         @media screen and (max-width: 1190.98px) {
             flex-grow: unset;
