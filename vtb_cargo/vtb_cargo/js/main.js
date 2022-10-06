@@ -189,74 +189,67 @@ $(document).ready(function () {
   }); // конец
   // переключение преимуществ
 
-  (function () {
-    var parent_hero_list = $('.main-hero__list');
-    var d = parent_hero_list[0].scrollLeftMax;
-    var t = 500;
-    parent_hero_list[0].scrollLeft = 0;
-    $('.arrow-container').on('click', '.arrow', function () {
-      var active_slide = $('.main-hero__list-item.active');
-      var index = active_slide.index();
+  if (window.matchMedia('(min-width: 991.98px)').matches) {
+    (function () {
+      var parent_hero_list = $('.main-hero__list');
+      var d = parent_hero_list[0].scrollLeftMax;
+      var t = 500;
+      parent_hero_list[0].scrollLeft = 0;
+      $('.arrow-container').on('click', '.arrow', function () {
+        var active_slide = $('.main-hero__list-item.active');
+        var index = active_slide.index();
+        var length = $('.main-hero__list-item').length - 1;
 
-      if ($(this).hasClass('arrow-right')) {
-        $('.arrow.arrow-left').removeClass('disable');
-        active_slide.next().addClass('active');
-        active_slide.removeClass('active');
+        if ($(this).hasClass('arrow-right')) {
+          $('.arrow.arrow-left').removeClass('disable');
+          active_slide.next().addClass('active');
+          active_slide.removeClass('active');
+          parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft + 252;
 
-        if (index === 1) {
-          parent_hero_list.stop().animate({
-            scrollLeft: d
-          }, t);
+          if (index + 2 === length - 1) {
+            $(this).addClass('disable');
+          }
         }
 
-        if (index + 2 === 4) {
-          $(this).addClass('disable');
-        }
-      }
+        if ($(this).hasClass('arrow-left')) {
+          $('.arrow.arrow-right').removeClass('disable');
+          active_slide.prev().addClass('active');
+          active_slide.removeClass('active');
+          parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft - 252; // parent_hero_list.stop().animate({scrollLeft: 0}, t);
 
-      if ($(this).hasClass('arrow-left')) {
-        $('.arrow.arrow-right').removeClass('disable');
-        active_slide.prev().addClass('active');
-        active_slide.removeClass('active');
+          if (index === 1) {
+            $(this).addClass('disable');
+          }
+        }
+      });
+      parent_hero_list.on('click', '.main-hero__list-item', function () {
+        var index = $(this).index();
+        parent_hero_list.find('.main-hero__list-item').removeClass('active');
+        $(this).addClass('active');
+        $('.arrow-container .arrow').removeClass('disable');
+
+        if (index === 0) {
+          $('.arrow.arrow-left').addClass('disable');
+        }
 
         if (index === 2) {
-          parent_hero_list.stop().animate({
-            scrollLeft: 0
-          }, t);
+          if (parent_hero_list[0].scrollLeft === 0) {
+            parent_hero_list.stop().animate({
+              scrollLeft: d
+            }, t);
+          } else {
+            parent_hero_list.stop().animate({
+              scrollLeft: 0
+            }, t);
+          }
         }
 
-        if (index === 1) {
-          $(this).addClass('disable');
+        if (index === 3) {
+          $('.arrow.arrow-right').addClass('disable');
         }
-      }
-    });
-    parent_hero_list.on('click', '.main-hero__list-item', function () {
-      var index = $(this).index();
-      parent_hero_list.find('.main-hero__list-item').removeClass('active');
-      $(this).addClass('active');
-      $('.arrow-container .arrow').removeClass('disable');
-
-      if (index === 0) {
-        $('.arrow.arrow-left').addClass('disable');
-      }
-
-      if (index === 2) {
-        if (parent_hero_list[0].scrollLeft === 0) {
-          parent_hero_list.stop().animate({
-            scrollLeft: d
-          }, t);
-        } else {
-          parent_hero_list.stop().animate({
-            scrollLeft: 0
-          }, t);
-        }
-      }
-
-      if (index === 3) {
-        $('.arrow.arrow-right').addClass('disable');
-      }
-    });
-  })(); // конец
+      });
+    })();
+  } // конец
   // вызов формы обратной связи
 
 

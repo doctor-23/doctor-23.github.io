@@ -670,6 +670,10 @@ input[type="number"]:focus {
   transition: all .3s ease;
 }
 
+.webp .main-hero {
+  background-image: url("../img/hero-new.png") !important;
+}
+
 .main-hero {
   height: 100vh;
   color: #fff;
@@ -747,7 +751,7 @@ input[type="number"]:focus {
           align-items: center;
   width: 19px;
   cursor: pointer;
-  gap: 22px;
+  gap: 36px;
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
           transform: translateY(100%);
@@ -765,9 +769,10 @@ input[type="number"]:focus {
 .main-hero__scroll-btn span {
   color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  text-transform: uppercase;
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .main-hero__list-wrap {
@@ -883,9 +888,6 @@ input[type="number"]:focus {
   z-index: 1;
   background-color: transparent;
   border-radius: 10px;
-  -webkit-transition: background-color .3s ease-in-out;
-  -o-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
 }
 
 .main-hero__list-item::before {
@@ -965,7 +967,7 @@ input[type="number"]:focus {
 
 .main-hero__list-item__bottom {
   display: none;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 130%;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.5);
@@ -980,9 +982,6 @@ input[type="number"]:focus {
   -webkit-transform: translate(18px, -44px);
       -ms-transform: translate(18px, -44px);
           transform: translate(18px, -44px);
-  -webkit-transition: opacity .3s ease-in-out;
-  -o-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out;
 }
 
 .main-hero__list-item__num img {
@@ -2714,6 +2713,10 @@ input[type="number"]:focus {
   line-height: 19px;
 }
 
+.webp .webp .main-hero {
+  background-image: url(../img/hero-new.webp) !important;
+}
+
 .webp .main-hero {
   background: #32363a url(../img/hero-new.webp) center/cover no-repeat;
 }
@@ -3910,6 +3913,10 @@ input[type="number"]:focus {
     transition: opacity .3s ease-in-out;
   }
 
+  .webp .main-hero {
+    background-image: url("../img/hero-new_mob.png") !important;
+  }
+
   .main-hero {
     background: #32363a url("../img/hero-new_mob.png") center/cover no-repeat;
   }
@@ -4187,6 +4194,10 @@ input[type="number"]:focus {
 
   .social-list {
     gap: 15px;
+  }
+
+  .webp .webp .main-hero {
+    background-image: url(../img/hero-new_mob.webp) !important;
   }
 
   .webp .main-hero {

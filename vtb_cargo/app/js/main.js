@@ -127,7 +127,7 @@ $(document).ready(function () {
     }); // конец
 
     // переключение преимуществ
-    if(window.matchMedia('(min-width: 991.98px)').matches)) {
+    if(window.matchMedia('(min-width: 991.98px)').matches) {
         (function() {
             var parent_hero_list = $('.main-hero__list');
             var d = parent_hero_list[0].scrollLeftMax;
@@ -138,17 +138,15 @@ $(document).ready(function () {
             $('.arrow-container').on('click', '.arrow', function () {
                 var active_slide = $('.main-hero__list-item.active');
                 var index = active_slide.index();
+                var length = $('.main-hero__list-item').length - 1;
 
                 if ($(this).hasClass('arrow-right')) {
                     $('.arrow.arrow-left').removeClass('disable');
                     active_slide.next().addClass('active');
                     active_slide.removeClass('active');
+                    parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft + 252;
 
-                    if (index === 1) {
-                        parent_hero_list.stop().animate({scrollLeft: d}, t);
-                    }
-
-                    if (index + 2 === 4) {
+                    if (index + 2 === length - 1) {
                         $(this).addClass('disable');
                     }
                 }
@@ -157,10 +155,8 @@ $(document).ready(function () {
                     $('.arrow.arrow-right').removeClass('disable')
                     active_slide.prev().addClass('active');
                     active_slide.removeClass('active');
-
-                    if (index === 2) {
-                        parent_hero_list.stop().animate({scrollLeft: 0}, t);
-                    }
+                    parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft - 252;
+                    // parent_hero_list.stop().animate({scrollLeft: 0}, t);
 
                     if (index === 1) {
                         $(this).addClass('disable')
@@ -192,7 +188,8 @@ $(document).ready(function () {
                 }
             })
         })()
-    } // конец
+    }
+     // конец
 
     // вызов формы обратной связи
 

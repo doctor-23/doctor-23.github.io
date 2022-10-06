@@ -1,3 +1,13 @@
+.webp {
+    .main-hero {
+        background-image: url("../img/hero-new.png") !important;
+
+        @media screen and(max-width: 575.98px) {
+            background-image: url("../img/hero-new_mob.png") !important;
+        }
+    }
+}
+
 .main-hero {
     height: 100vh;
     color: #fff;
@@ -131,7 +141,7 @@
     align-items: center;
     width: 19px;
     cursor: pointer;
-    gap: 22px;
+    gap: 36px;
     transform: translateY(100%);
 
     @media screen and (max-width: 991.98px) {
@@ -150,7 +160,8 @@
     span {
         color: rgba(255,255,255,.5);
         font-size: 16px;
-        transform: rotate(90deg);
+        text-transform: uppercase;
+        transform: rotate(270deg);
     }
 }
 
@@ -292,7 +303,7 @@
         z-index: 1;
         background-color: transparent;
         border-radius: 10px;
-        transition: background-color .3s ease-in-out;
+        //transition: background-color .3s ease-in-out;
 
         @media screen and (max-width: 991.98px) {
             background-color: transparent !important;
@@ -399,7 +410,7 @@
 
 .main-hero__list-item__bottom {
     display: none;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 130%;
     font-weight: 500;
     color: rgba(255,255,255,.5);
@@ -416,7 +427,7 @@
     z-index: 0;
     opacity: 0;
     transform: translate(18px, -44px);
-    transition: opacity .3s ease-in-out;
+    //transition: opacity .3s ease-in-out;
 
     @media screen and (max-width: 991.98px) {
         display: none;
