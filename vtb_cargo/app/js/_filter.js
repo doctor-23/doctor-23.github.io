@@ -17,7 +17,7 @@ function catalogSlider(el, infinite) {
     $(el).slick({
         slidesToShow: 3,
         slidesToScroll: 3,
-        speed: 300,
+        speed: 1000,
         draggable: false,
         arrows: true,
         infinite: infinite,

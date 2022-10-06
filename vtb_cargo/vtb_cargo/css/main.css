@@ -888,6 +888,9 @@ input[type="number"]:focus {
   z-index: 1;
   background-color: transparent;
   border-radius: 10px;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
 }
 
 .main-hero__list-item::before {
@@ -982,6 +985,9 @@ input[type="number"]:focus {
   -webkit-transform: translate(18px, -44px);
       -ms-transform: translate(18px, -44px);
           transform: translate(18px, -44px);
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .main-hero__list-item__num img {

@@ -203,8 +203,11 @@ $(document).ready(function () {
         if ($(this).hasClass('arrow-right')) {
           $('.arrow.arrow-left').removeClass('disable');
           active_slide.next().addClass('active');
-          active_slide.removeClass('active');
-          parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft + 252;
+          active_slide.removeClass('active'); // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft + 252;
+
+          parent_hero_list.stop().animate({
+            scrollLeft: parent_hero_list[0].scrollLeft + 252
+          }, t);
 
           if (index + 2 === length - 1) {
             $(this).addClass('disable');
@@ -214,40 +217,38 @@ $(document).ready(function () {
         if ($(this).hasClass('arrow-left')) {
           $('.arrow.arrow-right').removeClass('disable');
           active_slide.prev().addClass('active');
-          active_slide.removeClass('active');
-          parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft - 252; // parent_hero_list.stop().animate({scrollLeft: 0}, t);
+          active_slide.removeClass('active'); // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft - 252;
+
+          parent_hero_list.stop().animate({
+            scrollLeft: parent_hero_list[0].scrollLeft - 252
+          }, t);
 
           if (index === 1) {
             $(this).addClass('disable');
           }
         }
-      });
-      parent_hero_list.on('click', '.main-hero__list-item', function () {
-        var index = $(this).index();
-        parent_hero_list.find('.main-hero__list-item').removeClass('active');
-        $(this).addClass('active');
-        $('.arrow-container .arrow').removeClass('disable');
-
-        if (index === 0) {
-          $('.arrow.arrow-left').addClass('disable');
-        }
-
-        if (index === 2) {
-          if (parent_hero_list[0].scrollLeft === 0) {
-            parent_hero_list.stop().animate({
-              scrollLeft: d
-            }, t);
-          } else {
-            parent_hero_list.stop().animate({
-              scrollLeft: 0
-            }, t);
-          }
-        }
-
-        if (index === 3) {
-          $('.arrow.arrow-right').addClass('disable');
-        }
-      });
+      }); // parent_hero_list.on('click', '.main-hero__list-item', function () {
+      //     var index = $(this).index();
+      //
+      //     parent_hero_list.find('.main-hero__list-item').removeClass('active');
+      //     $(this).addClass('active');
+      //     $('.arrow-container .arrow').removeClass('disable');
+      //
+      //     if (index === 0) {
+      //         $('.arrow.arrow-left').addClass('disable');
+      //     }
+      //     if (index === 2) {
+      //         if (parent_hero_list[0].scrollLeft === 0) {
+      //             parent_hero_list.stop().animate({scrollLeft: d}, t);
+      //         } else {
+      //             parent_hero_list.stop().animate({scrollLeft: 0}, t);
+      //         }
+      //     }
+      //
+      //     if (index === 3) {
+      //         $('.arrow.arrow-right').addClass('disable');
+      //     }
+      // })
     })();
   } // конец
   // вызов формы обратной связи
@@ -285,7 +286,7 @@ $(document).ready(function () {
     $(el).slick({
       slidesToShow: 3,
       slidesToScroll: 3,
-      speed: 300,
+      speed: 1000,
       draggable: false,
       arrows: true,
       infinite: infinite,
