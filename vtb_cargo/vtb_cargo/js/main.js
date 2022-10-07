@@ -193,7 +193,8 @@ $(document).ready(function () {
     (function () {
       var parent_hero_list = $('.main-hero__list');
       var d = parent_hero_list[0].scrollLeftMax;
-      var t = 500;
+      var t = 500,
+          s;
       parent_hero_list[0].scrollLeft = 0;
       $('.arrow-container').on('click', '.arrow', function () {
         var active_slide = $('.main-hero__list-item.active');
@@ -205,8 +206,9 @@ $(document).ready(function () {
           active_slide.next().addClass('active');
           active_slide.removeClass('active'); // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft + 252;
 
+          s = (index + 1) * 252;
           parent_hero_list.stop().animate({
-            scrollLeft: parent_hero_list[0].scrollLeft + 252
+            scrollLeft: s
           }, t);
 
           if (index + 2 === length - 1) {
@@ -218,12 +220,14 @@ $(document).ready(function () {
           $('.arrow.arrow-right').removeClass('disable');
           active_slide.prev().addClass('active');
           active_slide.removeClass('active'); // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft - 252;
+          // parent_hero_list.stop().animate({scrollLeft: parent_hero_list[0].scrollLeft - 252}, t);
 
+          s = (index - 1) * 252;
           parent_hero_list.stop().animate({
-            scrollLeft: parent_hero_list[0].scrollLeft - 252
+            scrollLeft: s
           }, t);
 
-          if (index === 1) {
+          if (s === 0) {
             $(this).addClass('disable');
           }
         }
@@ -444,12 +448,10 @@ $(document).ready(function () {
               hiddenContainer.append($(this));
             }
 
-            if (data_motor !== motor) {
+            if (data_motor !== motor && motor !== "all") {
               hiddenContainer.append($(this));
             }
           } else {
-            console.log(data_model, model);
-
             if (data_motor !== motor && motor !== "all") {
               hiddenContainer.append($(this));
             }
@@ -471,7 +473,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
       body.removeClass('loader');
-    }, 2000);
+    }, 300);
   }); // конец
   // калькулятор
 

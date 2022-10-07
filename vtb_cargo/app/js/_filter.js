@@ -200,11 +200,10 @@ $(document).on('click', '.filters__btn', function (e) {
                         hiddenContainer.append($(this));
                     }
 
-                    if (data_motor !== motor) {
+                    if (data_motor !== motor && motor !== "all") {
                         hiddenContainer.append($(this));
                     }
                 } else {
-                    console.log(data_model, model)
                     if (data_motor !== motor && motor !== "all") {
                         hiddenContainer.append($(this));
                     }
@@ -228,7 +227,7 @@ $(document).on('click', '.filters__btn', function (e) {
 
     setTimeout(function () {
         body.removeClass('loader')
-    }, 2000)
+    }, 300)
 
 
 })

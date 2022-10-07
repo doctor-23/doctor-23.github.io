@@ -131,7 +131,8 @@ $(document).ready(function () {
         (function() {
             var parent_hero_list = $('.main-hero__list');
             var d = parent_hero_list[0].scrollLeftMax;
-            var t = 500;
+            var t = 500, s;
+
 
             parent_hero_list[0].scrollLeft = 0;
 
@@ -145,7 +146,8 @@ $(document).ready(function () {
                     active_slide.next().addClass('active');
                     active_slide.removeClass('active');
                     // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft + 252;
-                    parent_hero_list.stop().animate({scrollLeft: parent_hero_list[0].scrollLeft + 252}, t);
+                    s = (index + 1) * 252;
+                    parent_hero_list.stop().animate({scrollLeft: s}, t);
 
 
                     if (index + 2 === length - 1) {
@@ -158,10 +160,13 @@ $(document).ready(function () {
                     active_slide.prev().addClass('active');
                     active_slide.removeClass('active');
                     // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft - 252;
-                    parent_hero_list.stop().animate({scrollLeft: parent_hero_list[0].scrollLeft - 252}, t);
+                    // parent_hero_list.stop().animate({scrollLeft: parent_hero_list[0].scrollLeft - 252}, t);
 
-                    if (index === 1) {
-                        $(this).addClass('disable')
+                    s = (index - 1) * 252;
+                    parent_hero_list.stop().animate({scrollLeft: s}, t);
+
+                    if (s === 0) {
+                        $(this).addClass('disable');
                     }
                 }
             })
