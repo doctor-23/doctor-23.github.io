@@ -129,6 +129,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
+        infinite: false,
         asNavFor: '.card__slider-nav',
         responsive: [{
             breakpoint: 574.98,
@@ -149,7 +150,7 @@ $(document).ready(function () {
         asNavFor: '.card__slider',
         dots: false,
         arrows: true,
-        infinite: true,
+        infinite: false,
         variableWidth: true,
         prevArrow: '<a class="arrow-left"></a>',
         nextArrow: '<a class="arrow-right"></a>',

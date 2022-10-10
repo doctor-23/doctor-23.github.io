@@ -68,7 +68,8 @@ function browserSync() {
         // host: '109.86.234.64:3000',
         port: 3000,
         notify: false,
-        logPrefix: 'DomWeb'
+        logPrefix: 'DomWeb',
+        browser: 'firefox'
     })
 }
 

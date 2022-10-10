@@ -303,6 +303,10 @@
         padding: 0 5px;
     }
 
+    a {
+        max-width: 100%;
+    }
+
     .stickers-wrapper {
         position: absolute;
         left: 30px;
@@ -346,6 +350,10 @@
 .card__slider-nav__item {
     max-width: 175px;
     padding: 12.5px;
+
+    a {
+        max-width: 100%;
+    }
 
     img {
         display: block;

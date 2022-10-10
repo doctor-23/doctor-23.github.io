@@ -49,18 +49,8 @@ function customSelect(container, title, content, label, radio, show) {
       $(this).closest(container).addClass('open');
     }
   });
-} // кастомный select
+} // кастомный select;
 
-
-$('.accordC').prev('.t-rec').on('click', function () {
-  var content = $(this).next('.accordC'),
-      blockOne = content.find('.t396__artboard'),
-      blockTwo = blockOne.find('.t396__carrier'),
-      blockThree = blockOne.find('.t396__filter');
-  blockOne.attr('style', 'height: max-content !important');
-  blockTwo.attr('style', 'height: max-content !important');
-  blockThree.attr('style', 'height: max-content !important');
-});
 
 function clickOutside(container, area, open) {
   $(function () {
@@ -1026,6 +1016,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    infinite: false,
     asNavFor: '.card__slider-nav',
     responsive: [{
       breakpoint: 574.98,
@@ -1046,7 +1037,7 @@ $(document).ready(function () {
     asNavFor: '.card__slider',
     dots: false,
     arrows: true,
-    infinite: true,
+    infinite: false,
     variableWidth: true,
     prevArrow: '<a class="arrow-left"></a>',
     nextArrow: '<a class="arrow-right"></a>',
