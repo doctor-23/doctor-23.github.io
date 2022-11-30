@@ -5,6 +5,14 @@
 $(document).ready(function () {
     @@include('_webp_config.js');
 
+    $('.hamburger-content a[href^="#"], *[data-href^="#"]').on('click', function(e){
+        e.preventDefault();
+        var t = 1000;
+        var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+        $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
+        $('.hamburger-wrapper').removeClass('show');
+    }); // плавный скролл
+
     customSelect('.select', '.select-title', '.select-content' , '.select-content__wrapper', '.select-content__radio', 4) // init кастомного селекта
 
     clickOutside('.select', '.select-content', 'open') // клик вне элемента

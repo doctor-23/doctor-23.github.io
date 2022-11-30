@@ -1,3 +1,4 @@
+
 function parametersCatalogCardColumns() {
     var object, priceArr = [], placeArr = [], statusArr = [], spaceArr = [], quadratureArr = [], indexArr = [];
 
@@ -7,7 +8,7 @@ function parametersCatalogCardColumns() {
             place = $(this).data('place'),
             status = $(this).data('status'),
             space = $(this).data('space'),
-            quadrature = parseInt($(this).find('.catalog-card__quadrature').text()),
+            quadrature = checkValue(parseInt($(this).find('.catalog-card__quadrature').text())),
             indexCard = index + 1;
 
         priceArr.push(price)
@@ -39,9 +40,9 @@ function parametersCatalogCardList() {
             place = $(this).data('place'),
             status = $(this).data('status'),
             space = $(this).data('space'),
-            quadrature = parseInt($(this).find('.table-body__item_square').text()),
+            quadrature = checkValue(parseInt($(this).find('.table-body__item_square').text())),
             name = removeSpaces($(this).find('.table-body__item_building').text()),
-            floor = parseInt($(this).find('.table-body__item_floor').text()),
+            floor = checkValue(parseInt($(this).find('.table-body__item_floor').text())),
             indexCard = index;
 
         priceArr.push({
@@ -96,9 +97,9 @@ function parametersMainTable() {
                 // place = $(this).data('place'),
                 // status = $(this).data('status'),
                 // space = $(this).data('space'),
-                quadrature = parseInt($(this).find('.table-body__item_square').text()),
+                quadrature = checkValue(parseInt($(this).find('.table-body__item_square').text())),
                 name = removeSpaces($(this).find('.table-body__item_building').text()),
-                floor = parseInt($(this).find('.table-body__item_floor').text()),
+                floor = checkValue(parseInt($(this).find('.table-body__item_floor').text())),
                 indexCard = index;
 
             priceArr.push({

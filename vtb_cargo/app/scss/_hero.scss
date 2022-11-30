@@ -177,6 +177,7 @@
 
     @media screen and (max-width: 991.98px) {
         position: static;
+        z-index: 0;
         max-width: var(--container);
     }
 
@@ -437,4 +438,84 @@
         width: 107px;
         height: 98px;
     }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    /*display: none;*/
+background-color: rgba(0,0,0, 0.6);
+    cursor: pointer
+}
+
+#overlay .elementor-widget-shortcode {
+    position: static;
+}
+
+#overlay .wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#overlay .wpcf7-form .wpcf7-spinner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    margin: auto;
+}
+
+#overlay .wpcf7-form .wpcf7-spinner::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+#overlay .wpcf7-form p {
+    margin: 0 !important;
+}
+
+#overlay .wpcf7-form input {
+    width: 100%;
+    min-height: 47px;
+    padding: 6px 16px;
+    font-family: "Poppins", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #11154E;
+    background-color: #ffffff;
+    border-color: #11154E;
+    border-radius: 100px;
+}
+
+#overlay .wpcf7-form #form_submit {
+    max-height: 47px;
+    margin-top: 10px;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #e38c08;
+    border: 3px solid #e38c08;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+#overlay .wpcf7-form #form_submit:hover {
+    color: #e38c08;
+    background-color: transparent;
 }

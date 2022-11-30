@@ -331,6 +331,29 @@
             width: 100%;
             //margin-bottom: 20px;
         }
+
+        .catalog-card__picture {
+            img {
+                width: calc((var(--container) / 3) - 16.66px);
+                height: calc(((var(--container) / 3) - 16.66px) / 1.35);
+                object-fit: cover;
+
+                @media screen and (max-width: 1054.98px) {
+                    width: calc(((100vw - 30px) / 3) - 16.66px);
+                    height: calc((((100vw - 30px) / 3) - 16.66px) / 1.35);
+                }
+
+                @media screen and (max-width: 767.98px) {
+                    width: calc(((100vw - 30px) / 2) - 12.5px);
+                    height: calc((((100vw - 30px) / 2) - 12.5px) / 1.35);
+                }
+
+                @media screen and (max-width: 575.98px) {
+                    width: calc(100vw - 30px);
+                    height: calc((100vw - 30px) / 1.56);
+                }
+            }
+        }
     }
 }
 

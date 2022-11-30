@@ -561,6 +561,23 @@ input[type="number"]:focus {
   display: none;
 }
 
+#header .nav-menu__list-item_last .btn-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 201px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+}
+
 #header .header-phone {
   color: #fff;
   font-weight: 700;
@@ -3037,29 +3054,6 @@ input[type="number"]:focus {
     width: 100%;
   }
 
-  #header .nav-menu__list-item:first-child {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-  }
-
-  #header .nav-menu__list-item:first-child a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 201px;
-    height: 40px;
-    background-color: #fff;
-    border: 1px solid var(--main-color);
-    border-radius: 4px;
-  }
-
   #header .nav-menu__list-item a {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -3070,7 +3064,14 @@ input[type="number"]:focus {
   }
 
   #header .nav-menu__list-item_last {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
     margin-top: auto;
   }
 
@@ -3089,7 +3090,7 @@ input[type="number"]:focus {
   .hamburger.open .hamburger-ico::before,
   .close.open .hamburger-ico::after,
   .close.open .hamburger-ico::before {
-    background-color: var(--main-color);
+    background-color: #fff;
   }
 
   .main-hero {
@@ -3135,6 +3136,7 @@ input[type="number"]:focus {
 
   .main-hero__list-wrap {
     position: static;
+    z-index: 0;
     max-width: var(--container);
   }
 
@@ -3917,6 +3919,13 @@ input[type="number"]:focus {
     -webkit-transition: opacity .3s ease-in-out;
     -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
+  }
+
+  .hamburger.open .hamburger-ico::after,
+  .hamburger.open .hamburger-ico::before,
+  .close.open .hamburger-ico::after,
+  .close.open .hamburger-ico::before {
+    background-color: var(--main-color);
   }
 
   .webp .main-hero {

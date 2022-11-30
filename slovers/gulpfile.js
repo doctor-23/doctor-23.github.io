@@ -234,12 +234,12 @@ function fontsStyle() {
 function cb() { }
 
 function watchFiles() {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.libs_css], cssLibs);
-    gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.libs_js], jsLibs);
-    gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.html], {usePolling: true}, html);
+    gulp.watch([path.watch.css], {usePolling: true}, css);
+    gulp.watch([path.watch.libs_css], {usePolling: true}, cssLibs);
+    gulp.watch([path.watch.js], {usePolling: true}, js);
+    gulp.watch([path.watch.libs_js], {usePolling: true}, jsLibs);
+    gulp.watch([path.watch.img], {usePolling: true}, images);
 }
 
 function clean() {

@@ -1,3 +1,7 @@
+function checkValue(value) {
+    return isNaN(value) ? 1 : value;
+}
+
 function banText(event) {
     var banText = parseFloat(event.key);
 

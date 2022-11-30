@@ -16,10 +16,11 @@ function catalogFilterFunc(object, valPrice, valPlace, valStatus, valSpace, valQ
 
         catalogCard.each(function () {
             var priceNoSpaces = removeSpaces($(this).find('.catalog-card__price').text()),
-                price = parseInt(priceNoSpaces),place = $(this).data('place'),
+                price = parseInt(priceNoSpaces),
+                place = $(this).data('place'),
                 status = $(this).data('status'),
                 space = $(this).data('space'),
-                quadrature = parseInt($(this).find('.catalog-card__quadrature').text());
+                quadrature = checkValue(parseInt($(this).find('.catalog-card__quadrature').text()));
 
             $(document).find('.catalog-more_link').hide();
 
@@ -49,7 +50,7 @@ function catalogFilterFunc(object, valPrice, valPlace, valStatus, valSpace, valQ
                 place = $(this).data('place'),
                 status = $(this).data('status'),
                 space = $(this).data('space'),
-                quadrature = parseInt($(this).find('.table-body__item_square').text());
+                quadrature = checkValue(parseInt($(this).find('.table-body__item_square').text()));
 
             if ((valStatus !== '' ? valStatus === status : true) &&
                 (valPlace !== '' ? (valPlace === place || valPlace === 'all') : true) &&

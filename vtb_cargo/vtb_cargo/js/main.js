@@ -157,8 +157,14 @@ $(document).ready(function () {
       e.preventDefault();
       var t = 1000;
       var d = $(this).attr('href');
+      var offset_top = $(d).offset().top;
+
+      if (d === "#articles_anchor") {
+        offset_top = $(d).offset().top - 100;
+      }
+
       $('html,body').stop().animate({
-        scrollTop: $(d).offset().top
+        scrollTop: offset_top
       }, t);
 
       if (hamburger.hasClass('open')) {
@@ -197,38 +203,42 @@ $(document).ready(function () {
           s;
       parent_hero_list[0].scrollLeft = 0;
       $('.arrow-container').on('click', '.arrow', function () {
+        var slide = $('.main-hero__list-item');
         var active_slide = $('.main-hero__list-item.active');
         var index = active_slide.index();
-        var length = $('.main-hero__list-item').length - 1;
+        var length = slide.length - 1;
+        active_slide.removeClass('active');
 
         if ($(this).hasClass('arrow-right')) {
-          $('.arrow.arrow-left').removeClass('disable');
-          active_slide.next().addClass('active');
-          active_slide.removeClass('active'); // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft + 252;
-
           s = (index + 1) * 252;
-          parent_hero_list.stop().animate({
-            scrollLeft: s
-          }, t);
 
-          if (index + 2 === length - 1) {
-            $(this).addClass('disable');
+          if (index + 1 === length - 1) {
+            slide.first().addClass('active');
+            parent_hero_list.stop().animate({
+              scrollLeft: 0
+            }, t);
+          } else {
+            active_slide.next().addClass('active');
+            parent_hero_list.stop().animate({
+              scrollLeft: s
+            }, t);
           }
         }
 
         if ($(this).hasClass('arrow-left')) {
-          $('.arrow.arrow-right').removeClass('disable');
-          active_slide.prev().addClass('active');
-          active_slide.removeClass('active'); // parent_hero_list[0].scrollLeft = parent_hero_list[0].scrollLeft - 252;
-          // parent_hero_list.stop().animate({scrollLeft: parent_hero_list[0].scrollLeft - 252}, t);
-
-          s = (index - 1) * 252;
-          parent_hero_list.stop().animate({
-            scrollLeft: s
-          }, t);
-
-          if (s === 0) {
-            $(this).addClass('disable');
+          if (index - 1 === -1) {
+            var last = slide[length - 2];
+            s = (length - 2) * 252;
+            $(last).addClass('active');
+            parent_hero_list.stop().animate({
+              scrollLeft: s
+            }, t);
+          } else {
+            s = (index - 1) * 252;
+            active_slide.prev().addClass('active');
+            parent_hero_list.stop().animate({
+              scrollLeft: s
+            }, t);
           }
         }
       }); // parent_hero_list.on('click', '.main-hero__list-item', function () {

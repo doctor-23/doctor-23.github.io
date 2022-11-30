@@ -1,0 +1,238 @@
+.cargo-with-mileage {
+    padding: 100px 0;
+
+    @media screen and (max-width: 991.98px) {
+        padding: 70px 0;
+    }
+}
+
+.cargo-with-mileage__title {
+    margin-bottom: 40px;
+    color: var(--dark-main-color);
+    font-size: 36px;
+    line-height: 45px;
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+.cargo-with-mileage__tabs {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 767.98px) {
+        height: 52px;
+        margin-bottom: 24px;
+
+        .select-title {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            color: var(--main-color);
+        }
+    }
+}
+
+.cargo-with-mileage__tabs-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    height: 72px;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 125%;
+    border-bottom: 2px solid var(--main-color);
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    user-select: none;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    &.active {
+        color: #fff;
+        background-color: var(--main-color);
+    }
+}
+
+.cargo-with-mileage__content-item {
+    display: none;
+    justify-content: space-between;
+    gap: 150px;
+    width: 100%;
+
+    @media screen and (max-width: 1190.98px) {
+        gap: 50px;
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+.cargo-with-mileage__content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-shrink: 0;
+    max-width: 450px;
+    width: 100%;
+
+    @media screen and (max-width: 991.98px) {
+        max-width: max-content;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        gap: 32px;
+        max-width: 100%;
+    }
+}
+
+.cargo-with-mileage__content-row {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(2) {
+        gap: 27px;
+
+        @media screen and (max-width: 767.98px) {
+            gap: 16px;
+        }
+    }
+
+    &:last-child {
+        margin-top: 8px;
+
+        @media screen and (max-width: 767.98px) {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+
+    .row__title {
+        margin-bottom: 19px;
+        color: var(--dark-main-color);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 130%;
+
+        @media screen and (max-width: 767.98px) {
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+    }
+
+    .row__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .row__list-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 16px;
+        line-height: 125%;
+        color: var(--dark-main-color);
+
+        &::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: var(--dark-main-color);
+            border-radius: 50%;
+        }
+    }
+
+    .row__item {
+        display: flex;
+        gap: 12px;
+
+        .svg-ico {
+            color: #494B4D;
+        }
+    }
+
+    .row__item-icon {
+        min-width: 56px;
+    }
+
+    .row__item-content {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 767.98px) {
+            gap: 2px;
+            max-width: 277px;
+        }
+    }
+
+    .row__item-content__top {
+        font-size: 14px;
+        line-height: 130%;
+        color: #494B4D;
+
+        @media screen and (max-width: 767.98px) {
+            font-size: 12px;
+        }
+    }
+
+    .row__item-content__bottom {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--dark-main-color);
+    }
+
+    .row__underbtn-text {
+        margin-bottom: 24px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--dark-main-color);
+
+        @media screen and (max-width: 767.98px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    .cargo-with-mileage__btn {
+        width: 266px;
+        height: 56px;
+
+        @media screen and (max-width: 767.98px) {
+            width: 100%;
+        }
+    }
+}
+
+.cargo-with-mileage__content-right {
+    position: relative;
+    width: calc(((100vw - var(--container)) / 2) + (var(--container) - 600px));
+    margin-right: calc(((100vw) - var(--container)) / -2);
+    border-radius: 8px 0 0 8px;
+
+    @media screen and (max-width: 1190.98px) {
+        width: calc(((100vw - var(--container)) / 2) + (var(--container) - 500px));
+    }
+
+    @media screen and (max-width: 991.98px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px 0 0 8px;
+    }
+}

@@ -1,0 +1,31 @@
+.map {
+    margin-bottom: -208px;
+
+    .container {
+        max-width: 1260px;
+        border-radius: 10px;
+
+        @media screen and (max-width: 1189.98px) {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            width: 100vw;
+            margin-right: 0;
+            padding: 0;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 10px;
+
+        @media screen and (max-width: 767.98px) {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+}

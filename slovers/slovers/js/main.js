@@ -8,6 +8,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function checkValue(value) {
+  return isNaN(value) ? 1 : value;
+}
+
 function banText(event) {
   var banText = parseFloat(event.key);
 
@@ -574,7 +578,7 @@ function parametersCatalogCardColumns() {
         place = $(this).data('place'),
         status = $(this).data('status'),
         space = $(this).data('space'),
-        quadrature = parseInt($(this).find('.catalog-card__quadrature').text()),
+        quadrature = checkValue(parseInt($(this).find('.catalog-card__quadrature').text())),
         indexCard = index + 1;
     priceArr.push(price);
     placeArr.push(place);
@@ -613,9 +617,9 @@ function parametersCatalogCardList() {
         place = $(this).data('place'),
         status = $(this).data('status'),
         space = $(this).data('space'),
-        quadrature = parseInt($(this).find('.table-body__item_square').text()),
+        quadrature = checkValue(parseInt($(this).find('.table-body__item_square').text())),
         name = removeSpaces($(this).find('.table-body__item_building').text()),
-        floor = parseInt($(this).find('.table-body__item_floor').text()),
+        floor = checkValue(parseInt($(this).find('.table-body__item_floor').text())),
         indexCard = index;
     priceArr.push((_priceArr$push = {}, _defineProperty(_priceArr$push, 'index', indexCard), _defineProperty(_priceArr$push, 'value', price), _priceArr$push));
     quadratureArr.push((_quadratureArr$push = {}, _defineProperty(_quadratureArr$push, 'index', indexCard), _defineProperty(_quadratureArr$push, 'value', quadrature), _quadratureArr$push));
@@ -664,9 +668,9 @@ function parametersMainTable() {
           // place = $(this).data('place'),
       // status = $(this).data('status'),
       // space = $(this).data('space'),
-      quadrature = parseInt($(this).find('.table-body__item_square').text()),
+      quadrature = checkValue(parseInt($(this).find('.table-body__item_square').text())),
           name = removeSpaces($(this).find('.table-body__item_building').text()),
-          floor = parseInt($(this).find('.table-body__item_floor').text()),
+          floor = checkValue(parseInt($(this).find('.table-body__item_floor').text())),
           indexCard = index;
       priceArr.push((_priceArr$push2 = {}, _defineProperty(_priceArr$push2, 'index', indexCard), _defineProperty(_priceArr$push2, 'value', price), _priceArr$push2)); // placeArr.push(place)
       // statusArr.push(status)
@@ -714,7 +718,7 @@ function catalogFilterFunc(object, valPrice, valPlace, valStatus, valSpace, valQ
           place = $(this).data('place'),
           status = $(this).data('status'),
           space = $(this).data('space'),
-          quadrature = parseInt($(this).find('.catalog-card__quadrature').text());
+          quadrature = checkValue(parseInt($(this).find('.catalog-card__quadrature').text()));
       $(document).find('.catalog-more_link').hide();
 
       if ((valStatus ? valStatus === status : true) && (valPlace ? valPlace === place || valPlace === 'all' : true) && (valSpace ? valSpace === space || valSpace === 'all' : true) && valPrice[0] <= price && price <= valPrice[1] && valQuadrature[0] <= quadrature && quadrature <= valQuadrature[1]) {
@@ -741,7 +745,7 @@ function catalogFilterFunc(object, valPrice, valPlace, valStatus, valSpace, valQ
           place = $(this).data('place'),
           status = $(this).data('status'),
           space = $(this).data('space'),
-          quadrature = parseInt($(this).find('.table-body__item_square').text());
+          quadrature = checkValue(parseInt($(this).find('.table-body__item_square').text()));
 
       if ((valStatus !== '' ? valStatus === status : true) && (valPlace !== '' ? valPlace === place || valPlace === 'all' : true) && (valSpace !== '' ? valSpace === space || valSpace === 'all' : true) && valPrice[0] <= price && price <= valPrice[1] && valQuadrature[0] <= quadrature && quadrature <= valQuadrature[1]) {
         if (window.matchMedia('(min-width: 768px)').matches) {
@@ -896,6 +900,16 @@ $(document).ready(function () {
     }
   });
   ;
+  $('.hamburger-content a[href^="#"], *[data-href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    var t = 1000;
+    var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+    $('html,body').stop().animate({
+      scrollTop: $(d).offset().top
+    }, t);
+    $('.hamburger-wrapper').removeClass('show');
+  }); // плавный скролл
+
   customSelect('.select', '.select-title', '.select-content', '.select-content__wrapper', '.select-content__radio', 4); // init кастомного селекта
 
   clickOutside('.select', '.select-content', 'open'); // клик вне элемента
