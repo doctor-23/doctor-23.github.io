@@ -1,0 +1,346 @@
+.testimonials_on-main {
+    padding-bottom: 140px;
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
+}
+
+.testimonials_on-page {
+    padding: 60px 0 140px;
+
+    @include tablet {
+        padding: 30px 0 80px;
+    }
+
+    .testimonials__title {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        max-width: 993px;
+        margin-bottom: 30px;
+        text-indent: 0;
+
+        .sticker-title {
+            position: static;
+            height: 89px;
+            margin: 0 auto;
+            transform: none;
+
+            @include mobile {
+                height: 48px;
+            }
+
+            span {
+                height: 83px;
+                padding-top: 16px;
+
+                @include mobile {
+                    height: 42px;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .testimonials__description {
+        max-width: 840px;
+        margin-bottom: 60px;
+    }
+
+    .testimonials__tabs {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        max-width: 784px;
+        margin: 0 auto 50px;
+        padding-right: 0;
+
+        @include mobile {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            max-width: none;
+            padding-right: calc((100vw - var(--container))/ 2 + 20px);
+        }
+    }
+
+    .testimonials__item-row {
+        flex-wrap: wrap;
+        display: none;
+
+        &:nth-child(1), &:nth-child(2) {
+            display: flex;
+        }
+    }
+
+    .testimonials__item-more {
+        display: block;
+    }
+}
+
+.testimonials__title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 853px;
+    text-indent: 313px;
+    margin: 0 auto 30px;
+    text-align: center;
+
+    @include tablet {
+        text-indent: 0;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .sticker-title {
+        position: absolute;
+        top: 0;
+        left: 137px;
+        width: max-content;
+        height: 94px;
+        text-indent: 0;
+        transform: matrix(1, -0.05, 0.05, 1, 0, 0);
+
+        @include tablet {
+            position: static;
+            margin: 0 auto;
+        }
+
+        @include mobile {
+            height: 53px;
+        }
+
+        span {
+            width: max-content;
+            height: 88px;
+            padding-top: 24px;
+            background-color: var(--purpure);
+
+            @include mobile {
+                height: 47px;
+                padding-top: 6px;
+            }
+        }
+    }
+}
+
+.testimonials__description {
+    max-width: 745px;
+    margin: 0 auto 40px;
+    text-align: center;
+
+    @include mobile {
+        margin-bottom: 70px;
+    }
+}
+
+.testimonials__tabs {
+    display: flex;
+    gap: 25px;
+    width: calc(100vw - ((100vw - var(--container)) / 2 + 20px));
+    padding-right: calc((100vw - var(--container)) / 2 + 20px);
+    margin-bottom: 50px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {width: 0;}
+
+    @include tablet {
+        gap: 8px;
+    }
+
+    @include mobile {
+        margin-bottom: 40px;
+    }
+}
+
+.testimonials__tabs-item {
+    flex-shrink: 0;
+    width: max-content;
+    padding: 10px 30px;
+    border: 1px solid #242424;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .3s ease-in-out;
+
+    @include mobile {
+        padding: 8px 15px;
+    }
+
+    &.active, &:focus-visible, &:hover {
+        background-color: var(--green);
+    }
+}
+
+.testimonials__slider-wrap {
+    position: relative;
+    margin-bottom: 106px;
+
+    @include mobile {
+        margin-bottom: 86px;
+    }
+}
+
+.testimonials__slider {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.testimonials__list {
+    display: block;
+    gap: 50px 40px;
+    column-width: calc(var(--container) / 2 - 20px);
+    column-count:  2;
+    column-fill: balance;
+    margin-bottom: -50px;
+
+    @include laptop {
+        column-width: calc((var(--container) - 40px) / 2 - 60px);
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 0;
+    }
+
+    .testimonials__item {
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+        margin-bottom: 50px;
+
+        @include mobile {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.testimonials__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 4px dashed var(--violet);
+    border-radius: 30px;
+}
+
+.testimonials__item-row {
+    display: flex;
+    gap: 10px;
+
+    @include tablet {
+        flex-wrap: wrap;
+        display: none;
+
+        &:nth-child(1), &:nth-child(2) {
+            display: flex;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &:last-child {
+        .testimonials__item-row__text {
+            font-size: 14px;
+        }
+    }
+}
+
+.testimonials__item-row__heading {
+    min-width: 90px;
+    max-width: 90px;
+    font-weight: 600;
+    color: var(--violet);
+
+    @include mobile {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.testimonials__item-row__text {
+    width: calc(100% - 100px);
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.testimonials__item-more {
+    width: 100%;
+    text-align: center;
+    color: var(--blue);
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background-color: var(--green);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background-color .3s ease-in-out;
+
+    @include tablet {
+        display: none;
+    }
+
+    &:hover, &:focus-visible {
+        background-color: var(--violet);
+    }
+
+    &.arrow-left {
+        left: 0;
+    }
+
+    &.arrow-right {
+        right: 0;
+    }
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: auto;
+    transform: translateY(100%);
+
+    @include mobile {
+        bottom: -30px;
+    }
+
+    li {
+        width: 16px;
+        height: 16px;
+        background-color: var(--violet);
+        transition: background-color .3s ease-in-out;
+
+        &.active, &:hover, &:focus-visible {
+            background-color: var(--green);
+        }
+    }
+}
+
+.testimonials__btn-more {
+    margin: 0 auto;
+}

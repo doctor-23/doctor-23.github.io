@@ -1,0 +1,234 @@
+//.nav_scroll {
+//    padding-top: 21px;
+//
+//    @include tablet {
+//        padding-top: 0;
+//    }
+//
+//    #header {
+//        padding-bottom: 7px;
+//
+//        @include tablet {
+//            padding-bottom: 13px;
+//        }
+//    }
+//}
+
+#header {
+    width: 100%;
+    height: max-content;
+    padding: 10px 0 13px;
+
+    @include tablet {
+        padding: 4px 0;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            justify-content: space-between;
+        }
+    }
+}
+
+.header__logo {
+    width: 160px;
+    height: 59px;
+
+    @include tablet {
+        width: 108px;
+        height: 40px;
+    }
+
+    img {
+        width: 100%;
+        height: max-content;
+        object-fit: contain;
+    }
+}
+
+.hamburger-wrap {
+    margin-left: auto;
+
+    @include tablet {
+        position: absolute;
+        top: 48px;
+        left: calc((100vw - var(--container)) / -2);
+        z-index: 2;
+        width: 100vw;
+        height: calc(100vh - 48px);
+        padding: 55px calc((100vw - var(--container)) / 2 + 20px) 40px;
+        background-color: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+
+        &.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.hamburger-wrap__scroll_scrolling {
+    @include tablet {
+        flex-direction: column;
+        height: calc(100vh - 143px);
+
+        .socials {
+            display: flex;
+        }
+    }
+}
+
+.nav__header {
+    margin-right: 111px;
+
+    @include tablet {
+        margin-right: 0;
+    }
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 40px;
+
+    @include tablet {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    li {
+        a {
+
+        }
+    }
+}
+
+.header__btn-wrap {
+    display: flex;
+    gap: 20px;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        margin: auto 0 50px;
+    }
+}
+
+.main-btn {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @include tablet {
+        width: 180px !important;
+    }
+
+    &.auth-btn {
+        width: 103px;
+        color: #242424;
+        background-color: transparent;
+        border: 2px solid var(--violet);
+
+        &:hover, &:focus-visible {
+            border-color: var(--green);
+        }
+    }
+
+    &.registration-btn {
+        width: 167px;
+        color: #fff;
+        background-color: var(--violet);
+        border: 2px solid var(--violet);
+
+        &:hover, &:focus-visible {
+            background-color: var(--green);
+            border-color: var(--green);
+        }
+    }
+}
+
+.header__hamburger {
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    @include tablet {
+        display: flex;
+    }
+
+    &.open {
+        .header__hamburger-wrap {
+            position: relative;
+            //width: 22px;
+            //height: 22px;
+        }
+
+        .hamburger-ico {
+            position: absolute;
+            top: 45%;
+            width: 18px;
+
+            &.line-1 {
+                transform: rotate(45deg);
+            }
+
+            &.line-2 {
+                transform: rotate(0);
+                opacity: 0;
+            }
+
+            &.line-3 {
+                transform: rotate(-45deg);
+            }
+
+        }
+    }
+}
+
+.header__hamburger-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 16.67px;
+}
+
+.hamburger-ico {
+    position: relative;
+    width: 26px;
+    height: 2px;
+    background-color: var(--green);
+    transform: rotate(180deg);
+    transition: transform .3s ease-in-out;
+
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 4px;
+        height: 2px;
+        background-color: var(--green);
+        border-radius: 40%;
+    }
+
+    &::before {
+        left: -2px;
+    }
+
+    &::after {
+        right: -2px;
+    }
+}

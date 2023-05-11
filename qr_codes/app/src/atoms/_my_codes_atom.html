@@ -1,0 +1,34 @@
+<div class="my-code">
+    <div class="my-code__image">
+        <img src="@@image" alt="QR код">
+    </div>
+
+    <div class="my-code__head-wrap">
+        <h2 class="my-code__title">
+            <span class="my-code__title-text">
+                @@title
+            </span>
+
+            <span class="ico-pencil">
+                @@include('./_svg_atom.html',
+                    {
+                        "width": "26",
+                        "height": "26",
+                        "icon": "edit-pencil",
+                        "class": ""
+                    }
+                )
+            </span>
+        </h2>
+    </div>
+
+    <div class="my-code__btn-wrap">
+        <a href="#" class="btn download-code my-code__btn" download="">
+            Скачать QR-код
+        </a>
+
+        <a href="#" class="choice-other-design">
+            Выбрать другой дизайн
+        </a>
+    </div>
+</div>

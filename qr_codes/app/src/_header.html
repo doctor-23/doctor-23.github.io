@@ -1,0 +1,55 @@
+<header id="header">
+    <div class="container">
+        <a href="/" class="logo header__logo">
+            <img src="./img/logo.png" alt="LOGO">
+        </a>
+
+        <div class="hamburger-wrap">
+            <div class="hamburger-wrap__scroll">
+                <div class="hamburger-wrap__scroll_scrolling _f-space">
+                    <nav class="nav__header">
+                        <ul class="header__nav-list _f-space">
+                            <li>
+                                <a href="about.html">
+                                    О платформе
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tariff.html">
+                                    Тарифы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="partners.html">
+                                    Партнерам
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="header__btn-wrap">
+                        <a href="#" class="header__btn main-btn auth-btn">
+                            Вход
+                        </a>
+
+                        <a href="#" class="header__btn main-btn registration-btn">
+                            Регистрация
+                        </a>
+                    </div>
+
+                    @@include('../src/molecules/_socials_molecule.html', {"class": "tablet"})
+                </div>
+            </div>
+        </div>
+
+        <div class="header__hamburger tablet">
+            <div class="header__hamburger-wrap">
+                <div class="hamburger-ico line-1"></div>
+                <div class="hamburger-ico line-2"></div>
+                <div class="hamburger-ico line-3"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main-page">

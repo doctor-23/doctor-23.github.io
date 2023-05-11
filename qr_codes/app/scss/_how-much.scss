@@ -1,0 +1,108 @@
+.how-much {
+    padding: 60px 0 140px;
+
+    @include tablet {
+        padding: 30px 0 80px;
+    }
+}
+
+.how-much__title {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include mobile {
+        margin-bottom: 40px;
+    }
+}
+
+.how-much__wrap {
+    padding: 30px 55px 35px 31px;
+    border: 4px dashed var(--purpure);
+    border-radius: 30px;
+
+    @include mobile {
+        padding: 20px 17.5px 30px;
+    }
+}
+
+.how-much__heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 20px;
+    margin-bottom: 15px;
+
+    &>* {
+        font-size: 26px;
+        font-weight: 600;
+        color: var(--violet);
+
+        @include mobile {
+            font-size: 22px;
+        }
+    }
+}
+
+.how-much__description {
+    margin-bottom: 40px;
+
+    &, * {
+        font-weight: 600;
+    }
+
+    @include mobile {
+        margin-bottom: 20px;
+    }
+}
+
+.how-much__list {
+    column-gap: 64px;
+    column-count:  2;
+    column-width: calc((var(--container) - 94px) / 2 - 32px);
+    column-fill: balance;
+
+    @include laptop {
+        column-width: calc(((var(--container) - 40px)- 94px) / 2 - 32px);
+    }
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    li {
+        display: flex;
+        gap: 10px;
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+
+            @include tablet {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                content: '';
+                flex-shrink: 0;
+                width: 15px;
+                height: 15px;
+                margin-top: 5px;
+                background-color: var(--violet);
+                border-radius: 50%;
+            }
+        }
+
+        &:last-child {
+            margin-top: 5px;
+        }
+    }
+}
+
+.how-much__btn {
+    @include mobile {
+        margin: 0 auto;
+    }
+}

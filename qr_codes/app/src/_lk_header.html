@@ -1,0 +1,58 @@
+<header id="lk_header">
+    <div class="container">
+        <a href="/" class="logo lk-header__logo">
+            <img src="./img/logo.png" alt="LOGO">
+        </a>
+
+        <div class="lk-header__user">
+            <form action="#" id="header_user">
+                <label class="form-row custom-photo">
+                    <input type="file" name="user_photo" class="input_photo">
+
+                    <span class="custom-photo__content">
+                        <img src="./img/icons/user.svg" alt="Пользователь">
+
+                        <span class="custom-photo__ico">
+                             @@include('./atoms/_svg_atom.html',
+                                {
+                                    "width": "19",
+                                    "height": "19",
+                                    "icon": "plus",
+                                    "class": ""
+                                }
+                            )
+                        </span>
+
+                    </span>
+                </label>
+
+                <label class="form-row user-name-row">
+                    <span class="user-name empty-name">
+                        Введите имя
+                    </span>
+
+                    <span class="ico-pencil">
+                        @@include('./atoms/_svg_atom.html',
+                            {
+                                "width": "26",
+                                "height": "26",
+                                "icon": "edit-pencil",
+                                "class": ""
+                            }
+                        )
+                    </span>
+                </label>
+            </form>
+        </div>
+
+        <div class="header__hamburger">
+            <div class="header__hamburger-wrap">
+                <div class="hamburger-ico line-1"></div>
+                <div class="hamburger-ico line-2"></div>
+                <div class="hamburger-ico line-3"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="lk-page">

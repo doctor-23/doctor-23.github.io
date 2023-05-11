@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "image": "./img/sticker-lk-1.png",
+    "title": "Паспорт"
+  },
+  {
+    "id": 2,
+    "image": "./img/sticker-lk-2.png",
+    "title": "Багаж"
+  },
+  {
+    "id": 3,
+    "image": "./img/sticker-lk-1.png",
+    "title": "Водительское удостоверение"
+  },
+  {
+    "id": 4,
+    "image": "./img/sticker-lk-2.png",
+    "title": "Багаж"
+  },
+  {
+    "id": 5,
+    "image": "./img/sticker-lk-1.png",
+    "title": "Паспорт"
+  }
+]

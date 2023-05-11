@@ -1,0 +1,54 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "QRGET - Отзывы"})
+
+@@include('./src/_header.html')
+
+<section class="testimonials testimonials_on-page">
+    <div class="container">
+        <h1 class="testimonials__title main-title">
+            Истории от клиентов QRGET: ваши личные вещи
+
+            <span class="sticker-title">
+                <span>
+                    под защитой
+                </span>
+            </span>
+        </h1>
+
+        <div class="testimonials__description">
+            <p>
+                Ознакомьтесь с нашими историями в формате «до и после». Теперь утерянных вещей становится гораздо меньше — наши клиенты довольны идеей с QR-кодами и благодарят за возможность сохранить свои средства и нервы.
+            </p>
+        </div>
+
+        <ul class="testimonials__tabs">
+            <li class="testimonials__tabs-item active">
+                Показать все отзывы
+            </li>
+            <li class="testimonials__tabs-item">
+                Телефон
+            </li>
+            <li class="testimonials__tabs-item">
+                Документы
+            </li>
+            <li class="testimonials__tabs-item">
+                Сумки, чемоданы
+            </li>
+            <li class="testimonials__tabs-item">
+                Банковская карта
+            </li>
+            <li class="testimonials__tabs-item">
+                Пенал, дневник
+            </li>
+            <li class="testimonials__tabs-item">
+                Ранец
+            </li>
+        </ul>
+
+        <div class="testimonials__list">
+            @@loop('./src/atoms/_testimonial_atom.html', './src/content/testimonials.json')
+        </div>
+    </div>
+</section>
+
+@@include('./src/_footer.html')
+@@include('./src/_scripts.html')

@@ -1,0 +1,137 @@
+.select {
+    position: relative;
+    width: 260px;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    &.open {
+        .select-title {
+            border-color: var(--purpure);
+        }
+
+        .select-title__ico {
+            transform: rotate(180deg);
+
+            @media screen and(max-width: 767.98px) {
+                transform: rotate(360deg);
+            }
+        }
+
+        .select-content {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &.active {
+        .select-title {
+            color: #fff;
+        }
+    }
+}
+
+.select-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    background-color: transparent;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color .3s ease-in-out;
+
+    &:hover, &:focus-visible {
+        border-color: var(--violet);
+    }
+}
+
+.select-title__text {
+    color: #242424;
+    font-size: 16px;
+}
+
+.select-title__ico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    transition: transform .3s ease-in-out;
+
+    @include mobile {
+        transform: rotate(270deg);
+    }
+}
+
+.select-content {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 15px 8px 0;
+    background-color: rgba(255, 255, 255, 0.7);;
+    backdrop-filter: blur(2.5px);
+    border: 1px solid #242424;
+    border-radius: 5px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .3s ease-in-out;
+
+    &.no-scroll {
+        .select-content_wrap {
+            overflow-y: hidden;
+        }
+    }
+
+}
+
+.select-content_wrap {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--green) var(--violet);
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--green);
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--violet);
+    }
+}
+
+.select-content__wrapper {
+    display: flex;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color .1s ease-in-out;
+
+    &:hover {
+        background-color: rgba(138, 153, 168, 0.15);
+    }
+
+    input {
+        display: none !important;
+
+        &:checked ~ .select-content__radio {
+
+        }
+    }
+}
+
+.select-content__radio {
+
+}

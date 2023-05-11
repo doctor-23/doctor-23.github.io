@@ -1,0 +1,591 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "QRGET - Личный кабинет"})
+
+@@include('./src/_lk_header.html')
+
+<section class="personal">
+    <div class="container">
+        <aside class="personal__menu">
+            <div class="personal__menu-wrap">
+                <span class="personal__menu-close">
+                     <svg width="20" height="20" class="svg-ico" role="img">
+                        <use xlink:href="./img/icons/sprite.svg#close"></use>
+                    </svg>
+                </span>
+
+                <ul class="menu-list">
+                    <li class="active">
+                        Мои QR-коды
+                    </li>
+                    <li>
+                        Дизайн QR
+                    </li>
+                    <li class="disabled">
+                        Контент
+                    </li>
+                    <li class="disabled">
+                        Печать
+                    </li>
+                    <li class="disabled">
+                        Сообщения
+                    </li>
+                    <li>
+                        Оплата
+                    </li>
+                    <li>
+                        Поддержка
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="personal__content">
+            <div class="my-codes" style="display: none;">
+                <div class="my-codes__list">
+
+                    @@loop('./src/atoms/_my_codes_atom.html', './src/content/my_codes.json')
+
+                    <div class="my-code">
+                        <div class="my-code__image">
+                            @@include('./src/atoms/_svg_atom.html',
+                                {
+                                    "width": "51",
+                                    "height": "51",
+                                    "icon": "plus",
+                                    "class": ""
+                                }
+                            )
+                        </div>
+
+                        <div class="my-code__head-wrap">
+                            <h2 class="my-code__title">
+                                <span class="my-code__title-text">
+                                    Добавить новый QR-код
+                                </span>
+                            </h2>
+                        </div>
+
+                        <div class="my-code__btn-wrap">
+                            <a href="#" class="btn my-code__btn">
+                                Добавить QR-код
+                            </a>
+                        </div>
+                    </div>
+
+<!--                    <div class="my-code">-->
+<!--                        <div class="my-code__image">-->
+<!--                            <img src="./img/sticker-lk-1.png" alt="QR код">-->
+<!--                        </div>-->
+
+<!--                        <div class="my-code__head-wrap">-->
+<!--                            <h2 class="my-code__title">-->
+<!--                                <span class="my-code__title-text">-->
+<!--                                    Добавить новый QR-код-->
+<!--                                </span>-->
+<!--                            </h2>-->
+<!--                        </div>-->
+
+<!--                        <div class="my-code__btn-wrap">-->
+<!--                            <a href="#" class="btn my-code__btn">-->
+<!--                                Добавить QR-код-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+            <div class="design-codes" >
+                <ul class="design-codes__tabs">
+                    <li class="active">
+                        Выбрать готовый стикерпак
+                    </li>
+
+                    <li>
+                        Открыть редактор QR-кода
+                    </li>
+                </ul>
+
+                <div class="design-codes__ready" style="display:none;">
+                    <div class="design-codes__heading">
+                        <div class="design-codes__heading-text">
+                            Выберите QR-код
+                        </div>
+
+                        <div class="design-codes__heading-select select">
+                            <div class="select-title">
+                                <div class="select-title__text">
+                                    Паспорт
+                                </div>
+
+                                <div class="select-title__ico">
+                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.166 1.5L10.166 10.5L1.16602 1.5" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="select-content">
+                                <div class="select-content_wrap">
+
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="codes_title" value="1">
+                                        <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+
+                                    </label>
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="codes_title" value="2">
+                                        <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                    </label>
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="codes_title" value="3">
+                                        <span class="select-content__radio">
+                                        Водительское удостоверение
+                                    </span>
+
+                                    </label>
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="codes_title" value="4">
+                                        <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                    </label>
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="codes_title" value="5">
+                                        <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="design-codes__list">
+                        <div class="design-codes__list-item">
+                            <h4 class="design-codes__list-item__title">
+                                Классические варианты
+                            </h4>
+
+                            <div class="design-codes__list-item__image">
+                                <img src="./img/design-codes.png" alt="Дизайн">
+                            </div>
+
+                            <div class="design-codes__list-item__wrap">
+                                <div class="design-codes__list-item__text">
+                                    Скачать лист для печати
+                                </div>
+
+                                <a href="#" class="design-codes__list-item__download" download="">
+                                    @@include('./src/atoms/_svg_atom.html',
+                                    {
+                                    "width": "28",
+                                    "height": "28",
+                                    "icon": "ic_download",
+                                    "class": ""
+                                    }
+                                    )
+                                </a>
+                            </div>
+                        </div>
+                        <div class="design-codes__list-item">
+                            <h4 class="design-codes__list-item__title">
+                                Детские варианты
+                            </h4>
+
+                            <div class="design-codes__list-item__image">
+                                <img src="./img/design-codes.png" alt="Дизайн">
+                            </div>
+
+                            <div class="design-codes__list-item__wrap">
+                                <div class="design-codes__list-item__text">
+                                    Скачать лист для печати
+                                </div>
+
+                                <a href="#" class="design-codes__list-item__download" download="">
+                                    @@include('./src/atoms/_svg_atom.html',
+                                    {
+                                    "width": "28",
+                                    "height": "28",
+                                    "icon": "ic_download",
+                                    "class": ""
+                                    }
+                                    )
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="design-codes__footnote">
+                        ВНИМАНИЕ! В листе для печати собран архив со всеми возможными форматами (png, tiff, pdf, svg) для качественной самостоятельной печати или печати в типографии.
+                    </div>
+                </div>
+
+                <div class="design-codes__custom">
+                    <div class="design-codes__heading">
+                        <div class="design-codes__heading-wrap">
+                            <div class="design-codes__heading-text">
+                                Выберите QR-код
+                            </div>
+
+                            <div class="design-codes__heading-select select">
+                                <div class="select-title">
+                                    <div class="select-title__text">
+                                        Паспорт
+                                    </div>
+
+                                    <div class="select-title__ico">
+                                        <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.166 1.5L10.166 10.5L1.16602 1.5" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="select-content">
+                                    <div class="select-content_wrap">
+
+                                        <label class="select-content__wrapper">
+                                            <input type="radio" name="codes_title" value="1">
+                                            <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+
+                                        </label>
+                                        <label class="select-content__wrapper">
+                                            <input type="radio" name="codes_title" value="2">
+                                            <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                        </label>
+                                        <label class="select-content__wrapper">
+                                            <input type="radio" name="codes_title" value="3">
+                                            <span class="select-content__radio">
+                                        Водительское удостоверение
+                                    </span>
+
+                                        </label>
+                                        <label class="select-content__wrapper">
+                                            <input type="radio" name="codes_title" value="4">
+                                            <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                        </label>
+                                        <label class="select-content__wrapper">
+                                            <input type="radio" name="codes_title" value="5">
+                                            <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="design-codes__heading-footnote">
+                            Вы можете создать и сохранить неограниченное количество разных дизайнов для вашего QR-кода.
+                        </div>
+                    </div>
+
+                    <div class="design-codes__left">
+                        <div class="design-codes__image">
+                            <img src="./img/sticker-lk-1.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="design-codes__right">
+                        <form action="#" class="design-codes__form" id="code_design_form">
+
+
+                            <div class="design-codes__border form-row">
+                                <div class="design-codes__border-text title-text">
+                                    Выберите рамку
+                                </div>
+
+                                <div class="design-codes__border-select select">
+                                    <div class="select-title">
+                                        <div class="select-title__text">
+                                            Паспорт
+                                        </div>
+
+                                        <div class="select-title__ico">
+                                            <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19.166 1.5L10.166 10.5L1.16602 1.5" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="select-content">
+                                        <div class="select-content_wrap">
+
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="1">
+                                                <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="2">
+                                                <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="3">
+                                                <span class="select-content__radio">
+                                        Водительское удостоверение
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="4">
+                                                <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="5">
+                                                <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="design-codes__borders form-row">
+                                <div class="design-codes__border-item">
+                                    <img src="#" alt="Рамка">
+                                </div>
+                                <div class="design-codes__border-item">
+                                    <img src="#" alt="Рамка">
+                                </div>
+                                <div class="design-codes__border-item">
+                                    <img src="#" alt="Рамка">
+                                </div>
+                                <div class="design-codes__border-item">
+                                    <img src="#" alt="Рамка">
+                                </div>
+                                <div class="design-codes__border-item">
+                                    <img src="#" alt="Рамка">
+                                </div>
+                            </div>
+
+                            <div class="design-codes__caption form-row">
+                                <div class="design-codes__caption-title title-text">
+                                    Изменить надпись
+                                </div>
+
+                                <textarea
+                                        name="code_caption"
+                                        class="design-codes__caption-text">
+Я потерялся. Если вы нашли меня, отсканируйте и свяжитесь с владельцем.
+                                </textarea>
+                            </div>
+
+                            <div class="design-codes__size form-row">
+                                <div class="design-codes__size-title title-text">
+                                    Выберите размер рамки
+                                </div>
+
+                                <div class="design-codes__size-select select">
+                                    <div class="select-title">
+                                        <div class="select-title__text">
+                                            Паспорт
+                                        </div>
+
+                                        <div class="select-title__ico">
+                                            <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19.166 1.5L10.166 10.5L1.16602 1.5" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="select-content">
+                                        <div class="select-content_wrap">
+
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="1">
+                                                <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="2">
+                                                <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="3">
+                                                <span class="select-content__radio">
+                                        Водительское удостоверение
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="4">
+                                                <span class="select-content__radio">
+                                        Багаж
+                                    </span>
+
+                                            </label>
+                                            <label class="select-content__wrapper">
+                                                <input type="radio" name="codes_title" value="5">
+                                                <span class="select-content__radio">
+                                        Паспорт
+                                    </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="design-codes__settings-wrap form-row">
+                                <div class="design-codes__settings-title title-text">
+                                    Настройки QR-кода
+                                </div>
+
+                                <div class="design-codes__settings">
+                                    <div class="design-codes__settings-color">
+                                        <label class="design-codes__settings-color__picker color-picker-label">
+                                            <input
+                                                    type="color"
+                                                    name="code_color"
+                                                    id="code_color"
+                                                    class="color-picker-input"
+                                                    value="#6A4B99"
+                                            >
+
+                                            <span class="color-picker-custom">
+                                                <span class="color-picker-custom__box">
+
+                                                </span>
+
+                                                <span class="color-picker-custom__text">
+                                                                                                                                        Выбрать цвет
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <label class="custom-file-label">
+                                        <input type="file" id="code_image" class="custom-file-input" name="code_image">
+
+                                        <span class="custom-file">
+                                            <span class="custom-file__image">
+                                                <img src="./img/empty-image.png" alt="Фото">
+                                            </span>
+
+                                            <span class="custom-file__text">
+                                                Добавить фото
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <div class="design-codes__settings-radius">
+                                        <div class="design-codes__settings-radius__text">
+                                            Скругление
+                                        </div>
+
+                                        <div class="design-codes__settings-radius-select select">
+                                            <div class="select-title">
+                                                <div class="select-title__text">
+                                                    Паспорт
+                                                </div>
+
+                                                <div class="select-title__ico">
+                                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M19.166 1.5L10.166 10.5L1.16602 1.5" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                            <div class="select-content">
+                                                <div class="select-content_wrap">
+
+                                                    <label class="select-content__wrapper">
+                                                        <input type="radio" name="codes_title" value="1">
+                                                        <span class="select-content__radio">
+                                            Паспорт
+                                        </span>
+
+                                                    </label>
+                                                    <label class="select-content__wrapper">
+                                                        <input type="radio" name="codes_title" value="2">
+                                                        <span class="select-content__radio">
+                                            Багаж
+                                        </span>
+
+                                                    </label>
+                                                    <label class="select-content__wrapper">
+                                                        <input type="radio" name="codes_title" value="3">
+                                                        <span class="select-content__radio">
+                                            Водительское удостоверение
+                                        </span>
+
+                                                    </label>
+                                                    <label class="select-content__wrapper">
+                                                        <input type="radio" name="codes_title" value="4">
+                                                        <span class="select-content__radio">
+                                            Багаж
+                                        </span>
+
+                                                    </label>
+                                                    <label class="select-content__wrapper">
+                                                        <input type="radio" name="codes_title" value="5">
+                                                        <span class="select-content__radio">
+                                            Паспорт
+                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="design-codes__btn-wrap form-row">
+                                <button type="submit" class="btn design-codes__btn">
+                                    Сохранить
+                                </button>
+
+                                <a href="#" class="design-codes__downloads" download="">
+                                    Скачать QR-код
+
+                                    @@include('./src/atoms/_svg_atom.html',
+                                        {
+                                            "width": "28",
+                                            "height": "28",
+                                            "icon": "ic_download",
+                                            "class": ""
+                                        }
+                                    )
+                                </a>
+                            </div>
+                        </form>
+
+                        <div class="design-codes__footnote">
+                            Вы можете собрать свой стикерпак из QR-кодов в разделе <a href="#">«Печать»</a>.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('./src/_scripts.html')

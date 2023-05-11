@@ -1,0 +1,39 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "QRGET - Инструкция"})
+
+@@include('./src/_header.html')
+
+<section class="instruction">
+    <div class="container">
+        <h1 class="instruction__title main-title">
+            Инструкция
+        </h1>
+
+        <h2 class="instruction__subtitle">
+            Как создать QR-код?
+        </h2>
+
+        <div class="instruction__list">
+
+            @@loop('./src/atoms/_instruction_atom.html', './src/content/instruction.json')
+
+            <div class="instruction__list-item">
+                <div class="instruction__list-item__description">
+                    <p>
+                        Купите любое количество QR-кодов для каждой вещи или каждого члена вашей семьи.
+                    </p>
+                    <p>
+                        Даже если подписка закончилась, ваш QR-код будет работать. Вам могут написать сообщение, которое можно просмотреть при продлении подписки.
+                    </p>
+                </div>
+
+                <button class="btn instruction__btn">
+                    Создать QR-код
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@@include('./src/_footer.html')
+@@include('./src/_scripts.html')

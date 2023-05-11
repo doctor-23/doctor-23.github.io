@@ -1,0 +1,398 @@
+<div class="modal-wrap">
+    <div class="modal" id="authorization">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="20" height="20" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <a href="/" class="modal__logo">
+                    <img src="./img/logo.png" alt="LOGO">
+                </a>
+
+                <h2 class="modal__title">
+                    Вход
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Введите логин и пароль
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form form" id="auth_form">
+                    <label class="modal__form-row">
+                        <input type="text" class="modal-input input-email" name="auth_email" placeholder="E-mail *">
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат email
+                            </span>
+                    </label>
+
+
+                    <label class="modal__form-row">
+                        <input type="password" class="modal-input input-pass" name="auth_pass" placeholder="Пароль *">
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                    </label>
+
+                    <a href="#" class="forgot-pass__btn">
+                        Забыли пароль?
+                    </a>
+
+                    <button type="submit" class="btn auth-btn modal-submit disabled">
+                        Войти
+                    </button>
+                </form>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-title">
+                    Нет аккаунта?
+                </div>
+
+                <a href="#" class="btn registration__link modal__footer-link">
+                    Зарегистрироваться
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="authorization_email">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="20" height="20" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <a href="/" class="modal__logo">
+                    <img src="./img/logo.png" alt="LOGO">
+                </a>
+
+                <h2 class="modal__title">
+                    Вход
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Введите свой e-mail и мы вышлем данные для входа в личный кабинет
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form form" id="auth_email_form">
+                    <label class="modal__form-row">
+                        <input type="text" class="modal-input input-email" name="auth_email" placeholder="E-mail *">
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат email
+                            </span>
+                    </label>
+
+                    <label class="modal__form-row checkbox-wrap">
+                        <input type="checkbox" class="modal-input input-checkbox" name="policy" checked>
+
+                        <span class="custom-checkbox">
+                            Даю согласие на обработку персональных данных
+                        </span>
+                    </label>
+
+                    <button type="submit" class="btn auth-btn modal-submit disabled">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-description">
+                    Возникли проблемы? Свяжитесь с нами через удобный мессенджер.
+                </div>
+
+                <ul class="modal__socials">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="./img/icons/ic_tg.svg" alt="telegram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="./img/icons/ic_whatsapp.svg" alt="whatsapp">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="registration">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="20" height="20" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <a href="/" class="modal__logo">
+                    <img src="./img/logo.png" alt="LOGO">
+                </a>
+
+                <h2 class="modal__title">
+                    Регистрация
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Введите свой e-mail и мы вышлем данные для входа в личный кабинет
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form form" id="registr_form">
+                    <label class="modal__form-row">
+                        <input type="text" class="modal-input input-email" name="registr_email" placeholder="E-mail *">
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат email
+                            </span>
+                    </label>
+
+                    <label class="modal__form-row checkbox-wrap">
+                        <input type="checkbox" class="modal-input input-checkbox" name="policy" checked>
+
+                        <span class="custom-checkbox">
+                            Даю согласие на обработку персональных данных
+                        </span>
+                    </label>
+
+                    <button type="submit" class="btn registr-btn modal-submit disabled">
+                        Зарегистрироваться
+                    </button>
+                </form>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-title">
+                    Уже есть аккаунт?
+                </div>
+
+                <a href="#" class="btn authorization__link modal__footer-link">
+                    Войти
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="registration_v2">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="20" height="20" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <a href="/" class="modal__logo">
+                    <img src="./img/logo.png" alt="LOGO">
+                </a>
+
+                <h2 class="modal__title">
+                    Регистрация
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Для получения вашего qr-кода введите ваш e-mail и мы вышлем данные для входа в личный кабинет
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form form" id="registr_v2_form">
+                    <label class="modal__form-row">
+                        <input type="text" class="modal-input input-email" name="registr_v2_email" placeholder="E-mail *">
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат email
+                            </span>
+                    </label>
+
+                    <label class="modal__form-row checkbox-wrap">
+                        <input type="checkbox" class="modal-input input-checkbox" name="policy" checked>
+
+                        <span class="custom-checkbox">
+                            Даю согласие на обработку персональных данных
+                        </span>
+                    </label>
+
+                    <button type="submit" class="btn registr-btn modal-submit disabled">
+                        Зарегистрироваться
+                    </button>
+                </form>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-description">
+                    Возникли проблемы? Свяжитесь с нами через удобный мессенджер.
+                </div>
+
+                <ul class="modal__socials">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="./img/icons/ic_tg.svg" alt="telegram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="./img/icons/ic_whatsapp.svg" alt="whatsapp">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="forgot_complete">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="24" height="14" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <a href="/" class="modal__logo">
+                    <img src="./img/logo.png" alt="LOGO">
+                </a>
+
+                <h2 class="modal__title">
+                    Восстановление пароля
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        На указанный e-mail отправлено письмо с новым паролем и ссылкой на сайт. Для сброса пароля необходимо перейти по ссылке из письма.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="forgot">
+        <div class="modal__content">
+            <span class="modal__back">
+                 <svg width="24" height="14" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#arrow-back"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <a href="/" class="modal__logo">
+                    <img src="./img/logo.png" alt="LOGO">
+                </a>
+
+                <h2 class="modal__title">
+                    Восстановление пароля
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Введите свой e-mail и мы вышлем данные для входа в личный кабинет
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form form" id="forgot_form">
+                    <label class="modal__form-row">
+                        <input type="text" class="modal-input input-email" name="forgot_email" placeholder="E-mail *">
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат email
+                            </span>
+                    </label>
+
+                    <button type="submit" class="btn forgot-btn modal-submit disabled">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="payment">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="20" height="20" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <a href="/" class="modal__logo">
+                    <img src="./img/logo.png" alt="LOGO">
+                </a>
+
+                <h2 class="modal__title">
+                    Данный QR-код неактивен
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Необходимо пройти регистрацию и оплатить подписку
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <a href="#" class="btn payment-btn">
+                    Оплатить подписку
+                </a>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-description">
+                    Возникли проблемы при оплате? Свяжитесь с нами через удобный мессенджер.
+                </div>
+
+                <ul class="modal__socials">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="./img/icons/ic_tg.svg" alt="telegram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="./img/icons/ic_whatsapp.svg" alt="whatsapp">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

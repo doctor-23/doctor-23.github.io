@@ -1,0 +1,79 @@
+.move-program {
+    padding-bottom: 126px;
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
+
+    @include mobile {
+        padding: 0 20px 80px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 60px 56px;
+        background: var(--violet) url("../img/move-program-bg.png") center / cover no-repeat;
+        border-radius: 30px;
+
+        @include tablet {
+            padding: 30px 15px 40px;
+        }
+
+        @include mobile {
+            background-image: none;
+        }
+    }
+}
+
+.move-program__sticker {
+    width: 96px;
+    height: 96px;
+    margin-left: -7px;
+    margin-bottom: 16px;
+
+    @include tablet {
+        margin-left: 0;
+    }
+
+    @include mobile {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: max-content;
+        object-fit: contain;
+    }
+}
+
+.move-program__title {
+    max-width: 778px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+
+    @include mobile {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+}
+
+.move-program__description {
+    max-width: 778px;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #fff;
+
+    @include mobile {
+        font-size: 16px;
+    }
+}
+
+.move-program__btn {
+    border: 2px solid var(--green);
+}
