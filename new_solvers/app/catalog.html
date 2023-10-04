@@ -1,0 +1,93 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "Solvers Estate"})
+
+@@include('./src/_header.html')
+
+<section class="catalog">
+    <div class="container">
+        <form class="catalog__filters">
+            <div class="filters-row">
+                <label class="filters-radio">
+                    <input type="radio" name="rent_sale" value="rent" checked>
+
+                    <span class="filters-radio__custom">
+                        Аренда
+                    </span>
+                </label>
+
+                <label class="filters-radio">
+                    <input type="radio" name="rent_sale" value="sale">
+
+                    <span class="filters-radio__custom">
+                        Продажа
+                    </span>
+                </label>
+            </div>
+
+            <div class="filters-row">
+                @@include('./src/molecules/_select_molecule.html',
+                {
+                "class": "",
+                "title": "Объект недвижимости",
+                "item": "@@loop('../atoms/_select_atom.html', './src/content/space_content.json')"
+                }
+                )
+            </div>
+
+            <div class="filters-row">
+                @@include('./src/molecules/_select_molecule.html',
+                {
+                "class": "",
+                "title": "Башня",
+                "item": "@@loop('../atoms/_select_atom.html', './src/content/place_content.json')"
+                }
+                )
+            </div>
+
+            <div class="filters-row filters-row_inputs">
+                <input type="text" name="min_quadrature" id="min_quadrature" placeholder="от 20 м2">
+                <input type="text" name="max_quadrature" id="max_quadrature" placeholder="до 3 000 м2">
+            </div>
+
+            <div class="filters-row filters-row_inputs">
+                <input type="text" name="min_price" id="min_price" placeholder="от 150 000 ₽">
+                <input type="text" name="max_price" id="max_price" placeholder=" до 2 000 000 ₽">
+            </div>
+
+            <div class="filters-row">
+                @@include('./src/molecules/_select_molecule.html',
+                {
+                "class": "",
+                "title": "Сортировка",
+                "item": "@@loop('../atoms/_select_atom.html', './src/content/sorting.json')"
+                }
+                )
+            </div>
+
+            <div class="filters-row">
+                <button class="btn filters__btn apply-btn" type="submit">
+                    Применить
+                </button>
+
+                <button class="btn filters__btn reset-btn btn_black" type="reset">
+                    Сбросить
+                </button>
+            </div>
+        </form>
+
+        <div class="catalog__list-wrap">
+
+            <div class="catalog__list">
+
+                @@loop('./src/atoms/_catalog_atom.html', './src/content/catalog_1.json')
+
+            </div>
+
+            <button class="btn catalog__more">
+                Больше объектов
+            </button>
+        </div>
+    </div>
+</section>
+
+@@include('./src/_footer.html')
+@@include('./src/_scripts.html')

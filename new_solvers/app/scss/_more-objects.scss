@@ -1,0 +1,23 @@
+.more-objects {
+    padding: 33px 0 60px;
+    background-color: #191919;
+}
+
+.more-objects__title {
+    margin-bottom: 45px;
+    font-family: var(--montserrat);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.more-objects__list {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 67px;
+}
+
+.more-objects__link {
+    width: 200px;
+    margin: 0 auto;
+}

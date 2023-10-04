@@ -1,0 +1,12 @@
+[
+  {
+    "name": "rent_sale",
+    "value": "rent",
+    "title": "Снять"
+  },
+  {
+    "name": "rent_sale",
+    "value": "sale",
+    "title": "Купить"
+  }
+]

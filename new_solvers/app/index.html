@@ -1,0 +1,133 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "Solvers Estate", "class": "main-page"})
+
+@@include('./src/_header.html')
+
+<section class="main-hero">
+    <div class="container">
+        <h1 class="main-hero__title">
+            Жилая и коммерческая недвижимость в Сити
+        </h1>
+
+        <form action="catalog.html" class="main-hero__form">
+            <div class="form__row">
+
+                @@include('./src/molecules/_select_molecule.html',
+                {
+                "class": "",
+                "title": "Снять",
+                "item": "@@loop('../atoms/_select_atom.html', './src/content/rent_sale_content.json')"
+                }
+                )
+
+                @@include('./src/molecules/_select_molecule.html',
+                {
+                "class": "",
+                "title": "Апартаменты",
+                "item": "@@loop('../atoms/_select_atom.html', './src/content/space_content.json')"
+                }
+                )
+
+                @@include('./src/molecules/_select_molecule.html',
+                {
+                "class": "",
+                "title": "Федерация",
+                "item": "@@loop('../atoms/_select_atom.html', './src/content/place_content.json')"
+                }
+                )
+
+                <input type="text" placeholder="Площадь, от м²" name="min_square" class="common-input"
+                       onkeypress="banText(event)">
+
+                <input type="submit" value="Найти" class="form-submit btn" id="hero_form_submit">
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <div class="about__left">
+            <div class="about__description">
+                <p>
+                    Компания Solvers Estate предоставляет услуги по аренде и продаже офисной, коммерческой и жилой
+                    недвижимости в Москва-Сити. Больше 11 лет мы успешно ведем сделки полного цикла. 
+                </p>
+                <p>
+                    Свяжитесь с нами и мы поможем подобрать офис или апартаменты мечты, оперативно устроим показ или
+                    возьмем на себя организацию и проведение вашей сделки.
+                </p>
+                <p>
+                    Разместим вашу рекламу на территории Сити на indoor и outdoor форматах.
+                </p>
+            </div>
+
+            <button class="btn btn_black about__btn">
+                Заказать рекламу
+            </button>
+        </div>
+
+        <div class="about__right">
+            <img src="./img/about-image.png" alt="О компании">
+        </div>
+    </div>
+</section>
+
+<section class="main-catalog">
+    <div class="container">
+        <div class="main-catalog__tabs-wrapper">
+            <ul class="main-catalog__tabs">
+                <li class="active" data-tab="rent">
+                    Аренда
+                </li>
+                <li data-tab="sale">
+                    Продажа
+                </li>
+            </ul>
+
+            <ul class="main-catalog__tabs">
+                <li class="active" data-tab="office">
+                    Офисы
+                </li>
+                <li data-tab="apartment">
+                    Апартаменты
+                </li>
+                <li data-tab="selling">
+                    Торговые площадки
+                </li>
+                <li data-tab="meeting">
+                    Переговорные
+                </li>
+                <li data-tab="parking">
+                    Паркинг
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-catalog__wrap">
+
+            <div class="main-catalog__list" data-rent="" data-space="">
+
+                @@loop('./src/atoms/_catalog_atom.html', './src/content/catalog_1.json')
+
+            </div>
+
+        </div>
+
+        <a href="./catalog.html" class="main-catalog__link btn">
+            Все объекты
+        </a>
+    </div>
+</section>
+
+<section class="map-section">
+    <h3 class="map-section__title">
+        До небоскребов Москва-Сити можно добраться любым удобным способом: на автомобиле, метро, МЦК и на автобусе
+    </h3>
+
+    <div id="map">
+
+    </div>
+</section>
+
+@@include('./src/_footer.html')
+@@include('./src/_scripts.html'})

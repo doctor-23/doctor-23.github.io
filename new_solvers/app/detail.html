@@ -1,0 +1,128 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "Solvers Estate"})
+
+@@include('./src/_header.html')
+
+<section class="detail">
+    <div class="container">
+        <div class="detail__left">
+            <a href="./catalog.html" class="detail__back-link">
+                <svg width="46" height="40" class="svg-ico" role="img">
+                    <use xlink:href="/img/icons/sprite.svg#back-arrow"></use>
+                </svg>
+            </a>
+
+            <div class="detail__stickers">
+                <div class="sticker">
+                    <div class="sticker__icon">
+                        <svg width="34" height="34" class="svg-ico" role="img">
+                            <use xlink:href="/img/icons/sprite.svg#rent"></use>
+                        </svg>
+                    </div>
+
+                    <div class="sticker__text">
+                        Аренда
+                    </div>
+                </div>
+
+                <div class="sticker">
+                    <div class="sticker__icon">
+                        <svg width="34" height="34" class="svg-ico" role="img">
+                            <use xlink:href="/img/icons/sprite.svg#office"></use>
+                        </svg>
+                    </div>
+
+                    <div class="sticker__text">
+                        Офис
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail__place">
+                Империя
+                <div class="place-icon">?</div>
+
+                <div class="detail__place-inf">
+                    <h4 class="inf__title">
+                        Империя
+                    </h4>
+
+                    <div class="inf__address">
+                        Москва, Пресненская набережная, д. 6, стр. 2
+                    </div>
+
+                    <div class="inf__height">
+                        60 этажей
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail__price">
+                <div class="price-into-month">
+                    18 312 500 ₽/мес
+                </div>
+
+                <div class="price-into-year">
+                    75 000 за 1 м² ₽/год
+                </div>
+            </div>
+
+            <div class="detail__quadrature">
+                <div class="quadrature__num">
+                    2 930,0 м²
+                </div>
+
+                <div class="quadrature__floor">
+                    8 этаж
+                </div>
+            </div>
+
+            <div class="detail__description">
+                Офисный этаж сдается с отделкой и мебелью, планировка: openspace, кабинеты. В стоимость включены эксплуатационные расходы, коммунальные услуги здания, коммунальные платежи помещения, клининг и интернет. Налогообложение - УСН.
+            </div>
+
+            <div class="detail__btn-wrapper">
+                <button class="btn detail__btn">
+                    Запросить КП
+                </button>
+
+                <a href="#" download="" class="btn detail__download-pdf btn_black">
+                    Скачать PDF
+                </a>
+            </div>
+
+        </div>
+
+        <div class="detail__right">
+            <div class="detail__slider">
+
+                <div class="slider-item">
+                    <img src="./img/catalog/catalog-image-2.png" alt="Фото">
+                </div>
+
+            </div>
+
+            <div class="slider-navs detail__slider-navs"></div>
+        </div>
+    </div>
+</section>
+
+<section class="more-objects">
+    <div class="container">
+        <h2 class="more-objects__title">
+            Похожие предложения
+        </h2>
+
+        <div class="more-objects__list">
+
+            @@loop('./src/atoms/_catalog_atom.html', './src/content/catalog_more_objects.json')
+
+        </div>
+
+        <a href="./catalog.html" class="btn more-objects__link">
+            Все объекты
+        </a>
+    </div>
+</section>
+
+@@include('./src/_footer.html')
+@@include('./src/_scripts.html')

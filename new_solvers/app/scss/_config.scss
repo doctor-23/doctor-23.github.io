@@ -1,0 +1,324 @@
+@mixin laptop() {
+    @media screen and (max-width: 1359.98px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (max-width: 1029.98px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media screen and (max-width: 807.98px) {
+        @content;
+    }
+}
+
+@mixin fullMobile() {
+    @media screen and (max-width: 575.98px) {
+        @content;
+    }
+}
+
+
+:root {
+    --font-size: 18px;
+    --inter: 'Inter', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    --main-color: #fff;
+    --main-color-opacity: rgba(#fff, .5);
+    --container: 1320px;
+    --bg-color: #101011;
+
+    @include laptop {
+        --font-size: 17px;
+        --container: 100vw;
+    };
+
+    @include tablet {
+    };
+
+    @include mobile {
+        --font-size: 14px;
+    };
+}
+
+html {
+    font-size: var(--font-size);
+    font-weight: 400;
+}
+
+html, body {
+    scrollbar-gutter: stable;
+    //height: 100%;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    font-family: var(--inter);
+    line-height: normal;
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+
+    & * {
+        font-family: var(--inter);
+        line-height: normal;
+    }
+
+    &.no-scroll {
+        overflow: hidden;
+        //padding-right: 19px;
+    }
+}
+
+main {
+    position: relative;
+    background-color: var(--bg-color);
+    overflow: hidden;
+
+    &.z-index {
+        position: relative;
+        z-index: 4;
+    }
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before, &::after {
+        box-sizing: border-box;
+    }
+}
+
+a, a:hover, a:active, a:focus, button, input, button:hover, button:active, button:focus, input:focus, input:active {
+    text-decoration: none;
+    outline: none;
+}
+
+a {
+    color: inherit;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+img, picture {
+    display: block;
+}
+
+img {
+    width: 100%;
+    height: max-content;
+    object-fit: contain;
+}
+
+pre {
+    margin: 0 !important;
+    white-space: break-spaces;
+}
+
+
+.container {
+    position: relative;
+    max-width: var(--container);
+    width: 100%;
+    margin: 0 auto;
+
+    @include laptop {
+        padding: 0 20px;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+nav {
+    li {
+        a {
+            transition: color .5s ease-in-out;
+        }
+
+        &:hover {
+            color: var(--orange);
+        }
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 46px;
+    padding: 0;
+    color: var(--bg-color);
+    font-size: var(--font-size);
+    font-weight: 600;
+    line-height: 22px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
+
+    &:hover, &:focus-visible {
+        background-color: rgba(#fff, .5);
+        border-color: rgba(#fff, .5);
+        color: #fff;
+    }
+
+    &.btn_black {
+        color: #fff;
+        background-color: transparent;
+
+        &:hover, &:focus-visible {
+            color: rgba(#fff, .5);
+            border-color: rgba(#fff, .5);
+        }
+    }
+}
+
+.desktop {
+    @include tablet {
+        display: none !important;
+    }
+}
+
+.desktop-tablet {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.tablet {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.dots-arrows_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+
+    .slider-dots {
+        position: static;
+        order: 1;
+    }
+
+    .slick-arrow {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        svg {
+            transition: color .5s ease-in-out;
+        }
+
+        &:hover {
+            svg {
+                color: var(--yellow);
+            }
+        }
+
+        &.arrow-left {
+            order: 0;
+        }
+
+        &.arrow-right {
+            order: 2;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.slider-dots {
+    display: flex;
+    gap: 5px;
+    width: max-content;
+    margin: 0 auto;
+
+    li {
+        width: 12px;
+        height: 12px;
+        background-color: #D9D9D9;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.slick-active {
+            background-color: var(--yellow);
+        }
+
+        button {
+            font-size: 0;
+            background-color: transparent;
+            border: 0;
+        }
+    }
+}
+
+.loader {
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, .6) url('../img/icons/spinner.svg') center / 100px no-repeat;
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .7;
+}

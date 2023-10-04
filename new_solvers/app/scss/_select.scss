@@ -1,0 +1,125 @@
+.select {
+    position: relative;
+
+    &.open {
+        .select-title {
+            border-radius: 6px 6px 0 0;
+
+            &::after {
+                position: absolute;
+                right: 18px;
+                z-index: 3;
+                transform: rotate(180deg);
+
+                @include mobile {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        .select-content {
+            opacity: 1;
+            transform: scaleY(1);
+            transition: transform .3s ease-in-out;
+        }
+    }
+}
+
+.select-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.1px;
+    font-weight: 400;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color .3s ease-in-out;
+
+    &:hover, &:focus-visible {
+        border-color: rgba(#fff, .5);
+    }
+
+    &::after {
+        content: '';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        background: url('../img/icons/select-arrow.svg') center / contain no-repeat;
+        transition: transform .3s ease-in-out;
+
+        @media screen and(max-width: 767.98px) {
+            transform: rotate(270deg);
+        }
+    }
+}
+
+.select-content {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 24px 11px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-top: 0;
+    border-radius: 6px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 100% 0;
+    overflow-y: scroll;
+    transition: opacity .3s ease-in-out;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) var(--bg-color);
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--main-color);
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-color);
+    }
+}
+
+.select-content__wrapper {
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+        .select-content__radio {
+            color: var(--main-color);
+        }
+    }
+
+    input {
+        display: none !important;
+
+        &:checked ~ .select-content__radio {
+            color: var(--main-color);
+        }
+    }
+}
+
+.select-content__radio {
+    color: rgba(#fff, .5);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.1px;
+    transition: color .3s ease-in-out;
+}

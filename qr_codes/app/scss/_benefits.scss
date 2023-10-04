@@ -45,7 +45,8 @@
     min-height: 328px;
     padding: 25px 20px;
     margin: -4px 0 0 -4px;
-    border: 4px dashed var(--purpure);
+    //background: url('../img/border.png') center / contain no-repeat;
+    border: 4px dotted var(--purpure);
     border-radius: 30px;
 
     @include tablet {
@@ -91,6 +92,7 @@
 .benefits__btn {
     width: 100%;
     height: 100%;
+    border-radius: 27px;
 
     @include mobile {
         width: 100%;

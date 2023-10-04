@@ -1,0 +1,111 @@
+.catalog-item-wrap {
+    width: 100%;
+    height: calc((var(--container) / 3 - 16px) / 1.13);
+
+    .catalog-item {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(16, 16, 17, 0.64) 0%, rgba(16, 16, 17, 0.00) 16.15%, rgba(16, 16, 17, 0.00) 58.33%, #101011 100%);
+        }
+    }
+
+    .catalog-item__images {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(16, 16, 17, 0.64) 0%, rgba(16, 16, 17, 0.00) 16.15%, rgba(16, 16, 17, 0.00) 58.33%, #101011 100%);
+    }
+
+    .catalog-item__image {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .catalog-item__stickers {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .sticker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background-color: rgba(#101011, .5);
+            border-radius: 6px;
+        }
+
+        .svg-ico {
+            color: #fff;
+        }
+    }
+
+    .catalog-item__content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        height: max-content;
+        padding: 0 24px 56px;
+    }
+
+    .catalog-item__price {
+        font-variant-numeric: lining-nums tabular-nums;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+    }
+
+    .catalog-item__quadrature {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .catalog-item__place {
+        font-size: 16px;
+    }
+
+    .catalog-item__link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+    }
+
+    .catalog-item__nav {
+        position: absolute;
+        display: none;
+    }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "space",
+    "value": "all",
+    "title": "Все"
+  },
+  {
+    "name": "space",
+    "value": "office",
+    "title": "Офисы"
+  },
+  {
+    "name": "space",
+    "value": "apartment",
+    "title": "Апартаменты"
+  },
+  {
+    "name": "space",
+    "value": "selling",
+    "title": "Торговые площадки"
+  },
+  {
+    "name": "space",
+    "value": "meeting",
+    "title": "Переговорные"
+  },
+  {
+    "name": "space",
+    "value": "parking",
+    "title": "Паркинг"
+  }
+]

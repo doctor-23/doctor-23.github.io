@@ -1,0 +1,63 @@
+[
+  {
+    "name": "place",
+    "value": "all",
+    "title": "Все"
+  },
+  {
+    "name": "place",
+    "value": "empire",
+    "title": "Империя"
+  },
+  {
+    "name": "place",
+    "value": "federation_east",
+    "title": "Федерация Восток"
+  },
+  {
+    "name": "place",
+    "value": "federation_west",
+    "title": "Федерация Запад"
+  },
+  {
+    "name": "place",
+    "value": "IQ_district",
+    "title": "IQ-квартал"
+  },
+  {
+    "name": "place",
+    "value": "mercury",
+    "title": "Меркурий"
+  },
+  {
+    "name": "place",
+    "value": "neva_towers",
+    "title": "Neva Towers"
+  },
+  {
+    "name": "place",
+    "value": "ОКО",
+    "title": "ОКО"
+  },
+  {
+    "name": "place",
+    "value": "ОКО_2",
+    "title": "ОКО-II"
+  },
+  {
+    "name": "place",
+    "value": "north_tower",
+    "title": "Северная башня"
+  },
+  {
+    "name": "place",
+    "value": "tower_on_shore",
+    "title": "Башня на Набережной"
+  },
+  {
+    "name": "place",
+    "value": "city_capitals",
+    "title": "Город Столиц"
+  }
+
+]
