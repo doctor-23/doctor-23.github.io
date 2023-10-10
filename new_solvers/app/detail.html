@@ -112,10 +112,14 @@
             Похожие предложения
         </h2>
 
-        <div class="more-objects__list">
+        <div class="more-objects__list-wrap">
+            <div class="more-objects__list">
 
-            @@loop('./src/atoms/_catalog_atom.html', './src/content/catalog_more_objects.json')
+                @@loop('./src/atoms/_catalog_atom.html', './src/content/catalog_more_objects.json')
 
+            </div>
+
+            <div class="slider-navs more-objects__list-nav"></div>
         </div>
 
         <a href="./catalog.html" class="btn more-objects__link">

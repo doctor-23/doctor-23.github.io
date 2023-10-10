@@ -67,6 +67,14 @@
     font-weight: 600;
     line-height: 1.3;
 
+    @include tablet {
+        margin-bottom: 21px;
+    }
+
+    @include fullMobile {
+        margin-bottom: 42px;
+    }
+
     &:hover, &:focus-visible {
         text-decoration: underline;
     }

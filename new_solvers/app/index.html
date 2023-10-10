@@ -44,7 +44,7 @@
     </div>
 </section>
 
-<section class="about">
+<section class="about" id="about_anchor">
     <div class="container">
         <div class="about__left">
             <div class="about__description">
@@ -61,9 +61,9 @@
                 </p>
             </div>
 
-            <button class="btn btn_black about__btn">
+            <a href="https://citymoscow.ru/reklama" target="_blank" class="btn btn_black about__btn">
                 Заказать рекламу
-            </button>
+            </a>
         </div>
 
         <div class="about__right">
@@ -74,7 +74,7 @@
 
 <section class="main-catalog">
     <div class="container">
-        <div class="main-catalog__tabs-wrapper">
+        <div class="main-catalog__tabs-wrapper tabs-big">
             <ul class="main-catalog__tabs">
                 <li class="active" data-tab="rent">
                     Аренда
@@ -103,6 +103,42 @@
             </ul>
         </div>
 
+        <div class="main-catalog__tabs-wrapper tabs-small">
+            <div class="main-catalog__tabs-row">
+                <label class="tabs-radio">
+                    <input type="radio" name="rent_sale" value="rent" checked>
+
+                    <span class="tabs-radio__custom">
+                        Аренда
+                    </span>
+                </label>
+
+                <label class="tabs-radio">
+                    <input type="radio" name="rent_sale" value="sale">
+
+                    <span class="tabs-radio__custom">
+                        Продажа
+                    </span>
+                </label>
+            </div>
+
+            <div class="main-catalog__tabs-row">
+                @@include('./src/molecules/_select_molecule.html',
+                {
+                "class": "",
+                "title": "Объект недвижимости",
+                "item": "@@loop('../atoms/_select_atom.html', './src/content/space_content.json')"
+                }
+                )
+            </div>
+
+            <div class="main-catalog__tabs-row">
+                <a href="./catalog.html" class="tabs-link">
+                    Еще параметры
+                </a>
+            </div>
+        </div>
+
         <div class="main-catalog__wrap">
 
             <div class="main-catalog__list" data-rent="" data-space="">
@@ -110,6 +146,8 @@
                 @@loop('./src/atoms/_catalog_atom.html', './src/content/catalog_1.json')
 
             </div>
+
+            <div class="slider-navs main-catalog__navs"></div>
 
         </div>
 

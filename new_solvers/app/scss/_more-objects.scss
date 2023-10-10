@@ -1,6 +1,14 @@
 .more-objects {
     padding: 33px 0 60px;
     background-color: #191919;
+
+    @include tablet {
+        padding-bottom: 30px;
+    }
+
+    @include fullMobile {
+        padding-bottom: 60px;
+    }
 }
 
 .more-objects__title {
@@ -9,12 +17,53 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 1;
+
+    @include tablet {
+        margin-bottom: 76px;
+    }
+}
+
+.more-objects__list-wrap {
+    margin-bottom: 67px;
+
+    @include fullMobile {
+        margin-bottom: 74px;
+    }
 }
 
 .more-objects__list {
     display: flex;
     gap: 24px;
-    margin-bottom: 67px;
+
+    @include fullMobile {
+        margin-bottom: 20px !important;
+    }
+
+    .catalog-item-wrap {
+        display: none;
+
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+            display: block;
+        }
+
+        @include tablet {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include fullMobile {
+            display: block !important;
+        }
+    }
+}
+
+.more-objects__list-nav {
+    display: none;
+
+    @include fullMobile {
+        display: flex;
+    }
 }
 
 .more-objects__link {

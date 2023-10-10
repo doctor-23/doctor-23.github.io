@@ -1,5 +1,6 @@
 "use strict";
 
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function banText(event) {
   var banText = parseFloat(event.key);
   if (isNaN(banText)) {
@@ -205,8 +206,8 @@ function formCustomSelectValid(el, elCheck, isRequired) {
 
 // клик вне элемента
 function clickOutside(el, btn, cl) {
-  var element = document.querySelector(el),
-    button = document.querySelector(btn);
+  var element = _typeof(el) === 'object' ? el : document.querySelector(el);
+  var button = _typeof(btn) === 'object' ? btn : document.querySelector(btn);
   document.addEventListener('click', function (e) {
     var target = e.target;
     var itsEl = target == element || element.contains(target);
@@ -229,41 +230,61 @@ function handleClickOutside(element, callback) {
     document.removeEventListener("click", handleDocumentClick);
   };
 }
-function customSelect(container, title, content, label, radio, show) {
-  document.querySelectorAll(container).forEach(function (item) {
-    var labels = item.querySelectorAll(label),
-      labelCount = labels.length,
-      labelHeight = 0;
-    for (var i = 0; i < labelCount; i++) {
+function customSelect(containers, title, content, label, radio, show) {
+  var allContainers = document.querySelectorAll(containers);
+  function calculateLabelHeight(labels, show) {
+    var labelHeight = 0;
+    for (var i = 0; i < labels.length; i++) {
       if (i < show) {
         labelHeight += labels[i].offsetHeight;
       } else {
         break;
       }
     }
-    if (labelCount <= show) {
-      item.querySelector(content).classList.add('no-scroll');
+    return labelHeight;
+  }
+  allContainers.forEach(function (container) {
+    var labels = container.querySelectorAll(label);
+    var contentEl = container.querySelector(content);
+    var titleEl = container.querySelector(title);
+    var labelHeight = calculateLabelHeight(labels, show);
+    if (labels.length <= show) {
+      contentEl.classList.add('no-scroll');
     }
-    item.querySelector(content).style.maxHeight = labelHeight + 32 + 'px';
+    contentEl.style.maxHeight = labelHeight + 32 + 'px';
+    container.addEventListener('click', function (event) {
+      var mainParent = event.target.closest(containers);
+      var currentTitle = title.replaceAll('.', '');
+      var currentRadio = radio.replaceAll('.', '');
+      var currentLabel = label.replaceAll('.', '');
+      if (event.target.classList.contains(currentRadio) || event.target.classList.contains(currentLabel)) {
+        var _content = event.target.textContent;
+        mainParent.classList.toggle('active');
+        titleEl.textContent = _content;
+        mainParent.classList.remove('open');
+      } else if (event.target.classList.contains(currentTitle)) {
+        if (!mainParent.classList.contains('open')) {
+          mainParent.classList.add('open');
+        } else {
+          mainParent.classList.remove('open');
+        }
+        allContainers.forEach(function (container) {
+          if (container !== mainParent) {
+            container.classList.remove('open');
+          }
+        });
+      }
+    }, true);
   });
-  $(container).on('click', label, function () {
-    var content = $(this).find(radio).text(),
-      mainParent = $(this).closest(container);
-    if (!mainParent.hasClass('active')) {
-      mainParent.addClass('active');
-    }
-    mainParent.find(title).text(content);
-    mainParent.removeClass('open');
-  }).on('click', title, function () {
-    if ($(this).closest(container).hasClass('open')) {
-      $(container).removeClass('open');
-    } else {
-      $(container).removeClass('open');
-      $(this).closest(container).addClass('open');
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    if (!target.closest(containers)) {
+      allContainers.forEach(function (container) {
+        container.classList.remove('open');
+      });
     }
   });
-} // кастомный select
-
+}
 function validation(form, values) {
   var parent = $(form),
     parentNew = document.querySelector(form),
@@ -429,6 +450,65 @@ $(document).ready(function () {
   var header_h = $('header').outerHeight() + 'px',
     footer_h = $('footer').outerHeight() + 'px';
   $('main').css('min-height', "calc(100vh - (".concat(header_h, " + ").concat(footer_h, "))"));
+
+  // hamburger menu
+
+  var hamburger = document.querySelector('.header__hamburger');
+  var hamburgerWrap = document.querySelector('.header__wrapper');
+  var hamburgerClose = document.querySelector('.hamburger-wrap__close');
+  hamburger.addEventListener('click', function (e) {
+    e.preventDefault();
+    hamburgerWrap.classList.add('open');
+    document.body.classList.add('no-scroll');
+  });
+  hamburgerClose.addEventListener('click', function (e) {
+    e.preventDefault();
+    hamburgerWrap.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  });
+
+  // слайдер каталога на главной и похожих предложений в деталке
+
+  if (window.matchMedia("(max-width: 644.98px)").matches) {
+    $('.main-catalog__list').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 700,
+      draggable: true,
+      arrows: false,
+      dots: true,
+      dotsClass: 'slider-dots',
+      appendDots: $('.main-catalog__navs'),
+      infinite: false,
+      swipe: true
+    });
+    $('.more-objects__list').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 700,
+      draggable: true,
+      arrows: false,
+      dots: true,
+      dotsClass: 'slider-dots',
+      appendDots: $('.more-objects__list-nav'),
+      infinite: false,
+      swipe: true
+    });
+  }
+
+  // всплывашка на деталке
+
+  var detailInf = document.querySelector('.detail__place');
+  if (!!detailInf) {
+    var detailInfBox = document.querySelector('.detail__place-inf');
+    detailInf.addEventListener('click', function (e) {
+      e.preventDefault();
+      detailInfBox.classList.add('show');
+    });
+    handleClickOutside(detailInf, function () {
+      detailInfBox.classList.remove('show');
+    });
+  }
   var groups, myMap, barsContent, MyBalloonLayout, MyBalloonContentLayout, myGeoObject;
   groups = [{
     center: [55.74814411, 37.54025512],
@@ -679,5 +759,10 @@ $(document).ready(function () {
     };
     ymaps.ready(init);
   }
+  ;
+  $('.catalog__filters').on('reset', function () {
+    var parent = $(this).closest('.catalog__filters');
+    parent.find('.select').removeClass('active');
+  });
   ;
 });

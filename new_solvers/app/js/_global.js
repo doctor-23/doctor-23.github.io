@@ -234,80 +234,8 @@ function formCustomSelectValid(el, elCheck, isRequired) {
     return elCheck;
 }
 
-// клик вне элемента
-function clickOutside(el, btn, cl) {
-    var element = document.querySelector(el),
-        button = document.querySelector(btn);
-
-    document.addEventListener('click', e => {
-        let target = e.target;
-        let itsEl = target == element || element.contains(target);
-        let its_btn = target == button;
-        let its_el_is_open = element.classList.contains(cl);
-
-        if (!itsEl && !its_btn && its_el_is_open) {
-            element.classList.toggle(cl);
-        }
-    });
-}
-
-function handleClickOutside(element, callback) {
-    function handleDocumentClick(event) {
-        const isClickInsideElement = element.contains(event.target);
-        if (!isClickInsideElement) {
-            callback();
-        }
-    }
-
-    document.addEventListener("click", handleDocumentClick);
-
-    return function cleanup() {
-        document.removeEventListener("click", handleDocumentClick);
-    };
-}
-
-function customSelect(container, title, content, label, radio, show) {
-    document.querySelectorAll(container).forEach(function (item) {
-        var labels = item.querySelectorAll(label),
-            labelCount = labels.length,
-            labelHeight = 0;
-
-        for (let i = 0; i < labelCount; i++) {
-            if (i < show) {
-                labelHeight += labels[i].offsetHeight;
-            } else {
-                break;
-            }
-        }
-
-        if (labelCount <= show) {
-            item.querySelector(content).classList.add('no-scroll');
-        }
-
-        item.querySelector(content).style.maxHeight = labelHeight + 32 + 'px';
-    })
-
-    $(container).on('click', label, function () {
-        var content = $(this).find(radio).text(),
-            mainParent = $(this).closest(container);
-
-        if (!mainParent.hasClass('active')) {
-            mainParent.addClass('active');
-        }
-
-        mainParent.find(title).text(content);
-        mainParent.removeClass('open');
-    })
-
-        .on('click', title, function () {
-            if ($(this).closest(container).hasClass('open')) {
-                $(container).removeClass('open')
-            } else {
-                $(container).removeClass('open')
-                $(this).closest(container).addClass('open');
-            }
-        });
-} // кастомный select
+@@include('_clickOutside.js')
+@@include('_select.js')
 
 function validation(form, values) {
     var parent = $(form),

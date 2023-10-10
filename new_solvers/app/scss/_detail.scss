@@ -2,19 +2,44 @@
     padding: 50px 0 100px;
     background-color: #191919;
 
+    @include tablet {
+        padding: 50px 0 150px;
+    }
+
+    @include fullMobile {
+        padding: 39px 0 140px;
+    }
+
     .container {
         display: flex;
         gap: 27px;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        @include fullMobile {
+            gap: 60px;
+        }
     }
 }
 
 .detail__left {
     width: 48.94%;
+
+    @include tablet {
+        width: 100%;
+    }
 }
 
 .detail__back-link {
     display: block;
     margin-bottom: 56px;
+
+    @include fullMobile {
+        margin-bottom: 31px;
+    }
 
     &:hover {
         .svg-ico {
@@ -25,6 +50,11 @@
     .svg-ico {
         color: #fff;
         transition: color .3s ease-in-out;
+
+        @include fullMobile {
+            width: 34px;
+            height: 27px;
+        }
     }
 }
 
@@ -32,6 +62,10 @@
     display: flex;
     gap: 24px;
     margin-bottom: 10px;
+
+    @include tablet {
+        margin-bottom: 28px;
+    }
 
     .sticker {
         flex-shrink: 0;
@@ -75,6 +109,10 @@
     line-height: 1;
     cursor: pointer;
 
+    @include tablet {
+        margin-bottom: 35px;
+    }
+
     .place-icon {
         display: flex;
         justify-content: center;
@@ -100,6 +138,10 @@
 
     &.show {
         transform: translate(100%, -50%);
+
+        @include fullMobile {
+            transform: translate(48.5%, 0%);
+        }
     }
 
     .inf__title {
@@ -177,18 +219,38 @@
 .detail__btn-wrapper {
     display: flex;
     gap: 24px;
+
+    @include tablet {
+        position: absolute;
+        left: 20px;
+        bottom: -40px;
+        width: calc(100vw - 40px);
+        transform: translateY(100%);
+    }
 }
 
 .detail__btn {
     width: 199px;
+
+    @include fullMobile {
+        width: calc(50% - 10px);
+    }
 }
 
 .detail__download-pdf {
     width: 203px;
+
+    @include fullMobile {
+        width: calc(50% - 10px);
+    }
 }
 
 .detail__right {
     width: calc(100% - 48.94% - 27px);
+
+    @include tablet {
+        width: 100%;
+    }
 }
 
 .detail__slider {

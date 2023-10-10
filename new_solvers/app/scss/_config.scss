@@ -17,7 +17,7 @@
 }
 
 @mixin fullMobile() {
-    @media screen and (max-width: 575.98px) {
+    @media screen and (max-width: 644.98px) {
         @content;
     }
 }
@@ -196,6 +196,10 @@ nav {
     cursor: pointer;
     transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
 
+    @include fullMobile {
+        font-size: 15px;
+    }
+
     &:hover, &:focus-visible {
         background-color: rgba(#fff, .5);
         border-color: rgba(#fff, .5);
@@ -241,60 +245,27 @@ nav {
     }
 }
 
-.dots-arrows_wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
-    margin: 0 auto;
-
-    .slider-dots {
-        position: static;
-        order: 1;
-    }
-
-    .slick-arrow {
-        display: flex;
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-
-        svg {
-            transition: color .5s ease-in-out;
-        }
-
-        &:hover {
-            svg {
-                color: var(--yellow);
-            }
-        }
-
-        &.arrow-left {
-            order: 0;
-        }
-
-        &.arrow-right {
-            order: 2;
-            justify-content: flex-end;
-        }
-    }
-}
-
 .slider-dots {
     display: flex;
-    gap: 5px;
+    align-items: center;
+    gap: 8px;
     width: max-content;
     margin: 0 auto;
 
     li {
-        width: 12px;
-        height: 12px;
-        background-color: #D9D9D9;
+        width: 6px;
+        height: 6px;
+        background-color: transparent;
+        border: 1px solid rgba(#fff, .5);
         border-radius: 50%;
         cursor: pointer;
+        transition: all .3s ease-in-out;
 
         &.slick-active {
-            background-color: var(--yellow);
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-color: #fff
         }
 
         button {
