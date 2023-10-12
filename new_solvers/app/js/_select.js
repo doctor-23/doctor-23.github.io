@@ -21,11 +21,13 @@ function customSelect(containers, title, content, label, radio, show) {
         const titleEl = container.querySelector(title);
         const labelHeight = calculateLabelHeight(labels, show);
 
-        if (labels.length <= show) {
-            contentEl.classList.add('no-scroll');
-        }
+        if (show) {
+            if (labels.length <= show) {
+                contentEl.classList.add('no-scroll');
+            }
 
-        contentEl.style.maxHeight = labelHeight + 32 + 'px';
+            contentEl.style.maxHeight = labelHeight + 32 + 'px';
+        }
 
         container.addEventListener('click', function(event) {
             const mainParent = event.target.closest(containers);

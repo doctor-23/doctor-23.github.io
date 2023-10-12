@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     // init custom select
 
-    customSelect('.select', '.select-title', '.select-content', '.select-content__wrapper', '.select-content__radio', 5);
+    customSelect('.select', '.select-title', '.select-content', '.select-content__wrapper', '.select-content__radio');
 
     // растягиваем main между header&footer
 

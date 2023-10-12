@@ -85,10 +85,14 @@
     opacity: 0;
     transform: scaleY(0);
     transform-origin: 100% 0;
-    overflow-y: scroll;
     transition: opacity .3s ease-in-out;
-    scrollbar-width: thin;
-    scrollbar-color: var(--main-color) var(--bg-color);
+
+    @include mobile {
+        max-height: 182px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: var(--main-color) var(--bg-color);
+    }
 
     &::-webkit-scrollbar-thumb {
         background: var(--main-color);

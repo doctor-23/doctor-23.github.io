@@ -595,11 +595,8 @@ nav li:hover {
   -webkit-transform-origin: 100% 0;
       -ms-transform-origin: 100% 0;
           transform-origin: 100% 0;
-  overflow-y: scroll;
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
-  scrollbar-width: thin;
-  scrollbar-color: var(--main-color) var(--bg-color);
 }
 
 .select-content::-webkit-scrollbar-thumb {
@@ -828,6 +825,7 @@ nav li:hover {
 }
 
 .main-hero {
+  z-index: 2;
   background: transparent url("../img/main-bg.png") center/cover no-repeat;
 }
 
@@ -2421,6 +2419,13 @@ nav li:hover {
     -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+
+  .select-content {
+    max-height: 182px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) var(--bg-color);
   }
 }
 

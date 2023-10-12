@@ -1,4 +1,5 @@
 .main-hero {
+    z-index: 2;
     background: transparent url('../img/main-bg.png') center / cover no-repeat;
 
     &::after {

@@ -248,10 +248,12 @@ function customSelect(containers, title, content, label, radio, show) {
     var contentEl = container.querySelector(content);
     var titleEl = container.querySelector(title);
     var labelHeight = calculateLabelHeight(labels, show);
-    if (labels.length <= show) {
-      contentEl.classList.add('no-scroll');
+    if (show) {
+      if (labels.length <= show) {
+        contentEl.classList.add('no-scroll');
+      }
+      contentEl.style.maxHeight = labelHeight + 32 + 'px';
     }
-    contentEl.style.maxHeight = labelHeight + 32 + 'px';
     container.addEventListener('click', function (event) {
       var mainParent = event.target.closest(containers);
       var currentTitle = title.replaceAll('.', '');
@@ -443,7 +445,7 @@ function validation(form, values) {
 $(document).ready(function () {
   // init custom select
 
-  customSelect('.select', '.select-title', '.select-content', '.select-content__wrapper', '.select-content__radio', 5);
+  customSelect('.select', '.select-title', '.select-content', '.select-content__wrapper', '.select-content__radio');
 
   // растягиваем main между header&footer
 
