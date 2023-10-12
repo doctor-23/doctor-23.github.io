@@ -36,7 +36,7 @@ function customSelect(containers, title, content, label, radio, show) {
             if (event.target.classList.contains(currentRadio) || event.target.classList.contains(currentLabel)) {
                 const content = event.target.textContent;
 
-                mainParent.classList.toggle('active');
+                mainParent.classList.add('active');
                 titleEl.textContent = content;
                 mainParent.classList.remove('open');
 

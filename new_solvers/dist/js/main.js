@@ -259,7 +259,7 @@ function customSelect(containers, title, content, label, radio, show) {
       var currentLabel = label.replaceAll('.', '');
       if (event.target.classList.contains(currentRadio) || event.target.classList.contains(currentLabel)) {
         var _content = event.target.textContent;
-        mainParent.classList.toggle('active');
+        mainParent.classList.add('active');
         titleEl.textContent = _content;
         mainParent.classList.remove('open');
       } else if (event.target.classList.contains(currentTitle)) {
