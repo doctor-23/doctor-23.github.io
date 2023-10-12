@@ -2422,7 +2422,7 @@ nav li:hover {
   }
 
   .select-content {
-    max-height: 182px;
+    max-height: 227.5px;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: var(--main-color) var(--bg-color);
