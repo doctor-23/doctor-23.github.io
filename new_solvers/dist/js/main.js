@@ -1,5 +1,11 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function banText(event) {
   var banText = parseFloat(event.key);
@@ -762,9 +768,131 @@ $(document).ready(function () {
     ymaps.ready(init);
   }
   ;
-  $('.catalog__filters').on('reset', function () {
+  var filters = $('.catalog__filters');
+  filters.on('reset', function () {
     var parent = $(this).closest('.catalog__filters');
     parent.find('.select').removeClass('active');
+    cards.forEach(function (card) {
+      card.style.order = 'unset';
+      card.style.display = 'block';
+    });
   });
+  filters.on('submit', function (e) {
+    e.preventDefault();
+    var filtersValues = [];
+    var filtersRow = filters.find('.filters-row');
+    filtersRow.each(function (i) {
+      if (!$(this).hasClass('filters-row_inputs')) {
+        if (!$(this).hasClass('filters-row__btn')) {
+          var checkedValue = $(this).find('input:checked');
+          if (checkedValue.length > 0) {
+            filtersValues.push({
+              name: checkedValue.attr('name'),
+              value: checkedValue.val()
+            });
+          } else {
+            if (i !== filtersRow - 1) {
+              var firstInput = $(this).find('input').first();
+              filtersValues.push({
+                name: firstInput.attr('name'),
+                value: null
+              });
+            }
+          }
+        }
+      } else {
+        var min = $(this).find('input').first();
+        var max = $(this).find('input').last();
+        var name = $(this).find('input').attr('name');
+        for (var key in cardsValues) {
+          var regex = new RegExp(key);
+          var isMatch = regex.test(name);
+          if (!isMatch) {
+            continue;
+          } else {
+            var maxValue = Math.max.apply(Math, _toConsumableArray(cardsValues[key].map(function (item) {
+              return item.value;
+            })));
+            var minValue = Math.min.apply(Math, _toConsumableArray(cardsValues[key].map(function (item) {
+              return item.value;
+            })));
+            filtersValues.push({
+              name: min.attr('name'),
+              value: min.val() ? min.val() : minValue
+            });
+            filtersValues.push({
+              name: max.attr('name'),
+              value: max.val() ? max.val() : maxValue
+            });
+          }
+          console.log(key);
+        }
+      }
+    });
+
+    // let filterKeys = Object.keys(filtersValues)
+    catalogFilter(filtersValues[0]['value'], filtersValues[1]['value'], filtersValues[2]['value'], filtersValues[3]['value'], filtersValues[4]['value'], filtersValues[5]['value'], filtersValues[6]['value'], filtersValues[7]['value']);
+    console.log(filtersValues);
+  });
+  var cards = document.querySelectorAll('.catalog-item-wrap');
+  var cardsValues = {
+    price: [],
+    quadrature: []
+  };
+  cards.forEach(function (card, index) {
+    var itemChild = card.querySelector('.catalog-item');
+    var itemPrice = card.querySelector('.catalog-item__price').textContent;
+    cardsValues['price'].push({
+      value: parseFloat(removeSpaces(itemPrice)),
+      index: index
+    });
+    cardsValues['quadrature'].push({
+      value: parseFloat(itemChild.dataset['quadrature']),
+      index: index
+    });
+  });
+  function catalogFilter(status, space, place, minQuadrature, maxQuadrature, minPrice, maxPrice, sorting) {
+    cards.forEach(function (card) {
+      var itemChild = card.querySelector('.catalog-item');
+      var itemStatus = itemChild.dataset['status'];
+      var itemSpace = itemChild.dataset['space'];
+      var itemPlace = itemChild.dataset['place'];
+      var itemQuadrature = parseFloat(itemChild.dataset['quadrature']);
+      var itemPrice = card.querySelector('.catalog-item__price').textContent;
+      itemPrice = parseFloat(removeSpaces(itemPrice));
+      if ((status ? status === itemStatus : true) && (place ? place === itemPlace || place === 'all' : true) && (space ? space === itemSpace || space === 'all' : true) && minPrice <= itemPrice && itemPrice <= maxPrice && minQuadrature <= itemQuadrature && itemQuadrature <= maxQuadrature) {
+        card.style.display = 'block';
+        card.classList.add('onFilter');
+      } else {
+        card.style.display = 'none';
+        card.classList.remove('onFilter');
+      } // проверка всех введенных значений фильтра
+
+      if (sorting === null) {
+        card.style.order = 'unset';
+      }
+    });
+    if (sorting !== null) {
+      var sortingArray;
+      switch (sorting) {
+        case 'max_price':
+          sortingArray = cardsValues['price'].slice().sort(function (a, b) {
+            return b.value - a.value;
+          });
+          break;
+        case 'min_price':
+          sortingArray = cardsValues['price'].slice().sort(function (a, b) {
+            return a.value - b.value;
+          });
+          break;
+      }
+      for (var i = 0; i < sortingArray.length; i++) {
+        var sortingIndex = sortingArray[i]['index'];
+        if (cards[sortingIndex].classList.contains('onFilter')) {
+          cards[sortingIndex].style.order = i;
+        }
+      }
+    }
+  }
   ;
 });

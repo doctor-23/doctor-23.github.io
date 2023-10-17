@@ -8,15 +8,5 @@
     "name": "sorting",
     "value": "max_price",
     "title": "По убыванию цены"
-  },
-  {
-    "name": "sorting",
-    "value": "min_quadrature",
-    "title": "По возрастанию квадратуры"
-  },
-  {
-    "name": "sorting",
-    "value": "max_quadrature",
-    "title": "По убыванию квадратуры"
   }
 ]

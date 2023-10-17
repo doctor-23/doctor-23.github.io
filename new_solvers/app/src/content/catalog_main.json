@@ -1,0 +1,202 @@
+[
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "office",
+    "spaceTitle": "Офис",
+    "title": "20 000 000 ₽",
+    "quadrature": 180,
+    "place": "federation_east",
+    "placeTitle": "Федерация Восток"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "office",
+    "spaceTitle": "Офис",
+    "title": "21 000 000 ₽",
+    "quadrature": 220,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "office",
+    "spaceTitle": "Офис",
+    "title": "350 000 ₽/мес",
+    "quadrature": 440,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "office",
+    "spaceTitle": "Офис",
+    "title": "360 000 ₽/мес",
+    "quadrature": 450,
+    "place": "mercury",
+    "placeTitle": "Меркурий"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "apartment",
+    "spaceTitle": "Апартаменты",
+    "title": "80 000 000 ₽",
+    "quadrature": 450,
+    "place": "federation_east",
+    "placeTitle": "Федерация Восток"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "apartment",
+    "spaceTitle": "Апартаменты",
+    "title": "85 000 000 ₽",
+    "quadrature": 460,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "apartment",
+    "spaceTitle": "Апартаменты",
+    "title": "320 000 ₽/мес",
+    "quadrature": 90,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "apartment",
+    "spaceTitle": "Апартаменты",
+    "title": "350 000 ₽/мес",
+    "quadrature": 110,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "selling",
+    "spaceTitle": "Торговые площадки",
+    "title": "110 000 000 ₽",
+    "quadrature": 800,
+    "place": "mercury",
+    "placeTitle": "Меркурий"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "selling",
+    "spaceTitle": "Торговые площадки",
+    "title": "120 000 000 ₽",
+    "quadrature": 850,
+    "place": "federation_east",
+    "placeTitle": "Федерация Восток"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "selling",
+    "spaceTitle": "Торговые площадки",
+    "title": "1 500 000 ₽/мес",
+    "quadrature": 750,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "selling",
+    "spaceTitle": "Торговые площадки",
+    "title": "1 200 000 ₽/мес",
+    "quadrature": 700,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "meeting",
+    "spaceTitle": "Переговорные",
+    "title": "900 000 ₽",
+    "quadrature": 40,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "meeting",
+    "spaceTitle": "Переговорные",
+    "title": "1 100 000 ₽",
+    "quadrature": 60,
+    "place": "mercury",
+    "placeTitle": "Меркурий"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "meeting",
+    "spaceTitle": "Переговорные",
+    "title": "50 000 ₽/мес",
+    "quadrature": 20,
+    "place": "federation_east",
+    "placeTitle": "Федерация Восток"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "meeting",
+    "spaceTitle": "Переговорные",
+    "title": "90 000 ₽/мес",
+    "quadrature": 40,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "parking",
+    "spaceTitle": "Паркинг",
+    "title": "2 000 000 ₽",
+    "quadrature": 5,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "sale",
+    "rentTitle": "Продажа",
+    "space": "parking",
+    "spaceTitle": "Паркинг",
+    "title": "2 500 000 ₽",
+    "quadrature": 5,
+    "place": "empire",
+    "placeTitle": "Империя"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "parking",
+    "spaceTitle": "Паркинг",
+    "title": "40 000 ₽/мес",
+    "quadrature": 5,
+    "place": "mercury",
+    "placeTitle": "Меркурий"
+  },
+  {
+    "status": "rent",
+    "rentTitle": "Аренда",
+    "space": "parking",
+    "spaceTitle": "Паркинг",
+    "title": "60 000 ₽/мес",
+    "quadrature": 5,
+    "place": "federation_east",
+    "placeTitle": "Федерация Восток"
+  }
+]

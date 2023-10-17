@@ -1713,6 +1713,7 @@ nav li:hover {
           align-items: center;
   gap: 45px;
   max-width: calc(66.66% - 12px);
+  width: 100%;
 }
 
 .catalog__list {

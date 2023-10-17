@@ -1,42 +1,54 @@
 [
   {
     "rent": "rent",
+    "rentTitle": "Аренда",
     "space": "office",
+    "spaceTitle": "Офис",
     "title": "1 999 999 ₽/мес",
     "quadrature": "180 м2",
     "place": "Федерация"
   },
   {
     "rent": "rent",
+    "rentTitle": "Аренда",
     "space": "office",
+    "spaceTitle": "Офис",
     "title": "1 999 999 ₽/мес",
     "quadrature": "180 м2",
     "place": "Империя"
   },
   {
     "rent": "rent",
+    "rentTitle": "Аренда",
     "space": "office",
+    "spaceTitle": "Офис",
     "title": "1 999 999 ₽/мес",
     "quadrature": "180 м2",
     "place": "Империя"
   },
   {
     "rent": "rent",
+    "rentTitle": "Аренда",
     "space": "office",
+    "spaceTitle": "Офис",
     "title": "1 999 999 ₽/мес",
     "quadrature": "180 м2",
     "place": "Меркурий"
   },
   {
     "rent": "rent",
+    "rentTitle": "Аренда",
     "space": "office",
+    "spaceTitle": "Офис",
     "title": "1 999 999 ₽/мес",
     "quadrature": "180 м2",
     "place": "Федерация"
   },
   {
     "rent": "rent",
+    "rentTitle": "Аренда",
     "space": "office",
+    "spaceTitle": "Офис",
     "title": "1 999 999 ₽/мес",
     "quadrature": "180 м2",
     "place": "Империя"
