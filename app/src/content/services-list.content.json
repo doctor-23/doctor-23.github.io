@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Аудит",
+    "image": "./img/services/services-1.png",
+    "link":"#"
+  },
+  {
+    "title": "Инжиринг",
+    "image": "./img/services/services-2.png",
+    "link": "#"
+  },
+  {
+    "title": "Реинжиринг",
+    "image": "./img/services/services-3.png",
+    "link": "#"
+  },
+  {
+    "title": "Проектирование",
+    "image": "./img/services/services-4.png",
+    "link": "#"
+  },
+  {
+    "title": "Строительно-<br>монтажные<br> работы",
+    "image": "./img/services/services-5.png",
+    "link": "#"
+  },
+  {
+    "title": "Сервисное<br>обслуживание",
+    "image": "./img/services/services-6.png",
+    "link": "#"
+  },
+  {
+    "title": "Автоматизация",
+    "image": "./img/services/services-7.png",
+    "link": "#"
+  },
+  {
+    "title": "Другое",
+    "image": "./img/services/services-8.png",
+    "link": "#"
+  }
+]

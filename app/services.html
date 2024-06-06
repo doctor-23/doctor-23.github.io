@@ -1,0 +1,26 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "Прогресс Инжиниринг - Услуги"})
+
+@@include('./src/_header.html')
+
+<!--Hero Section-->
+@@include('./src/components/_common_hero.component.html', {
+    "class": "services-hero",
+    "image": "./img/services-hero-bg.png",
+    "title": "Услуги",
+    "description": "Проведем аудит и поможем определить необходимое оборудование под ваши задачи, изготовим его и установим под ключ",
+    "button": "<button class=\"btn hero__btn hero__btn_more\">Подробнее</button>"
+})
+
+<!--Services list Section-->
+@@include('./src/components/_services.component.html', {
+    "services": "@@loop('../atoms/_services.atom.html', './src/content/services-list.content.json')",
+})
+
+<!--Feedback Section-->
+@@include('./src/components/_feedback.component.html', {
+    "title": "Ответим на все<br> вопросы",
+    "description": "Сформируем предварительный бюджет"
+})
+
+@@include('./src/_footer.html')
+@@include('./src/_scripts.html')

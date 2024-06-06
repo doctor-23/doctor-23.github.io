@@ -1,0 +1,13 @@
+.trust {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    padding-top: 44px;
+}
+
+.trust__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--color-1);
+}

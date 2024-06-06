@@ -1,0 +1,45 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+// COMMON
+@import 'fonts';
+@import 'config';
+@import 'select';
+@import 'header';
+@import 'hamburger';
+@import 'menu';
+@import 'running-line';
+@import 'feedback';
+@import 'accordion';
+
+// main
+
+@import "hero";
+@import "trust";
+@import "main-about";
+@import "benefits";
+@import "we-are-help";
+@import "calculation";
+@import "projects";
+@import "geography";
+@import "faq";
+
+// SERVICES
+
+@import "services";
+
+// EQUIPMENTS
+
+@import "equipments";
+
+
+@import 'footer';
+@import 'modal';

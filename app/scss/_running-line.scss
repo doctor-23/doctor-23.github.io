@@ -1,0 +1,15 @@
+.running-line {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    width: 100vw;
+    height: 68px;
+
+    background: transparent url('../img/running-line2.png') center / auto repeat-x;
+}
+
+.running-line__wrap {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}

@@ -1,0 +1,228 @@
+<div class="modal-wrap">
+    <div class="modal" id="modal-review">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставьте отзыв
+                </h2>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form" id="review_form" method="POST" enctype="multipart/form-data">
+                    <div class="modal__form-row">
+                        <label class="modal__form-wrap">
+                            <input type="text" class="modal-input input-name" name="modal_review_name"
+                                   placeholder="Ваше имя *">
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                            <span class="msg msg-empty">
+                                "Имя" должно содержать не менее 2 букв
+                            </span>
+                        </label>
+
+                        <label class="modal__form-wrap">
+                            <input type="email" class="modal-input input-email" name="modal_review_email"
+                                   placeholder="Ваш e-mail *">
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                            <span class="msg msg-empty">
+                                Неверный формат email
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="modal__form-row">
+                        <div class="select review-select modal__form-wrap">
+                            <div class="select-title">
+                                Название курса/консультации *
+                            </div>
+
+                            <div class="select-content">
+                                <div class="select-content_wrap">
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="product_name" value="0">
+                                        <span class="select-content__radio">
+                                        Личная консультация
+                                    </span>
+                                    </label>
+
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="product_name" value="1">
+                                        <span class="select-content__radio">
+                                        Курс “Введение в профессию”
+                                    </span>
+                                    </label>
+
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="product_name" value="3">
+                                        <span class="select-content__radio">
+                                        Личная консультация
+                                    </span>
+                                    </label>
+
+                                    <label class="select-content__wrapper">
+                                        <input type="radio" name="product_name" value="4">
+                                        <span class="select-content__radio">
+                                        Курс “Введение в профессию”
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        </div>
+
+                        <div class="review-photo modal__form-wrap">
+                            <div class="review-photo__output">
+                                <img src="./img/icons/review-plug.svg" alt="Фотография">
+                            </div>
+
+                            <label class="review-photo__upload" for="custom-file">
+                                <span class="review-photo__upload-text">Ваше фото (при желании)</span>
+
+                                <input id="custom-file" type="file" name="review_photo"
+                                       accept="image/png, image/gif, image/jpeg, image/svg+xml"/>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="modal__form-row modal__form-row_full">
+                        <label class="modal__form-row">
+                            <textarea name="modal_review_textarea" class="modal-textarea"
+                                      placeholder="Сообщение *"></textarea>
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                            <span class="msg msg-empty">
+                                Отзыв должен быть не менее 100 символов
+                            </span>
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Отправить" class="btn modal__review-submit modal-submit">
+                </form>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__policy">
+                    Нажимая на кнопку “Отправить”, я соглашаюсь с условиями <a href="policy/">Политики
+                    конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal-review-thx">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <h3 class="modal__title">
+                Спасибо, ваш отзыв успешно отправлен.
+            </h3>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-lead">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Заявка на консультацию
+                </h2>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form" id="lead_form">
+                    <input type="hidden" name="sales_funnel" value="Первичный контакт">
+                    <label class="modal__form-row">
+                        <input type="text" class="modal-input input-name" name="modal_lead_name"
+                               placeholder="Ваше имя">
+
+                        <span class="msg msg-error">
+                            Поле является обязательным
+                        </span>
+                        <span class="msg msg-empty">
+                            "Имя" должно содержать не менее 2 букв
+                        </span>
+                    </label>
+
+                    <label class="modal__form-row">
+                        <input type="tel" class="modal-input input-phone" name="modal_lead_name"
+                               placeholder="Ваш номер телефона">
+
+                        <span class="msg msg-error">
+                            Поле является обязательным
+                        </span>
+                        <span class="msg msg-empty">
+                            Неверный формат телефона
+                        </span>
+                    </label>
+
+                    <label class="modal__form-row">
+                        <input type="email" class="modal-input input-email" name="modal_lead_email"
+                               placeholder="Ваш e-mail">
+
+                        <span class="msg msg-error">
+                            Поле является обязательным
+                        </span>
+                        <span class="msg msg-empty">
+                            Неверный формат email
+                        </span>
+                    </label>
+
+                    <input type="submit" value="Отправить" class="btn modal__lead-submit modal-submit disabled">
+                </form>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__policy">
+                    Нажимая на кнопку “Отправить”, я соглашаюсь с условиями <a href="policy/">Политики
+                    конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal-lead-thx">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <h3 class="modal__title">
+                Спасибо, ваши данные успешно отправлены.
+            </h3>
+
+            <div class="modal__description">
+                <p>
+                    Мы свяжемся с вами в ближайшее время.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

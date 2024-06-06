@@ -1,0 +1,58 @@
+@@include('./src/_head.html', {"lang": "ru", "title": "Прогресс Инжиниринг", "class": "header-with-border"})
+
+@@include('./src/_header.html')
+
+<!--Hero Section-->
+@@include('./src/components/_common_hero.component.html', {
+    "class": "services-hero",
+    "image": "./img/main-hero-bg.png",
+    "title": "Выполнение комплексных проектов для промышленных предприятий:",
+    "description": "от технического задания до разработки и производства комплекса технологического оборудования с последующим вводом в эксплуатацию и контролем технологического процесса",
+    "button": "<button class=\"btn hero__btn hero__btn_callback\" data-modal=\"modal_callback\">Оставить заявку</button><button class=\"btn hero__btn hero__btn_more transparent\">Подробнее</button>"
+})
+
+<!--Trust Section-->
+@@include('./src/components/_main_trust_component.html')
+
+<!--Main about Section-->
+@@include('./src/components/_main_about.component.html', {
+    "slides": "@@loop('../atoms/_main_about_slide.atom.html', './src/content/main-about.content.json')",
+})
+
+<!--Feedback Section-->
+@@include('./src/components/_feedback.component.html', {
+    "title": "Закажите аудит<br> в инжиниринговой<br> компании с многолетним<br> опытом",
+    "description": "Исключим риск ошибок и оптимизируем производственные процессы"
+})
+
+<!--Benefits Section-->
+@@include('./src/components/_benefits.component.html')
+
+<!--We are help Section-->
+@@include('./src/components/_main_we_are_help.component.html')
+
+<!--Calculation Section-->
+@@include('./src/components/_main_calculation.component.html')
+
+<!--Main projects Section-->
+@@include('./src/components/_main_projects.component.html', {
+"slides": "@@loop('../atoms/_main_projects_slide.atom.html', './src/content/main-projects.content.json')",
+})
+
+<!--Geography Section-->
+@@include('./src/components/_main-geography.component.html')
+
+<!--Main FAQ Section-->
+@@include('./src/components/_faq.component.html', {
+"faq_list": "@@loop('../atoms/_accordion.atom.html', './src/content/main-faq.content.json')",
+})
+
+<!--Feedback Section-->
+@@include('./src/components/_feedback.component.html', {
+    "title": "Эффективное оборудование<br> для увеличения<br> производительности<br> вашего предприятия",
+    "description": "Определим потребности производства, подберем или изготовим аппараты, механизмы и системы, по всем параметрам подходящие для вашего предприятия, установим и наладим их работу."
+})
+
+
+@@include('./src/_footer.html')
+@@include('./src/_scripts.html')

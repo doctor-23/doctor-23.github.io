@@ -1,0 +1,6 @@
+{
+  "image": "linear-gradient(87deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(8deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url('./img/main-hero-bg.png')",
+  "title": "Выполнение комплексных проектов для промышленных предприятий:",
+  "description": "от технического задания до разработки и производства комплекса технологического оборудования с последующим вводом в эксплуатацию и контролем технологического процесса",
+  "button": "<button class=\"btn hero__btn hero__btn_callback\" data-modal=\"modal_callback\">Оставить заявку</button><button class=\"btn hero__btn hero__btn_more transparent\">Подробнее</button>"
+}

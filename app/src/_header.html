@@ -1,0 +1,104 @@
+<header id="header">
+    <div class="container">
+        <div class="header__fixed">
+            <a href="./" class="logo header__logo">
+                <img src="./img/logo.svg" alt="LOGO">
+            </a>
+
+            <form action="#" class="header__search">
+                <label class="form-label">
+                    @@include('./atoms/_svg_atom.html', {"icon": "zoom-in", "width":24, "height": 24})
+
+                    <input
+                            type="text"
+                            name="q"
+                            id="header_search"
+                            class="form-input"
+                            placeholder="Поиск"
+                    >
+                </label>
+            </form>
+
+            <nav class="header__nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="./">
+                            @@include('./atoms/_svg_atom.html', {"icon": "home-02", "width":24, "height": 24})
+
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./equipment.html">
+                            @@include('./atoms/_svg_atom.html', {"icon": "settings-01", "width":24, "height": 24})
+
+                            Оборудования
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./services.html">
+                            @@include('./atoms/_svg_atom.html', {"icon": "cube-outline", "width":24, "height": 24})
+
+                            Услуги
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./">
+                            @@include('./atoms/_svg_atom.html', {"icon": "announcement-03", "width":24, "height": 24})
+
+                            Новости
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./">
+                            @@include('./atoms/_svg_atom.html', {"icon": "phone-call-01", "width":24, "height": 24})
+
+                            Контакты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./">
+                            @@include('./atoms/_svg_atom.html', {"icon": "folder-check", "width":24, "height": 24})
+
+                            О компании
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__contacts">
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Написать нам:
+                    </div>
+
+                    <a
+                            href="mailto:seles@etc-progress.ru"
+                            class="contacts-row__contact"
+                    >
+                        seles@etc-progress.ru
+                    </a>
+                </div>
+
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Позвонить нам:
+                    </div>
+
+                    <a
+                            href="tel:+73832484722"
+                            class="contacts-row__contact"
+                    >
+                        +7(383) 248 47 22
+                    </a>
+                </div>
+            </div>
+
+            <button class="btn header__btn" data-modal="modal_callback">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="main-page">
