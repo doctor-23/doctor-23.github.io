@@ -2132,6 +2132,51 @@ pre {
   color: #888;
 }
 
+.about {
+  padding-bottom: 115px;
+}
+
+.about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.about .container>* {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.about__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 37px;
+  max-width: calc(51.72% - 40px);
+  height: 100%;
+  padding-bottom: 44px;
+}
+
+.about__btn {
+  width: 198px;
+  margin-top: auto;
+}
+
+.about__right {
+  max-width: 48.28%;
+  width: 100%;
+  border-radius: var(--radius-1);
+}
+
+.about__right img {
+  border-radius: var(--radius-1);
+}
+
 .hero {
   max-width: 1920px;
   width: 100%;
@@ -2792,6 +2837,121 @@ pre {
   margin-bottom: 66px;
 }
 
+.equipment-tech-timeline {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-bottom: 159px;
+  overflow-x: hidden;
+}
+
+.equipment-tech-timeline__title {
+  margin-bottom: 62px;
+}
+
+.equipment-tech-timeline__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+  width: calc(100% + 75px);
+  margin-bottom: 80px;
+}
+
+.equipment-tech-timeline__list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: calc(100% + 35px);
+  margin: auto;
+  background-color: rgba(0,0,0,.3);
+}
+
+.equipment-tech-timeline__list .timeline__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 260px;
+}
+
+.equipment-tech-timeline__list .timeline__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 69px;
+  height: 69px;
+  z-index: 1;
+  margin: auto;
+  background-color: #0190ff;
+  border-radius: 100%;
+  -webkit-transform: translateY(-13px);
+      -ms-transform: translateY(-13px);
+          transform: translateY(-13px);
+}
+
+.equipment-tech-timeline__list .timeline__item:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.equipment-tech-timeline__list .timeline__item:nth-child(even) .timeline__item__right {
+  margin-left: calc((100vw - (var(--container) + 75px))/-2 - 34px);
+}
+
+.equipment-tech-timeline__list .timeline__item:nth-child(odd) .timeline__item__left {
+  padding-left: 43px;
+}
+
+.equipment-tech-timeline__list .timeline__item:nth-child(odd) .timeline__item__right {
+  margin-right: calc((100vw - (var(--container) + 75px))/-2 - 34px);
+}
+
+.equipment-tech-timeline__list .timeline__item__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.equipment-tech-timeline__list .timeline__item__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.equipment-tech-timeline__list .timeline__item__right {
+  border-radius: var(--radius-1);
+}
+
+.equipment-tech-timeline__list .timeline__item__right img {
+  border-radius: var(--radius-1);
+}
+
+.equipment-tech-timeline__btn {
+  width: 244px;
+  margin: 0 auto;
+}
+
 #footer {
   height: 547px;
 }
@@ -3362,6 +3522,20 @@ pre {
   margin: 0 auto;
   text-align: center;
   font-size: 17px;
+}
+
+@media screen and (min-width: 1950px) {
+  .equipment-tech-timeline {
+    overflow-x: visible;
+  }
+
+  .equipment-tech-timeline__list .timeline__item:nth-child(even) .timeline__item__right {
+    margin-left: calc((1920px - (var(--container) + 75px))/-2 - 34px);
+  }
+
+  .equipment-tech-timeline__list .timeline__item:nth-child(odd) .timeline__item__right {
+    margin-right: calc((1920px - (var(--container) + 75px))/-2 - 34px);
+  }
 }
 
 @media screen and (max-width: 1269.98px) {
