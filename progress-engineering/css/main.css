@@ -923,7 +923,9 @@ pre {
 }
 
 .list-1 .item:hover .item-title,
-.list-1 .item:focus-visible .item-title {
+.list-1 .item:hover .item-description,
+.list-1 .item:focus-visible .item-title,
+.list-1 .item:focus-visible .item-description {
   color: var(--white);
 }
 
@@ -940,6 +942,13 @@ pre {
   font-size: 24px;
   font-weight: 800;
   color: var(--color-2);
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.list-1 .item-description {
+  position: relative;
+  z-index: 1;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
@@ -2950,6 +2959,18 @@ pre {
 .equipment-tech-timeline__btn {
   width: 244px;
   margin: 0 auto;
+}
+
+.equipments-list {
+  padding-bottom: 99px;
+}
+
+.equipments-list__title {
+  margin-bottom: 66px;
+}
+
+.equipments-list__description {
+  margin: -56px 0 74px;
 }
 
 #footer {
