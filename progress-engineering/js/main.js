@@ -921,6 +921,7 @@ class Accordion {
   constructor(selector, multiple) {
     this.el = document.querySelector(selector);
     this.multiple = multiple;
+    if (!this.el) return;
     this.bindEvents();
   }
   bindEvents() {
@@ -1602,174 +1603,127 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   ;
-  const hamburger = document.querySelector('.header__hamburger-wrap');
-  const hamburgerClose = document.querySelector('.hamburger__close');
+  // Найти элемент с классом 'header__hamburger'
+  const hamburger = document.querySelector('.header__hamburger');
+
+  // Проверить, существует ли элемент 'header__hamburger'
   if (hamburger) {
+    // Добавить обработчик события 'click' к элементу 'header__hamburger'
     hamburger.addEventListener('click', event => {
+      // Предотвратить стандартное поведение события (например, переход по ссылке)
       event.preventDefault();
-      const wrapper = document.querySelector('.hamburger-container');
-      document.body.classList.add('no-scroll');
-      wrapper.classList.remove('slideOutLeft');
-      wrapper.classList.add('slideInLeft');
-    });
-  }
-  if (hamburgerClose) {
-    hamburgerClose.addEventListener('click', event => {
-      event.preventDefault();
-      const wrapper = document.querySelector('.hamburger-container');
-      document.body.classList.remove('no-scroll');
-      wrapper.classList.remove('slideInLeft');
-      wrapper.classList.add('slideOutLeft');
+
+      // Найти элемент с классом 'header__fixed'
+      const fixedMenu = document.querySelector('.header__fixed');
+
+      // Проверить, содержит ли текущий элемент ('hamburger') класс 'open'
+      if (hamburger.classList.contains('open')) {
+        // Если содержит, удалить класс 'open' у элемента 'hamburger'
+        hamburger.classList.remove('open');
+        hamburger.classList.add('close');
+        // Удалить класс 'no-scroll' у элемента 'body', чтобы разрешить прокрутку страницы
+        document.body.classList.remove('no-scroll');
+
+        // Удалить класс 'slideOutLeft' у элемента 'fixedMenu' и добавить класс 'slideInLeft'
+        // Это переключит анимацию меню с 'slide out' (выезд) на 'slide in' (заезд)
+        fixedMenu.classList.remove('slideInLeft');
+        fixedMenu.classList.add('slideOutLeft');
+      } else {
+        // Если класс 'open' отсутствует у элемента 'hamburger'
+        // Добавить класс 'open' к элементу 'hamburger'
+        hamburger.classList.add('open');
+        hamburger.classList.remove('close');
+        // Добавить класс 'no-scroll' к элементу 'body', чтобы предотвратить прокрутку страницы
+        document.body.classList.add('no-scroll');
+
+        // Удалить класс 'slideInLeft' у элемента 'fixedMenu' и добавить класс 'slideOutLeft'
+        // Это переключит анимацию меню с 'slide in' (заезд) на 'slide out' (выезд)
+        fixedMenu.classList.remove('slideOutLeft');
+        fixedMenu.classList.add('slideInLeft');
+      }
     });
   }
   ;
-  function scrollMenu() {
-    const menu = document.querySelector('.menu');
-    if (menu) {
-      let container = menu.querySelector('.container');
-      let menuList = menu.querySelector('.nav-list');
-      let iconScroll = menu.querySelector('.menu__icon-scroll');
-      let containerWidth = container.clientWidth;
-      let menuListWidth = menuList.scrollWidth;
-      function showHideIcon(width, className) {
-        if (width <= menuListWidth) {
-          iconScroll.classList.remove(className);
-        } else {
-          iconScroll.classList.add(className);
-        }
-      }
-      let cartBtn = menu.querySelector('.menu__cart');
-      let cartBtnWidth = cartBtn.clientWidth;
-      let finalWidth = containerWidth - cartBtnWidth - 30;
-      showHideIcon(finalWidth, 'hide');
-      showHideIcon(containerWidth, 'hide-on-scroll');
-    }
-  }
-  scrollMenu();
+  /**
+   * Функция для управления состоянием меню в зависимости от прокрутки страницы.
+   *
+   * @param {Object} item - Объект window, который содержит информацию о текущей прокрутке страницы.
+   * @param {Boolean} onScroll - Флаг, указывающий, что вызвана функция при скролле.
+   */
+  function stickyMenu(item, onScroll = false) {
+    // Получаем первый секционный элемент внутри main
+    const hero = document.body.querySelector('main > section');
+    // Получаем высоту этого секционного элемента
+    const heroH = hero.offsetHeight;
+    // Получаем элемент с id 'header'
+    const header = document.getElementById('header');
+    // Получаем фиксированное меню внутри header
+    const headerFixed = header.querySelector('.header__fixed');
+    // Получаем основное меню внутри header
+    const headerMain = header.querySelector('.header__main');
 
-  // плавающее меню
-  const getMenuOffsetTop = () => {
-    const menu = document.querySelector('.menu');
-    const menuH = menu.offsetHeight;
-    const header = document.querySelector('header');
-    const headerH = header.offsetHeight;
-    let menuOffsetTop;
-    if (menu.classList.contains('homepage_menu')) {
-      let hero = document.querySelector('.hero');
-      menuOffsetTop = headerH + hero.offsetHeight;
-    } else {
-      menuOffsetTop = headerH + menuH;
-    }
-    return menuOffsetTop;
-  };
-  function stickyMenu(item) {
-    let menu = document.querySelector('.menu');
-    let header = document.querySelector('#header');
-    let headerH = header.offsetHeight;
-    let height = headerH;
-    let backToTop = document.getElementById('back_to_top');
-    if (menu) {
-      let menuH = menu.offsetHeight;
-      height += menuH;
-      if (menu.classList.contains('homepage_menu')) {
-        height = menuH + getMenuOffsetTop();
-      }
-      if (!menu.classList.contains('is_not_first_scroll')) {
-        scrollMenu(menu);
-      }
-    }
-    if (item.pageYOffset > height) {
+    // Если текущая прокрутка страницы больше высоты секционного элемента
+    if (item.pageYOffset > heroH) {
+      // Добавляем класс nav_scroll к body
       document.body.classList.add('nav_scroll');
+      // Меняем классы для анимации фиксированного меню
+      headerFixed.classList.remove('slideInLeft');
+      headerFixed.classList.add('slideOutLeft');
+
+      // Меняем классы для анимации основного меню
+      headerMain.classList.add('slideInDown');
+      headerMain.classList.remove('slideOutDown');
     } else {
+      // Если прокрутка меньше высоты секционного элемента, удаляем класс nav_scroll у body
       document.body.classList.remove('nav_scroll');
-    }
-    if (item.pageYOffset > item.innerHeight) {
-      backToTop.style.display = 'flex';
-    } else {
-      backToTop.style.display = 'none';
+
+      // Меняем классы для анимации фиксированного меню
+      headerFixed.classList.remove('slideOutLeft');
+      headerFixed.classList.add('slideInLeft');
+      headerMain.classList.add('slideOutUp');
+      headerMain.classList.remove('slideInDown');
     }
   }
+
+  // Вызываем функцию stickyMenu при загрузке страницы с текущим объектом window
   stickyMenu(window);
+
+  // Добавляем обработчик события прокрутки страницы
   window.addEventListener('scroll', function () {
-    stickyMenu(this);
-  });
-  const catalogLinks = document.querySelectorAll('.catalog-link');
-  if (catalogLinks.length > 0) {
-    catalogLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        window.scrollTo({
-          top: getMenuOffsetTop(),
-          behavior: 'smooth' // Опция для плавной прокрутки
-        });
-      });
-    });
-  }
-
-  // клик по мини корзине
-
-  document.querySelectorAll('.mini-cart').forEach(cart => {
-    cart.addEventListener('click', e => {
-      e.preventDefault();
-      if (cart.classList.contains('empty_mini-cart')) {
-        const modal = document.getElementById('modal_empty_cart');
-        modal.style.display = 'block';
-        modal.style.opacity = 1;
-      } else {
-        window.location.href = cart.href;
-      }
-    });
+    // Вызываем функцию stickyMenu при каждом событии прокрутки
+    stickyMenu(this, true);
   });
 
-  // Обновление меню категорий на главной
-  if (document.body.classList.contains('home')) {
-    const navMenuItems = document.querySelectorAll('.nav-list li');
-    if (navMenuItems.length > 0) {
-      navMenuItems.forEach(function (item) {
-        item.addEventListener('click', function (e) {
-          e.preventDefault();
-          let itemLink = this.querySelector('a');
-          let href = itemLink.getAttribute('href');
-          let catName = itemLink.textContent;
-          let urlGetParams = href.split('=');
-          let data = {
-            action: 'get_products_by_cat',
-            slug: urlGetParams[1]
-          };
-          $.ajax({
-            url: americano.ajaxurl,
-            type: 'post',
-            data: data,
-            beforeSend: function (xhr) {
-              document.body.classList.add('loader');
-            },
-            success: function (result) {
-              // console.log(result);
-              let catalogList = document.querySelector('.catalog__list');
-              catalogList.innerHTML = result;
-              document.querySelector('.catalog-section__title').textContent = catName;
-            },
-            complete: function () {
-              document.body.classList.remove('loader');
-              window.scrollTo({
-                top: getMenuOffsetTop(),
-                behavior: 'smooth' // Опция для плавной прокрутки
-              });
-              navMenuItems.forEach(item => item.classList.remove('active'));
-              item.classList.add('active');
-              history.replaceState(null, null, href);
-              if (itemLink.closest('.hamburger')) {
-                const wrapper = document.querySelector('.hamburger-container');
-                document.body.classList.remove('no-scroll');
-                wrapper.classList.remove('slideInLeft');
-                wrapper.classList.add('slideOutLeft');
-              }
-            }
-          });
-        });
-      });
+  // Добавляем обработчик события клика на документ
+  document.addEventListener('click', e => {
+    // Получаем элемент фиксированного меню
+    const element = document.querySelector('.header__fixed');
+    // Получаем кнопку гамбургера
+    const button = document.querySelector('.header__hamburger');
+
+    // Определяем на какой элемент был клик
+    const target = e.target;
+    // Проверяем, был ли клик на фиксированное меню или внутри него
+    const itsEl = target === element || element.contains(target);
+    // Проверяем, был ли клик на кнопку гамбургера
+    const itsHamburger = target === button;
+    // Проверяем, открыт ли элемент (имеет ли он класс open)
+    const isElementOpen = button.classList.contains('open');
+
+    // Если клик был не на фиксированное меню, не на кнопку гамбургера и меню открыто
+    if (!itsEl && !itsHamburger && isElementOpen) {
+      // Убираем класс no-scroll у body (возвращаем прокрутку страницы)
+      document.body.classList.remove('no-scroll');
+      // Убираем класс open у кнопки гамбургера
+      button.classList.remove('open');
+      // Добавляем класс close у кнопки гамбургера
+      button.classList.add('close');
+      // Меняем классы для анимации фиксированного меню
+      element.classList.remove('slideInLeft');
+      element.classList.add('slideOutLeft');
     }
-  }
+  });
+  ;
 
   /**
    * инициализация аккордеона
