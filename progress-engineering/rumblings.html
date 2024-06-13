@@ -9,8 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon.svg">
     <link rel="stylesheet" href="./css/vendor.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=4c9f1e02-c16f-42f5-8a17-89f3fe76629e"
-            type="text/javascript"></script>
 
     <title>Прогресс Инжиниринг - Дробление и грохочение</title>
 </head>
@@ -183,6 +181,17 @@
         </div>
     </div>
 </header>
+
+<div class="download-presentation">
+    <a href="#" download>
+        <svg width="74" height="74" class="svg-ico @@class" role="img">
+            <use xlink:href="./img/icons/sprite.svg#stand"></use>
+        </svg>
+
+
+        <span>Скачать презентацию</span>
+    </a>
+</div>
 
 <main class="main-page">
 
@@ -445,13 +454,87 @@
 </main>
 
 <footer id="footer">
-</footer>
+    <div class="container">
+        <div class="footer__col col-1">
+            <a href="./" class="footer__logo">
+                <img src="./img/logo-2.svg" alt="LOGO">
+            </a>
 
-<div id="back_to_top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14" fill="none">
-        <path d="M13.0607 0.939577C12.4749 0.353795 11.5252 0.353801 10.9394 0.939592L1.3935 10.4856C0.807718 11.0714 0.807724 12.0211 1.39351 12.6069C1.9793 13.1927 2.92905 13.1927 3.51483 12.6069L12.0001 4.12156L20.4854 12.6068C21.0712 13.1926 22.0209 13.1926 22.6067 12.6068C23.1925 12.021 23.1925 11.0712 22.6067 10.4855L13.0607 0.939577ZM13.5001 4.0001L13.5 2.00023L10.5 2.00025L10.5001 4.00012L13.5001 4.0001Z" fill="#222021"/>
-    </svg>
-</div>
+            <div class="footer__copyright">
+                Общество с ограниченной ответственностью «Прогресс»
+            </div>
+        </div>
+
+        <div class="footer__col col-2">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li><a href="#">Оборудование</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">О компании</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__col col-3">
+            <a href="#" class="footer__links footer__policy">
+                Политика обработки персональных данных
+            </a>
+            <a href="#" class="footer__links footer__agreement">
+                Пользовательское соглашение
+            </a>
+        </div>
+
+        <div class="footer__col col-4">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li><a href="#">Перелинковка 1</a></li>
+                    <li><a href="#">Перелинковка 2</a></li>
+                    <li><a href="#">Перелинковка 3</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__col col-5">
+            <a href="#" download="" class="footer__download">
+                Скачать презентацию
+            </a>
+
+            <div class="footer__contacts">
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Написать нам:
+                    </div>
+
+                    <a
+                            href="mailto:seles@etc-progress.ru"
+                            class="contacts-row__contact"
+                    >
+                        seles@etc-progress.ru
+                    </a>
+                </div>
+
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Позвонить нам:
+                    </div>
+
+                    <a
+                            href="tel:+73832484722"
+                            class="contacts-row__contact"
+                    >
+                        +7(383) 248 47 22
+                    </a>
+                </div>
+            </div>
+
+            <button class="btn footer__btn" data-modal="modal_callback">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+</footer>
 
 <div class="modal-wrap">
     <div class="modal" id="modal-review">

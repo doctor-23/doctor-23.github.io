@@ -1771,18 +1771,19 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
    * инициализация карты
    */
-  const map = document.getElementById('map');
-  if (map) {}
   ;
 
   // Получаем ссылки с классами '.footer__policy-link' и '.footer__agreement-link'
-  const policyLinks = document.querySelectorAll('.footer__policy-link, .footer__agreement-link');
+  const policyLinks = document.querySelectorAll('.footer__links');
 
-  // Функция обработчика клика
+  /**
+   * Функция обработчика клика по политикам в подвале
+   * @param e
+   */
   function handleClick(e) {
     e.preventDefault(); // Отменяем стандартное поведение ссылки
     let href = this.getAttribute('href'); // Получаем значение атрибута 'href' ссылки
-    window.location.href = href.replace('#', ''); // Удаляем символ '#' из значения 'href' и ереходим по новому адресу
+    window.location.href = href.replace('#', ''); // Удаляем символ '#' из значения 'href' и переходим по новому адресу
   }
   if (policyLinks.length > 0) {
     // Назначаем обработчик клика на каждую найденную ссылку
@@ -1854,5 +1855,33 @@ document.addEventListener('DOMContentLoaded', function () {
       dotsClass: 'slider-dots'
     });
   }
+  ;
+  /**
+   * Функция для бесконечной горизонтальной прокрутки содержимого внутри оберток .running-line__wrap
+   * @param {DOMHighResTimeStamp} timestamp - Время в миллисекундах, предоставленное requestAnimationFrame для анимации
+   */
+  function scrollHorizontally(timestamp) {
+    // Получаем все обертки .running-line__wrap
+    const parent = document.querySelector('.running-line');
+    const child = parent.firstElementChild;
+    const wrappers = document.querySelectorAll('.running-line__wrap');
+
+    // Получаем ширину одной обертки (предполагаем, что все обертки имеют одинаковую ширину)
+    const childWidth = child.offsetWidth / 2;
+
+    // Вычисляем смещение (offset), которое должно увеличиваться постоянно для эффекта бесконечной прокрутки
+    const offset = timestamp / 10 % childWidth; // Делим timestamp на 10, чтобы скорость прокрутки была медленнее
+
+    // Прокручиваем каждую обертку по горизонтали на заданное смещение
+    wrappers.forEach((wrapper, index) => {
+      wrapper.style.transform = `translateX(-${offset}px)`;
+    });
+
+    // Повторяем анимацию, вызывая функцию снова на следующем кадре
+    requestAnimationFrame(scrollHorizontally);
+  }
+
+  // Начинаем бесконечную горизонтальную прокрутку при загрузке страницы
+  requestAnimationFrame(scrollHorizontally);
   ;
 });
