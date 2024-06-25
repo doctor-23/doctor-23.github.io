@@ -1746,6 +1746,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+  window.addEventListener('scroll', function () {
+    const fixedDownloadButton = document.querySelector('.download-presentation');
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      fixedDownloadButton.classList.add('slideOutRight');
+      fixedDownloadButton.classList.remove('slideInRight');
+    } else {
+      if (fixedDownloadButton.classList.contains('slideOutRight')) {
+        fixedDownloadButton.classList.add('slideInRight');
+        fixedDownloadButton.classList.remove('slideOutRight');
+      }
+    }
+  });
   const mainAboutSlider = document.querySelector('.main-about__slider');
   const projectsSlider = document.querySelector('.projects__slider');
   if (mainAboutSlider) {
