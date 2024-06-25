@@ -240,8 +240,8 @@ pre {
 }
 
 .download-presentation {
-  position: absolute;
-  top: 767px;
+  position: fixed;
+  bottom: 0;
   right: 0;
   z-index: 4;
   width: 528px;
@@ -2907,6 +2907,7 @@ pre {
 }
 
 .main-about__slider .slider-right img {
+  max-height: 524px;
   border-radius: var(--radius-2) 0 0 var(--radius-2);
 }
 
