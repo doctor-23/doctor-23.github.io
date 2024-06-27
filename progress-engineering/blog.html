@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/vendor.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 
-    <title>Автокраны - Everest</title>
+    <title>Прогресс Инжиниринг - Новости</title>
 </head>
 <body class="@@class">
 
@@ -184,58 +184,459 @@
 <main class="main-page">
 
 
-<section class="not-found">
-    <div class="container">
-        <div class="not-found__image">
-            <img src="./img/404.png" alt="not-found">
-        </div>
+<!--Breadcrumbs-->
+<div class="breadcrumbs container">
+  <ul
+          class="breadcrumbs__list"
+          itemscope
+          itemtype="http://schema.org/BreadcrumbList"
+  >
 
-        <div class="not-found__description">
-            <p>
-                Извините! Страница, которую вы ищете, не найдена.
-            </p>
-        </div>
-
-        <a href="/" class="not-found__btn btn">
-            Вернуться на главную
+    <li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="./"
+                itemprop="name"
+        >
+            Главная
         </a>
+    </li>
+
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
+<li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="#"
+                itemprop="name"
+        >
+            Новости
+        </a>
+    </li>
+
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
+
+
+  </ul>
+</div>
+;
+
+<!--News-list Section-->
+<section class="news">
+    <div class="container">
+
+        <h1 class="news__title second-title with-line">
+            Новости
+        </h1>
+
+        <div class="news__list">
+
+            <div class="list-row list-row_first">
+
+                <div class="item-news_big">
+
+                    <div class="item-news__image">
+                        <img src="./img/news/news-1.png" alt="Заголовок новости">
+                    </div>
+
+                    <div class="item-news__content">
+
+                        <h3 class="item-news__title">
+                            Заголовок новости
+                        </h3>
+
+                        <div class="item-news__short-description">
+                            <p>
+                                Краткий текст
+                            </p>
+                        </div>
+
+                        <a href="./news-card.html" class="btn item-news__btn">
+                            Подробнее
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="list-row list-row_second">
+                <div class="item-news_small">
+
+                    <div class="item-news__image">
+                        <img src="./img/news/news-2.png" alt="Заголовок новости">
+                    </div>
+
+                    <div class="item-news__content">
+
+                        <div class="item-news__date">
+                            00.00.0000
+                        </div>
+
+                        <h3 class="item-news__title">
+                            Заголовок новости
+                        </h3>
+
+                        <div class="item-news__short-description">
+                            <p>
+                                Краткий текст
+                            </p>
+                        </div>
+
+                        <a href="./news-card.html" class="item-news__btn">
+                            Подробнее
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="item-news_small">
+
+                    <div class="item-news__image">
+                        <img src="./img/news/news-3.png" alt="Заголовок новости">
+                    </div>
+
+                    <div class="item-news__content">
+
+                        <div class="item-news__date">
+                            00.00.0000
+                        </div>
+
+                        <h3 class="item-news__title">
+                            Заголовок новости
+                        </h3>
+
+                        <div class="item-news__short-description">
+                            <p>
+                                Краткий текст
+                            </p>
+                        </div>
+
+                        <a href="./news-card.html" class="item-news__btn">
+                            Подробнее
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </section>
+;
 
-<div class="inf-separator">
-    <div class="inf-separator__wrap">
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-    </div>
-    <div class="inf-separator__wrap">
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-    </div>
-    <div class="inf-separator__wrap">
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-    </div>
-    <div class="inf-separator__wrap">
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
-        <div>astrooma</div>
+<!--Projects Section-->
+<div class="projects projects_blog">
+    <div class="container">
+        <h2 class="projects__title second-title">
+            Кейсы
+        </h2>
+
+        
+
+
+        <div class="projects__slider-wrap">
+            <div class="projects__slider">
+                <div class="slider-item">
+                    <div class="slider-left">
+                        <img src="./img/projects/main-projects.png" alt="Действующая фабрика игрушек">
+                    </div>
+
+                    <div class="slider-right">
+                        <h3 class="project__title">
+                            Действующая фабрика игрушек
+                        </h3>
+
+                        <div class="project__info">
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Задача.</span> Переоборудовать производство.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Решение.</span> Проведен аудит, по итогам которого сформировано техзадание для проекта и изготовлены станки по новым чертежам, обеспечивающие увеличение производительности. Оборудование установлено, протестировано и запущено в работу.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Результат.</span> Через 2 месяца после ввода в эксплуатацию объем продукции увеличен на 30%.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Сроки.</span> 4 месяца.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+<div class="slider-item">
+                    <div class="slider-left">
+                        <img src="./img/projects/main-projects.png" alt="Действующая фабрика игрушек">
+                    </div>
+
+                    <div class="slider-right">
+                        <h3 class="project__title">
+                            Действующая фабрика игрушек
+                        </h3>
+
+                        <div class="project__info">
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Задача.</span> Переоборудовать производство.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Решение.</span> Проведен аудит, по итогам которого сформировано техзадание для проекта и изготовлены станки по новым чертежам, обеспечивающие увеличение производительности. Оборудование установлено, протестировано и запущено в работу.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Результат.</span> Через 2 месяца после ввода в эксплуатацию объем продукции увеличен на 30%.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Сроки.</span> 4 месяца.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="slider-nav projects__slider-nav"></div>
+        </div>
     </div>
 </div>
+
+
+<!--Projects Section-->
+<section class="articles">
+    <div class="container">
+        <h2 class="articles__title second-title with-line">
+            Полезные статьи
+        </h2>
+
+        <div class="articles__list">
+
+            <div class="list-item">
+
+                <div class="list-item__image">
+
+                    <img src="./img/articles/article-1.png" alt="Заголовок статьи">
+
+                </div>
+
+                <div class="list-item__content">
+
+                    <div class="list-item__date">
+                        00.00.0000
+                    </div>
+
+                    <h3 class="list-item__title">
+                        Заголовок статьи
+                    </h3>
+
+                    <div class="list-item__short-description">
+                        <p>
+                            Краткий текст
+                        </p>
+                    </div>
+
+                    <a href="./article.html" class="btn list-item__btn">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <div class="list-item__image">
+
+                    <img src="./img/articles/article-2.png" alt="Заголовок статьи">
+
+                </div>
+
+                <div class="list-item__content">
+
+                    <div class="list-item__date">
+                        00.00.0000
+                    </div>
+
+                    <h3 class="list-item__title">
+                        Заголовок статьи
+                    </h3>
+
+                    <div class="list-item__short-description">
+                        <p>
+                            Краткий текст
+                        </p>
+                    </div>
+
+                    <a href="./article.html" class="btn list-item__btn">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <div class="list-item__image">
+
+                    <img src="./img/articles/article-3.png" alt="Заголовок статьи">
+
+                </div>
+
+                <div class="list-item__content">
+
+                    <div class="list-item__date">
+                        00.00.0000
+                    </div>
+
+                    <h3 class="list-item__title">
+                        Заголовок статьи
+                    </h3>
+
+                    <div class="list-item__short-description">
+                        <p>
+                            Краткий текст
+                        </p>
+                    </div>
+
+                    <a href="./article.html" class="btn list-item__btn">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <div class="list-item__image">
+
+                    <img src="./img/articles/article-4.png" alt="Заголовок статьи">
+
+                </div>
+
+                <div class="list-item__content">
+
+                    <div class="list-item__date">
+                        00.00.0000
+                    </div>
+
+                    <h3 class="list-item__title">
+                        Заголовок статьи
+                    </h3>
+
+                    <div class="list-item__short-description">
+                        <p>
+                            Краткий текст
+                        </p>
+                    </div>
+
+                    <a href="./article.html" class="btn list-item__btn">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <div class="list-item__image">
+
+                    <img src="./img/articles/article-5.png" alt="Заголовок статьи">
+
+                </div>
+
+                <div class="list-item__content">
+
+                    <div class="list-item__date">
+                        00.00.0000
+                    </div>
+
+                    <h3 class="list-item__title">
+                        Заголовок статьи
+                    </h3>
+
+                    <div class="list-item__short-description">
+                        <p>
+                            Краткий текст
+                        </p>
+                    </div>
+
+                    <a href="./article.html" class="btn list-item__btn">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <div class="list-item__image">
+
+                    <img src="./img/articles/article-5.png" alt="Заголовок статьи">
+
+                </div>
+
+                <div class="list-item__content">
+
+                    <div class="list-item__date">
+                        00.00.0000
+                    </div>
+
+                    <h3 class="list-item__title">
+                        Заголовок статьи
+                    </h3>
+
+                    <div class="list-item__short-description">
+                        <p>
+                            Краткий текст
+                        </p>
+                    </div>
+
+                    <a href="./article.html" class="btn list-item__btn">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 </main>
 
