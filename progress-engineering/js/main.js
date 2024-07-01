@@ -1787,6 +1787,29 @@ document.addEventListener('DOMContentLoaded', function () {
       dotsClass: 'slider-dots'
     });
   }
+  const slidersWithNav = document.querySelectorAll('.slider-with-nav');
+  if (slidersWithNav.length > 0) {
+    slidersWithNav.forEach(slider => sliderWithNav(slider));
+  }
+  function sliderWithNav(container) {
+    const slider = container.querySelector('.slider');
+    const sliderNav = container.querySelector('.slider-nav');
+    $(slider).slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+    $(sliderNav).slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.slider',
+      dots: true,
+      // centerMode: true,
+      focusOnSelect: true
+    });
+  }
   ;
   /**
    * Функция для бесконечной горизонтальной прокрутки содержимого внутри оберток .running-line__wrap

@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./css/vendor.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 
-    <title>Прогресс Инжиниринг - audit</title>
+    <title>Прогресс Инжиниринг - О компании</title>
 </head>
-<body class="header-with-border">
+<body class="@@class">
 
 
 <header id="header">
@@ -184,291 +184,59 @@
 <main class="main-page">
 
 
-<!--Hero Section-->
-<section class="hero audit-hero" style="background-image: url('./img/audit-hero-bg.png')">
-    <div class="container">
-        <h1 class="hero__title main-title">
-            «Прогресс»: оценим и приумножим возможности предприятия
-        </h1>
+<!--Breadcrumbs-->
+<div class="breadcrumbs container">
+  <ul
+          class="breadcrumbs__list"
+          itemscope
+          itemtype="http://schema.org/BreadcrumbList"
+  >
 
-        <div class="hero__description">
-            <p>
-                Выявим слабые места в технологической цепочке и поможем улучшить эффективность технологического процесса
-            </p>
-        </div>
+    <li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="./"
+                itemprop="name"
+        >
+            Главная
+        </a>
+    </li>
 
-        <div class="hero__btn-wrap">
-            <button class="btn hero__btn hero__btn_callback" data-modal="modal_callback">Заказать аудит</button><button class="btn hero__btn hero__btn_more transparent">Узнать подробнее</button>
-        </div>
-    </div>
-</section>
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
+<li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="#"
+                itemprop="name"
+        >
+            О компании
+        </a>
+    </li>
 
-
-<!--About-audit Section-->
-<section class="about-audit">
-    <div class="container">
-        <div class="about-audit__col about-audit__col_first">
-            <h2 class="about-audit__title second-title">
-                Аудит — основа для успешного запуска  и масштабирования производств
-            </h2>
-
-            <div class="about-audit__description">
-                <p>
-                    Проводим оценку уже действующих предприятий и стартапов на этапе планирования. 
-                </p>
-                <p>
-                    Аудит позволяет диагностировать состояние компании в целом и детально, грамотно поставить задачу оснащения, переоборудования, модернизации или расширения производства.
-                </p>
-            </div>
-        </div>
-
-        <div class="about-audit__col about-audit__col_second">
-            <ul class="about-audit__list">
-                <li>
-                    Выезд на объект, экспертиза объекта, имеющегося оборудования
-                </li>
-                <li>
-                    Анализ ниши, конкурентов, продукции, запросов целевой аудитории
-                </li>
-                <li>
-                    Определение сильных и слабых сторон предприятия, оценка перспектив и рисков
-                </li>
-                <li>
-                    Резюмирование и формирование техзадания с конкретными решениями
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
 
 
-<!--About-benefits Section-->
-<section class="benefits @@class">
-    <div class="container">
-        <h2 class="benefits__title second-title">
-            Наши достижения в цифрах
-        </h2>
-
-        <div class="benefits__list">
-
-            <div class="list-item">
-                <div class="list-item__left">
-                    <h3 class="list-item__heading">
-                        250
-                    </h3>
-
-                    <div class="list-item__description">
-                        <p>
-                            единиц оборудования<br/>
-                            изготовлено<br/>
-                            за 2023 год
-                        </p>
-                    </div>
-                </div>
-
-                <div class="list__item-right">
-                    <img src="./img/benefits/quantity.svg" alt="Единиц оборудования">
-                </div>
-            </div>
-
-            <div class="list-item">
-                <div class="list-item__left">
-                    <h3 class="list-item__heading">
-                        200
-                    </h3>
-
-                    <div class="list-item__description">
-                        <p>
-                            признательных<br/>
-                            заказчиков<br/>
-                            по всему миру
-                        </p>
-                    </div>
-                </div>
-
-                <div class="list__item-right">
-                    <img src="./img/benefits/world.svg" alt="Заказы">
-                </div>
-            </div>
-
-            <div class="list-item">
-                <div class="list-item__left">
-                    <h3 class="list-item__heading">
-                        40
-                    </h3>
-
-                    <div class="list-item__description">
-                        <p>
-                            компаний в числе<br/>
-                            постоянных<br/>
-                            клиентов
-                        </p>
-                    </div>
-                </div>
-
-                <div class="list__item-right">
-                    <img src="./img/benefits/company.svg" alt="Клиенты">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!--Section with image-->
-<section class="section-with-image section-with-image_audit revert">
-    <div class="container">
-
-        <div class="section-with-image__left">
-            <h2 class="second-title section-with-image__title">
-                Без простоя, срывов срока и брака продукции
-            </h2>
-
-            <div class="section-with-image__description">
-                <p>Четко сформулированные потребности производства и выявление узких мест поможет точно определить вид и объем оборудования, необходимого для бесперебойной работы предприятия.</p><p>Только опираясь на результаты грамотного аудита можно подобрать именно то оборудование, которое нужно для получения всесторонней выгоды.</p>
-            </div>
-
-            <a href="#" class="section-with-image__button btn">
-                Подробнее
-            </a>
-        </div>
-
-        <div class="section-with-image__right">
-            <img src="./img/sections-with-image/image-2.png" alt="Оборудование">
-        </div>
-
-    </div>
-</section>
-
-
-<!--Calculation Section-->
-<section class="calculation calculation_audit">
-    <div class="container">
-
-        <h2 class="calculation__title">
-            Проведем аудит предприятия <br>и определим номенклатуру <br>необходимого оборудования
-        </h2>
-
-        <div class="calculation__description">
-            <p>
-                Сэкономим ваши средства на закупку агрегатов и поможем увеличить производительность
-            </p>
-        </div>
-
-        <button class="btn calculation__btn" data-modal="modal_callback">
-            Обратиться
-        </button>
-
-        <div class="calculation__image"></div>
-    </div>
-</section>
-
-
-<!--Projects Section-->
-<div class="projects projects_audit">
-    <div class="container">
-        <h2 class="projects__title second-title">
-            Рост производственных показателей <br>и другие выгоды аудита: примеры
-        </h2>
-
-        
-            <div class="projects__description">
-                <p>
-                    Ознакомьтесь с нашими проектами и убедитесь, что «Прогресс» работает на результат:
-                </p>
-            </div>
-        
-
-
-        <div class="projects__slider-wrap">
-            <div class="projects__slider">
-                <div class="slider-item">
-                    <div class="slider-left">
-                        <img src="./img/projects/audit-projects.png" alt="Действующий завод <br>по металлообработке">
-                    </div>
-
-                    <div class="slider-right">
-                        <h3 class="project__title">
-                            Действующий завод <br>по металлообработке
-                        </h3>
-
-                        <div class="project__info">
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Задача.</span> Выявить устаревшее оборудование для последующей модернизации.
-
-                            </div>
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Решение.</span> Проведено исследование объекта и оборудования, технических возможностей и технологических особенностей, составлен отчет с указанием слабых мест и рекомендациями по их устранению.
-
-                            </div>
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Результат.</span> Оценка общей ситуации и деталей производства позволила выявить факторы, негативно влияющие на производительность, и составить техзадание по их устранению.
-
-                            </div>
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Сроки.</span> Сроки. 2 недели.
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-<div class="slider-item">
-                    <div class="slider-left">
-                        <img src="./img/projects/audit-projects.png" alt="Действующий завод <br>по металлообработке">
-                    </div>
-
-                    <div class="slider-right">
-                        <h3 class="project__title">
-                            Действующий завод <br>по металлообработке
-                        </h3>
-
-                        <div class="project__info">
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Задача.</span> Выявить устаревшее оборудование для последующей модернизации.
-
-                            </div>
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Решение.</span> Проведено исследование объекта и оборудования, технических возможностей и технологических особенностей, составлен отчет с указанием слабых мест и рекомендациями по их устранению.
-
-                            </div>
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Результат.</span> Оценка общей ситуации и деталей производства позволила выявить факторы, негативно влияющие на производительность, и составить техзадание по их устранению.
-
-                            </div>
-                            <div class="project__info-col">
-
-                                <span class="project__info-heading">Сроки.</span> Сроки. 2 недели.
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-            <div class="slider-nav projects__slider-nav"></div>
-        </div>
-    </div>
+  </ul>
 </div>
-
+;
 
 <!--Benefits Section-->
-<section class="benefits @@class">
+<section class="benefits benefits_about">
     <div class="container">
         <h2 class="benefits__title second-title">
-            Наши достижения в цифрах
+            О компании
         </h2>
 
         <div class="benefits__list">
@@ -531,6 +299,335 @@
                 <div class="list__item-right">
                     <img src="./img/benefits/company.svg" alt="Клиенты">
                 </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--page-about-->
+<section class="page-about">
+    <div class="container">
+        <h1 class="page-about__title">
+            Мы создаем качественное оборудование с возможностью интеграции
+        </h1>
+
+        <div class="page-about__list">
+
+            <div class="list-item">
+
+                <div class="list-item__row list-item__row_first">
+
+                    <div class="list-item__image">
+                        <img src="./img/about/about-1.png" alt="Миссия">
+                    </div>
+
+                </div>
+
+                <div class="list-item__row list-item__row_second">
+
+                    <h3 class="list-item__title">
+                        Миссия
+                    </h3>
+
+                    <div class="list-item__description">
+                        <p>
+                            Своей миссией мы считаем, развитие и оптимизацию деятельности компании в интересах
+                            производственной сферы России с целью повышения её конкурентоспособности на мировом рынке.
+                        </p>
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <div class="list-item__row list-item__row_first">
+
+                    <div class="list-item__image">
+                        <img src="./img/about/about-2.png" alt="Стратегия">
+                    </div>
+
+                </div>
+
+                <div class="list-item__row list-item__row_second">
+
+                    <h3 class="list-item__title">
+                        Стратегия
+                    </h3>
+
+                    <div class="list-item__description">
+                        <p>
+                            Стратегией компании является завоевание лидирующих позиций на рынке машиностроения
+                            Российской Федерации и других отраслях промышленности в качестве надежного поставщика
+                            продукции и сервисных услуг.
+                        </p>
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <div class="list-item__row list-item__row_first">
+
+                    <div class="list-item__image">
+                        <img src="./img/about/about-3.png" alt="Поставщикам">
+                    </div>
+
+                </div>
+
+                <div class="list-item__row list-item__row_second">
+
+                    <h3 class="list-item__title">
+                        Поставщикам
+                    </h3>
+
+                    <div class="list-item__description">
+                        <p>
+                            Нашими поставщиками являются около полусотни самых надежных производителей из России и
+                            зарубежья. Мы сотрудничаем с крупнейшими импортерами и непосредственно
+                            заводами-производителями, поэтому можем гарантировать клиентам минимальные цены и надежные
+                            поставки продукции.
+                        </p>
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--production-about-->
+<section class="production-about">
+    <div class="container">
+        <h2 class="production-about__title second-title">
+            Производство
+        </h2>
+
+        <div class="production-about__description">
+            <p>
+                Производственно-торговая компания «Прогресс», Специализируется на решениях в области электропривода,
+                инжиниринга и ведения проектов. Обеспечивая высокую производительность предприятий малого и крупного
+                бизнеса на территории РФ. Мы готовы выполнять техническое сопровождение, предоставлять всевозможные
+                варианты решение Ваших производственных задач в кратчайшие сроки, при этом сохраняя самые оптимальные
+                для вас цены.
+            </p>
+        </div>
+
+        <div class="production-about__slider-wrap slider-with-nav">
+
+            <div class="production-about__slider slider">
+
+                <div class="slider__item">
+                    <a href="./img/production-slider.png"
+                       data-fancybox="gallery">
+                        <img src="./img/production-slider.png" alt="Производство">
+                    </a>
+                </div>
+
+                <div class="slider__item">
+                    <a href="./img/production-slider.png"
+                       data-fancybox="gallery">
+                        <img src="./img/production-slider.png" alt="Производство">
+                    </a>
+                </div>
+
+                <div class="slider__item">
+                    <a href="./img/production-slider.png"
+                       data-fancybox="gallery">
+                        <img src="./img/production-slider.png" alt="Производство">
+                    </a>
+                </div>
+
+                <div class="slider__item">
+                    <a href="./img/article-bg.png"
+                       data-fancybox="gallery">
+                        <img src="./img/article-bg.png" alt="Производство">
+                    </a>
+                </div>
+
+                <div class="slider__item">
+                    <a href="./img/production-slider.png"
+                       data-fancybox="gallery">
+                        <img src="./img/production-slider.png" alt="Производство">
+                    </a>
+                </div>
+
+                <div class="slider__item">
+                    <a href="./img/article-bg.png"
+                       data-fancybox="gallery">
+                        <img src="./img/article-bg.png" alt="Производство">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="production-about__slider-nav slider-nav">
+
+                <div class="slider-nav__item">
+                    <img src="./img/production-slider.png" alt="Производство">
+                </div>
+
+                <div class="slider-nav__item">
+                    <img src="./img/production-slider.png" alt="Производство">
+                </div>
+
+                <div class="slider-nav__item">
+                    <img src="./img/production-slider.png" alt="Производство">
+                </div>
+
+                <div class="slider-nav__item">
+                    <img src="./img/article-bg.png" alt="Производство">
+                </div>
+
+                <div class="slider-nav__item">
+                    <img src="./img/production-slider.png" alt="Производство">
+                </div>
+
+                <div class="slider-nav__item">
+                    <img src="./img/article-bg.png" alt="Производство">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--about-benefits-->
+<section class="about-benefits">
+    <div class="container">
+        <h2 class="about-benefits__title second-title">
+            Наши достижения
+        </h2>
+
+        <div class="about-benefits__list">
+
+            <div class="list-item">
+
+                <h3 class="list-item__title">
+                    СОБЛЮДЕНИЕ ДОГОВОРНЫХ ОБЯЗАТЕЛЬСТВ
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        Приоритетным для нас является строгое соблюдение договорных обязательств. Вы можете быть уверены, что получите заказанное оборудование точно в срок.
+                    </p>
+                </div>
+
+                <div class="list-item__icon">
+                    <img src="./img/about-benefits/documents.svg" alt="Иконка">
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title">
+                    ГАРАНТИИ КАЧЕСТВА
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        Гарантийный срок  эксплуатации, в зависимости  от типа оборудования от 12 до 60 месяцев. Каждое произведенное оборудование отличается долговечностью и рассчитано на длительный безремонтный срок эксплуатации.
+                    </p>
+                </div>
+
+                <div class="list-item__icon">
+                    <img src="./img/about-benefits/guard.svg" alt="Иконка">
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title">
+                    ВЫГОДНЫЕ УСЛОВИЯ
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        Мы всегда готовы к обсуждению обоюдно приемлемых сроков оплаты и условий предоставления скидок.
+                    </p>
+                </div>
+
+                <div class="list-item__icon">
+                    <img src="./img/about-benefits/conditions.svg" alt="Иконка">
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title">
+                    ИЗВЕСТНЫЕ
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        Все ключевые показатели находятся под постоянным контролем наших специалистов.
+                    </p>
+                </div>
+
+                <div class="list-item__icon">
+                    <img src="./img/about-benefits/brand.svg" alt="Иконка">
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title">
+                    ВНИМАНИЕ К ЗАКАЗЧИКАМ
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        Помогаем решать сложные ситуации, а не создавать их.
+                    </p>
+                </div>
+
+                <div class="list-item__icon">
+                    <img src="./img/about-benefits/attention.svg" alt="Иконка">
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title">
+                    КОМПЕТЕНТНЫЕ СПЕЦИАЛИСТЫ
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        Высокий уровень сервиса и компетенций наших сотрудников
+                    </p>
+                </div>
+
+                <div class="list-item__icon">
+                    <img src="./img/about-benefits/competence.svg" alt="Иконка">
+                </div>
+
             </div>
 
         </div>
@@ -543,12 +640,12 @@
     <div class="container">
         <div class="feedback__left">
             <h2 class="feedback__title second-title">
-                Избавьтесь от риска <br>переплат и простоя <br>производства
+                Остались вопросы?
             </h2>
 
             <div class="feedback__description">
                 <p>
-                    Закажите аудит и узнайте, какое оборудование <br>необходимо
+                    Оставьте свои контактные данные и наш специалист свяжется с вами для обсуждения деталей вашего проекта.
                 </p>
             </div>
         </div>
@@ -611,7 +708,6 @@
         </div>
     </div>
 </section>
-
 
 
 </main>
@@ -911,5 +1007,4 @@
 
 </body>
 </html>
-
 
