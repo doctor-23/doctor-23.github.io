@@ -4735,10 +4735,16 @@ pre {
   margin-left: calc((100vw - var(--container))/2);
 }
 
-.mills .detail-hero__image {
+.detail-hero.mills .detail-hero__image {
   -webkit-transform: translate(390px, 8px);
       -ms-transform: translate(390px, 8px);
           transform: translate(390px, 8px);
+}
+
+.detail-hero.hydrocyclone .detail-hero__image {
+  -webkit-transform: translateY(140px);
+      -ms-transform: translateY(140px);
+          transform: translateY(140px);
 }
 
 .detail-hero__image {
@@ -4902,6 +4908,36 @@ pre {
   max-width: 16.9%;
   padding-right: 30px;
   text-align: right;
+}
+
+.detail-documents {
+  padding-bottom: 160px;
+}
+
+.detail-documents__title {
+  margin-bottom: 30px;
+}
+
+.detail-documents__description {
+  margin-bottom: 65px;
+}
+
+.detail-documents__btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+}
+
+.detail-documents__btn-wrap .btn {
+  width: 358px;
+}
+
+.detail-documents__btn {
+  width: 198px;
 }
 
 #footer {
@@ -5768,7 +5804,13 @@ pre {
     max-width: 100vw;
   }
 
-  .mills .detail-hero__image {
+  .detail-hero.mills .detail-hero__image {
+    -webkit-transform: translateY(-70px);
+        -ms-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+
+  .detail-hero.hydrocyclone .detail-hero__image {
     -webkit-transform: translateY(-70px);
         -ms-transform: translateY(-70px);
             transform: translateY(-70px);
