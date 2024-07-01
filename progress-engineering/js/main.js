@@ -1780,6 +1780,7 @@ document.addEventListener('DOMContentLoaded', function () {
       draggable: true,
       appendDots: $(sliderNavi),
       appendArrows: $(sliderNavi),
+      adaptiveHeight: true,
       arrows: false,
       infinite: false,
       swipe: true,

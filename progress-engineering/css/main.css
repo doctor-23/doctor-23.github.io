@@ -2253,7 +2253,9 @@ pre {
       -ms-flex-align: center;
           align-items: center;
   gap: 56px;
-  height: 68px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   overflow-x: hidden;
 }
 
@@ -2840,9 +2842,9 @@ pre {
 .calculation__image {
   position: absolute !important;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   z-index: 0 !important;
   background: rgba(0,0,0,0) url("../img/main-calculation-image.png") right bottom/auto no-repeat;
   background-size: 22.8102189781vw 19.0114068441vw;
@@ -3166,8 +3168,10 @@ pre {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 209px;
-  height: 209px;
+  max-width: 209px;
+  width: 10.989010989vw;
+  max-height: 209px;
+  height: 10.989010989vw;
   padding-left: 28px;
   border-radius: 100%;
   background-color: var(--color-4);
@@ -3177,8 +3181,10 @@ pre {
 }
 
 .benefits__list .list__item-right img {
-  width: 97px;
-  height: 97px;
+  max-width: 97px;
+  width: 5.0505050505vw;
+  max-height: 97px;
+  height: 5.0505050505vw;
 }
 
 .we-are-help {
@@ -3604,6 +3610,8 @@ pre {
 }
 
 .contacts__row.contacts__row_top {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-height: 150px;
   margin-bottom: 120px;
 }
@@ -3654,6 +3662,8 @@ pre {
 }
 
 .contacts__col-content .content-item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3690,6 +3700,8 @@ pre {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -4515,8 +4527,9 @@ pre {
   position: absolute;
   right: 0;
   top: 0;
-  width: 209px;
-  height: 209px;
+  width: 10.989010989vw;
+  max-height: 209px;
+  height: 10.989010989vw;
   border-radius: 100%;
   background-color: var(--color-4);
   -webkit-transform: translate(36%, -33.6%);
@@ -5299,6 +5312,16 @@ pre {
   font-size: 17px;
 }
 
+@media screen and (min-width: 1919.99px) {
+  .calculation__image {
+    left: auto;
+    width: 22.8102189781vw;
+    height: 19.0114068441vw;
+    max-height: 365px;
+    background-size: contain;
+  }
+}
+
 @media screen and (min-width: 1950px) {
   .equipment-tech-timeline {
     overflow-x: visible;
@@ -5320,6 +5343,11 @@ pre {
             align-items: flex-start;
     max-width: 100vw;
     padding-left: 381px;
+    border-radius: 0;
+  }
+
+  .feedback__left {
+    max-width: 100%;
   }
 
   .feedback__title br {
@@ -5336,11 +5364,61 @@ pre {
     margin-left: 381px;
   }
 
+  .main-about .container {
+    max-width: var(--container);
+    margin-left: auto;
+  }
+
+  .main-about__slider .slider-item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .main-about__slider .slider-left {
+    max-width: 100%;
+  }
+
+  .main-about__slider .slider-description {
+    margin-bottom: 30px;
+  }
+
+  .main-about__slider .slider-right {
+    border-radius: var(--radius-2);
+  }
+
+  .main-about__slider .slider-right img {
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    border-radius: var(--radius-2);
+  }
+
   .main-about__slider-nav {
-    width: calc(var(--container) - (1920px - 100vw)/2);
-    -webkit-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-            transform: translateY(100%);
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    left: 381px;
+    bottom: 0;
+    -webkit-transform: translateY(calc(100% + 30px));
+        -ms-transform: translateY(calc(100% + 30px));
+            transform: translateY(calc(100% + 30px));
+  }
+
+  .benefits__list {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+
+  .benefits__list .list-item {
+    min-height: auto;
   }
 
   .equipment-tech-timeline__list {
@@ -5366,6 +5444,16 @@ pre {
 
   .equipment-tech-timeline__list .timeline__item__left {
     padding-left: 43px;
+  }
+}
+
+@media screen and (max-width: 1628.98px) {
+  .contacts__right .contacts__row.contacts__row_top .contacts__col-content {
+    gap: 10px;
+  }
+
+  .contacts__right .contacts__row.contacts__row_top .contacts__col-content .content-item:first-child {
+    max-width: 100%;
   }
 }
 
