@@ -1691,6 +1691,32 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
    * инициализация карты
    */
+  /**
+  * Табы на главнйо странце в секции Geography
+  */
+
+  const geographyTabs = document.querySelectorAll('.geography__tabs .geography_tab');
+  if (geographyTabs) {
+    const geographyTabsContent = document.querySelectorAll('.geography__tabs-content .geography__tab-content');
+    geographyTabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        const target = e.target;
+        const currentTab = target.classList === 'geography_tab' ? target : target.closest('.geography_tab');
+        const dataTab = currentTab.dataset.tab;
+        if (geographyTabsContent) {
+          geographyTabsContent.forEach(contentTab => {
+            const dataContentTab = contentTab.dataset.tab;
+            contentTab.style.display = dataContentTab === dataTab ? 'block' : 'none';
+          });
+        }
+        geographyTabs.forEach(tab => {
+          tab.classList.remove('active');
+        });
+        currentTab.classList.add('active');
+      });
+    });
+  }
   ;
 
   // Получаем ссылки с классами '.footer__policy-link' и '.footer__agreement-link'
@@ -1716,33 +1742,6 @@ document.addEventListener('DOMContentLoaded', function () {
     customSelects.forEach(select => {
       new CustomSelect('init', {
         selectElement: select
-      });
-    });
-  }
-
-  /**
-   * Табы на главнйо странце в секции Geography
-   */
-
-  const geographyTabs = document.querySelectorAll('.geography__tabs .geography_tab');
-  if (geographyTabs) {
-    const geographyTabsContent = document.querySelectorAll('.geography__tabs-content .geography__tab-content');
-    geographyTabs.forEach(tab => {
-      tab.addEventListener('click', e => {
-        e.preventDefault();
-        const target = e.target;
-        const currentTab = target.classList === 'geography_tab' ? target : target.closest('.geography_tab');
-        const dataTab = currentTab.dataset.tab;
-        if (geographyTabsContent) {
-          geographyTabsContent.forEach(contentTab => {
-            const dataContentTab = contentTab.dataset.tab;
-            contentTab.style.display = dataContentTab === dataTab ? 'block' : 'none';
-          });
-        }
-        geographyTabs.forEach(tab => {
-          tab.classList.remove('active');
-        });
-        currentTab.classList.add('active');
       });
     });
   }

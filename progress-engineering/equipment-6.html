@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon.svg">
+    <link rel="stylesheet" href="./css/vendor.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <title> Дробилка шлака</title>
+</head>
+<body class="details">
+
+
+<header id="header">
+    <div class="container">
+        <div class="header__main animated">
+            <a href="./" class="logo header__logo">
+                <img src="./img/icons/logo.svg" alt="LOGO">
+            </a>
+
+            <form action="#" class="header__search">
+                <label class="form-label">
+                    <svg width="24" height="24" class="svg-ico @@class" role="img">
+                        <use xlink:href="./img/icons/sprite.svg#zoom-in"></use>
+                    </svg>
+
+
+                    <input
+                            type="text"
+                            name="q"
+                            id="header_search_main"
+                            class="form-input"
+                            placeholder="Поиск"
+                    >
+                </label>
+            </form>
+
+            <div class="header__contacts">
+                <a href="mailto:sales@etc-progress.ru">
+                    sales@etc-progress.ru
+                </a>
+
+                <a href="tel:+73832484722">
+                    +7(383) 248 47 22
+                </a>
+            </div>
+
+            <div class="header__hamburger">
+                <div class="header__hamburger-line line-1"></div>
+                <div class="header__hamburger-line line-2"></div>
+                <div class="header__hamburger-line line-3"></div>
+            </div>
+
+            <button class="btn header__btn" data-modal="modal_callback">
+                Заказать звонок
+            </button>
+        </div>
+
+        <div class="header__fixed animated">
+            <a href="./" class="logo header__logo">
+                <img src="./img/icons/logo.svg" alt="LOGO">
+            </a>
+
+            <form action="#" class="header__search">
+                <label class="form-label">
+                    <svg width="24" height="24" class="svg-ico @@class" role="img">
+                        <use xlink:href="./img/icons/sprite.svg#zoom-in"></use>
+                    </svg>
+
+
+                    <input
+                            type="text"
+                            name="q"
+                            id="header_search_fixed"
+                            class="form-input"
+                            placeholder="Поиск"
+                    >
+                </label>
+            </form>
+
+            <nav class="header__nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="./">
+                            <svg width="24" height="24" class="svg-ico @@class" role="img">
+                                <use xlink:href="./img/icons/sprite.svg#home-02"></use>
+                            </svg>
+
+
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./equipment.html">
+                            <svg width="24" height="24" class="svg-ico @@class" role="img">
+                                <use xlink:href="./img/icons/sprite.svg#settings-01"></use>
+                            </svg>
+
+
+                            Оборудование
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./services.html">
+                            <svg width="24" height="24" class="svg-ico @@class" role="img">
+                                <use xlink:href="./img/icons/sprite.svg#cube-outline"></use>
+                            </svg>
+
+
+                            Услуги
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">
+                            <svg width="24" height="24" class="svg-ico @@class" role="img">
+                                <use xlink:href="./img/icons/sprite.svg#announcement-03"></use>
+                            </svg>
+
+
+                            Новости
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contacts.html">
+                            <svg width="24" height="24" class="svg-ico @@class" role="img">
+                                <use xlink:href="./img/icons/sprite.svg#phone-call-01"></use>
+                            </svg>
+
+
+                            Контакты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html">
+                            <svg width="24" height="24" class="svg-ico @@class" role="img">
+                                <use xlink:href="./img/icons/sprite.svg#folder-check"></use>
+                            </svg>
+
+
+                            О компании
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__contacts">
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Написать нам:
+                    </div>
+
+                    <a
+                            href="mailto:sales@etc-progress.ru"
+                            class="contacts-row__contact"
+                    >
+                        sales@etc-progress.ru
+                    </a>
+                </div>
+
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Позвонить нам:
+                    </div>
+
+                    <a
+                            href="tel:+73832484722"
+                            class="contacts-row__contact"
+                    >
+                        +7(383) 248 47 22
+                    </a>
+                </div>
+            </div>
+
+            <button class="btn header__btn" data-modal="modal_callback">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="main-page">
+
+
+<div class="breadcrumbs container">
+  <ul
+          class="breadcrumbs__list"
+          itemscope
+          itemtype="http://schema.org/BreadcrumbList"
+  >
+
+    <li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="./"
+                itemprop="name"
+        >
+            Главная
+        </a>
+    </li>
+
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
+<li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="./equipments.html"
+                itemprop="name"
+        >
+            Оборудование
+        </a>
+    </li>
+
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
+<li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="./equipment-technical.html"
+                itemprop="name"
+        >
+            Технологическое оборудование
+        </a>
+    </li>
+
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
+<li
+            class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/ListItem"
+    >
+        <a
+                href="#"
+                itemprop="name"
+        >
+             Дробилка шлака
+        </a>
+    </li>
+
+    <li class="breadcrumbs__item separator">
+        /
+    </li>
+
+
+  </ul>
+</div>
+
+
+<!--detail-hero-->
+<section class="detail-hero slag-crusher">
+    <div class="container">
+        <h1 class="detail-hero__title">
+             Дробилка шлака: «Прогресс инжиниринг»
+        </h1>
+
+        <div class="detail-hero__description">
+            <p>
+                Эффективное оборудование <br>для переработки шлака
+            </p>
+        </div>
+
+        <div class="detail-hero__btn-wrap">
+            <button class="btn detail-hero__btn detail-hero__btn_callback" data-modal="modal_callback">
+                Оставить заявку
+            </button>
+
+            <button class="btn detail-hero__btn detail-hero__btn_more transparent">
+                Подробнее
+            </button>
+        </div>
+    </div>
+
+    <div class="detail-hero__image">
+        <img src="./img/equipments-hero/equipment-6.png" alt=" Дробилка шлака: «Прогресс инжиниринг»">
+    </div>
+</section>
+
+
+<!--detail-about-->
+<section class="about-equipment @@detail_slag_crusher.about.class">
+  <div class="container">
+    <div class="about-equipment__col col_first">
+      <h2 class="about-equipment__title">
+         Дробилка шлака играет ключевую роль в процессе переработки шлака на промышленных предприятиях.
+      </h2>
+
+      <div class="about-equipment__description">
+        <p>
+          Это специализированное оборудование предназначено для измельчения и уменьшения размера шлака, что позволяет использовать его в дальнейших производственных процессах или в качестве строительного материала.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-equipment__col col_second">
+      <img src="./img/equipments-hero/equipment-6-1.png" alt="Мельница">
+    </div>
+
+  </div>
+</section>
+
+
+<!--quality-equipment-->
+<section class="quality-equipment">
+    <div class="container">
+        <h2 class="quality-equipment__title second-title">
+            Мы создаем качественное оборудование с возможностью интеграции
+        </h2>
+
+        <div class="quality-equipment__list">
+
+            <div class="list-item">
+
+                <div class="list-item__row row_first">
+                    <img src="./img/equipments-hero/equipment-6-2.png" alt="Область применения:">
+                </div>
+
+                <div class="list-item__row row_second">
+                    <h3 class="list-item__title">
+                        Область применения:
+                    </h3>
+
+                    <div class="list-item__description">
+                        <p>Дробилки шлака находят широкое применение в металлургической, горнодобывающей и строительной промышленности. Они используются для переработки различных видов шлака, включая металлургический, стеклянный, и доменный шлак.</p>
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        Подробнее
+                    </a>
+                </div>
+
+            </div>
+<div class="list-item">
+
+                <div class="list-item__row row_first">
+                    <img src="./img/equipments-hero/equipment-6-3.png" alt="Конструктивные особенности и принцип действия:">
+                </div>
+
+                <div class="list-item__row row_second">
+                    <h3 class="list-item__title">
+                        Конструктивные особенности и принцип действия:
+                    </h3>
+
+                    <div class="list-item__description">
+                        <p>Дробилка шлака обычно состоит из мощного корпуса, в котором расположен ротор с ножами или ударными плитами. Шлак подается внутрь дробилки, где он подвергается дроблению и измельчению под действием ротора. Полученные частицы шлака выходят через отверстия в корпусе.</p>
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        Подробнее
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<!--equipment-documents-->
+<section class="detail-documents">
+    <div class="container">
+        <h2 class="detail-documents__title second-title">
+            Ресурсы и документация
+        </h2>
+
+        <div class="detail-documents__description">
+            <p>
+                Здесь вы можете найти ссылки на более подробные технические спецификации, брошюры или руководства по использованию гидроциклонных установок "Прогресс инжиниринг". Это поможет вам лучше понять возможности и преимущества оборудования.
+            </p>
+        </div>
+
+        <div class="detail-documents__btn-wrap">
+            <button class="btn detail-documents__btn-technical">
+                Технические характеристики
+            </button>
+
+            <button class="btn detail-documents__btn-guide">
+                Руководство пользователя
+            </button>
+
+            <button class="btn detail-documents__btn-brochures">
+                Брошюры
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!--Projects Section-->
+<div class="projects projects_detail">
+    <div class="container">
+        <h2 class="projects__title second-title">
+            Наши технологии обеспечивают надежность, эффективность и гибкость в управлении вашим предприятием
+        </h2>
+
+        
+            <div class="projects__description">
+                <p>
+                    Ознакомьтесь с нашим портфолио и оцените результаты нашей работы:
+                </p>
+            </div>
+        
+
+
+        <div class="projects__slider-wrap">
+            <div class="projects__slider">
+                <div class="slider-item">
+                    <div class="slider-left">
+                        <img src="./img/projects/audit-projects.png" alt="Действующий завод <br>по металлообработке">
+                    </div>
+
+                    <div class="slider-right">
+                        <h3 class="project__title">
+                            Действующий завод <br>по металлообработке
+                        </h3>
+
+                        <div class="project__info">
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Задача.</span> Выявить устаревшее оборудование для последующей модернизации.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Решение.</span> Проведено исследование объекта и оборудования, технических возможностей и технологических особенностей, составлен отчет с указанием слабых мест и рекомендациями по их устранению.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Результат.</span> Оценка общей ситуации и деталей производства позволила выявить факторы, негативно влияющие на производительность, и составить техзадание по их устранению.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Сроки.</span> Сроки. 2 недели.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+<div class="slider-item">
+                    <div class="slider-left">
+                        <img src="./img/projects/audit-projects.png" alt="Действующий завод <br>по металлообработке">
+                    </div>
+
+                    <div class="slider-right">
+                        <h3 class="project__title">
+                            Действующий завод <br>по металлообработке
+                        </h3>
+
+                        <div class="project__info">
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Задача.</span> Выявить устаревшее оборудование для последующей модернизации.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Решение.</span> Проведено исследование объекта и оборудования, технических возможностей и технологических особенностей, составлен отчет с указанием слабых мест и рекомендациями по их устранению.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Результат.</span> Оценка общей ситуации и деталей производства позволила выявить факторы, негативно влияющие на производительность, и составить техзадание по их устранению.
+
+                            </div>
+                            <div class="project__info-col">
+
+                                <span class="project__info-heading">Сроки.</span> Сроки. 2 недели.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="slider-nav projects__slider-nav"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--Feedback Section-->
+<section class="feedback feedback_detail_1">
+    <div class="container">
+        <div class="feedback__left">
+            <h2 class="feedback__title second-title">
+                Поможем подобрать <br>и изготовим <br>оборудование под ключ
+            </h2>
+
+            <div class="feedback__description">
+                <p>
+                    Оставьте заявку и мы поможем определить потребности в оборудование конкретно для вашей компании,  без лишних затрат
+                </p>
+            </div>
+        </div>
+
+        <div class="feedback__right">
+            <form action="#" class="feedback__form" novalidate>
+                <label class="form__col">
+                    <input
+                            type="text"
+                            class="form-input input-name required"
+                            name="first_name"
+                            placeholder="Имя *"
+                            required
+                    >
+
+                    <span class="msg msg-error">
+                        Поле является обязательным
+                    </span>
+                    <span class="msg msg-empty">
+                        "Имя" должно быть не менее 2 букв
+                    </span>
+                </label>
+
+                <label class="form__col">
+                    <input
+                            type="tel"
+                            class="form-input input-phone required"
+                            name="tel"
+                            placeholder="Телефон *"
+                            required
+                    >
+
+                    <span class="msg msg-error">
+                        Поле является обязательным
+                    </span>
+                    <span class="msg msg-empty">
+                        Неверный формат телефона
+                    </span>
+                </label>
+
+                <label class="form__col">
+                    <textarea
+                            type="text"
+                            class="form-textarea"
+                            name="comment"
+                            placeholder="Комментарий"
+                    ></textarea>
+                </label>
+
+                <label class="form__col from__col-submit">
+                    <button type="submit" class="btn form-submit">
+                        Заказать консультацию по оборудованию
+                    </button>
+                </label>
+
+                <label class="form__col from__agreement">
+                    Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                </label>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!--Main FAQ Section-->
+<section class="faq faq_detail">
+    <div class="container">
+        <h2 class="faq__title second-title">
+            Вы спрашиваете — эксперты отвечают
+        </h2>
+
+        <div class="accordion faq__list">
+            <div class="accordion-item">
+                <div class="heading">
+                    <h4 class="heading-text">
+                        Требуется новое оборудование по чертежам «старого», вы беретесь за такие заказы?
+                    </h4>
+
+                    <div class="heading-icon"></div>
+                </div>
+
+                <div class="submenu">
+                    Да, конечно, проводим реинжиниринг и изготавливаем оборудование по вашим чертежам.
+                </div>
+            </div>
+<div class="accordion-item">
+                <div class="heading">
+                    <h4 class="heading-text">
+                        Вы предоставляете образцы оборудования?
+                    </h4>
+
+                    <div class="heading-icon"></div>
+                </div>
+
+                <div class="submenu">
+                    Да, конечно, проводим реинжиниринг и изготавливаем оборудование по вашим чертежам.
+                </div>
+            </div>
+<div class="accordion-item">
+                <div class="heading">
+                    <h4 class="heading-text">
+                        Когда нужно оплачивать заказ?
+                    </h4>
+
+                    <div class="heading-icon"></div>
+                </div>
+
+                <div class="submenu">
+                    Да, конечно, проводим реинжиниринг и изготавливаем оборудование по вашим чертежам.
+                </div>
+            </div>
+<div class="accordion-item">
+                <div class="heading">
+                    <h4 class="heading-text">
+                        Вы предоставляете гарантию на оборудование?
+                    </h4>
+
+                    <div class="heading-icon"></div>
+                </div>
+
+                <div class="submenu">
+                    Да, конечно, проводим реинжиниринг и изготавливаем оборудование по вашим чертежам.
+                </div>
+            </div>
+<div class="accordion-item">
+                <div class="heading">
+                    <h4 class="heading-text">
+                        Возможен ли самовывоз оборудование с ваших складов?
+                    </h4>
+
+                    <div class="heading-icon"></div>
+                </div>
+
+                <div class="submenu">
+                    Да, конечно, проводим реинжиниринг и изготавливаем оборудование по вашим чертежам.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--Feedback Section-->
+<section class="feedback feedback_detail_2">
+    <div class="container">
+        <div class="feedback__left">
+            <h2 class="feedback__title second-title">
+                Остались вопросы?
+            </h2>
+
+            <div class="feedback__description">
+                <p>
+                    Оставьте свои контактные данные и наш специалист свяжется с вами для обсуждения деталей вашего проекта.
+                </p>
+            </div>
+        </div>
+
+        <div class="feedback__right">
+            <form action="#" class="feedback__form" novalidate>
+                <label class="form__col">
+                    <input
+                            type="text"
+                            class="form-input input-name required"
+                            name="first_name"
+                            placeholder="Имя *"
+                            required
+                    >
+
+                    <span class="msg msg-error">
+                        Поле является обязательным
+                    </span>
+                    <span class="msg msg-empty">
+                        "Имя" должно быть не менее 2 букв
+                    </span>
+                </label>
+
+                <label class="form__col">
+                    <input
+                            type="tel"
+                            class="form-input input-phone required"
+                            name="tel"
+                            placeholder="Телефон *"
+                            required
+                    >
+
+                    <span class="msg msg-error">
+                        Поле является обязательным
+                    </span>
+                    <span class="msg msg-empty">
+                        Неверный формат телефона
+                    </span>
+                </label>
+
+                <label class="form__col">
+                    <textarea
+                            type="text"
+                            class="form-textarea"
+                            name="comment"
+                            placeholder="Комментарий"
+                    ></textarea>
+                </label>
+
+                <label class="form__col from__col-submit">
+                    <button type="submit" class="btn form-submit">
+                        Заказать консультацию по оборудованию
+                    </button>
+                </label>
+
+                <label class="form__col from__agreement">
+                    Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                </label>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!--More-services Section-->
+<section class="more-services">
+    <div class="container">
+        <h2 class="more-services__title second-title">
+            Другое оборудование и услуги
+        </h2>
+
+        <div class="more-services__list list-1">
+
+            <div class="item">
+                <h4 class="item-title">
+                    Щевые
+                </h4>
+
+                
+
+                <div class="item-image">
+                    
+                        <img src="./img/services/services-2.png" alt="Щевые">
+                    
+                </div>
+
+                <a href="./service.html" class="item-link"></a>
+            </div>
+<div class="item">
+                <h4 class="item-title">
+                    Круглые вибрационные
+                </h4>
+
+                
+
+                <div class="item-image">
+                    
+                        <img src="./img/equipments/equipment-1.png" alt="Круглые вибрационные">
+                    
+                </div>
+
+                <a href="./equipment-technical.html" class="item-link"></a>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+</main>
+
+<footer id="footer">
+    <div class="container">
+        <div class="footer__col col-1">
+            <a href="./" class="footer__logo">
+                <img src="./img/icons/logo-blue.svg" alt="LOGO">
+            </a>
+
+            <div class="footer__copyright">
+                Общество с ограниченной ответственностью «Прогресс»
+            </div>
+        </div>
+
+        <div class="footer__col col-2">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li><a href="./equipment.html">Оборудование</a></li>
+                    <li><a href="./services.html">Услуги</a></li>
+                    <li><a href="./blog.html">Новости</a></li>
+                    <li><a href="./contacts.html">Контакты</a></li>
+                    <li><a href="./about.html">О компании</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__col col-3">
+            <a href="#" class="footer__links footer__policy">
+                Политика обработки персональных данных
+            </a>
+            <a href="#" class="footer__links footer__agreement">
+                Пользовательское соглашение
+            </a>
+        </div>
+
+        <div class="footer__col col-4">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li>
+                        <a href="#">
+                            <img src="./img/logos/nznto.svg" alt="НЗНТО">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/logos/dncpumps.svg" alt="DNCPUMPS">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__col col-5">
+            <a href="#" download="" class="footer__download">
+                Скачать презентацию
+            </a>
+
+            <div class="footer__contacts">
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Написать нам:
+                    </div>
+
+                    <a
+                            href="mailto:sales@etc-progress.ru"
+                            class="contacts-row__contact"
+                    >
+                        sales@etc-progress.ru
+                    </a>
+                </div>
+
+                <div class="contacts-row">
+                    <div class="contacts-row__heading">
+                        Позвонить нам:
+                    </div>
+
+                    <a
+                            href="tel:+73832484722"
+                            class="contacts-row__contact"
+                    >
+                        +7(383) 248 47 22
+                    </a>
+                </div>
+            </div>
+
+            <button class="btn footer__btn" data-modal="modal_callback">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+</footer>
+
+<div class="download-presentation animated">
+    <a href="#" download>
+        <svg width="74" height="74" class="svg-ico @@class" role="img">
+            <use xlink:href="./img/icons/sprite.svg#stand"></use>
+        </svg>
+
+
+        <span>Скачать презентацию</span>
+    </a>
+</div>
+
+<div class="modal-wrap">
+    <div class="modal" id="modal_callback">
+        <div class="modal__content">
+            <div class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставьте заявку на расчет проекта
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами, чтобы рассчитать стоимость проекта
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="callback_form"
+                        novalidate
+                >
+                        <label class="form__col">
+                            <input
+                                    type="text"
+                                    class="form-input input-name required"
+                                    name="first_name"
+                                    placeholder="Имя *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <input
+                                    type="tel"
+                                    class="form-input input-phone required"
+                                    name="tel"
+                                    placeholder="Телефон *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                        </label>
+
+                        <label class="form__col from__col-submit">
+                            <button type="submit" class="btn form-submit">
+                                Заказать расчет
+                            </button>
+                        </label>
+
+                        <label class="form__col from__agreement">
+                            Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                        </label>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal-review-thx">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <h3 class="modal__title">
+                Спасибо, ваш отзыв успешно отправлен.
+            </h3>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-lead">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Заявка на консультацию
+                </h2>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" class="modal__form" id="lead_form">
+                    <input type="hidden" name="sales_funnel" value="Первичный контакт">
+                    <label class="modal__form-row">
+                        <input type="text" class="modal-input input-name" name="modal_lead_name"
+                               placeholder="Ваше имя">
+
+                        <span class="msg msg-error">
+                            Поле является обязательным
+                        </span>
+                        <span class="msg msg-empty">
+                            "Имя" должно содержать не менее 2 букв
+                        </span>
+                    </label>
+
+                    <label class="modal__form-row">
+                        <input type="tel" class="modal-input input-phone" name="modal_lead_name"
+                               placeholder="Ваш номер телефона">
+
+                        <span class="msg msg-error">
+                            Поле является обязательным
+                        </span>
+                        <span class="msg msg-empty">
+                            Неверный формат телефона
+                        </span>
+                    </label>
+
+                    <label class="modal__form-row">
+                        <input type="email" class="modal-input input-email" name="modal_lead_email"
+                               placeholder="Ваш e-mail">
+
+                        <span class="msg msg-error">
+                            Поле является обязательным
+                        </span>
+                        <span class="msg msg-empty">
+                            Неверный формат email
+                        </span>
+                    </label>
+
+                    <input type="submit" value="Отправить" class="btn modal__lead-submit modal-submit disabled">
+                </form>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__policy">
+                    Нажимая на кнопку “Отправить”, я соглашаюсь с условиями <a href="policy/">Политики
+                    конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal-lead-thx">
+        <div class="modal__content">
+            <span class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </span>
+
+            <h3 class="modal__title">
+                Спасибо, ваши данные успешно отправлены.
+            </h3>
+
+            <div class="modal__description">
+                <p>
+                    Мы свяжемся с вами в ближайшее время.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
+;

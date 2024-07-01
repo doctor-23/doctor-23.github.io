@@ -4731,6 +4731,7 @@ pre {
 }
 
 .detail-hero .container {
+  z-index: 2;
   max-width: 31.25vw;
   margin-left: calc((100vw - var(--container))/2);
 }
@@ -4745,6 +4746,69 @@ pre {
   -webkit-transform: translateY(140px);
       -ms-transform: translateY(140px);
           transform: translateY(140px);
+}
+
+.detail-hero.conveyor .detail-hero__image {
+  -webkit-transform: translate(395px, 8px);
+      -ms-transform: translate(395px, 8px);
+          transform: translate(395px, 8px);
+}
+
+.detail-hero.hydrocyclones .detail-hero__image {
+  -webkit-transform: translate(155px, -267px);
+      -ms-transform: translate(155px, -267px);
+          transform: translate(155px, -267px);
+}
+
+.detail-hero.slag-conveyor .detail-hero__image {
+  -webkit-transform: translate(134px, 126px);
+      -ms-transform: translate(134px, 126px);
+          transform: translate(134px, 126px);
+}
+
+.detail-hero.slag-conveyor .detail-hero__image img {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.detail-hero.slag-crusher .detail-hero__image {
+  -webkit-transform: translate(134px, 126px);
+      -ms-transform: translate(134px, 126px);
+          transform: translate(134px, 126px);
+}
+
+.detail-hero.slag-crusher .detail-hero__image img {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.detail-hero.belt-feeders .detail-hero__image {
+  -webkit-transform: translate(134px, 126px);
+      -ms-transform: translate(134px, 126px);
+          transform: translate(134px, 126px);
+}
+
+.detail-hero.belt-feeders .detail-hero__image img {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.detail-hero.vibrating-feeders .detail-hero__image {
+  -webkit-transform: translate(134px, 126px);
+      -ms-transform: translate(134px, 126px);
+          transform: translate(134px, 126px);
 }
 
 .detail-hero__image {
@@ -5794,6 +5858,14 @@ pre {
   }
 
   .detail-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
     padding-top: 150px;
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -5816,10 +5888,47 @@ pre {
             transform: translateY(-70px);
   }
 
+  .detail-hero.conveyor .detail-hero__image {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .detail-hero.hydrocyclones .detail-hero__image {
+    margin: -35% 0 -20%;
+    -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+
+  .detail-hero.slag-conveyor .detail-hero__image {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .detail-hero.slag-crusher .detail-hero__image {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .detail-hero.belt-feeders .detail-hero__image {
+    -webkit-transform: translateY(-70px);
+        -ms-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+
+  .detail-hero.vibrating-feeders .detail-hero__image {
+    -webkit-transform: translateY(-70px);
+        -ms-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+
   .detail-hero__image {
     position: static;
     max-width: 100vw;
-    padding-left: 381px;
+    padding: 0 20px 0 381px;
   }
 
   .detail-hero__description {
