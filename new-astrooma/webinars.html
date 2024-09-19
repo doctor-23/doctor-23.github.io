@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon.svg">
+    <link rel="stylesheet" href="./css/vendor.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <title>Вебинары - ASTROOMA</title>
+</head>
+<body class="@@class">
+
+
+<header id="header">
+    <div class="container">
+        <a href="/" class="logo header__logo tablet">
+            <svg width="105" height="38" class="svg-ico " role="img">
+                <use xlink:href="./img/icons/sprite.svg#logo"></use>
+            </svg>
+
+        </a>
+
+        <div class="hamburger-wrap animated">
+            <svg width="24" height="24" class="svg-ico header__close tablet" role="img">
+                <use xlink:href="./img/icons/sprite.svg#close"></use>
+            </svg>
+
+
+            <div class="hamburger-wrap__scroll">
+                <div class="hamburger-wrap__scroll-wrap">
+                    <div class="header__top-wrap">
+                        <ul class="social-list header__social">
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="14" height="14" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#inst"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="16" height="11" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="16" height="10" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="16" height="18" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#telegram"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <a href="#" class="header__location" id="choice_city">
+                            Москва
+                        </a>
+
+                        <a href="/" class="logo header__logo">
+                            <svg width="146" height="51" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#logo"></use>
+                            </svg>
+
+                        </a>
+
+                        <a href="tel:+79930019877" class="header__phone">
+                            +7 993 001-98-77
+                        </a>
+
+                        <button class="header__btn" data-modal="feedback_modal">
+                            Заказать звонок
+                        </button>
+                    </div>
+
+                    <div class="header__bottom-wrap">
+                        <nav class="header__nav nav">
+                            <ul class="nav__list">
+                                <li class="nav-item">
+                                    <a href="/">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="nav-item with-submenu">
+                                    <a href="./learn-to-free">
+                                        Учиться бесплатно
+                                    </a>
+
+                                    <ul class="nav-list__submenu">
+                                        <li class="nav-list__submenu-item">
+                                            <a href="./free-course.html">
+                                                Бесплатный курс
+                                            </a>
+                                        </li>
+                                        <li class="nav-list__submenu-item">
+                                            <a href="./database.html">
+                                                База знаний
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./courses.html">
+                                        Курсы
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./webinars.html">
+                                        Вебинары
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./evolution.html">
+                                        Развитие
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./consultation.html">
+                                        Консультации
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./about.html">
+                                        О школе
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./contacts.html">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <noindex class="tablet">
+            <button class="header__btn" data-modal="feedback_modal">
+                Заказать звонок
+            </button>
+        </noindex>
+
+        <div class="header__hamburger tablet">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="location_modal">
+        <div class="modal__content">
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Выберите город
+                </h3>
+
+                <span class="modal__close">
+                     <svg width="17" height="17" class="svg-ico" role="img">
+                        <use xlink:href="./img/icons/sprite.svg#close"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="modal__body">
+                <div class="modal__search-wrap">
+                    <div class="modal__search-text">
+                        Выберите из списка или укажите в поле
+                    </div>
+
+                    <label class="modal__search-input-wrap">
+                        <input type="text" class="modal__search-input" id="search_city" name="search_city" placeholder="Найти город">
+
+                        <svg width="16" height="16" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#location"></use>
+                        </svg>
+
+                    </label>
+
+                </div>
+
+                <div class="modal__cities-list">
+                    <div class="modal__cities-list_empty">
+                        К сожалению этого города нет в нашем списке, но это не помешает Вам пользоваться услугами нашей школы.
+                    </div>
+
+                    <div class="modal__cities-list__column">
+                        <a href="#" class="modal__cities-list__item active">
+                            Москва
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Санкт-Петербург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Новосибирск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Екатеринбург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Нижний Новгород
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Казань
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Самара
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Челябинск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Омск
+                        </a>
+                    </div>
+
+                    <div class="modal__cities-list__column">
+                        <a href="#" class="modal__cities-list__item">
+                            Москва
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Санкт-Петербург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Новосибирск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Екатеринбург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Нижний Новгород
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Казань
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Самара
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Челябинск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Омск
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<main class="main-page">
+
+
+<section class="webinars-hero">
+    <div class="container">
+
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+                <a href="./">
+                    Главная
+                </a>
+            </li>
+            <li class="breadcrumbs-separator">
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.33398 0.666748L4.66732 4.00008L1.33398 7.33341" stroke="white" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </li>
+            <li class="breadcrumbs-item">
+                Вебинары
+            </li>
+        </ul>
+
+        <h1 class="main-title webinars-hero__title">
+            <span class="orange">Вебинары</span> для новичков и профессиональных астрологов
+        </h1>
+
+        <div class="webinars-hero__description">
+            <p>
+                Получайте полезные знания и используйте их для себя и клиентов
+            </p>
+        </div>
+
+        <div class="webinars-hero__btn-wrap">
+
+            <a href="#webinars_anchor" class="link webinars-hero__link">
+                Выбрать вебинар
+            </a>
+
+            <button class="btn webinars-hero__btn">
+                Получить консультацию
+            </button>
+
+        </div>
+
+        <div class="webinars-hero__slider-wrap">
+
+            <div class="slider-heading">
+
+                <div class="slider-heading__title">
+                    Ближайшие вебинары:
+                </div>
+
+                <div class="slider-heading__nav slider-nav">
+                    <button class="slider-nav__btn btn_prev">
+                        <svg width="51" height="20" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#slider-arrow-prev"></use>
+                        </svg>
+
+                    </button>
+
+                    <button class="slider-nav__btn btn_next">
+                        <svg width="51" height="20" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#slider-arrow-next"></use>
+                        </svg>
+
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="webinars-slider">
+
+                <div class="slider-item">
+
+                    <div class="item__availability">
+                        Доступно уже сейчас
+                    </div>
+
+                    <h3 class="item__title third-title">
+                        «Профориентация»
+                    </h3>
+
+                    <div class="item__description">
+                        <p>
+                            Вебинар для профессиональных астрологов предоставит возможность расширить спектр услуг,
+                            проводить консультации по выбору профессии, основываясь на самых важных показателях
+                            натальной карты.
+                        </p>
+                    </div>
+
+                    <a href="#" class="link item__link without-star">
+                        Узнать подробнее
+                    </a>
+
+                </div>
+
+                <div class="slider-item">
+
+                    <div class="item__availability">
+                        Доступно уже сейчас
+                    </div>
+
+                    <h3 class="item__title third-title">
+                        «Правила денег»
+                    </h3>
+
+                    <div class="item__description">
+                        <p>
+                            Вебинар для новичков поможет разобраться, что влияет на финансовый достаток, как его
+                            улучшить, какие сферы деятельности и стратегии подходят именно для Вас.
+                        </p>
+                    </div>
+
+                    <a href="#" class="link item__link without-star">
+                        Узнать подробнее
+                    </a>
+
+                </div>
+
+                <div class="slider-item">
+
+                    <div class="item__availability">
+                        Доступно уже сейчас
+                    </div>
+
+                    <h3 class="item__title third-title">
+                        «Профориентация»
+                    </h3>
+
+                    <div class="item__description">
+                        <p>
+                            Вебинар для профессиональных астрологов предоставит возможность расширить спектр услуг,
+                            проводить консультации по выбору профессии, основываясь на самых важных показателях
+                            натальной карты.
+                        </p>
+                    </div>
+
+                    <a href="#" class="link item__link without-star">
+                        Узнать подробнее
+                    </a>
+
+                </div>
+
+                <div class="slider-item">
+
+                    <div class="item__availability">
+                        Доступно уже сейчас
+                    </div>
+
+                    <h3 class="item__title third-title">
+                        «Правила денег»
+                    </h3>
+
+                    <div class="item__description">
+                        <p>
+                            Вебинар для новичков поможет разобраться, что влияет на финансовый достаток, как его
+                            улучшить, какие сферы деятельности и стратегии подходят именно для Вас.
+                        </p>
+                    </div>
+
+                    <a href="#" class="link item__link without-star">
+                        Узнать подробнее
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="school-in-numbers section-on-webinars">
+    <div class="container">
+        <h2 class="second-title school-in-numbers__title">
+            Школа Астрологии в цифрах
+        </h2>
+
+        <div class="school-in-numbers__list">
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    1300+
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        выданных сертификатов об обучении
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    4
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        практикующих куратора
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    5000+
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        успешных консультаций
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    24/7
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        доступ к обучающим материалам
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    70
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        городов и 10 стран — территория охвата
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    900+
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        выпускников зарабатывают с помощью астрологии
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="webinars_anchor" class="section-webinars">
+    <div class="container">
+
+        <h2 class="section-webinars__title second-title">
+            Выберите вебинары и постигайте глубины астрологии
+        </h2>
+
+        <div class="section-webinars__list">
+
+            <div class="list-item">
+
+                <h3 class="item__title third-title">
+                    «Правила денег»
+                </h3>
+
+                <div class="item__excerpt">
+                    <p>
+                        Вебинар для новичков и всех тех, кому интересна данная тема — специальные знания не требуются.
+                    </p>
+                </div>
+
+                <div class="item__results">
+
+                    <div class="item__results-heading">
+                        Вы научитесь:
+                    </div>
+
+                    <ul class="item__results-list">
+
+                        <li class="list-item item_visible">
+                            Читать финансовые показатели в натальной карте
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Выбирать для себя наиболее эффективную стратегию отношений с деньгами — копить или тратить
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Определять действия, которые необходимо совершать, чтобы расширять финансовый канал и
+                            наращивать капитал
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Читать финансовые показатели в натальной карте
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Выбирать для себя наиболее эффективную стратегию отношений с деньгами — копить или тратить
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Определять действия, которые необходимо совершать, чтобы расширять финансовый канал и
+                            наращивать капитал
+                        </li>
+
+                    </ul>
+
+                    <a class="item__results-more">
+
+                        Показать все навыки
+
+                    </a>
+
+
+                </div>
+
+                <div class="item__footnote">
+                    Откройте секреты финансового успеха.
+                </div>
+
+                <a href="#" class="link without-star item__link">
+                    Узнать детали
+                </a>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="item__title third-title">
+                    «Лилит, или тёмная сторона твоей личности»
+                </h3>
+
+                <div class="item__excerpt">
+                    <p>
+                        Вебинар для новичков — специальные знания не требуются.
+
+                </div>
+
+                <div class="item__results">
+
+                    <div class="item__results-heading">
+                        После вебинара вы сможете:
+                    </div>
+
+                    <ul class="item__results-list">
+
+                        <li class="list-item item_visible">
+                            Разобраться с негативными сценариями прошлых воплощений
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Увидите с какими уроками в прошлых воплощениях вы не справились, как это может проявляться в
+                            этой жизни и самое главное — поймёте как это исправлять
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Разобраться с негативными сценариями прошлых воплощений
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Увидите с какими уроками в прошлых воплощениях вы не справились, как это может проявляться в
+                            этой жизни и самое главное — поймёте как это исправлять
+                        </li>
+
+                    </ul>
+
+                    <a class="item__results-more">
+
+                        Показать все навыки
+
+                    </a>
+
+
+                </div>
+
+                <div class="item__footnote">
+                    Взгляните на теневую сторону своей личности под новым углом.
+                </div>
+
+                <a href="#" class="link without-star item__link">
+                    Узнать детали
+                </a>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="item__title third-title">
+                    «Карма»
+                </h3>
+
+                <div class="item__excerpt">
+                    <p>
+                        2-дневный вебинар для новичков и профессиональных астрологов.
+                    </p>
+                </div>
+
+                <div class="item__results">
+
+                    <div class="item__results-heading">
+                        После обучения вы сумеете:
+                    </div>
+
+                    <ul class="item__results-list">
+
+                        <li class="list-item item_visible">
+                            Разобраться в базовых понятиях: карма, предназначение
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Раскрыть, в чем заключался кармический опыт и действительно ли он мешает продвигаться в этой
+                            жизни
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Разобраться в базовых понятиях: карма, предназначение
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Раскрыть, в чем заключался кармический опыт и действительно ли он мешает продвигаться в этой
+                            жизни
+                        </li>
+
+                    </ul>
+
+                    <a class="item__results-more">
+
+                        Показать все навыки
+
+                    </a>
+
+
+                </div>
+
+                <div class="item__footnote">
+                    Узнайте, что такое «предназначение души» и как к нему приблизиться.
+                </div>
+
+                <a href="#" class="link without-star item__link">
+                    Узнать детали
+                </a>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="item__title third-title">
+                    «Профориентация»
+                </h3>
+
+                <div class="item__excerpt">
+                    <p>
+                        Вебинар для профессиональных астрологов.
+                    </p>
+                </div>
+
+                <div class="item__results">
+
+                    <div class="item__results-heading">
+                        Повышайте средний чек на услуги за счёт:
+                    </div>
+
+                    <ul class="item__results-list">
+
+                        <li class="list-item item_visible">
+                            Рекомендаций по выбору профессии на основе важных планетарных соответствий
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Навыка применять самые важные и сильные черты клиента в его реализации
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Рекомендаций по выбору профессии на основе всех важных показателей
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Рекомендаций по выбору профессии на основе важных планетарных соответствий
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Навыка применять самые важные и сильные черты клиента в его реализации
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Рекомендаций по выбору профессии на основе всех важных показателей
+                        </li>
+
+                    </ul>
+
+                    <a class="item__results-more">
+
+                        Показать все навыки
+
+                    </a>
+
+
+                </div>
+
+                <div class="item__footnote">
+                    Получите более глубокие знания, повышайте свою экспертность и зарабатывайте больше.
+                </div>
+
+                <a href="#" class="link without-star item__link">
+                    Узнать детали
+                </a>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="item__title third-title">
+                    «Финансы. Тонкости консультирования»
+                </h3>
+
+                <div class="item__excerpt">
+                    <p>
+                        Вебинар для профессиональных астрологов.
+                    </p>
+                </div>
+
+                <div class="item__results">
+
+                    <div class="item__results-heading">
+                        Повышайте квалификацию и доход благодаря:
+                    </div>
+
+                    <ul class="item__results-list">
+
+                        <li class="list-item item_visible">
+                            Более глубокому анализу финансовой сферы гороскопа
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Объединению всех элементов в единую картину материального успеха
+                        </li>
+
+                        <li class="list-item item_visible">
+                            Наиболее полной и ясной трактовке противоречивых финансовых показателей
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Более глубокому анализу финансовой сферы гороскопа
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Объединению всех элементов в единую картину материального успеха
+                        </li>
+
+                        <li class="list-item item_hidden">
+                            Наиболее полной и ясной трактовке противоречивых финансовых показателей
+                        </li>
+
+                    </ul>
+
+                    <a class="item__results-more">
+
+                        Показать все навыки
+
+                    </a>
+
+
+                </div>
+
+                <div class="item__footnote">
+                    Добавляйте в список услуг консультации по финансам и получайте дополнительный доход.
+                </div>
+
+                <a href="#" class="link without-star item__link">
+                    Узнать детали
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+<section class="help-choice-webinar">
+    <div class="container">
+
+        <h2 class="help-choice-webinar__title second-title">
+            <span class="orange">Поможем выбрать</span> вебинар под ваши запросы и цели
+        </h2>
+
+        <div class="help-choice-webinar__description">
+            <pre>
+Оставьте контакты и получите бесплатную подробную консультацию по обучению.
+
+Менеджер подберёт вебинар в соответствии с вашими запросами, потребностями и задачами.
+            </pre>
+        </div>
+
+        <button class="link help-choice-webinar__btn">
+            Проконсультироваться
+        </button>
+
+    </div>
+</section>
+
+<section class="immersion">
+    <div class="container">
+
+        <div class="immersion__col col_1">
+            <h2 class="second-title immersion__title">
+                Погружайтесь в астрологию <span class="orange">с опытным наставником</span>
+            </h2>
+        </div>
+
+        <div class="immersion__col col_2">
+            <ul class="immersion__list list-with-star orange-star">
+
+                <li class="list-item">
+                    Пополняйте багаж знаний и навыков для улучшения своей жизни и повышения квалификации. Вебинары созданы основательницей школы — Оксаной Малковой.
+                </li>
+
+                <li class="list-item">
+                    Уникальные авторские разработки дополнены методическими материалами и «живыми» примерами. Освойте профессию ещё глубже и повышайте экспертность.
+                </li>
+
+            </ul>
+
+            <a href="#webinars_anchor" class="link immersion__link">
+                Выбрать вебинар
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-col col_1">
+                <a href="./" class="footer__logo">
+                    <svg width="146" height="51" class="svg-ico " role="img">
+                        <use xlink:href="./img/icons/sprite.svg#logo"></use>
+                    </svg>
+
+                </a>
+
+                <div class="footer__copyright">
+                    © 2022–2024 Astrooma. Все права защищены.
+                </div>
+            </div>
+            <div class="footer__top-col col_2">
+                <div class="footer__city" id="footer_city_choice">
+                    г. Москва
+                </div>
+
+                <a href="tel:+79930019877" class="footer__phone">
+                    +7 993 001-98-77
+                </a>
+
+                <a href="mailto:admin@astrooma-school.ru" class="footer__email">
+                    admin@astrooma-school.ru
+                </a>
+
+                <ul class="social-list footer__social">
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="14" height="14" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#inst"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="16" height="11" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="16" height="10" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="16" height="18" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#telegram"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="footer__top-col col_3">
+                <h4 class="col-heading">
+                    Обучение
+                </h4>
+
+                <nav class="footer__nav">
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="./">
+                                Главная
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./learn-to-free.html">
+                                Учись бесплатно
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./courses.html">
+                                Курсы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./webinars.html">
+                                Вебинары
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__top-col col_4">
+                <h4 class="col-heading">
+                    Развитие
+                </h4>
+
+                <nav class="footer__nav">
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="./club.html">
+                                Клуб астрологов
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./calendar.html">
+                                Ежемесячный календарь
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./dictionary.html">
+                                Словарь астролога
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./consultations.html">
+                                Словарь астролога
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__top-col col_5">
+                <h4 class="col-heading">
+                    О школе
+                </h4>
+
+                <nav class="footer__nav">
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="./contacts.html">
+                                Контакты
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./reviews.html">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./legal-data.html">
+                                Юридические данные
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-col col_1">
+                <a href="./policy.html" class="footer__policy">
+                    Политика обработки персональных данных
+                </a>
+
+                <a href="./agreement.html" class="footer__agreement">
+                    Пользовательское соглашение
+                </a>
+            </div>
+            <div class="footer__bottom-col col_2">
+                <div class="footer__license">
+                    Лицензия на осуществление образовательной деятельности 18.12.2023,
+                    № Л 035-01199-54/00977742
+                </div>
+            </div>
+            <div class="footer__bottom-col col_3">
+                <div class="footer__requisites">
+                    <pre>
+ИП Малкова Оксана Сергеевна
+ОГРН: 320547600115202
+ИНН: 540400190531
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="modal-wrap">
+    <div class="modal" id="modal_callback">
+        <div class="modal__content">
+            <div class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставить заявку
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами!
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="callback_form"
+                        novalidate
+                >
+                        <label class="form__col">
+                            <input
+                                    type="text"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="Имя *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <input
+                                    type="tel"
+                                    class="form-input input-phone required"
+                                    name="tel"
+                                    placeholder="Телефон *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                        </label>
+
+                        <label class="form__col from__col-submit">
+                            <button type="submit" class="btn form-submit">
+                                Отправить
+                            </button>
+                        </label>
+
+                        <label class="form__col from__agreement">
+                            Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                        </label>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_audit">
+        <div class="modal__content">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Заказать аудит
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами, чтобы провести аудит!
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="audit_form"
+                        novalidate
+                >
+                    <label class="form__col">
+                        <input
+                                type="text"
+                                class="form-input input-name required"
+                                name="name"
+                                placeholder="Имя *"
+                                required
+                        >
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                    </label>
+
+                    <label class="form__col">
+                        <input
+                                type="tel"
+                                class="form-input input-phone required"
+                                name="tel"
+                                placeholder="Телефон *"
+                                required
+                        >
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                    </label>
+
+                    <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                    </label>
+
+                    <label class="form__col from__col-submit">
+                        <button type="submit" class="btn form-submit">
+                            Отправить
+                        </button>
+                    </label>
+
+                    <label class="form__col from__agreement">
+                        Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_calculation">
+        <div class="modal__content">
+            <div class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставьте заявку на расчет проекта
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами, чтобы рассчитать стоимость проекта
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="calculation_form"
+                        novalidate
+                >
+                        <label class="form__col">
+                            <input
+                                    type="text"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="Имя *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <input
+                                    type="tel"
+                                    class="form-input input-phone required"
+                                    name="tel"
+                                    placeholder="Телефон *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                        </label>
+
+                        <label class="form__col from__col-submit">
+                            <button type="submit" class="btn form-submit">
+                                Заказать расчет
+                            </button>
+                        </label>
+
+                        <label class="form__col from__agreement">
+                            Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                        </label>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal_success">
+        <div class="modal__content animated zoomIn">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="<?= get_image_path() ?>/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Спасибо, ваши данные успешно отправлены.
+                </h3>
+
+                <div class="modal__description">
+                    <p>
+                        Мы свяжемся с вами в ближайшее время.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal_error">
+        <div class="modal__content animated zoomIn">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Что-то пошло не так!
+                </h3>
+
+                <div class="modal__description">
+                    <p>
+                        Попробуйте снова или <a href="tel:+7 (902) 976-69-69">позвоните нам</a>!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
