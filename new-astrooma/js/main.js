@@ -2125,37 +2125,104 @@ document.addEventListener('DOMContentLoaded', function () {
     slider.classList.add('swiper-wrapper');
     slides.forEach(slide => slide.classList.add('swiper-slide'));
 
-    // Инициализация Swiper
-    const swiper = new Swiper(sliderWrap, {
+    // Общие настройки для всех разрешений
+    const commonOptions = {
       speed: 300,
       // Скорость анимации слайда
-      autoHeight: true,
-      // Автоматическая настройка высоты
       loop: false,
       // Отключаем зацикливание слайдов
       grabCursor: true,
       // Включаем курсор "перетаскивания" при наведении
+      navigation: {
+        nextEl: nextButton,
+        // Элемент для кнопки "вперед"
+        prevEl: prevButton // Элемент для кнопки "назад"
+      }
+    };
+
+    // Инициализация Swiper
+    const swiper = new Swiper(sliderWrap, {
+      ...commonOptions,
+      // Используем общие опции
       // Responsive breakpoints
       breakpoints: {
         320: {
-          navigation: false,
           slidesPerView: 'auto',
           // Показываем по одному слайду за раз
-          spaceBetween: 20 // Отступ между слайдами
+          spaceBetween: 20,
+          // Отступ между слайдами
+          autoHeight: true,
+          // Автоматическая настройка высоты
+          navigation: false // Отключаем навигацию
         },
         576: {
-          // Настройки для экранов от 576px до 808px
           slidesPerView: 2,
           // Показываем по 2 слайда за раз
-          navigation: {
-            nextEl: nextButton,
-            // Элемент для кнопки "вперед"
-            prevEl: prevButton // Элемент для кнопки "назад"
-          }
+          spaceBetween: 20,
+          // Отступ между слайдами
+          autoHeight: true // Автоматическая настройка высоты
         },
         809: {
-          // Настройки для экранов от 809px и выше
-          spaceBetween: 40 // Отступ между слайдами для больших экранов
+          slidesPerView: 2,
+          // Показываем по 2 слайда за раз
+          spaceBetween: 25 // Отступ между слайдами для больших экранов
+        }
+      }
+    });
+  }
+  function coursesHeroSlider(sliderWrap) {
+    // Находим внутренние элементы внутри обертки слайдера
+    const slider = sliderWrap.querySelector('.courses-slider');
+    const slides = slider.querySelectorAll('.slider-item');
+    const nextButton = sliderWrap.querySelector('.btn_next');
+    const prevButton = sliderWrap.querySelector('.btn_prev');
+
+    // Добавляем нужные классы для Swiper
+    sliderWrap.classList.add('swiper');
+    slider.classList.add('swiper-wrapper');
+    slides.forEach(slide => slide.classList.add('swiper-slide'));
+
+    // Общие настройки для всех разрешений
+    const commonOptions = {
+      speed: 300,
+      // Скорость анимации слайда
+      loop: false,
+      // Отключаем зацикливание слайдов
+      grabCursor: true,
+      // Включаем курсор "перетаскивания" при наведении
+      navigation: {
+        nextEl: nextButton,
+        // Элемент для кнопки "вперед"
+        prevEl: prevButton // Элемент для кнопки "назад"
+      }
+    };
+
+    // Инициализация Swiper
+    const swiper = new Swiper(sliderWrap, {
+      ...commonOptions,
+      // Используем общие опции
+      // Responsive breakpoints
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          // Показываем по одному слайду за раз
+          spaceBetween: 20,
+          // Отступ между слайдами
+          autoHeight: true,
+          // Автоматическая настройка высоты
+          navigation: false // Отключаем навигацию
+        },
+        576: {
+          slidesPerView: 2,
+          // Показываем по 2 слайда за раз
+          spaceBetween: 20,
+          // Отступ между слайдами
+          autoHeight: true // Автоматическая настройка высоты
+        },
+        809: {
+          slidesPerView: 2,
+          // Показываем по 2 слайда за раз
+          spaceBetween: 25 // Отступ между слайдами для больших экранов
         }
       }
     });
@@ -2224,6 +2291,87 @@ document.addEventListener('DOMContentLoaded', function () {
       listChildren.forEach(item => {
         // Находим кнопку "Показать все навыки/Скрыть все навыки" внутри каждого элемента
         const btnMore = item.querySelector('.item__results-more');
+
+        // Если кнопки нет, то завершаем выполнение функции
+        if (!btnMore) {
+          return;
+        }
+
+        // Добавляем обработчик события 'click' на кнопку
+        btnMore.addEventListener('click', e => {
+          e.preventDefault(); // Останавливаем стандартное поведение кнопки (например, если это была ссылка)
+
+          // Переключаем класс 'show' у кнопки при каждом нажатии
+          btnMore.classList.toggle('show');
+
+          // Находим список с навыками внутри текущего элемента
+          const resultsList = item.querySelector('.item__results-list');
+
+          // Определяем, находится ли кнопка в состоянии "Показать" или "Скрыть"
+          const isShow = btnMore.classList.contains('show');
+
+          // Меняем текст кнопки в зависимости от состояния
+          btnMore.textContent = isShow ? 'Скрыть все навыки' : 'Показать все навыки';
+
+          // Если списка с результатами нет, завершаем выполнение функции
+          if (!resultsList) {
+            return;
+          }
+
+          // Находим все элементы списка внутри контейнера с результатами
+          const listItems = resultsList.querySelectorAll('.list-item');
+
+          // Если в списке нет элементов, завершаем выполнение
+          if (listItems.length <= 0) {
+            return;
+          }
+
+          // Проходим по каждому элементу списка навыков
+          listItems.forEach(item => {
+            // Если кнопка в состоянии "Показать", удаляем класс 'item_hidden' у всех элементов списка
+            if (isShow) {
+              item.classList.remove('item_hidden');
+            }
+
+            // Если кнопка в состоянии "Скрыть" и элемент не является видимым, добавляем класс 'item_hidden'
+            if (!isShow && !item.classList.contains('item_visible')) {
+              item.classList.add('item_hidden');
+            }
+          });
+        });
+      });
+    }
+  }
+
+  // Находим элемент с классом '.courses-hero__slider-wrap'
+  const coursesHeroSliderEl = document.querySelector('.courses-hero__slider-wrap');
+
+  // Если элемент существует, вызываем функцию для инициализации слайдера
+  if (coursesHeroSliderEl) {
+    coursesHeroSlider(coursesHeroSliderEl);
+  }
+
+  /**
+   * Находим элемент с классом '.section-courses__list', который содержит список вебинаров
+   */
+  const coursesList = document.querySelector('.section-courses__list');
+
+  // Если элемент списка найден, продолжаем выполнение
+  if (coursesList) {
+    // Преобразуем коллекцию детей списка (coursesList.children) в массив для использования метода forEach
+    const listChildren = Array.from(coursesList.children);
+
+    // Проверяем, есть ли в списке элементы
+    if (listChildren.length) {
+      // Проходим по каждому элементу списка
+      listChildren.forEach(item => {
+        // Находим кнопку "Показать все навыки/Скрыть все навыки" внутри каждого элемента
+        const btnMore = item.querySelector('.item__results-more');
+
+        // Если кнопки нет, то завершаем выполнение функции
+        if (!btnMore) {
+          return;
+        }
 
         // Добавляем обработчик события 'click' на кнопку
         btnMore.addEventListener('click', e => {
