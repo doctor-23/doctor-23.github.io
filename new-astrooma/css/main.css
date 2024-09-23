@@ -1779,6 +1779,7 @@ pre {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100%;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -6663,6 +6664,16 @@ pre {
     display: block !important;
   }
 
+  .form-input,
+  .form-textarea {
+    height: 50px;
+    padding: 20px 14.5px;
+  }
+
+  .form-textarea {
+    height: 100px;
+  }
+
   .custom-radio .custom-radio-text {
     height: 40px;
     padding: 0 16px;
@@ -6694,9 +6705,9 @@ pre {
 
   .form-label label {
     left: 11px;
-    -webkit-transform: translateY(40%);
-        -ms-transform: translateY(40%);
-            transform: translateY(40%);
+    -webkit-transform: translateY(13.5px);
+        -ms-transform: translateY(13.5px);
+            transform: translateY(13.5px);
   }
 
   .form-label label,
@@ -6779,7 +6790,7 @@ pre {
   }
 
   .school-founder.on-webinar {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
 
   .school-founder.on-webinar .school-founder__heading {
@@ -7656,6 +7667,9 @@ pre {
   }
 
   .webinar-hero .breadcrumbs {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto 20px;
   }
 
