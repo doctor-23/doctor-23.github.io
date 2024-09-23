@@ -150,6 +150,29 @@ function getStyle(elem) {
   }
 }
 
+/**
+ * Разделяет текст элемента на два слова и вставляет между ними разрыв строки.
+ *
+ * @param {HTMLElement} item - Родительский элемент, внутри которого ищем нужный текст.
+ * @param {string} className - Класс элемента, содержащего текст, который нужно разделить на две строки.
+ */
+const wordBreaking = (item, className) => {
+  // Находим элемент с переданным классом внутри родительского элемента
+  const title = item.querySelector(className);
+
+  // Получаем текст внутри элемента и удаляем пробелы в начале и конце строки
+  const text = title.textContent.trim();
+
+  // Разделяем текст на массив слов по пробелам
+  const words = text.split(' ');
+
+  // Если в тексте ровно два слова, выполняем замену текста с разрывом строки
+  if (words.length === 2) {
+    // Вставляем разрыв строки между первым и вторым словом
+    title.innerHTML = `${words[0]}<br>${words[1]}`;
+  }
+};
+
 // клик вне элемента
 
 function clickOutside(el, btn, cl) {
@@ -2227,6 +2250,54 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+  function otherWebinarsSlider(sliderWrap) {
+    // Находим внутренние элементы внутри обертки слайдера
+    const slider = sliderWrap.querySelector('.webinars-others__slider');
+    const slides = slider.querySelectorAll('.slider-item');
+    const nextButton = sliderWrap.querySelector('.btn_next');
+    const prevButton = sliderWrap.querySelector('.btn_prev');
+
+    // Добавляем нужные классы для Swiper
+    sliderWrap.classList.add('swiper');
+    slider.classList.add('swiper-wrapper');
+    slides.forEach(slide => slide.classList.add('swiper-slide'));
+
+    // Общие настройки для всех разрешений
+    const commonOptions = {
+      speed: 300,
+      // Скорость анимации слайда
+      loop: false,
+      // Отключаем зацикливание слайдов
+      autoHeight: true,
+      // Автоматическая настройка высоты
+      grabCursor: true,
+      // Включаем курсор "перетаскивания" при наведении
+      navigation: {
+        nextEl: nextButton,
+        // Элемент для кнопки "вперед"
+        prevEl: prevButton // Элемент для кнопки "назад"
+      }
+    };
+
+    // Инициализация Swiper
+    const swiper = new Swiper(sliderWrap, {
+      ...commonOptions,
+      // Используем общие опции
+      // Responsive breakpoints
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          // Показываем по одному слайду за раз
+          spaceBetween: 20 // Отступ между слайдами
+        },
+        809: {
+          slidesPerView: 2,
+          // Показываем по 2 слайда за раз
+          spaceBetween: 40 // Отступ между слайдами для больших экранов
+        }
+      }
+    });
+  }
 
   // Находим все элементы с классом '.reviews__slider-wrap'
   const reviewsSliders = document.querySelectorAll('.reviews__slider-wrap');
@@ -2417,6 +2488,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     }
+  }
+  const webinarResultsList = document.querySelector('.webinar-results__list');
+  if (webinarResultsList) {
+    const listItems = Array.from(webinarResultsList.children);
+    if (listItems.length > 0) {
+      listItems.forEach(item => wordBreaking(item, '.third-title'));
+    }
+  }
+  const otherWebinarsList = document.querySelector('.webinars-others__slider-wrap');
+  if (webinarResultsList) {
+    otherWebinarsSlider(otherWebinarsList);
   }
 
   /**
