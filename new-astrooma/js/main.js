@@ -961,7 +961,7 @@ function formPromocodeValid(el, isRequired = false) {
 ;
 class Accordion {
   constructor(selector, multiple) {
-    this.el = document.querySelector(selector);
+    this.el = typeof selector === 'string' ? document.querySelector(selector) : selector;
     this.multiple = multiple;
     if (!this.el) return;
     this.bindEvents();
@@ -1802,7 +1802,12 @@ document.addEventListener('DOMContentLoaded', function () {
    * инициализация аккордеона
    */
 
-  const myAccordion = new Accordion('.accordion', false);
+  const accordions = document.querySelectorAll('.accordion');
+  if (accordions.length > 0) {
+    accordions.forEach(accordion => {
+      const myAccordion = new Accordion(accordion, false);
+    });
+  }
 
   /**
    * инициализация масок

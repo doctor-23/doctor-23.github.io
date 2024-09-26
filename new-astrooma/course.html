@@ -1,0 +1,2810 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon.svg">
+    <link rel="stylesheet" href="./css/vendor.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <title>Курс - ASTROOMA</title>
+</head>
+<body class="@@class">
+
+
+<header id="header">
+    <div class="container">
+        <a href="/" class="logo header__logo tablet">
+            <svg width="105" height="38" class="svg-ico " role="img">
+                <use xlink:href="./img/icons/sprite.svg#logo"></use>
+            </svg>
+
+        </a>
+
+        <div class="hamburger-wrap animated">
+            <svg width="24" height="24" class="svg-ico header__close tablet" role="img">
+                <use xlink:href="./img/icons/sprite.svg#close"></use>
+            </svg>
+
+
+            <div class="hamburger-wrap__scroll">
+                <div class="hamburger-wrap__scroll-wrap">
+                    <div class="header__top-wrap">
+                        <ul class="social-list header__social">
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="14" height="14" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#inst"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="16" height="11" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="16" height="10" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" target="_blank">
+                                    <svg width="16" height="18" class="svg-ico " role="img">
+                                        <use xlink:href="./img/icons/sprite.svg#telegram"></use>
+                                    </svg>
+
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <a href="#" class="header__location" id="choice_city">
+                            Москва
+                        </a>
+
+                        <a href="/" class="logo header__logo">
+                            <svg width="146" height="51" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#logo"></use>
+                            </svg>
+
+                        </a>
+
+                        <a href="tel:+79930019877" class="header__phone">
+                            +7 993 001-98-77
+                        </a>
+
+                        <button class="header__btn" data-modal="feedback_modal">
+                            Заказать звонок
+                        </button>
+                    </div>
+
+                    <div class="header__bottom-wrap">
+                        <nav class="header__nav nav">
+                            <ul class="nav__list">
+                                <li class="nav-item">
+                                    <a href="/">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="nav-item with-submenu">
+                                    <a href="./learn-to-free">
+                                        Учиться бесплатно
+                                    </a>
+
+                                    <ul class="nav-list__submenu">
+                                        <li class="nav-list__submenu-item">
+                                            <a href="./free-course.html">
+                                                Бесплатный курс
+                                            </a>
+                                        </li>
+                                        <li class="nav-list__submenu-item">
+                                            <a href="./database.html">
+                                                База знаний
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./courses.html">
+                                        Курсы
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./webinars.html">
+                                        Вебинары
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./evolution.html">
+                                        Развитие
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./consultation.html">
+                                        Консультации
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./about.html">
+                                        О школе
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./contacts.html">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <noindex class="tablet">
+            <button class="header__btn" data-modal="feedback_modal">
+                Заказать звонок
+            </button>
+        </noindex>
+
+        <div class="header__hamburger tablet">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="location_modal">
+        <div class="modal__content">
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Выберите город
+                </h3>
+
+                <span class="modal__close">
+                     <svg width="17" height="17" class="svg-ico" role="img">
+                        <use xlink:href="./img/icons/sprite.svg#close"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="modal__body">
+                <div class="modal__search-wrap">
+                    <div class="modal__search-text">
+                        Выберите из списка или укажите в поле
+                    </div>
+
+                    <label class="modal__search-input-wrap">
+                        <input type="text" class="modal__search-input" id="search_city" name="search_city" placeholder="Найти город">
+
+                        <svg width="16" height="16" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#location"></use>
+                        </svg>
+
+                    </label>
+
+                </div>
+
+                <div class="modal__cities-list">
+                    <div class="modal__cities-list_empty">
+                        К сожалению этого города нет в нашем списке, но это не помешает Вам пользоваться услугами нашей школы.
+                    </div>
+
+                    <div class="modal__cities-list__column">
+                        <a href="#" class="modal__cities-list__item active">
+                            Москва
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Санкт-Петербург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Новосибирск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Екатеринбург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Нижний Новгород
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Казань
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Самара
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Челябинск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Омск
+                        </a>
+                    </div>
+
+                    <div class="modal__cities-list__column">
+                        <a href="#" class="modal__cities-list__item">
+                            Москва
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Санкт-Петербург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Новосибирск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Екатеринбург
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Нижний Новгород
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Казань
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Самара
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Челябинск
+                        </a>
+                        <a href="#" class="modal__cities-list__item">
+                            Омск
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<main class="main-page">
+
+
+<section class="course-hero">
+    <div class="container">
+
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+                <a href="./">
+                    Главная
+                </a>
+            </li>
+            <li class="breadcrumbs-separator">
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.33398 0.666748L4.66732 4.00008L1.33398 7.33341" stroke="white" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </li>
+            <li class="breadcrumbs-item">
+                <a href="./courses.html">
+                    Курсы
+                </a>
+            </li>
+            <li class="breadcrumbs-separator">
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.33398 0.666748L4.66732 4.00008L1.33398 7.33341" stroke="white" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </li>
+            <li class="breadcrumbs-item">
+                Натальная астрология
+            </li>
+        </ul>
+
+        <h1 class="main-title course-hero__title">
+            курс «Натальная АСТРОЛОГИЯ С НУЛЯ»
+        </h1>
+
+        <div class="course-hero__description">
+            <p>
+                Освойте востребованную профессию астролога на курсе Оксаны Малковой
+            </p>
+        </div>
+
+        <div class="course-hero__btn-wrap">
+
+            <a href="#course_packages" class="link course-hero__link without-star">
+                Записаться на обучение
+            </a>
+
+            <a href="#course_programme" class="course-hero__link-more">
+                Ознакомиться с программой курса
+            </a>
+
+        </div>
+
+        <div class="course-hero__course-info">
+
+            <div class="info-item">
+
+                <h3 class="info-item__title">
+                    65
+                </h3>
+
+                <div class="info-item__description">
+                    уроков за 6 месяцев
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <h3 class="info-item__title">
+                    1
+                </h3>
+
+                <div class="info-item__description">
+                    онлайн практика в неделю
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <h3 class="info-item__title">
+                    2
+                </h3>
+
+                <div class="info-item__description">
+                    урока в неделю
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="course-hero__image" style="background-image: url('./img/courses/natal-hero.png');">
+            <div class="course-hero__start">
+                Начало курса<br>
+                21 сентября
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="course-liquid">
+    <div class="container">
+
+        <div class="course-liquid__col col_1">
+
+            <h2 class="second-title course-liquid__title">
+                КУРС ПОДОЙДЕТ ВАМ, ЕСЛИ ВЫ:
+            </h2>
+
+        </div>
+        <div class="course-liquid__col col_2">
+
+            <ul class="course-liquid__list list-with-star gold-star">
+
+                <li class="list-item">
+                    Только начали интересоваться астрологией и хотите превратить свое увлечение в высокооплачиваемое
+                    хобби.
+                </li>
+                <li class="list-item">
+                    Уже пробовали заниматься астрологией, но понимаете, что вам не хватает знаний.
+                </li>
+                <li class="list-item">
+                    Зарабатываете с помощью астрологии, но хотите отточить свои навыки и глубже разобраться в теме.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="course-mastery">
+    <div class="container">
+
+        <div class="course-mastery__heading">
+
+            <h2 class="second-title course-mastery__title">
+                Знания + практика
+            </h2>
+
+            <div class="course-mastery__description">
+                <p>
+                    На обучении вы получите готовые инструменты для поиска ответов и изменений во всех сферах жизни
+                </p>
+            </div>
+
+        </div>
+
+        <div class="course-mastery__list">
+
+            <div class="course-mastery__list-item list-item_1">
+
+                <h3 class="third-title list-item__title">
+                    Знания
+                </h3>
+
+                <ul class="list-item__list list-with-star gold-star">
+
+                    <li class="list-item">
+                        Научитесь с легкостью читать натальную карту и сможете получить ответы на многие вопросы.
+                    </li>
+
+                    <li class="list-item">
+                        Лучше поймете себя и окружающих, сможете помогать в этом клиентам.
+                    </li>
+
+                    <li class="list-item">
+                        Узнаете с помощью каких действий сможете приблизить желаемое будущее.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="course-mastery__list-item list-item_2">
+
+                <h3 class="third-title list-item__title">
+                    практика
+                </h3>
+
+                <ul class="list-item__list list-with-star gold-star">
+
+                    <li class="list-item">
+                        Составите свой список СЗД (солнцезажигающих действий) - конкретные действия относительно Вашей
+                        натальной карты, позволяющие проработать Солнце в гороскопе.
+                        Если следовать этим действиям, количество внутренней энергии увеличивается. А это, в свою
+                        очередь, помогает реализовать свой потенциал, легче добиваться своих целей.
+                    </li>
+
+                    <li class="list-item">
+                        Подберете способы проработки негативных программ и сценариев, а также избавитесь от них.
+                    </li>
+
+                    <li class="list-item">
+                        Составите список действий, которые прокачают вашу женственность, таланты и улучшат финансовый
+                        поток.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="course-mastery__list-item list-item_3">
+
+                <div class="list-item__heading">
+                    Важно!
+                </div>
+
+                <div class="list-item__description">
+                    <p>
+                        Вы не просто изучите астрологию, вы получите востребованную на ближайшие 20 лет профессию.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="course-outcomes">
+    <div class="container">
+
+        <h2 class="second-title course-outcomes__title">
+            Какие вопросы решает натальная астрология?
+        </h2>
+
+        <ul class="course-outcomes__list">
+
+            <li class="list-item">
+                до
+            </li>
+            <li class="list-item">
+                После
+            </li>
+            <li class="list-item">
+                Неудовлетворенность текущим местом работы
+            </li>
+            <li class="list-item">
+                Получение новой востребованной профессии
+            </li>
+            <li class="list-item">
+                Сложность в принятии решений
+            </li>
+            <li class="list-item">
+                Уверенность в своих действиях
+            </li>
+            <li class="list-item">
+                Проблемы в межличностном общении
+            </li>
+            <li class="list-item">
+                Налаживание межличностных связей через понимание своих сильных сторон и коммуникативных способностей
+            </li>
+            <li class="list-item">
+                Проблемы в отношениях
+            </li>
+            <li class="list-item">
+                Налаживание личной жизни через понимание и устранение проблематики
+            </li>
+            <li class="list-item">
+                Незнание как пробить финансовый потолок
+            </li>
+            <li class="list-item">
+                Понимание индивидуальной успешной финансовой стратегии
+            </li>
+            <li class="list-item">
+                Непонимание своего предназначения
+            </li>
+            <li class="list-item">
+                Осознание своего кармического опыта и предназначения, понимание врожденных сильных и слабых сторон
+            </li>
+            <li class="list-item">
+                Недовольство своей жизнью и ее течением
+            </li>
+            <li class="list-item">
+                Удовлетворенность в большинстве жизненных сфер и дальнейшее их прокачивание
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+<section class="course-skills">
+    <div class="container">
+
+        <div class="course-skills__heading">
+
+            <h2 class="second-title course-skills__title">
+                ПОСЛЕ ОБУЧЕНИЯ ВЫ СМОЖЕТЕ ДЕЛАТЬ:
+            </h2>
+
+            <a href="#course_packages" class="link without-star course-skills__link">
+                Записаться на обучение
+            </a>
+
+        </div>
+
+        <ul class="course-skills__list">
+
+            <li class="list-item">
+                Общий разбор гороскопа рождения (таланты, возможности, основные сценарии жизни)
+            </li>
+
+            <li class="list-item">
+                Детский гороскоп (рекомендации по развитию способностей, подбор учителей, дополнительных занятий и
+                секций)
+            </li>
+
+            <li class="list-item">
+                Разбор профориентации и финансов (выбор сферы для реализации, финансовые правила, особенности
+                взаимоотношений с деньгами)
+            </li>
+
+            <li class="list-item">
+                Кармический анализ гороскопа (предназначение души, наработанный опыт, кармические задачи и рекомендации
+                к проработке)
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+<section class="course-programme" id="course_programme">
+    <div class="container">
+
+        <div class="course-programme__heading">
+
+            <h2 class="course-programme__title second-title">
+                программа курса
+            </h2>
+
+            <a href="#course_packages" class="course-programme__link link without-star">
+                Записаться на обучение
+            </a>
+
+        </div>
+
+        <div class="course-programme__wrap">
+
+            <div class="course-programme__block block_1">
+                <h3 class="block-title">
+                    БЛОК 1. ИНТЕРПРЕТАЦИЯ ЭЛЕМЕНТОВ ГОРОСКОПА
+                </h3>
+
+                <div class="accordion block-accordion">
+
+                    <div class="accordion-item">
+                        <div class="heading">
+                            <h4 class="heading-text">
+                                Часть 1. Введение
+                            </h4>
+
+                            <div class="heading-icon">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="submenu">
+                            <ul class="submenu__list">
+
+                                <li>
+                                    Урок 1: Введение в предмет.
+                                </li>
+
+                                <li>
+                                    Урок 2: Космограмма.
+                                </li>
+
+                                <li>
+                                    Урок 3: Классификаторы и базовая символика элементов.
+                                </li>
+
+                                <li>
+                                    Урок 4: Планеты. Введение.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="heading">
+                            <h4 class="heading-text">
+                                Часть 2. Планеты
+                            </h4>
+
+                            <div class="heading-icon">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="submenu">
+                            <ul class="submenu__list">
+
+                                <li>
+                                    Урок 1: Введение в предмет.
+                                </li>
+
+                                <li>
+                                    Урок 2: Космограмма.
+                                </li>
+
+                                <li>
+                                    Урок 3: Классификаторы и базовая символика элементов.
+                                </li>
+
+                                <li>
+                                    Урок 4: Планеты. Введение.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="heading">
+                            <h4 class="heading-text">
+                                Часть 3. Дома
+                            </h4>
+
+                            <div class="heading-icon">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="submenu">
+                            <ul class="submenu__list">
+
+                                <li>
+                                    Урок 1: Введение в предмет.
+                                </li>
+
+                                <li>
+                                    Урок 2: Космограмма.
+                                </li>
+
+                                <li>
+                                    Урок 3: Классификаторы и базовая символика элементов.
+                                </li>
+
+                                <li>
+                                    Урок 4: Планеты. Введение.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="heading">
+                            <h4 class="heading-text">
+                                Часть 4. Аспекты
+                            </h4>
+
+                            <div class="heading-icon">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="submenu">
+                            <ul class="submenu__list">
+
+                                <li>
+                                    Урок 1: Введение в предмет.
+                                </li>
+
+                                <li>
+                                    Урок 2: Космограмма.
+                                </li>
+
+                                <li>
+                                    Урок 3: Классификаторы и базовая символика элементов.
+                                </li>
+
+                                <li>
+                                    Урок 4: Планеты. Введение.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="heading">
+                            <h4 class="heading-text">
+                                Часть 5. Тематический анализ гороскопа
+                            </h4>
+
+                            <div class="heading-icon">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="submenu">
+                            <ul class="submenu__list">
+
+                                <li>
+                                    Урок 1: Введение в предмет.
+                                </li>
+
+                                <li>
+                                    Урок 2: Космограмма.
+                                </li>
+
+                                <li>
+                                    Урок 3: Классификаторы и базовая символика элементов.
+                                </li>
+
+                                <li>
+                                    Урок 4: Планеты. Введение.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="course-programme__block block_2">
+                <h3 class="block-title">
+                    БЛОК 2. КОМПЕНСАТОРНЫЕ ДЕЙСТВИЯ И ПРОФЕССИОНАЛЬНОЕ КОНСУЛЬТИРОВАНИЕ
+                </h3>
+
+                <div class="accordion block-accordion">
+
+                    <div class="accordion-item">
+                        <div class="heading">
+                            <h4 class="heading-text">
+                                Часть 1. Компенсаторные действия
+                            </h4>
+
+                            <div class="heading-icon">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="submenu">
+                            <ul class="submenu__list">
+
+                                <li>
+                                    Урок 1: Введение в предмет.
+                                </li>
+
+                                <li>
+                                    Урок 2: Космограмма.
+                                </li>
+
+                                <li>
+                                    Урок 3: Классификаторы и базовая символика элементов.
+                                </li>
+
+                                <li>
+                                    Урок 4: Планеты. Введение.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="heading">
+                            <h4 class="heading-text">
+                                Часть 2. Профессиональное консультирование и пр.
+                            </h4>
+
+                            <div class="heading-icon">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="submenu">
+                            <ul class="submenu__list">
+
+                                <li>
+                                    Урок 1: Введение в предмет.
+                                </li>
+
+                                <li>
+                                    Урок 2: Космограмма.
+                                </li>
+
+                                <li>
+                                    Урок 3: Классификаторы и базовая символика элементов.
+                                </li>
+
+                                <li>
+                                    Урок 4: Планеты. Введение.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="course-structure">
+    <div class="container">
+
+        <h2 class="second-title course-structure__title">
+            формат обучения
+        </h2>
+
+        <div class="course-structure__list">
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    Онлайн режим
+                </h3>
+
+                <div class="list-item__description">
+<pre>
+На обучении предусмотрены живые практики и уроки в записи 1-2 раза в неделю. Продолжительность одного занятия  120-150 минут.
+
+Всего 65 занятий. По мере усвоения материала школа оставляет за собой возможность добавить дополнительные уроки.
+</pre>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    Личный кабинет
+                </h3>
+
+                <div class="list-item__description">
+<pre>
+Обучение проходит на удобной платформе, где у вас будет личный кабинет с расписанием занятий, записями всех уроков, методическими материалами и тестами к уроку.
+</pre>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    Записи материалов
+                </h3>
+
+                <div class="list-item__description">
+<pre>
+Записи всех пройденных уроков находятся в личном кабинете. Их можно переслушивать необходимое количество раз. Доступ сохраняется в течение 6 месяцев с даты окончания обучения.
+</pre>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    Домашние задания
+                </h3>
+
+                <div class="list-item__description">
+<pre>
+На обучении предусмотрены тематические тесты и практические задания с проверкой куратора для усвоения материала.
+</pre>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    Индивидуальная поддержка
+                </h3>
+
+                <div class="list-item__description">
+<pre>
+Внимание и поддержка кураторов на тарифах с обратной связью , будет присутствовать на протяжении всего обучения.
+
+Ответы на вопросы, проверка домашних заданий, общение по любым проблемам курса - всё это будет отслеживаться внимательными и заботливыми кураторами, а также с любой сложностью вы всегда можете обратиться к Оксане напрямую.
+</pre>
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    Чаты и общение
+                </h3>
+
+                <div class="list-item__description">
+<pre>
+Для тарифов с обратной связью предусмотрены общие чаты в мессенджерах. В чате курса вы сможете общаться в любое время, найти  единомышленников и получить  поддержку.
+</pre>
+                </div>
+
+                <a href="#course_packages" class="link without-start list-item__link">
+                    Записаться на обучение
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="course-certification">
+    <div class="container">
+
+        <div class="course-certification__row">
+            <h2 class="second-title course-certification__title">
+                ПРОФЕССИОНАЛЬНАЯ АТТЕСТАЦИЯ
+            </h2>
+
+            <div class="course-certification__certificate">
+                <a href="./img/certificate.png" data-fancybox data-caption="Сертификат">
+                    <img src="./img/certificate.png" alt="Сертификат">
+                </a>
+            </div>
+
+            <ul class="course-certification__list">
+
+                <li class="list-item">
+                    Все студенты успешно сдавшие тестирование получают сертификат о прослушивании.
+                </li>
+
+                <li class="list-item">
+                    Все студенты успешно сдавшие тестирование и индивидуальный экзамен получают сертификат об успешном
+                    прохождении обучения.
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="course-promotion">
+    <div class="container">
+
+        <div class="course-promotion__wrap">
+
+            <h2 class="second-title course-promotion__title">
+                <span class="orange">Бесплатный курс</span> «Введение в астрологию»
+            </h2>
+
+            <div class="course-promotion__description">
+<pre>
+Пройдите бесплатный курс и получите бесценные знания — знакомство с терминами и общее представление об астрологии, возможности и нюансы учения.
+
+Узнайте, как можно улучшить свою жизнь, помочь знакомым и открыть для себя профессию астролога.
+</pre>
+            </div>
+
+            <a href="./free-course.html" class="link without-star course-promotion__link">
+                Подробнее
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="course-statistics">
+    <div class="container">
+
+        <h2 class="second-title course-statistics__title">
+            Факты и цифры
+        </h2>
+
+        <div class="course-statistics__list">
+
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    100%
+                </h3>
+
+                <div class="list-item__description">
+                    Знаний из авторитетных источников, проверенные на практике
+                </div>
+
+            </div>
+
+
+            <div class="list-item">
+
+                <h3 class="third-title list-item__title">
+                    90%
+                </h3>
+
+                <div class="list-item__description">
+                    Участников доходят до конца программы и меняют свою жизнь
+                </div>
+
+            </div>
+
+
+            <div class="list-item">
+
+                <div class="list-item__icon">
+                    <img src="./img/icons/community-bank.svg" alt="Иконка">
+                </div>
+
+                <div class="list-item__description">
+                    Свое профессиональное комьюнити астрологов для общения
+                </div>
+
+            </div>
+
+
+            <div class="list-item">
+
+                <div class="list-item__icon">
+                    <img src="./img/icons/community-interest.svg" alt="Иконка">
+                </div>
+
+                <div class="list-item__description">
+                    Живая практика на каждом блоке любого курса
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="school-founder on-course">
+    <div class="container">
+
+        <div class="school-founder__heading">
+            <h2 class="school-founder__title second-title">
+                Оксана Малкова
+            </h2>
+
+            <h3 class="school-founder__subtitle third-title">
+                основательница школы, астролог, педагог
+            </h3>
+        </div>
+
+        <div class="school-founder__wrap">
+
+            <div class="school-founder__col col_1">
+                <ul class="school-founder__list">
+
+                    <li class="list-item">
+                        <pre>
+Практикует
+<span class="yellow">с 2017 года</span>
+                        </pre>
+                    </li>
+
+                    <li class="list-item">
+                        <pre>
+Имеет <span class="yellow">20 000+</span>
+подписчиков
+в социальных сетях
+                        </pre>
+                    </li>
+
+                    <li class="list-item">
+                        <pre>
+Выпустила <span class="yellow">1300+</span>
+учеников
+                        </pre>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="school-founder__col col_2">
+                <img src="./img/image_founder.png" alt="Оксана Малкова">
+            </div>
+
+            <div class="school-founder__col col_3">
+                <ul class="school-founder__list">
+
+                    <li class="list-item">
+                        <pre>
+Провела <span class="yellow">3000+</span>
+консультаций
+                        </pre>
+                    </li>
+
+                    <li class="list-item">
+                        <pre>
+Создала и ведёт <span class="yellow">4 курса</span> и
+множество практикумов и
+вебинаров
+                        </pre>
+                    </li>
+
+                    <li class="list-item">
+                        <pre>
+Собрала <span class="yellow">250+</span> экспертов в
+клубе астрологов
+                        </pre>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+<section class="reviews on-course">
+    <div class="container">
+
+        <div class="reviews__heading">
+            <h2 class="second-title reviews__title">
+                Что говорят ученики
+            </h2>
+
+            <button class="link reviews__btn">
+                Оставить отзыв
+            </button>
+        </div>
+
+        <div class="reviews__slider-wrap">
+
+            <div class="reviews__slider">
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Диана Янина
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Екатерина Мирошниченко
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Диана Янина
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Екатерина Мирошниченко
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Диана Янина
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Екатерина Мирошниченко
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Диана Янина
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Екатерина Мирошниченко
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Диана Янина
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Екатерина Мирошниченко
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Диана Янина
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                        Добрый день, мне очень нравится, как вы даёте материал. Вебинар по транзитам оказался супер
+                        полезным! Сделала продажи на трине Меркуриев, и продалось в 2 раза больше чем обычно,
+                        это очень прикольно работает. Причём, у меня в карте это — управитель
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+                <div class="review">
+                    <div class="review__heading">
+
+                        <div class="heading-col">
+                            <div class="heading-avatar">
+                                <img src="./img/icons/empty-photo.svg" alt="Пользователь">
+                            </div>
+                        </div>
+
+                        <div class="heading-col">
+                            <div class="heading-name">
+                                Екатерина Мирошниченко
+                            </div>
+
+                            <div class="heading-product">
+                                Основы прогнозирования
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="review__text">
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                        Курс реально потрясающий. Без воды, все конкретно и чётко. Я тоже раньше проходила прогностику,
+                        но с каждым занятием тогда я все больше и больше запутывалась. И когда сама садилась делать
+                        прогноз, то вот из этой каши в голове ничего не могла выцепить
+                    </div>
+
+                    <button class="review__btn-more">
+                        Развернуть отзыв
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="reviews__slider-nav slider-nav">
+
+                <button class="slider-nav__btn btn_prev">
+                    <svg width="51" height="20" class="svg-ico " role="img">
+                        <use xlink:href="./img/icons/sprite.svg#slider-arrow-prev"></use>
+                    </svg>
+
+                </button>
+
+                <div class="slider-nav__pages">1/1</div>
+
+                <button class="slider-nav__btn btn_next">
+                    <svg width="51" height="20" class="svg-ico " role="img">
+                        <use xlink:href="./img/icons/sprite.svg#slider-arrow-next"></use>
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="course-packages" id="course_packages">
+
+    <div class="container">
+
+        <h2 class="second-title course-packages__title">
+            Пакеты обучения
+        </h2>
+
+        <div class="course-packages__list">
+
+            <div class="course-packages__list-item" style="background-color: #3056A1;">
+
+                <h3 class="third-title list-item__title">
+                    «Для себя»
+                </h3>
+
+                <ul class="list-item__list list-with-star gold-star">
+                    <li class="list-item">
+                        Все уроки Блока 1 «Интерпретация элементов гороскопа»
+                    </li>
+                    <li class="list-item">
+                        Тесты для самопроверки
+                    </li>
+                    <li class="list-item">
+                        Поддержка куратора на обучающей платформе в рамках Блока 1 «Интерпретация элементов гороскопа»
+                    </li>
+                </ul>
+
+                <div class="list-item__wrap">
+                    <div class="list-item__price">
+
+                        <div class="old-price price">
+                            84 990 руб
+                        </div>
+
+                        <div class="new-price price">
+                            74 990 руб
+                        </div>
+
+                    </div>
+
+                    <div class="list-item__btn-wrap">
+
+                        <button class="link without-star list-item__btn">
+                            Купить обучение
+                        </button>
+
+                        <button class="list-item__btn_installment">
+                            Оформить рассрочку
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="course-packages__list-item" style="background-color: #1A4497;">
+
+                <h3 class="third-title list-item__title">
+                    «Профессия»
+                </h3>
+
+                <ul class="list-item__list list-with-star gold-star">
+                    <li class="list-item">
+                        Все уроки Блока 1 «Интерпретация элементов гороскопа»
+                    </li>
+                    <li class="list-item">
+                        Все уроки Блока 2 «Компенсаторные действия и профессиональное консультирование»
+                    </li>
+                    <li class="list-item">
+                        Урок «Схема консультации»
+                    </li>
+                    <li class="list-item">
+                        Урок «Неподвижные звезды»
+                    </li>
+                    <li class="list-item">
+                        Совместный урок с маркетологом Оксаны Малковой «Продвижение экспертов в социальных сетях»
+                    </li>
+                    <li class="list-item">
+                        Тесты для самопроверки
+                    </li>
+                    <li class="list-item">
+                        Поддержка кураторов в общем чате учеников в telegram
+                    </li>
+                    <li class="list-item">
+                        Очный индивидуальный экзамен и сертификат о прохождении курса
+                    </li>
+                </ul>
+
+                <div class="list-item__wrap">
+
+                    <div class="list-item__price">
+
+                        <div class="old-price price">
+                            89 990 руб
+                        </div>
+
+                        <div class="new-price price">
+                            79 990 руб
+                        </div>
+
+                    </div>
+
+                    <div class="list-item__btn-wrap">
+
+                        <button class="link without-star list-item__btn">
+                            Купить обучение
+                        </button>
+
+                        <button class="list-item__btn_installment">
+                            Оформить рассрочку
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="course-packages__list-item" style="background-color: #053186;">
+
+                <h3 class="third-title list-item__title" style="color: #cdac7f">
+                    «Vip»
+                </h3>
+
+                <ul class="list-item__list list-with-star gold-star">
+                    <li class="list-item">
+                        Все уроки Блока 1 «Интерпретация элементов гороскопа»
+                    </li>
+                    <li class="list-item">
+                        Все уроки Блока 2 «Компенсаторные действия и профессиональное консультирование»
+                    </li>
+                    <li class="list-item">
+                        Урок «Схема консультации»
+                    </li>
+                    <li class="list-item">
+                        Урок «Неподвижные звезды»
+                    </li>
+                    <li class="list-item">
+                        Совместный урок с маркетологом Оксаны Малковой «Продвижение экспертов в социальных сетях»
+                    </li>
+                    <li class="list-item">
+                        Тесты для самопроверки
+                    </li>
+                    <li class="list-item">
+                        Поддержка лично от Оксаны Малковой: проверка домашних заданий, ответы на вопросы и отдельный чат
+                        в telegram
+                    </li>
+                    <li class="list-item">
+                        Два индивидуальных практических занятия с Оксаной Малковой в течение курса
+                    </li>
+                    <li class="list-item">
+                        Очный индивидуальный экзамен и сертификат о прохождении курса
+                    </li>
+                </ul>
+
+                <div class="list-item__wrap">
+
+
+                    <div class="list-item__footnote">
+                        На тариф принимается только 5 участников
+                    </div>
+
+                    <div class="list-item__price">
+
+                        <div class="old-price price">
+                            199 990 руб
+                        </div>
+
+                        <div class="new-price price">
+                            159 990 руб
+                        </div>
+
+                    </div>
+
+                    <div class="list-item__btn-wrap">
+
+                        <button class="link without-star list-item__btn">
+                            Купить обучение
+                        </button>
+
+                        <button class="list-item__btn_installment">
+                            Оформить рассрочку
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="faq on-course">
+    <div class="container">
+        <h2 class="second-title faq__title">
+            Часто задаваемые вопросы
+        </h2>
+
+        <div class="accordion faq__accordion">
+
+            <div class="accordion-item">
+                <div class="heading">
+                    <div class="heading-text">
+                        Как долго будет открыт доступ к курсу?
+                    </div>
+
+                    <div class="heading-icon">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="submenu">
+                    В зависимости от выбранного курса - от 3 до 6 месяцев с даты окончания обучения. На всех курсах
+                    есть возможность платного продления доступа.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="heading">
+                    <div class="heading-text">
+                        На какой платформе происходит обучение?
+                    </div>
+
+                    <div class="heading-icon">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="submenu">
+                    Обучение проходит на платформе «Геткурс» с возможностью обучаться с любого устройства и из любой
+                    точки мира.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="heading">
+                    <div class="heading-text">
+                        На каком астропроцессоре проходит обучение?
+                    </div>
+
+                    <div class="heading-icon">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="submenu">
+                    В зависимости от выбранного курса - от 3 до 6 месяцев с даты окончания обучения. На всех курсах
+                    есть возможность платного продления доступа.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="heading">
+                    <div class="heading-text">
+                        Какой формат обучающих материалов: уроки в записи или ведутся в прямом эфире?
+                    </div>
+
+                    <div class="heading-icon">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="submenu">
+                    Да, перед каждым блоком есть урок по техническим настройкам программы.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="heading">
+                    <div class="heading-text">
+                        Сколько длится занятие?
+                    </div>
+
+                    <div class="heading-icon">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="submenu">
+                    Большинство уроков в записи, но есть и онлайн вебинары-практикумы с разборами и ответами на вопросы.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="heading">
+                    <div class="heading-text">
+                        Можно учиться с телефона?
+                    </div>
+
+                    <div class="heading-icon">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="submenu">
+                    В среднем 45–60 минут. Также есть короткие технические уроки и практикумы, которые могут длиться
+                    дольше 60 минут.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="heading">
+                    <div class="heading-text">
+                        Есть ли у школы лицензия на оказание образовательной деятельности?
+                    </div>
+
+                    <div class="heading-icon">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="submenu">
+                    В среднем 45–60 минут. Также есть короткие технические уроки и практикумы, которые могут длиться
+                    дольше 60 минут.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="course-insight">
+    <div class="container">
+
+        <div class="course-insight__heading">
+
+            <h2 class="second-title course-insight__title">
+                Школа астрологии Оксаны Малковой
+            </h2>
+
+            <div class="course-insight__description">
+<pre>
+В школе преподается западная астрология, где в основе лежит баланс между точными науками, астрономической логикой и компетенциями астролога в смежных областях.
+
+Мы придерживаемся подхода, что астрология - это наука, рассматривающая все процессы, с точки зрения геометрии и физики, в том числе.
+</pre>
+            </div>
+
+        </div>
+
+        <div class="course-insight__list">
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    300+
+                </h3>
+
+                <div class="list-item__description">
+                    учеников по всему миру
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    5
+                </h3>
+
+                <div class="list-item__description">
+                    лет опыт преподавания
+                </div>
+
+            </div>
+
+            <div class="list-item">
+
+                <h3 class="list-item__title third-title">
+                    1500+
+                </h3>
+
+                <div class="list-item__description">
+                    успешных консультаций
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a href="./about.html" class="link without-star course-insight__link">
+            Подробнее о школе
+        </a>
+
+    </div>
+</section>
+
+<section class="courses-catalog">
+    <div class="container">
+
+        <h2 class="second-title courses-catalog__title">
+            Другие наши курсы
+        </h2>
+
+        <div class="courses-catalog__list">
+
+            <div class="list-item">
+                <h3 class="third-title list-item__title">
+                    «Введение в астрологию»
+                </h3>
+
+                <div class="list-item__description">
+                    <p>
+                        Астрология - это профессия, которая имеет множество нюансов. Чтобы вы не тратили много денег на
+                        обучение, которое вам может не подойти, мы сделали пробный курс «Введение в профессию».
+                    </p>
+                </div>
+
+                <div class="list-item__btn-wrap">
+                    <a href="./course.html" class="link without-star list-item__link">
+                        Начать обучение
+                    </a>
+                    <a href="./course.html" class="btn list-item__link-more">
+                        Узнать подробнее
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <h3 class="third-title list-item__title">
+                    «Основы прогнозирования»
+                </h3>
+
+                <div class="list-item__description">
+                    Продвинутый курс для астрологов, которые хотят расширить свой арсенал инструментов и зарабатывать
+                    еще больше. После обучения вы сможете включить в перечень своих услуг популярную консультацию Соляр,
+                    научитесь выполнять ректификацию и не только!
+                </div>
+
+                <div class="list-item__start">
+                    Старт курса в 2025 году.
+                </div>
+
+                <div class="list-item__btn-wrap">
+                    <a href="./courses.html#course_packages" class="link without-star list-item__link">
+                        Записаться
+                    </a>
+                    <a href="./course.html" class="btn list-item__link-more">
+                        Узнать подробнее
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <h3 class="third-title list-item__title">
+                    Курс «Лунный календарь»
+                </h3>
+
+                <div class="list-item__description">
+                    Курс для действующих астрологов, который позволит научиться составлять ежедневные прогнозы,
+                    подбирать даты важных событий по общему расположению планет и самостоятельно составлять астро
+                    календари на день, месяц и год.
+                </div>
+
+                <div class="list-item__btn-wrap">
+                    <a href="./courses.html#course_packages" class="link without-star list-item__link">
+                        Записаться
+                    </a>
+                    <a href="./course.html" class="btn list-item__link-more">
+                        Узнать подробнее
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="feedback on-course">
+    <div class="container">
+
+        <div class="feedback__col col_1">
+            <h2 class="second-title feedback__title">
+                Свяжитесь с нами по всем вопросам
+            </h2>
+
+            <div class="feedback__description">
+                <p>
+                    Оставьте свои контакты и наш менеджер поможет вам правильно подобрать курс и ответит на ваши вопросы
+                </p>
+            </div>
+        </div>
+
+        <div class="feedback__col col_2">
+
+            <form action="#" id="feedback_form" class="form">
+
+                <div class="form__row-wrap">
+                    <div class="form__col form-label">
+
+                        <input
+                                type="text"
+                                id="feedback_name"
+                                class="form-input input-name required"
+                                name="name"
+                                placeholder="Ваше имя *"
+                        >
+
+                        <label for="feedback_name">Ваше имя <span class="red">*</span></label>
+
+                        <div class="msg msg-error">
+                            Поле является обязательным
+                        </div>
+                        <div class="msg msg-empty">
+                            "Имя" должно содержать не менее 2 букв
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form__row-wrap">
+                    <div class="form__col form-label">
+
+                        <input
+                                type="tel"
+                                id="feedback_phone"
+                                class="form-input input-phone required"
+                                name="tel"
+                                placeholder="Номер телефона *"
+                        >
+
+                        <label for="feedback_phone">Номер телефона <span class="red">*</span></label>
+
+                        <div class="msg msg-error">
+                            Поле является обязательным
+                        </div>
+                        <div class="msg msg-empty">
+                            Неверный формат телефона
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form__row-wrap">
+                    <div class="form__col form-label">
+
+                        <input
+                                type="email"
+                                id="feedback_email"
+                                class="form-input input-email required"
+                                name="email"
+                                placeholder="Email *"
+                        >
+
+                        <label for="feedback_email">Email <span class="red">*</span></label>
+
+                        <div class="msg msg-error">
+                            Поле является обязательным
+                        </div>
+                        <div class="msg msg-empty">
+                            Неверный формат Email
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form__row-wrap">
+                    <div class="form__col form-label form__col_comment">
+                        <textarea
+                                type="text"
+                                id="comment"
+                                class="form-textarea input-comment"
+                                name="comment"
+                                placeholder="Задайте вопрос (не обязательно)"
+                        ></textarea>
+
+                        <label for="comment">Задайте вопрос (не обязательно)</label>
+                    </div>
+
+                </div>
+
+                <div class="form__row-wrap form__row-submit">
+                    <div class="form__col">
+                        <button
+                                type="submit"
+                                id="feedback_submit"
+                                class="link form-submit"
+                        >
+                            Получить консультацию
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="form__row-wrap form__row-checkboxes">
+                    <label class="form__col custom-checkbox checkbox-agreement">
+                        <input
+                                type="checkbox"
+                                name="agreement"
+                                value="1"
+                                class="required"
+                        >
+
+                        <span class="custom-checkbox__checkbox"></span>
+
+                        <span class="custom-checkbox__text">
+                            Ознакомлен с <a href="./policy.html">Политикой обработки персональных данных</a> и даю <a
+                                href="./soglasie.html" target="_blank">Согласие на обработку персональных данных</a>.
+                        </span>
+                    </label>
+
+                    <label class="form__col custom-checkbox checkbox-soglasie">
+                        <input
+                                type="checkbox"
+                                name="soglasie"
+                                value="1"
+                        >
+
+                        <span class="custom-checkbox__checkbox"></span>
+
+                        <span class="custom-checkbox__text">
+                            Даю согласие на рекламную рассылку
+                        </span>
+                    </label>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-col col_1">
+                <a href="./" class="footer__logo">
+                    <svg width="146" height="51" class="svg-ico " role="img">
+                        <use xlink:href="./img/icons/sprite.svg#logo"></use>
+                    </svg>
+
+                </a>
+
+                <div class="footer__copyright">
+                    © 2022–2024 Astrooma. Все права защищены.
+                </div>
+            </div>
+            <div class="footer__top-col col_2">
+                <div class="footer__city" id="footer_city_choice">
+                    г. Москва
+                </div>
+
+                <a href="tel:+79930019877" class="footer__phone">
+                    +7 993 001-98-77
+                </a>
+
+                <a href="mailto:admin@astrooma-school.ru" class="footer__email">
+                    admin@astrooma-school.ru
+                </a>
+
+                <ul class="social-list footer__social">
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="14" height="14" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#inst"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="16" height="11" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="16" height="10" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" target="_blank">
+                            <svg width="16" height="18" class="svg-ico " role="img">
+                                <use xlink:href="./img/icons/sprite.svg#telegram"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="footer__top-col col_3">
+                <h4 class="col-heading">
+                    Обучение
+                </h4>
+
+                <nav class="footer__nav">
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="./">
+                                Главная
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./learn-to-free.html">
+                                Учись бесплатно
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./courses.html">
+                                Курсы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./webinars.html">
+                                Вебинары
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__top-col col_4">
+                <h4 class="col-heading">
+                    Развитие
+                </h4>
+
+                <nav class="footer__nav">
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="./club.html">
+                                Клуб астрологов
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./calendar.html">
+                                Ежемесячный календарь
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./dictionary.html">
+                                Словарь астролога
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./consultations.html">
+                                Консультации
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__top-col col_5">
+                <h4 class="col-heading">
+                    О школе
+                </h4>
+
+                <nav class="footer__nav">
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="./contacts.html">
+                                Контакты
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./reviews.html">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./legal-data.html">
+                                Юридические данные
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-col col_1">
+                <a href="./policy.html" class="footer__policy">
+                    Политика обработки персональных данных
+                </a>
+
+                <a href="./agreement.html" class="footer__agreement">
+                    Пользовательское соглашение
+                </a>
+            </div>
+            <div class="footer__bottom-col col_2">
+                <div class="footer__license">
+                    Лицензия на осуществление образовательной деятельности 18.12.2023,
+                    № Л 035-01199-54/00977742
+                </div>
+            </div>
+            <div class="footer__bottom-col col_3">
+                <div class="footer__requisites">
+                    <pre>
+ИП Малкова Оксана Сергеевна
+ОГРН: 320547600115202
+ИНН: 540400190531
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="modal-wrap">
+    <div class="modal" id="modal_callback">
+        <div class="modal__content">
+            <div class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставить заявку
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами!
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="callback_form"
+                        novalidate
+                >
+                        <label class="form__col">
+                            <input
+                                    type="text"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="Имя *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <input
+                                    type="tel"
+                                    class="form-input input-phone required"
+                                    name="tel"
+                                    placeholder="Телефон *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                        </label>
+
+                        <label class="form__col from__col-submit">
+                            <button type="submit" class="btn form-submit">
+                                Отправить
+                            </button>
+                        </label>
+
+                        <label class="form__col from__agreement">
+                            Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                        </label>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_audit">
+        <div class="modal__content">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Заказать аудит
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами, чтобы провести аудит!
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="audit_form"
+                        novalidate
+                >
+                    <label class="form__col">
+                        <input
+                                type="text"
+                                class="form-input input-name required"
+                                name="name"
+                                placeholder="Имя *"
+                                required
+                        >
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                    </label>
+
+                    <label class="form__col">
+                        <input
+                                type="tel"
+                                class="form-input input-phone required"
+                                name="tel"
+                                placeholder="Телефон *"
+                                required
+                        >
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                    </label>
+
+                    <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                    </label>
+
+                    <label class="form__col from__col-submit">
+                        <button type="submit" class="btn form-submit">
+                            Отправить
+                        </button>
+                    </label>
+
+                    <label class="form__col from__agreement">
+                        Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_calculation">
+        <div class="modal__content">
+            <div class="modal__close">
+                 <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставьте заявку на расчет проекта
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами, чтобы рассчитать стоимость проекта
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="calculation_form"
+                        novalidate
+                >
+                        <label class="form__col">
+                            <input
+                                    type="text"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="Имя *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <input
+                                    type="tel"
+                                    class="form-input input-phone required"
+                                    name="tel"
+                                    placeholder="Телефон *"
+                                    required
+                            >
+
+                            <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                                    <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                        </label>
+
+                        <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                        </label>
+
+                        <label class="form__col from__col-submit">
+                            <button type="submit" class="btn form-submit">
+                                Заказать расчет
+                            </button>
+                        </label>
+
+                        <label class="form__col from__agreement">
+                            Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки персональных данных
+                        </label>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal_success">
+        <div class="modal__content animated zoomIn">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="<?= get_image_path() ?>/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Спасибо, ваши данные успешно отправлены.
+                </h3>
+
+                <div class="modal__description">
+                    <p>
+                        Мы свяжемся с вами в ближайшее время.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal_error">
+        <div class="modal__content animated zoomIn">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Что-то пошло не так!
+                </h3>
+
+                <div class="modal__description">
+                    <p>
+                        Попробуйте снова или <a href="tel:+7 (902) 976-69-69">позвоните нам</a>!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
