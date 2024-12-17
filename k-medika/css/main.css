@@ -2559,11 +2559,7 @@ button {
 
 .portfolio {
   padding-bottom: 50px;
-}
-
-.portfolio .container {
-  max-width: calc((100vw - var(--container))/2 + var(--container) + 20px);
-  margin-right: 0;
+  overflow: hidden;
 }
 
 .portfolio__slider-wrap {
@@ -2575,7 +2571,12 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 35px;
+  width: calc(var(--container)*.931);
   overflow: hidden;
+}
+
+.portfolio__slider-wrap.swiper {
+  overflow: visible;
 }
 
 .portfolio__heading {
@@ -2588,15 +2589,13 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: calc(var(--container) + 27px);
-  padding-left: 20px;
+  width: var(--container);
 }
 
 .portfolio__slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 27px;
   padding-bottom: 20px;
 }
 
@@ -2610,12 +2609,23 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 91.3%;
+  width: 100%;
   min-height: 754px;
   height: 100%;
   border-radius: var(--radius-5);
   -webkit-box-shadow: var(--shadow-4);
           box-shadow: var(--shadow-4);
+}
+
+.portfolio__slider .slider-item.swiper-slide {
+  visibility: hidden;
+  -webkit-transition: visibility .05s ease-in-out;
+  transition: visibility .05s ease-in-out;
+}
+
+.portfolio__slider .slider-item.swiper-slide-active,
+.portfolio__slider .slider-item.swiper-slide-next {
+  visibility: visible;
 }
 
 .portfolio__slider .slider-item__col {

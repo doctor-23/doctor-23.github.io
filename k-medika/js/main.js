@@ -2234,6 +2234,15 @@ document.addEventListener('DOMContentLoaded', function () {
   if (portfolioSliderWrap) {
     portfolioSlider(portfolioSliderWrap);
   }
+  function setEqualHeight(swiper) {
+    let maxHeight = 0;
+    swiper.slides.forEach(slide => {
+      maxHeight = Math.max(maxHeight, slide.offsetHeight);
+    });
+    swiper.slides.forEach(slide => {
+      slide.style.height = `${maxHeight}px`;
+    });
+  }
 
   /**
    * Инициализирует проверку элементов для Swiper-слайдера и добавляет необходимые классы.
@@ -2298,15 +2307,6 @@ document.addEventListener('DOMContentLoaded', function () {
       bullets
     };
   }
-  const setEqualHeight = swiper => {
-    let maxHeight = 0;
-    swiper.slides.forEach(slide => {
-      maxHeight = Math.max(maxHeight, slide.offsetHeight);
-    });
-    swiper.slides.forEach(slide => {
-      slide.style.height = `${maxHeight}px`;
-    });
-  };
 
   /**
    * Инициализирует основной слайдер на главной странице.
@@ -2347,6 +2347,14 @@ document.addEventListener('DOMContentLoaded', function () {
         nextEl: nextButton,
         // Элемент кнопки "вперед"
         prevEl: prevButton // Элемент кнопки "назад"
+      },
+      on: {
+        init: function () {
+          setEqualHeight(this);
+        },
+        resize: function () {
+          setEqualHeight(this);
+        }
       }
     });
   }
