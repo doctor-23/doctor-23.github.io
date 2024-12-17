@@ -2857,6 +2857,198 @@ button {
   border-radius: var(--radius-5);
 }
 
+.blog {
+  padding-bottom: 120px;
+}
+
+.blog__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.blog__archive-link {
+  color: var(--color-11);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.blog__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.blog__list .list-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(33.33% - 10.66px);
+  border-radius: var(--radius-1);
+  background-color: var(--white);
+}
+
+.blog__list .list-item:hover .list-item__image img,
+.blog__list .list-item:focus-visible .list-item__image img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blog__list .list-item__image {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  max-height: 240px;
+  border-radius: var(--radius-1) var(--radius-1) 0 0;
+  overflow: hidden;
+}
+
+.blog__list .list-item__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-1) var(--radius-1) 0 0;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.blog__list .list-item__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  padding: 15px 15px 20px;
+}
+
+.blog__list .list-item__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(--raleway);
+  max-height: 52.8px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--color-6);
+}
+
+.blog__list .list-item__description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  max-height: calc(var(--font-size)*1.3*4 + 5px);
+  overflow: hidden;
+}
+
+.blog__list .list-item__description,
+.blog__list .list-item__description * {
+  color: var(color-8);
+}
+
+.blog__list .list-item__date {
+  margin-top: auto;
+  font-size: 14px;
+  font-family: var(--avenir-next-cyr);
+  color: var(--color-22);
+}
+
+.blog__list a {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.feedback {
+  margin-top: -105px;
+  padding-bottom: 125px;
+  -webkit-transform: translateY(105px);
+      -ms-transform: translateY(105px);
+          transform: translateY(105px);
+}
+
+.feedback .container {
+  min-height: 675px;
+  padding: 30px 20px;
+  background: rgba(0,0,0,0) url("./../img/feedback-bg.png") center/cover no-repeat;
+  border-radius: var(--radius-5);
+}
+
+.feedback__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 615px;
+  padding: 60px 50px 60px 60px;
+  border-radius: var(--radius-5);
+  background-color: var(--white);
+}
+
+.feedback__title {
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: var(--color-6);
+}
+
+.feedback__description {
+  margin-bottom: 30px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.feedback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 440px;
+}
+
+.feedback__form .row-name {
+  margin-bottom: 15px;
+}
+
+.feedback__form .row-phone {
+  margin-bottom: 20px;
+}
+
+.feedback__form .row-agreement {
+  margin-bottom: 40px;
+}
+
+.feedback__form .form-submit {
+  width: 320px;
+}
+
 .index-hero {
   padding: 35px 0 20px;
 }
