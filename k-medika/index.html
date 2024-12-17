@@ -1590,7 +1590,7 @@
             </div>
             <div class="footer__col col_2">
 
-                <div class="footer__col-item">
+                <div class="footer__col-contact">
 
                     <div class="footer__col-heading">
                         Почта
@@ -1602,7 +1602,7 @@
 
                 </div>
 
-                <div class="footer__col-item">
+                <div class="footer__col-contact">
 
                     <div class="footer__col-heading">
                         Телефон
@@ -1640,10 +1640,10 @@
                                     id="footer_subscribe_email"
                                     class="form-input input-email required"
                                     name="email"
-                                    placeholder="Введите ваш email"
+                                    placeholder="E-mail *"
                             >
 
-                            <label for="footer_subscribe_email">Введите ваш email</label>
+                            <label for="footer_subscribe_email">E-mail  <sup class="red">*</sup></label>
 
                             <div class="msg msg-error">
                                 Поле является обязательным
@@ -1657,18 +1657,49 @@
 
                     <div class="modal__form-row submit-row">
 
-                        <button
-                                type="submit"
-                                id="order_submit"
-                                class="form-submit"
-                        >
-                            Подписаться
-                        </button>
+                        
+                            <button type="submit" class="btn with-arrow btn form-submit">
+                        
+
+                        
+
+
+                            <span class="btn-text">
+                                
+                            </span>
+
+                                <span class="btn-arrow">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+                                </svg>
+
+                            </span>
+
+                            </button>
+
 
                     </div>
 
                 </form>
 
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+
+            <div class="footer__links-wrap">
+                <a href="#" class="footer__links link-policy">
+                    Политика обработки персональных данных
+                </a>
+
+                <a href="#" class="footer__links link-agreement">
+                    Пользовательское соглашение
+                </a>
+            </div>
+
+            <div class="footer__copyright">
+                2024 ООО “К-медика”. Все права защищены.
             </div>
 
         </div>
@@ -1767,7 +1798,7 @@
         <div class="modal__content animated zoomIn">
             <div class="modal__close">
                 <svg width="17" height="17" class="svg-ico" role="img">
-                    <use xlink:href="<?= get_image_path() ?>/icons/sprite.svg#close"></use>
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
                 </svg>
             </div>
 
