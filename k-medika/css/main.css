@@ -2351,6 +2351,10 @@ button {
   padding-bottom: 120px;
 }
 
+.section-with-image.section-with-image .container {
+  padding-bottom: 0 !important;
+}
+
 .section-with-image .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3114,6 +3118,307 @@ button {
   width: 320px;
 }
 
+.section-feedback {
+  padding-bottom: 120px;
+}
+
+.section-feedback .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 25px 50px 60px;
+  border-radius: var(--radius-5);
+  background-color: var(--white);
+  -webkit-box-shadow: var(--shadow-2);
+          box-shadow: var(--shadow-2);
+}
+
+.section-feedback__col {
+  width: 100%;
+}
+
+.section-feedback__col.col_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  max-width: 51.8%;
+}
+
+.section-feedback__col.col_2 {
+  max-width: calc(48.2% - 40px);
+}
+
+.section-feedback__description,
+.section-feedback__description * {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.section-feedback__form .row-name {
+  margin-bottom: 15px;
+}
+
+.section-feedback__form .row-phone {
+  margin-bottom: 25px;
+}
+
+.section-feedback__form .row-agreement {
+  margin-bottom: 30px;
+}
+
+.section-feedback.green .container {
+  background-color: var(--color-14);
+  color: var(--white);
+}
+
+.section-feedback.green .section-feedback__form .form-label:hover label {
+  color: var(--white);
+}
+
+.section-feedback.green .section-feedback__form .form-label label {
+  color: hsla(0,0%,100%,.5);
+}
+
+.section-feedback.green .section-feedback__form .form-input {
+  color: var(--white);
+  border-color: hsla(0,0%,100%,.5);
+}
+
+.section-feedback.green .section-feedback__form .form-input:hover,
+.section-feedback.green .section-feedback__form .form-input:focus-visible {
+  border-color: var(--white);
+}
+
+.section-feedback.green .section-feedback__form .row-agreement .custom-field {
+  border-color: var(--white);
+}
+
+.section-feedback.green .section-feedback__form .row-agreement .custom-field::before {
+  background-image: url("./../img/icons/check-white.svg");
+}
+
+.section-feedback.green .section-feedback__form .row-agreement .custom-text {
+  color: var(--white);
+}
+
+.section-feedback.green .section-feedback__form .row-agreement .custom-text a {
+  color: var(--white);
+}
+
+.section-feedback.green .section-feedback__form .form-submit {
+  background-color: var(--white);
+}
+
+.section-feedback.green .section-feedback__form .form-submit .btn-text {
+  color: var(--color-12);
+}
+
+.section-feedback.green .section-feedback__form .form-submit::after {
+  content: none;
+}
+
+.process-cooperation {
+  padding-bottom: 120px;
+}
+
+.process-cooperation__title {
+  margin-bottom: 30px;
+}
+
+.process-cooperation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  counter-reset: item;
+}
+
+.process-cooperation__list .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 33px;
+  width: calc(50% - 20px);
+  padding: 22px 25px;
+  background-color: var(--white);
+  border-radius: var(--radius-4);
+}
+
+.process-cooperation__list .list-item__col {
+  width: 100%;
+}
+
+.process-cooperation__list .list-item__col.col_1 {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16.96%;
+  height: calc((var(--container)/2 - 20px)*.1696);
+  padding: 6px 12px;
+  background-color: #f2f6f6;
+  border-radius: var(--radius-1);
+}
+
+.process-cooperation__list .list-item__col.col_1::before {
+  content: "0" counter(item);
+  counter-increment: item;
+  position: absolute;
+  inset: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  font-family: var(--raleway);
+  font-size: 51px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: rgba(0,0,0,0);
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.process-cooperation__list .list-item__col.col_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.process-cooperation__list .list-item__heading {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--color-6);
+}
+
+.process-cooperation__list .list-item__description {
+  color: var(--color-7);
+}
+
+.about-director {
+  padding-bottom: 120px;
+}
+
+.about-director .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 35px 35px 30px 60px;
+  background-color: var(--white);
+  border-radius: var(--radius-5);
+  -webkit-box-shadow: var(--shadow-2);
+          box-shadow: var(--shadow-2);
+}
+
+.about-director__col {
+  width: 100%;
+}
+
+.about-director__col.col_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: calc(62.33% - 85px);
+}
+
+.about-director__col.col_2 {
+  max-width: 37.67%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.about-director__title {
+  margin-bottom: 22px;
+}
+
+.about-director__description {
+  margin-bottom: 50px;
+}
+
+.about-director__description,
+.about-director__description * {
+  line-height: 1.45;
+  font-weight: bold;
+  color: var(--color-8);
+}
+
+.about-director__footnote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+
+.about-director__footnote .footnote-heading {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--color-6);
+}
+
+.about-director__footnote .footnote-description {
+  color: var(--color-7);
+  line-height: 1.3;
+}
+
+.about-director__image {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: var(--radius-5);
+}
+
+.about-director__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--radius-5);
+}
+
 .index-hero {
   padding: 35px 0 20px;
 }
@@ -3414,60 +3719,108 @@ button {
   width: 244px;
 }
 
-.equipment-archive-feedback {
+.medical-centers-hero {
+  padding: 35px 0 120px;
+}
+
+.medical-centers-hero .container {
+  min-height: 602px;
+  padding-top: 115px;
+  padding-left: 55px;
+  border-radius: var(--radius-5);
+  background: rgba(0,0,0,0) url("./../img/index-hero-bg.png") center/cover no-repeat;
+}
+
+.medical-centers-hero__title {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.medical-centers-hero__description {
+  max-width: 500px;
+  margin-bottom: 70px;
+}
+
+.medical-centers-hero__description * {
+  color: var(--color-5);
+  font-weight: bold;
+}
+
+.medical-centers-hero__btn {
+  width: 245px;
+}
+
+.medical-centers-hero__image {
+  position: absolute;
+  top: 52px;
+  right: 56px;
+  pointer-events: none;
+}
+
+.medical-centers-hero__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.medical-equipment-catalog {
   padding-bottom: 120px;
 }
 
-.equipment-archive-feedback .container {
+.medical-equipment-catalog__title {
+  max-width: 830px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.medical-equipment-catalog__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 40px 25px 50px 60px;
-  border-radius: var(--radius-5);
-  background-color: var(--white);
-  -webkit-box-shadow: var(--shadow-2);
-          box-shadow: var(--shadow-2);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-.equipment-archive-feedback__col {
-  width: 100%;
-}
-
-.equipment-archive-feedback__col.col_1 {
+.medical-equipment-catalog__list .list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 30px;
-  max-width: 51.8%;
+  gap: 13px;
+  width: calc(25% - 30px);
+  height: calc((var(--container)/4 - 30px)*1.29);
+  padding: 15px 10px;
+  background: var(--color-12) center/cover no-repeat;
+  border-radius: var(--radius-2);
 }
 
-.equipment-archive-feedback__col.col_2 {
-  max-width: calc(48.2% - 40px);
-}
-
-.equipment-archive-feedback__description,
-.equipment-archive-feedback__description * {
-  font-size: 17px;
+.medical-equipment-catalog__list .list-item__title {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: var(--raleway);
+  font-size: 20px;
   font-weight: bold;
+  color: var(--white);
+  text-align: center;
 }
 
-.equipment-archive-feedback__form .row-name {
-  margin-bottom: 15px;
+.medical-equipment-catalog__list .list-item__link {
+  width: 100%;
+  height: 40px;
 }
 
-.equipment-archive-feedback__form .row-phone {
-  margin-bottom: 25px;
-}
-
-.equipment-archive-feedback__form .row-agreement {
-  margin-bottom: 30px;
+.medical-equipment-catalog__btn-more {
+  width: 220px;
+  margin: 0 auto;
 }
 
 .not-found-page {
@@ -4143,6 +4496,20 @@ button {
     z-index: 1;
   }
 
+  .medical-centers-hero .container {
+    max-width: 100vw;
+    padding-left: 20px;
+  }
+
+  .medical-centers-hero__title {
+    position: relative;
+    z-index: 1;
+  }
+
+  .medical-centers-hero__image {
+    right: 0;
+  }
+
   .footer__links {
     font-size: 15px;
   }
@@ -4459,6 +4826,46 @@ button {
     padding: 20px 15px 15px;
   }
 
+  .section-feedback {
+    padding: 0 10px 60px;
+  }
+
+  .section-feedback .container {
+    padding: 30px 20px;
+  }
+
+  .section-feedback__col.col_1 {
+    max-width: 100%;
+  }
+
+  .section-feedback__col.col_1 {
+    gap: 20px;
+  }
+
+  .section-feedback__col.col_2 {
+    max-width: 100%;
+  }
+
+  .section-feedback__form .row-name {
+    margin-bottom: 10px;
+  }
+
+  .section-feedback__form .row-phone {
+    margin-bottom: 30px;
+  }
+
+  .section-feedback__form .row-agreement {
+    margin-bottom: 20px;
+  }
+
+  .process-cooperation {
+    padding-bottom: 60px;
+  }
+
+  .about-director {
+    padding-bottom: 60px;
+  }
+
   .index-hero {
     padding: 20px 10px 30px;
   }
@@ -4572,36 +4979,26 @@ button {
     min-height: max-content;
   }
 
-  .equipment-archive-feedback {
-    padding: 0 10px 60px;
+  .medical-centers-hero {
+    padding: 20px 10px 30px;
   }
 
-  .equipment-archive-feedback .container {
-    padding: 30px 20px;
+  .medical-centers-hero .container {
+    padding: 80px 10px;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
   }
 
-  .equipment-archive-feedback__col.col_1 {
-    max-width: 100%;
-  }
-
-  .equipment-archive-feedback__col.col_1 {
-    gap: 20px;
-  }
-
-  .equipment-archive-feedback__col.col_2 {
-    max-width: 100%;
-  }
-
-  .equipment-archive-feedback__form .row-name {
-    margin-bottom: 10px;
-  }
-
-  .equipment-archive-feedback__form .row-phone {
-    margin-bottom: 30px;
-  }
-
-  .equipment-archive-feedback__form .row-agreement {
-    margin-bottom: 20px;
+  .medical-centers-hero__image {
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    margin: auto;
+    width: 32.26vw;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 
   .not-found {
@@ -5048,6 +5445,25 @@ button {
     width: 100%;
   }
 
+  .section-feedback .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .section-feedback__form .form-input {
+    max-width: 78.125vw;
+  }
+
+  .section-feedback__form .row-agreement {
+    max-width: 78.125vw;
+  }
+
   .index-hero .container {
     padding: 20px 10px 55px;
   }
@@ -5141,23 +5557,32 @@ button {
     margin-bottom: 190px;
   }
 
-  .equipment-archive-feedback .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    gap: 20px;
+  .medical-centers-hero .container {
+    padding: 20px 10px 55px;
   }
 
-  .equipment-archive-feedback__form .form-input {
-    max-width: 78.125vw;
+  .medical-centers-hero__title {
+    margin-bottom: 10px;
   }
 
-  .equipment-archive-feedback__form .row-agreement {
-    max-width: 78.125vw;
+  .medical-centers-hero__description {
+    margin-bottom: 0;
+  }
+
+  .medical-centers-hero__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .medical-centers-hero__image {
+    position: static;
+    width: 250px;
+    margin: 0;
+    -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
 
   .footer .container {
@@ -5509,6 +5934,14 @@ button {
     bottom: 30px;
     left: 10px;
     width: calc(100vw - 40px);
+  }
+
+  .medical-centers-hero .container {
+    background-image: url("./../img/index-hero-bg-mob.png");
+  }
+
+  .medical-centers-hero__image {
+    margin: 0 auto;
   }
 
   .modal__content {
