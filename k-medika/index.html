@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/vendor.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 
-    <title>Сайт</title>
+    <title>К-МЕДИКА</title>
 </head>
 <body class="@@class">
 
@@ -21,8 +21,12 @@
         </a>
 
         <div class="header__hamburger-wrap">
-            <div class="header__hamburger-content">
-                <a href="./" class="header__logo desktop">
+            <div class="header__hamburger-content animated">
+                <button class="header__close">
+                    <img src="./img/icons/close.svg" alt="Закрыть">
+                </button>
+
+                <a href="./" class="header__logo">
                     <img src="./img/logo.svg" alt="К-МЕДИКА">
                 </a>
 
@@ -140,9 +144,9 @@
             </div>
         </div>
 
-        <div class="header__hamburger tablet">
-
-        </div>
+        <button class="header__hamburger">
+            <img src="./img/icons/hamburger.svg" alt="Меню">
+        </button>
     </div>
 </header>
 
@@ -376,14 +380,12 @@
 
                     </div>
 
-                    <a href="#" class="list-item__link"></a>
-
-                    <div class="list-item__link-icon">
+                    <a href="#" class="list-item__link">
                         <svg width="24" height="24" class="svg-ico " role="img">
                             <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
                         </svg>
 
-                    </div>
+                    </a>
 
                 </div>
 
@@ -418,14 +420,12 @@
 
                     </div>
 
-                    <a href="#" class="list-item__link"></a>
-
-                    <div class="list-item__link-icon">
+                    <a href="#" class="list-item__link">
                         <svg width="24" height="24" class="svg-ico " role="img">
                             <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
                         </svg>
 
-                    </div>
+                    </a>
 
                 </div>
 
@@ -460,14 +460,12 @@
 
                     </div>
 
-                    <a href="#" class="list-item__link"></a>
-
-                    <div class="list-item__link-icon">
+                    <a href="#" class="list-item__link">
                         <svg width="24" height="24" class="svg-ico " role="img">
                             <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
                         </svg>
 
-                    </div>
+                    </a>
 
                 </div>
 
@@ -502,14 +500,12 @@
 
                     </div>
 
-                    <a href="#" class="list-item__link"></a>
-
-                    <div class="list-item__link-icon">
+                    <a href="#" class="list-item__link">
                         <svg width="24" height="24" class="svg-ico " role="img">
                             <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
                         </svg>
 
-                    </div>
+                    </a>
 
                 </div>
 
@@ -530,6 +526,10 @@
                     Современные и технологичные модели медицинского оборудования от отечественных и зарубежных
                     производителей уже доступны — подробное описание товаров в каталоге.
                 </p>
+            </div>
+
+            <div class="equipment-offer__image">
+                <img src="./img/equipment-offer-image.png" alt="Изображение">
             </div>
 
             
@@ -676,7 +676,7 @@
                         <span class="gradient-text">Реализованные кейсы</span> по оснащению клиник
                     </h2>
 
-                    <div class="portfolio__slider__nav slider-nav">
+                    <div class="portfolio__slider-nav slider-nav">
                         <button class="slider-nav__btn btn_prev">
                             <svg width="51" height="20" class="svg-ico " role="img">
                                 <use xlink:href="./img/icons/sprite.svg#slider-arrow-prev"></use>
@@ -774,7 +774,8 @@
                         <div class="slider-item__col col_2">
 
                             <div class="slider-item__image">
-                                <img src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="desktop-tablet" src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="mobile" src="./img/portfolio-item-1-mob.png" alt="Оснащение стоматологической клиники">
                             </div>
 
                         </div>
@@ -860,7 +861,8 @@
                         <div class="slider-item__col col_2">
 
                             <div class="slider-item__image">
-                                <img src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="desktop-tablet" src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="mobile" src="./img/portfolio-item-1-mob.png" alt="Оснащение стоматологической клиники">
                             </div>
 
                         </div>
@@ -946,7 +948,8 @@
                         <div class="slider-item__col col_2">
 
                             <div class="slider-item__image">
-                                <img src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="desktop-tablet" src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="mobile" src="./img/portfolio-item-1-mob.png" alt="Оснащение стоматологической клиники">
                             </div>
 
                         </div>
@@ -1032,7 +1035,8 @@
                         <div class="slider-item__col col_2">
 
                             <div class="slider-item__image">
-                                <img src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="desktop-tablet" src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="mobile" src="./img/portfolio-item-1-mob.png" alt="Оснащение стоматологической клиники">
                             </div>
 
                         </div>
@@ -1118,7 +1122,8 @@
                         <div class="slider-item__col col_2">
 
                             <div class="slider-item__image">
-                                <img src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="desktop-tablet" src="./img/portfolio-item-1.png" alt="Оснащение стоматологической клиники">
+                                <img class="mobile" src="./img/portfolio-item-1-mob.png" alt="Оснащение стоматологической клиники">
                             </div>
 
                         </div>

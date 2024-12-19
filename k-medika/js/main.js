@@ -2077,92 +2077,43 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-
-  // Найти элемент с классом 'header__hamburger'
   const hamburger = header.querySelector('.header__hamburger');
-  const hamburgerClose = header.querySelector('.header__close');
-  const hamburgerWrap = header.querySelector('.hamburger-wrap');
+  if (hamburger) {
+    const hamburgerClose = header.querySelector('.header__close');
+    const hamburgerWrap = header.querySelector('.header__hamburger-wrap');
+    const hamburgerContent = header.querySelector('.header__hamburger-content');
+    const closeHamburger = event => {
+      if (!hamburger) {
+        console.error('Элемент hamburger отсутствует!');
+        return;
+      }
+      hamburgerContent.classList.add('slideOutRight');
+      hamburgerContent.classList.remove('slideInRight');
+      document.body.classList.remove('no-scroll');
+      setTimeout(() => {
+        hamburgerWrap.classList.remove('open');
+      }, 700);
+    };
+    // Проверить, существует ли элемент 'header__hamburger'
+    // Добавить обработчик события 'click' к элементу 'header__hamburger'
+    hamburger.addEventListener('click', event => {
+      // Предотвратить стандартное поведение события (например, переход по ссылке)
+      event.preventDefault();
 
-  // if (hamburger)
-  // const closeHamburger = () => {
-  //     if (!hamburger) {
-  //         console.error('Элемент hamburger отсутствует!')
-  //         return;
-  //     }
-  //
-  //     hamburger.classList.remove('open');
-  //     hamburgerWrap.classList.remove('slideInRight');
-  //     hamburgerWrap.classList.add('slideOutRight');
-  //     document.body.classList.remove('no-scroll');
-  //     setTimeout(() => {
-  //         hamburgerWrap.classList.add('menu-hidden');
-  //     }, 1000);
-  // }
-  // // Проверить, существует ли элемент 'header__hamburger'
-  // if (hamburger) {
-  //     // Добавить обработчик события 'click' к элементу 'header__hamburger'
-  //     hamburger.addEventListener('click', event => {
-  //         // Предотвратить стандартное поведение события (например, переход по ссылке)
-  //         event.preventDefault();
-  //
-  //         // Проверить, содержит ли текущий элемент ('hamburger') класс 'open'
-  //         if (hamburger.classList.contains('open')) {
-  //             // Если содержит, удалить класс 'open' у элемента 'hamburger'
-  //             closeHamburger();
-  //         } else {
-  //             // Если класс 'open' отсутствует у элемента 'hamburger'
-  //             // Добавить класс 'open' к элементу 'hamburger'
-  //             hamburger.classList.add('open');
-  //             hamburger.classList.remove('close');
-  //             // Добавить класс 'no-scroll' к элементу 'body', чтобы предотвратить прокрутку страницы
-  //             document.body.classList.add('no-scroll');
-  //
-  //             // Удалить класс 'slideInLeft' у элемента 'hamburgerWrap' и добавить класс 'slideOutLeft'
-  //             // Это переключит анимацию меню с 'slide in' (заезд) на 'slide out' (выезд)
-  //             hamburgerWrap.classList.remove('slideOutRight');
-  //             hamburgerWrap.classList.add('slideInRight');
-  //             hamburgerWrap.classList.remove('menu-hidden');
-  //         }
-  //     });
-  // }
-  //
-  // if (hamburgerClose) {
-  //     hamburgerClose.addEventListener('click', (event) => {
-  //        event.preventDefault();
-  //         closeHamburger();
-  //     });
-  // }
-  //
-  // document.addEventListener('click', function (e) {
-  //     const target = e.target;
-  //     const isHamburgerWrap = target.classList.contains('header__hamburger') || target.closest('.header__hamburger');
-  //
-  //     if (!isHamburgerWrap) {
-  //         console.error('Элемент hamburger отсутствует!')
-  //         return;
-  //     }
-  //     const isCloseButton = target.classList.contains('header__close');
-  //
-  //     if (!isCloseButton) {
-  //         console.error('Элемент hamburger отсутствует!')
-  //         return;
-  //     }
-  //     // const isCloseButton = target.classList.contains('header__close') || target.closest('.header__close');
-  //     const isHamburger = target.classList.contains('header__hamburger') || target.closest('.header__hamburger');
-  //
-  //     if (!isHamburger) {
-  //         console.error('Элемент hamburger отсутствует!')
-  //         return;
-  //     }
-  //
-  //     const isOpen = hamburgerWrap.classList.contains('slideInRight');
-  //
-  //     if (!isHamburger) {
-  //         if (isHamburgerWrap || isCloseButton || isOpen) {
-  //             closeHamburger();
-  //         }
-  //     }
-  // });
+      // Добавить класс 'no-scroll' к элементу 'body', чтобы предотвратить прокрутку страницы
+      document.body.classList.add('no-scroll');
+      hamburgerWrap.classList.add('open');
+      setTimeout(() => {
+        hamburgerContent.classList.remove('slideOutRight');
+        hamburgerContent.classList.add('slideInRight');
+      }, 200);
+    });
+    hamburgerClose.addEventListener('click', closeHamburger);
+    hamburgerWrap.addEventListener('click', closeHamburger);
+    hamburgerContent.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  }
 
   /**
    * инициализация аккордеона
@@ -2342,20 +2293,20 @@ document.addEventListener('DOMContentLoaded', function () {
       // Отключение бесконечного зацикливания слайдов
       grabCursor: true,
       // Включение курсора "перетаскивания" при наведении
-      autoHeight: true,
+      autoHeight: false,
       navigation: {
         nextEl: nextButton,
         // Элемент кнопки "вперед"
         prevEl: prevButton // Элемент кнопки "назад"
-      },
-      on: {
-        init: function () {
-          setEqualHeight(this);
-        },
-        resize: function () {
-          setEqualHeight(this);
-        }
       }
+      // on: {
+      //     init: function () {
+      //         setEqualHeight(this)
+      //     },
+      //     resize: function () {
+      //         setEqualHeight(this)
+      //     }
+      // }
     });
   }
 
