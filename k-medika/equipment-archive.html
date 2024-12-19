@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon.svg">
+    <link rel="stylesheet" href="./css/vendor.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <title>Сайт</title>
+</head>
+<body class="@@class">
+
+
+<header id="header">
+    <div class="container">
+        <a href="./" class="header__logo tablet">
+            <img src="./img/logo.svg" alt="К-МЕДИКА">
+        </a>
+
+        <div class="header__hamburger-wrap">
+            <div class="header__hamburger-content animated">
+                <button class="header__close">
+                    <img src="./img/icons/close.svg" alt="Закрыть">
+                </button>
+
+                <a href="./" class="header__logo">
+                    <img src="./img/logo.svg" alt="К-МЕДИКА">
+                </a>
+
+                <nav class="header__nav-menu">
+                    <ul class="header__nav-list">
+
+                        <li>
+                            <a href="./equipment-archive.html">
+                                Оборудование
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Услуги
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Новости
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Контакты
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                О компании
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="header__buttons-wrapper">
+                    <button id="header_search" class="header__search">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="20" height="20" fill="transparent" />
+                            <path d="M12.5 12.5L17.5 17.5M8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667Z" stroke="url(#paint0_linear_289_12189)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_289_12189" x1="1.86842" y1="-1.11111" x2="23.1012" y2="0.563219" gradientUnits="userSpaceOnUse">
+                                    <stop class="svg-hover" stop-color="#01524D" />
+                                    <stop class="svg-hover" offset="1" stop-color="#38DBD2" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </button>
+
+                    <a href="#" class="header__link">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_289_12180)">
+                                <path d="M2.00482 24L3.62722 18.0384C2.55818 16.2058 1.99653 14.1216 2.00002 12C2.00002 5.3724 7.37241 0 14 0C20.6276 0 26 5.3724 26 12C26 18.6276 20.6276 24 14 24C11.8793 24.0034 9.796 23.4422 7.96401 22.374L2.00482 24ZM9.66921 6.3696C9.51425 6.37922 9.36282 6.42003 9.22401 6.4896C9.09384 6.56331 8.97501 6.65547 8.87121 6.7632C8.72721 6.8988 8.64561 7.0164 8.55801 7.1304C8.11451 7.70759 7.87594 8.4161 7.88001 9.14399C7.88241 9.73199 8.03601 10.3044 8.27601 10.8396C8.76681 11.922 9.57441 13.068 10.6412 14.13C10.898 14.3856 11.1488 14.6424 11.4188 14.8812C12.7429 16.0469 14.3207 16.8876 16.0268 17.3364L16.7096 17.4408C16.9316 17.4528 17.1536 17.436 17.3768 17.4252C17.7263 17.4072 18.0675 17.3125 18.3764 17.148C18.5756 17.0424 18.6692 16.9896 18.836 16.884C18.836 16.884 18.8876 16.8504 18.986 16.776C19.148 16.656 19.2476 16.5708 19.382 16.4304C19.4816 16.3272 19.568 16.206 19.634 16.068C19.7276 15.8724 19.8212 15.4992 19.8596 15.1884C19.8884 14.9508 19.88 14.8212 19.8764 14.7408C19.8716 14.6124 19.7648 14.4792 19.6484 14.4228L18.95 14.1096C18.95 14.1096 17.906 13.6548 17.2688 13.3644C17.2016 13.3351 17.1296 13.3184 17.0564 13.3152C16.9743 13.3068 16.8913 13.316 16.8131 13.3423C16.7349 13.3686 16.6632 13.4113 16.6028 13.4676V13.4652C16.5968 13.4652 16.5164 13.5336 15.6488 14.5848C15.599 14.6517 15.5304 14.7023 15.4518 14.7301C15.3731 14.7578 15.288 14.7616 15.2072 14.7408C15.129 14.7199 15.0524 14.6934 14.978 14.6616C14.8292 14.5992 14.7776 14.5752 14.6756 14.5308L14.6696 14.5284C13.9831 14.2287 13.3475 13.8238 12.7856 13.3284C12.6344 13.1964 12.494 13.0524 12.35 12.9132C11.8779 12.4611 11.4665 11.9496 11.126 11.3916L11.0552 11.2776C11.0044 11.201 10.9632 11.1184 10.9328 11.0316C10.8872 10.8552 11.006 10.7136 11.006 10.7136C11.006 10.7136 11.2976 10.3944 11.4332 10.2216C11.5461 10.078 11.6515 9.92858 11.7488 9.774C11.8904 9.546 11.9348 9.312 11.8604 9.1308C11.5244 8.31 11.1764 7.4928 10.8188 6.6816C10.748 6.5208 10.538 6.4056 10.3472 6.3828C10.2824 6.3756 10.2176 6.3684 10.1528 6.3636C9.99166 6.35559 9.83017 6.35839 9.66921 6.3696Z"
+                                      fill="url(#paint0_linear_289_12180)"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_289_12180" x1="22.5527" y1="24" x2="0.884661" y2="23.1765"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#01524D"/>
+                                    <stop offset="1" stop-color="#38DBD2"/>
+                                </linearGradient>
+                                <clipPath id="clip0_289_12180">
+                                    <rect width="26" height="26" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </a>
+
+                    <a href="#" class="header__link">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_289_12184)">
+                                <circle cx="14.5078" cy="13.5" r="9.5" fill="white"/>
+                                <path d="M13 0.40625C5.81855 0.40625 0 6.04297 0 13C0 19.957 5.81855 25.5938 13 25.5938C20.1815 25.5938 26 19.957 26 13C26 6.04297 20.1815 0.40625 13 0.40625ZM19.3847 9.03398L17.2512 18.7738C17.094 19.4645 16.6694 19.632 16.077 19.307L12.827 16.9863L11.2597 18.4488C11.0867 18.6164 10.9399 18.7586 10.6044 18.7586L10.8351 15.5543L16.8581 10.2832C17.1202 10.0598 16.8004 9.93281 16.4544 10.1562L9.01089 14.6961L5.80282 13.7262C5.10565 13.5129 5.08992 13.0508 5.9496 12.7258L18.4831 8.04375C19.0649 7.84063 19.5734 8.18086 19.3847 9.03398Z"
+                                      fill="url(#paint0_linear_289_12184)"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_289_12184" x1="22.2655" y1="25.5938" x2="-1.20606" y2="24.673"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#01524D"/>
+                                    <stop offset="1" stop-color="#38DBD2"/>
+                                </linearGradient>
+                                <clipPath id="clip0_289_12184">
+                                    <rect width="26" height="26" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </a>
+                </div>
+
+                <button class="header__btn">
+                    <span class="btn-text">
+                        Заказать звонок
+                    </span>
+
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.50246 1.25722C6.19873 0.497902 5.46332 0 4.64551 0H1.89474C0.848303 0 0 0.848097 0 1.89453C0 10.7892 7.21078 18 16.1055 18C17.1519 18 18 17.1516 18 16.1052L18.0005 13.354C18.0005 12.5361 17.5027 11.8009 16.7434 11.4971L14.1069 10.4429C13.4249 10.1701 12.6483 10.2929 12.0839 10.7632L11.4035 11.3307C10.6089 11.9929 9.43963 11.9402 8.7082 11.2088L6.79222 9.29106C6.06079 8.55962 6.00673 7.39134 6.66895 6.59668L7.23633 5.9163C7.70661 5.35195 7.83049 4.57516 7.55766 3.89309L6.50246 1.25722Z"
+                              fill="url(#paint0_linear_2006_264)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_2006_264" x1="15.4149" y1="18" x2="-0.836524" y2="17.3823"
+                                            gradientUnits="userSpaceOnUse">
+                                <stop class="svg-hover" stop-color="#01524D"/>
+                                <stop class="svg-hover" offset="1" stop-color="#38DBD2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        <button class="header__hamburger">
+            <img src="./img/icons/hamburger.svg" alt="Меню">
+        </button>
+    </div>
+</header>
+
+
+<main class="equipment-archive-page">
+
+    <section class="equipment-archive-hero">
+        <div class="container">
+
+            <h1 class="main-title equipment-archive-hero__title">
+                <span class="gradient-text">Оборудование</span><br> для вашей клиники
+            </h1>
+
+            <div class="equipment-archive-hero__description">
+                Оснастим вашу клинику всем необходимым оборудованием и предоставим комплексные услуги под ключ, учитывая ваши задачи и потребности.
+            </div>
+
+            
+
+                
+                <button class="btn equipment-archive-hero__btn">
+                    
+
+                <span class="btn-text">
+                    Подробнее
+                </span>
+
+            </button>
+
+
+        </div>
+    </section>
+
+    <section class="tile-view on-equipment-archive">
+        <div class="container">
+
+            <h2 class="tile-view__title second-title">
+                Мы окажем помощь в оснащении вашего медицинского центра с учетом особенностей вашего направления
+            </h2>
+
+            <div class="tile-view__list">
+
+                <div class="list-item">
+
+                    <div class="list-item__flipper">
+
+                        <div class="list-item__front" style="background-image: url('./img/tile-views/view-1.png');">
+                            <h4 class="list-item__title">
+                                Медицинский центр
+                            </h4>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/stethoscope.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                        <div class="list-item__back">
+                            <h4 class="list-item__title">
+                                Медицинский центр
+                            </h4>
+
+                            <div class="list-item__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cupiditate
+                                deserunt eaque eligendi expedita, fugit magni pariatur repellat veritatis!
+                            </div>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/stethoscope.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+                <div class="list-item">
+
+                    <div class="list-item__flipper">
+
+                        <div class="list-item__front" style="background-image: url('./img/tile-views/view-2.png');">
+                            <h4 class="list-item__title">
+                                Ветеринария
+                            </h4>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/paw-cat-pet.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                        <div class="list-item__back">
+                            <h4 class="list-item__title">
+                                Ветеринария
+                            </h4>
+
+                            <div class="list-item__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cupiditate
+                                deserunt eaque eligendi expedita, fugit magni pariatur repellat veritatis!
+                            </div>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/paw-cat-pet.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+                <div class="list-item">
+
+                    <div class="list-item__flipper">
+
+                        <div class="list-item__front" style="background-image: url('./img/tile-views/view-3.png');">
+                            <h4 class="list-item__title">
+                                Стоматология
+                            </h4>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/dental-crown.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                        <div class="list-item__back">
+                            <h4 class="list-item__title">
+                                Стоматология
+                            </h4>
+
+                            <div class="list-item__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cupiditate
+                                deserunt eaque eligendi expedita, fugit magni pariatur repellat veritatis!
+                            </div>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/dental-crown.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+                <div class="list-item">
+
+                    <div class="list-item__flipper">
+
+                        <div class="list-item__front" style="background-image: url('./img/tile-views/view-4.png');">
+                            <h4 class="list-item__title">
+                                Косметология
+                            </h4>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/cream.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                        <div class="list-item__back">
+                            <h4 class="list-item__title">
+                                Косметология
+                            </h4>
+
+                            <div class="list-item__description">
+                                Оборудование для омоложения, аппараты, мезотерапии, RF-лифтинга и криотерапии, а также
+                                косметологические кресла, лазеры и аппараты для ухода за кожей.
+                            </div>
+
+                            <div class="list-item__icon">
+                                <img src="./img/icons/cream.svg" alt="Иконка">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="list-item__link">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="equipment-archive-feedback">
+        <div class="container">
+
+            <div class="equipment-archive-feedback__col col_1">
+
+                <h2 class="equipment-archive-feedback__title second-title">
+                    Расширьте спектр медицинских услуг за счет высокотехнологичного оборудования
+                </h2>
+
+                <div class="equipment-archive-feedback__description">
+                    <p>
+                        Получите аудит и комплексные решения от компании с 10-летним опытом в сфере
+                    </p>
+                </div>
+
+            </div>
+            <div class="equipment-archive-feedback__col col_2">
+
+                <form
+                        action="#"
+                        class="equipment-archive-feedback__form"
+                        id="equipment_archive_feedback_form"
+                        novalidate
+                >
+
+                    <div class="form__row-wrap row-name">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="text"
+                                    id="index_feedback_name"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="Имя *"
+                            >
+
+                            <label for="index_feedback_name">Имя <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Поле должно быть не менее 2 символов
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-phone">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="tel"
+                                    id="index_feedback_phone"
+                                    class="form-input input-phone required"
+                                    name="tel"
+                                    placeholder="Телефона *"
+                            >
+
+                            <label for="index_feedback_phone">Телефона <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Неверный формат телефона
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-agreement">
+                        <label class="form__col from__agreement custom-checkbox">
+                            <input type="checkbox" name="agreement" hidden value="1">
+                            <span class="custom-field"></span>
+                            <span class="custom-text">
+                                Я даю согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a
+                                    href="#">Политике
+                            обработки персональных данных</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form__row-wrap">
+                        
+                        <button type="submit" class="btn btn form-submit">
+                            
+
+                            
+
+                            <span class="btn-text">
+                                Получить консультацию
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="quality on-equipment-archive">
+        <div class="container">
+
+            <div class="quality__title second-title">
+                <span>Более 1000 клиник</span> доверили нам свое оборудование
+            </div>
+
+            <div class="quality__description">
+<pre>
+Наша цель — оснастить каждый медицинский центр передовым оборудованием, которое поможет эффективнее оказывать помощь пациентам и улучшить позиции на рынке.
+</pre>
+            </div>
+
+            <div class="quality__list">
+
+                <div class="list-item">
+                    <div class="list-item__icon">
+                        <img src="./img/icons/globs.svg" alt="Иконка">
+                    </div>
+
+                    <div class="list-item__numbers">
+                        70
+                    </div>
+
+                    <div class="list-item__text">
+                        городов — география покрытия
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="list-item__icon">
+                        <img src="./img/icons/message.svg" alt="Иконка">
+                    </div>
+
+                    <div class="list-item__numbers">
+                        90%
+                    </div>
+
+                    <div class="list-item__text">
+                        клиентов рекомендуют нас
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="list-item__icon">
+                        <img src="./img/icons/hand.svg" alt="Иконка">
+                    </div>
+
+                    <div class="list-item__numbers">
+                        1000
+                    </div>
+
+                    <div class="list-item__text">
+                        консультаций ежемесячно
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="list-item__icon">
+                        <img src="./img/icons/handshake.svg" alt="Иконка">
+                    </div>
+
+                    <div class="list-item__numbers">
+                        500
+                    </div>
+
+                    <div class="list-item__text">
+                        клиник на постоянном обслуживании
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-with-two-image on-equipment-archive">
+        <div class="container">
+
+            <div class="section-with-two-image__col col_1">
+
+                <h2 class="section-with-two-image__title second-title">
+                    <span class="gradient-text">Современное оборудование</span>
+                     и надежное обслуживание
+
+                </h2>
+
+                <div class="section-with-two-image__description">
+                    <p>
+                        Оснащаем качественным оборудованием учреждения любого уровня — обеспечиваем бесперебойную работу клиник и контролируем техническое состояние оснащения. Выступаем в качестве надежного партнера, которому можно доверять.
+                    </p>
+                </div>
+
+                
+
+                
+                    <button class="btn with-arrow section-with-two-image__btn">
+                
+
+
+                    <span class="btn-text">
+                        Подробнее о компании
+                    </span>
+
+                        <span class="btn-arrow">
+                        <svg width="24" height="24" class="svg-ico " role="img">
+                            <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+                        </svg>
+
+                    </span>
+
+                    </button>
+
+
+            </div>
+
+            <div class="section-with-two-image__col col_2">
+
+                <div class="section-with-two-image__images">
+
+                    <img src="./img/picture-in-block-with-two-image-1.png" alt="Изображение">
+                    <img src="./img/picture-in-block-with-two-image-2.png" alt="Изображение">
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="feedback on-equipment-archive">
+
+        <div class="container">
+
+            <div class="feedback__col ">
+
+                <h2 class="second-title feedback__title">
+                    Обратитесь к нашим специалистам для выбора подходящего оборудования
+                </h2>
+
+                <div class="feedback__description">
+                    <p>
+                        Ответим на ваши вопросы и предложим оптимальные варианты для вашей клиники
+                    </p>
+                </div>
+
+                <form
+                        action="#"
+                        class="feedback__form"
+                        id="feedback_form"
+                        novalidate
+                >
+
+                    <div class="form__row-wrap row-name">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="text"
+                                    id="feedback_name"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="Имя *"
+                            >
+
+                            <label for="feedback_name">Имя <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Поле должно быть не менее 2 символов
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-phone">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="tel"
+                                    id="feedback_phone"
+                                    class="form-input input-phone required"
+                                    name="tel"
+                                    placeholder="Телефона *"
+                            >
+
+                            <label for="feedback_phone">Телефона <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Неверный формат телефона
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-agreement">
+                        <label class="form__col from__agreement custom-checkbox">
+                            <input type="checkbox" name="agreement" hidden value="1">
+                            <span class="custom-field"></span>
+                            <span class="custom-text">
+                                Я даю согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a
+                                    href="#">Политике
+                            обработки персональных данных</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form__row-wrap">
+                        
+                        <button type="submit" class="btn with-image btn form-submit">
+                            
+
+                            
+
+
+                                <span class="btn-text">
+                                Получить консультацию
+                            </span>
+
+                            <span class="btn-image" style="background-image: url('./img/index-button-image.png');"></span>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer__top">
+
+            <div class="footer__col col_1">
+
+                <div class="footer__col-heading">
+                    Навигация
+                </div>
+
+                <nav class="footer__nav">
+
+                    <ul class="footer__nav-list">
+
+                        <li>
+                            <a href="./equipment-archive.html">
+                                Оборудование
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Контакты
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Новости
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Услуги
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                О компании
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+            <div class="footer__col col_2">
+
+                <div class="footer__col-contact">
+
+                    <div class="footer__col-heading">
+                        Почта
+                    </div>
+
+                    <a href="mailto:example@mail.ru" class="footer__contacts-link contact-email">
+                        example@mail.ru
+                    </a>
+
+                </div>
+
+                <div class="footer__col-contact">
+
+                    <div class="footer__col-heading">
+                        Телефон
+                    </div>
+
+                    <a href="tel:79999999999" class="footer__contacts-link contact-email">
+                        +7 (999) 999 99 99
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="footer__col col_3">
+
+                <div class="footer__col-heading">
+                    Подпишитесь на рассылку
+                </div>
+
+                <div class="footer__col-footnote">
+                    Получайте свежие новости и специальные предложения
+                </div>
+
+                <form
+                        action="#"
+                        id="footer_subscribe"
+                        class="subscribe__form"
+                        novalidate
+                >
+
+                    <div class="form__row-wrap">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="email"
+                                    id="footer_subscribe_email"
+                                    class="form-input input-email required"
+                                    name="email"
+                                    placeholder="E-mail *"
+                            >
+
+                            <label for="footer_subscribe_email">E-mail  <sup class="red">*</sup></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Неверный формат Email
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal__form-row submit-row">
+
+                        
+                            <button type="submit" class="btn with-arrow btn form-submit">
+                        
+
+                        
+
+
+                            <span class="btn-text">
+                                
+                            </span>
+
+                                <span class="btn-arrow">
+                                <svg width="24" height="24" class="svg-ico " role="img">
+                                    <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+                                </svg>
+
+                            </span>
+
+                            </button>
+
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+
+            <div class="footer__links-wrap">
+                <a href="#" class="footer__links link-policy">
+                    Политика обработки персональных данных
+                </a>
+
+                <a href="#" class="footer__links link-agreement">
+                    Пользовательское соглашение
+                </a>
+            </div>
+
+            <div class="footer__copyright">
+                2024 ООО “К-медика”. Все права защищены.
+            </div>
+
+        </div>
+
+
+    </div>
+</footer>
+
+<div class="modal-wrap">
+    <div class="modal" id="modal_callback">
+        <div class="modal__content">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставить заявку
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты и мы свяжемся с вами!
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form
+                        action="#"
+                        class="modal__form"
+                        id="callback_form"
+                        novalidate
+                >
+                    <label class="form__col">
+                        <input
+                                type="text"
+                                class="form-input input-name required"
+                                name="name"
+                                placeholder="Имя *"
+                                required
+                        >
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                "Имя" должно быть не менее 2 букв
+                            </span>
+                    </label>
+
+                    <label class="form__col">
+                        <input
+                                type="tel"
+                                class="form-input input-phone required"
+                                name="tel"
+                                placeholder="Телефон *"
+                                required
+                        >
+
+                        <span class="msg msg-error">
+                                Поле является обязательным
+                            </span>
+                        <span class="msg msg-empty">
+                                Неверный формат телефона
+                            </span>
+                    </label>
+
+                    <label class="form__col">
+                            <textarea
+                                    type="text"
+                                    class="form-textarea"
+                                    name="comment"
+                                    placeholder="Комментарий"
+                            ></textarea>
+                    </label>
+
+                    <label class="form__col from__col-submit">
+                        <button type="submit" class="btn form-submit">
+                            Отправить
+                        </button>
+                    </label>
+
+                    <label class="form__col from__agreement">
+                        Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки
+                        персональных данных
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal_success">
+        <div class="modal__content animated zoomIn">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Спасибо, ваши данные успешно отправлены.
+                </h3>
+
+                <div class="modal__description">
+                    <p>
+                        Мы свяжемся с вами в ближайшее время.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thx" id="modal_error">
+        <div class="modal__content animated zoomIn">
+            <div class="modal__close">
+                <svg width="17" height="17" class="svg-ico" role="img">
+                    <use xlink:href="./img/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+
+            <div class="modal__header">
+                <h3 class="modal__title">
+                    Что-то пошло не так!
+                </h3>
+
+                <div class="modal__description">
+                    <p>
+                        Попробуйте снова или <a href="tel:+7 (902) 976-69-69">позвоните нам</a>!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+

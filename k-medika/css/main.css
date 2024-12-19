@@ -2405,7 +2405,8 @@ button {
 }
 
 .tile-view__title {
-  margin-bottom: 30px;
+  max-width: 830px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
@@ -3382,6 +3383,93 @@ button {
   height: max-content;
 }
 
+.equipment-archive-hero {
+  padding: 65px 0 125px;
+}
+
+.equipment-archive-hero .container {
+  min-height: 602px;
+  padding-top: 115px;
+  padding-left: 55px;
+  border-radius: var(--radius-5);
+  background: rgba(0,0,0,0) url("./../img/index-hero-bg.png") center/cover no-repeat;
+}
+
+.equipment-archive-hero__title {
+  max-width: 825px;
+  margin-bottom: 40px;
+}
+
+.equipment-archive-hero__description {
+  max-width: 520px;
+  margin-bottom: 50px;
+}
+
+.equipment-archive-hero__description * {
+  color: var(--color-5);
+  font-weight: bold;
+}
+
+.equipment-archive-hero__btn {
+  width: 244px;
+}
+
+.equipment-archive-feedback {
+  padding-bottom: 120px;
+}
+
+.equipment-archive-feedback .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 25px 50px 60px;
+  border-radius: var(--radius-5);
+  background-color: var(--white);
+  -webkit-box-shadow: var(--shadow-2);
+          box-shadow: var(--shadow-2);
+}
+
+.equipment-archive-feedback__col {
+  width: 100%;
+}
+
+.equipment-archive-feedback__col.col_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  max-width: 51.8%;
+}
+
+.equipment-archive-feedback__col.col_2 {
+  max-width: calc(48.2% - 40px);
+}
+
+.equipment-archive-feedback__description,
+.equipment-archive-feedback__description * {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.equipment-archive-feedback__form .row-name {
+  margin-bottom: 15px;
+}
+
+.equipment-archive-feedback__form .row-phone {
+  margin-bottom: 25px;
+}
+
+.equipment-archive-feedback__form .row-agreement {
+  margin-bottom: 30px;
+}
+
 .not-found-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4045,6 +4133,16 @@ button {
     max-width: 100vw;
   }
 
+  .equipment-archive-hero .container {
+    max-width: 100vw;
+    padding-left: 20px;
+  }
+
+  .equipment-archive-hero__title {
+    position: relative;
+    z-index: 1;
+  }
+
   .footer__links {
     font-size: 15px;
   }
@@ -4461,6 +4559,49 @@ button {
     max-width: 176px;
     min-height: 176px;
     max-height: 176px;
+  }
+
+  .equipment-archive-hero {
+    padding: 20px 10px 80px;
+  }
+
+  .equipment-archive-hero .container {
+    padding: 60px 10px;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+  }
+
+  .equipment-archive-feedback {
+    padding: 0 10px 60px;
+  }
+
+  .equipment-archive-feedback .container {
+    padding: 30px 20px;
+  }
+
+  .equipment-archive-feedback__col.col_1 {
+    max-width: 100%;
+  }
+
+  .equipment-archive-feedback__col.col_1 {
+    gap: 20px;
+  }
+
+  .equipment-archive-feedback__col.col_2 {
+    max-width: 100%;
+  }
+
+  .equipment-archive-feedback__form .row-name {
+    margin-bottom: 10px;
+  }
+
+  .equipment-archive-feedback__form .row-phone {
+    margin-bottom: 30px;
+  }
+
+  .equipment-archive-feedback__form .row-agreement {
+    margin-bottom: 20px;
   }
 
   .not-found {
@@ -4992,6 +5133,33 @@ button {
     text-align: left;
   }
 
+  .equipment-archive-hero .container {
+    padding: 30px 10px;
+  }
+
+  .equipment-archive-hero__description {
+    margin-bottom: 190px;
+  }
+
+  .equipment-archive-feedback .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .equipment-archive-feedback__form .form-input {
+    max-width: 78.125vw;
+  }
+
+  .equipment-archive-feedback__form .row-agreement {
+    max-width: 78.125vw;
+  }
+
   .footer .container {
     border-radius: var(--radius-5);
   }
@@ -5325,6 +5493,22 @@ button {
   .confidence__list-partners li:not(.empty) {
     padding: 5px;
     font-size: 14px;
+  }
+
+  .equipment-archive-hero .container {
+    min-height: 445px;
+    background-image: url("./../img/wave-horizontal-bg-2-mob.png");
+  }
+
+  .equipment-archive-hero__title {
+    margin-bottom: 20px;
+  }
+
+  .equipment-archive-hero__btn {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    width: calc(100vw - 40px);
   }
 
   .modal__content {
