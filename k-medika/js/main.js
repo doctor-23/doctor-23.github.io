@@ -1650,7 +1650,7 @@ class FormSender {
           break;
         default:
           myProps = this.getFormProps(this.props, this.formData);
-          myProps.action = '#'; // Установка действия для формы
+          myProps.action = 'base_form_request'; // Установка действия для формы
           // Получение функций обратного вызова для обработки результатов отправки формы бронирования
           Object.assign(myProps, this.defaultForm());
           // Отправка формы методом POST с использованием функций обратного вызова
@@ -1682,14 +1682,18 @@ class FormSender {
      * @param {HTMLElement} form - Форма, связанная с запросом.
      */
     const success = (response, form) => {
-      console.log(response);
-      // if (response.code === 200) {
-      //     const modal = form.closest('.modal');
-      //     const thxModal = document.getElementById('modal_lead_thx');
-      //
-      //     fadeOut(modal, 0);
-      //     fadeIn(thxModal, 215);
-      // }
+      const {
+        success,
+        data
+      } = response;
+      const modalClosed = form.closest('.modal');
+      const modalId = success ? 'modal_success' : 'modal_error';
+      const modal = document.getElementById(modalId);
+      if (modalClosed) fadeOut(form.closest('.modal'), 0);
+      modal.querySelector('.modal__description p').innerHTML = '';
+      modal.querySelector('.modal__description p').innerHTML = data.message;
+      form.reset();
+      fadeIn(modal, 215);
     };
 
     /**
@@ -1779,7 +1783,6 @@ class FormSender {
 
     // Вызываем функцию beforeSend перед отправкой запроса
     beforeSend(form, formData);
-
     // Отправляем запрос с использованием fetch
     fetch(url, requestOptions).then(response => {
       // Проверяем, был ли успешный ответ от сервера
@@ -1963,6 +1966,31 @@ document.addEventListener('DOMContentLoaded', function () {
       headerMain.classList.remove('slideInDown');
     }
   }
+  const headerSearchBtn = document.getElementById('header_search');
+  if (headerSearchBtn) {
+    const modalSearch = document.getElementById('modal_search');
+    const modalSearchContent = modalSearch.querySelector('.modal__content');
+    headerSearchBtn.addEventListener('click', e => {
+      modalSearch.style.opacity = 1;
+      modalSearch.style.display = 'block';
+      document.body.classList.add('no-scroll');
+      setTimeout(() => {
+        modalSearchContent.classList.add('slideInDown');
+      }, 300);
+    });
+
+    // modalSearch.addEventListener('click', function(e) {
+    //     e.preventDefault();
+    //     modalSearchContent.classList.remove('slideInUp');
+    //     document.body.classList.remove('no-scroll');
+    //     modalSearchContent.classList.add('slideOutUp');
+    //
+    //     setTimeout(() => {
+    //         modalSearch.style.opacity = 0;
+    //         modalSearchContent.classList.remove('slideOutUp');
+    //     }, 300);
+    // });
+  }
 
   // Вызываем функцию stickyMenu при загрузке страницы с текущим объектом window
   // stickyMenu(window);
@@ -2039,7 +2067,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const target = e.target;
     const isOverlay = target.classList.contains('modal');
     const isCloseButton = target.classList.contains('modal__close') || target.closest('.modal__close');
-    const isOpenButton = target.dataset.modal;
+    const isOpenButton = target.dataset.modal || target.closest('button') && target.closest('button').dataset.modal;
     let modal;
     if (isOverlay) {
       modal = target;
@@ -2053,12 +2081,19 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.classList.remove('no-scroll');
     }
     if (isOpenButton) {
-      const modalId = target.dataset.modal;
-      const autoSubmit = !!parseInt(target.dataset.autoSubmit) || false;
+      const button = target.dataset.modal ? target : target.closest('button');
+      const modalId = button.dataset.modal;
+      const autoSubmit = !!parseInt(button.dataset.autoSubmit) || false;
+      const dataPostType = button.dataset.type;
+      const dataProductId = button.dataset.product;
       if (modalId) {
         const modal = document.getElementById(modalId);
         const form = modal.querySelector('form');
         const selects = modal.querySelectorAll('.custom-select');
+        const postTypeHidden = form.querySelector('input[type="hidden"][name="post_type"]');
+        const productIdHidden = form.querySelector('input[type="hidden"][name="product_id"]');
+        postTypeHidden.value = dataPostType ? dataPostType : '';
+        productIdHidden.value = dataProductId ? dataProductId : '';
         fadeIn(modal, 215);
         document.body.classList.add('no-scroll');
         if (selects.length > 0) {
@@ -2082,6 +2117,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerClose = header.querySelector('.header__close');
     const hamburgerWrap = header.querySelector('.header__hamburger-wrap');
     const hamburgerContent = header.querySelector('.header__hamburger-content');
+    const headerBtn = header.querySelector('.header__btn');
     const closeHamburger = event => {
       if (!hamburger) {
         console.error('Элемент hamburger отсутствует!');
@@ -2093,6 +2129,9 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         hamburgerWrap.classList.remove('open');
       }, 700);
+    };
+    const stopPropagation = event => {
+      event.stopPropagation();
     };
     // Проверить, существует ли элемент 'header__hamburger'
     // Добавить обработчик события 'click' к элементу 'header__hamburger'
@@ -2110,8 +2149,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     hamburgerClose.addEventListener('click', closeHamburger);
     hamburgerWrap.addEventListener('click', closeHamburger);
-    hamburgerContent.addEventListener('click', function (event) {
-      event.stopPropagation();
+    hamburgerContent.addEventListener('click', stopPropagation);
+    headerBtn.addEventListener('click', function (event) {
+      const target = event.target;
+      const button = target.dataset.modal ? target : target.closest('button');
+      const modalId = button.dataset.modal;
+      const autoSubmit = !!parseInt(button.dataset.autoSubmit) || false;
+      if (modalId) {
+        const modal = document.getElementById(modalId);
+        const form = modal.querySelector('form');
+        const selects = modal.querySelectorAll('.custom-select');
+        fadeIn(modal, 215);
+        document.body.classList.add('no-scroll');
+        if (selects.length > 0) {
+          selects.forEach(select => {
+            new CustomSelect('reinit', {
+              selectElement: select
+            });
+          });
+        }
+        if (form) {
+          new HandlerForm({
+            form,
+            autoSubmit
+          });
+        }
+      }
     });
   }
 
@@ -2167,15 +2230,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /**
    * Инит формы валидации обратной связи
+   * 1 - форма внизу страницы почти на каждой страницы
+   * 2 - форма присутствует только на главной странице
+   * 3 - форма на страницах услуг и оборудования
    */
 
-  const feedbackFormOnPage = document.getElementById('feedback_form_on_page');
-  if (feedbackFormOnPage) {
-    new HandlerForm({
-      form: feedbackFormOnPage,
-      autoSubmit: true
-    });
-  }
+  const feedbackForm = document.getElementById('feedback_form');
+  const indexFeedbackForm = document.getElementById('index_feedback_form');
+  const sectionFeedbackForm = document.getElementById('section_feedback_form');
+  const subscribeForm = document.getElementById('footer_subscribe');
+  if (feedbackForm) new HandlerForm({
+    form: feedbackForm
+  });
+  if (indexFeedbackForm) new HandlerForm({
+    form: indexFeedbackForm
+  });
+  if (sectionFeedbackForm) new HandlerForm({
+    form: sectionFeedbackForm
+  });
+  if (subscribeForm) new HandlerForm({
+    form: subscribeForm
+  });
 
   /**
    * Слайдер портфолио
@@ -2184,6 +2259,30 @@ document.addEventListener('DOMContentLoaded', function () {
   const portfolioSliderWrap = document.querySelector('.portfolio__slider-wrap');
   if (portfolioSliderWrap) {
     portfolioSlider(portfolioSliderWrap);
+  }
+
+  /**
+   * Слайдер в блоке "Наша команда" на странице "о компании"
+   */
+
+  const teamSliderWrap = document.querySelector('.team__wrapper');
+  if (teamSliderWrap) {
+    teamSlider(teamSliderWrap);
+  }
+
+  /**
+   * Кнопка "показать еще" на странице подкатегории оборудования
+   */
+
+  const equipmentCatCatalogBtnMore = document.querySelector('.equipment-cat-catalog__btn-more');
+  if (equipmentCatCatalogBtnMore) {
+    equipmentCatCatalogBtnMore.addEventListener('click', () => {
+      const catalogItems = document.querySelectorAll('.equipment-cat-catalog__list .list-item');
+      if (catalogItems.length > 0) {
+        catalogItems.forEach(item => item.classList.remove('hidden'));
+        equipmentCatCatalogBtnMore.remove();
+      }
+    });
   }
   function setEqualHeight(swiper) {
     let maxHeight = 0;
@@ -2307,6 +2406,64 @@ document.addEventListener('DOMContentLoaded', function () {
       //         setEqualHeight(this)
       //     }
       // }
+    });
+  }
+  /**
+   * Инициализирует основной слайдер на главной странице.
+   * @function mainHeroSlider
+   * @param {HTMLElement} sliderWrap - Внешний контейнер слайдера на главной странице.
+   */
+  function teamSlider(sliderWrap) {
+    // Инициализируем проверку и получаем необходимые элементы
+    const result = sliderInitCheck({
+      sliderWrapElement: sliderWrap,
+      sliderClassName: '.team__list',
+      slideClassName: '.list-item',
+      showBullets: false
+    });
+
+    // Проверяем результат на наличие необходимых элементов для инициализации Swiper
+    if (!result) {
+      console.error('Ошибка инициализации слайдера: не удалось найти все необходимые элементы.');
+      return;
+    }
+    const {
+      nextButton,
+      prevButton
+    } = result;
+
+    // Инициализация Swiper с конфигурацией
+    const swiper = new Swiper(sliderWrap, {
+      speed: 300,
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      loop: false,
+      grabCursor: true,
+      autoHeight: false,
+      watchSlidesVisibility: true,
+      navigation: {
+        nextEl: nextButton,
+        prevEl: prevButton
+      },
+      on: {
+        init: function () {
+          setEqualHeight(this);
+        },
+        resize: function () {
+          setEqualHeight(this);
+        }
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 10
+        },
+        820: {
+          spaceBetween: 20
+        },
+        1200: {
+          spaceBetween: 40
+        }
+      }
     });
   }
 

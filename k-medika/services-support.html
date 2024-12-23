@@ -382,7 +382,7 @@
                 <form
                         action="#"
                         class="section-feedback__form"
-                        id="equipment_archive_feedback_form"
+                        id="section_feedback_form"
                         novalidate
                 >
 
@@ -739,7 +739,7 @@
 
                                 </span>
 
-                                </button>
+                            </button>
 
 
                         </div>
@@ -825,7 +825,7 @@
 
                                 </span>
 
-                                </button>
+                            </button>
 
 
                         </div>
@@ -911,7 +911,7 @@
 
                                 </span>
 
-                                </button>
+                            </button>
 
 
                         </div>
@@ -997,7 +997,7 @@
 
                                 </span>
 
-                                </button>
+                            </button>
 
 
                         </div>
@@ -1083,7 +1083,7 @@
 
                                 </span>
 
-                                </button>
+                            </button>
 
 
                         </div>
@@ -1215,7 +1215,7 @@
 
                     </span>
 
-                    </button>
+                </button>
 
 
             </div>
@@ -1344,7 +1344,7 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer @@class">
     <div class="container">
 
         <div class="footer__top">
@@ -1481,7 +1481,7 @@
 
                             </span>
 
-                            </button>
+                        </button>
 
 
                     </div>
@@ -1518,9 +1518,7 @@
     <div class="modal" id="modal_callback">
         <div class="modal__content">
             <div class="modal__close">
-                <svg width="17" height="17" class="svg-ico" role="img">
-                    <use xlink:href="./img/icons/sprite.svg#close"></use>
-                </svg>
+                <img src="./img/icons/close.svg" alt="Закрыть">
             </div>
 
             <div class="modal__header">
@@ -1536,65 +1534,261 @@
             </div>
 
             <div class="modal__body">
-                <form
-                        action="#"
-                        class="modal__form"
-                        id="callback_form"
-                        novalidate
-                >
-                    <label class="form__col">
-                        <input
-                                type="text"
-                                class="form-input input-name required"
-                                name="name"
-                                placeholder="Имя *"
-                                required
-                        >
+                <form novalidate action="#" class="modal__form" id="callback_form" autocomplete="off">
 
-                        <span class="msg msg-error">
-                                Поле является обязательным
-                            </span>
-                        <span class="msg msg-empty">
-                                "Имя" должно быть не менее 2 букв
-                            </span>
-                    </label>
+                    <div class="form__row-wrap row-name">
+                        <div class="form__col form-label">
 
-                    <label class="form__col">
-                        <input
-                                type="tel"
-                                class="form-input input-phone required"
-                                name="tel"
-                                placeholder="Телефон *"
-                                required
-                        >
-
-                        <span class="msg msg-error">
-                                Поле является обязательным
-                            </span>
-                        <span class="msg msg-empty">
-                                Неверный формат телефона
-                            </span>
-                    </label>
-
-                    <label class="form__col">
-                            <textarea
+                            <input
                                     type="text"
-                                    class="form-textarea"
-                                    name="comment"
-                                    placeholder="Комментарий"
-                            ></textarea>
-                    </label>
+                                    id="callback_name"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="ФИО *"
+                            >
 
-                    <label class="form__col from__col-submit">
-                        <button type="submit" class="btn form-submit">
-                            Отправить
+                            <label for="callback_name">ФИО <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                "Имя" должно содержать не менее 2 букв
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-phone">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="tel"
+                                    id="callback_phone"
+                                    class="form-input input-phone required"
+                                    name="phone"
+                                    placeholder="Телефон *"
+                            >
+
+                            <label for="callback_phone">Телефон <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Неверный формат телефона
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-email">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="text"
+                                    id="callback_email"
+                                    class="form-input input-email required"
+                                    name="email"
+                                    placeholder="Email *"
+                            >
+
+                            <label for="callback_email">Email <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Неверный формат Email
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-agreement">
+                        <label class="form__col form__agreement custom-checkbox">
+                            <input type="checkbox" name="agreement" hidden value="1">
+                            <span class="custom-field"></span>
+                            <span class="custom-text">
+                                Я даю согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a
+                                    href="#">Политике
+                            обработки персональных данных</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="modal__form-row submit-row">
+
+                        
+                        <button type="submit" class="btn with-image btn form-submit">
+                            
+
+                            
+
+
+                                <span class="btn-text">
+                                Получить консультацию
+                            </span>
+
+                            <span class="btn-image" style="background-image: url('./img/index-button-image.png');"></span>
+
                         </button>
-                    </label>
 
-                    <label class="form__col from__agreement">
-                        Нажимая кнопку “Заказать консультацию по оборудованию” вы соглашаетесь с политикой обработки
-                        персональных данных
-                    </label>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_kp">
+        <div class="modal__content">
+            <div class="modal__close">
+                <img src="./img/icons/close.svg" alt="Закрыть">
+            </div>
+
+            <div class="modal__header">
+                <h2 class="modal__title">
+                    Оставить заявку
+                </h2>
+
+                <div class="modal__description">
+                    <p>
+                        Оставьте свои контакты, мы свяжемся с вами и вышлем Коммерческое Предложение!
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <form novalidate action="#" class="modal__form" id="kp_form" autocomplete="off">
+
+                    <div class="form__row-wrap row-name">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="text"
+                                    id="kp_form_name"
+                                    class="form-input input-name required"
+                                    name="name"
+                                    placeholder="ФИО *"
+                            >
+
+                            <label for="kp_form_name">ФИО <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                "Имя" должно содержать не менее 2 букв
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-phone">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="tel"
+                                    id="kp_form_phone"
+                                    class="form-input input-phone required"
+                                    name="phone"
+                                    placeholder="Телефон *"
+                            >
+
+                            <label for="kp_form_phone">Телефон <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Неверный формат телефона
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-email">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="text"
+                                    id="kp_form_email"
+                                    class="form-input input-email required"
+                                    name="email"
+                                    placeholder="Email *"
+                            >
+
+                            <label for="kp_form_email">Email <span class="red">*</span></label>
+
+                            <div class="msg msg-error">
+                                Поле является обязательным
+                            </div>
+                            <div class="msg msg-empty">
+                                Неверный формат Email
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form__row-wrap row-agreement">
+                        <label class="form__col form__agreement custom-checkbox">
+                            <input type="checkbox" name="agreement" hidden value="1">
+                            <span class="custom-field"></span>
+                            <span class="custom-text">
+                                Я даю согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a
+                                    href="#">Политике
+                            обработки персональных данных</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="modal__form-row submit-row">
+
+                        
+                        <button type="submit" class="btn with-image btn form-submit">
+                            
+
+                            
+
+
+                                <span class="btn-text">
+                                Получить консультацию
+                            </span>
+
+                            <span class="btn-image" style="background-image: url('./img/index-button-image.png');"></span>
+
+                        </button>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_search">
+        <div class="modal__content animated">
+
+            <div class="modal__body">
+                <form novalidate action="s" class="modal__form" id="search_form" autocomplete="off">
+
+                    <div class="form__row-wrap row-name">
+                        <div class="form__col form-label">
+
+                            <input
+                                    type="search"
+                                    id="search_form_request"
+                                    class="form-input"
+                                    name="name"
+                                    placeholder="Введите запрос"
+                            >
+
+                            <label for="search_form_request">Введите запрос</label>
+
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </div>
